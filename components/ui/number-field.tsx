@@ -59,7 +59,7 @@ const NumberField = ({
         {(renderProps) => (
           <>
             {isMobile ? <StepperButton slot="decrement" className="border-r" /> : null}
-            <Input className="tabular-nums" placeholder={placeholder} />
+            <Input className="px-13 tabular-nums sm:px-2.5" placeholder={placeholder} />
             <div
               className={fieldBorderStyles({
                 ...renderProps,
