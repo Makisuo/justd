@@ -126,7 +126,9 @@ const PopoverContent = ({
   const isMenuTrigger = popoverContext?.trigger === "MenuTrigger"
   const isSubmenuTrigger = popoverContext?.trigger === "SubmenuTrigger"
   const isMenu = isMenuTrigger || isSubmenuTrigger
-  const isComboBoxTrigger = popoverContext?.trigger === "ComboBoxTrigger"
+  const isComboBoxTrigger = popoverContext?.trigger === "ComboBox"
+  const isSelectTrigger = popoverContext?.trigger === "Select"
+  const isPicker = isComboBoxTrigger || isSelectTrigger
   const offset = showArrow ? 12 : 8
   const effectiveOffset = isSubmenuTrigger ? offset - 5 : offset
   return isMobile && respectScreen ? (
@@ -140,7 +142,12 @@ const PopoverContent = ({
           drawer({ ...renderProps, isMenu, className }),
         )}
       >
-        <Dialog role="dialog" aria-label={props["aria-label"] || isMenu ? "Menu" : undefined}>
+        <Dialog
+          role="dialog"
+          aria-label={
+            props["aria-label"] ? props["aria-label"] : isMenu ? "Menu list item" : undefined
+          }
+        >
           {children}
         </Dialog>
       </Modal>
@@ -168,8 +175,13 @@ const PopoverContent = ({
           </svg>
         </OverlayArrow>
       )}
-      {isComboBoxTrigger ? (
-        <Dialog role="dialog" aria-label={props["aria-label"] || isMenu ? "Menu" : undefined}>
+      {!isPicker ? (
+        <Dialog
+          role="dialog"
+          aria-label={
+            props["aria-label"] ? props["aria-label"] : isMenu ? "Menu list item" : undefined
+          }
+        >
           {children}
         </Dialog>
       ) : (
