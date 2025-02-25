@@ -56,6 +56,7 @@ const DatePickerOverlay = ({
 }: DatePickerOverlayProps) => {
   return (
     <Popover.Content
+      isDismissable={false}
       showArrow={false}
       className={cn(
         "flex min-w-auto max-w-none snap-x justify-center p-4 sm:min-w-[16.5rem] sm:p-2 sm:pt-3",

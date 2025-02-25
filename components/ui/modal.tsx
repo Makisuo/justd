@@ -37,7 +37,7 @@ const modalContentStyles = tv({
   base: [
     "max-h-full w-full rounded-t-2xl bg-overlay text-left align-middle text-overlay-fg shadow-lg ring-1 ring-fg/5",
     "overflow-hidden sm:rounded-2xl dark:ring-border",
-    "sm:fixed sm:top-1/2 sm:left-[50vw] sm:-translate-x-1/2 sm:-translate-y-1/2",
+    "sm:-translate-x-1/2 sm:-translate-y-1/2 sm:fixed sm:top-1/2 sm:left-[50vw]",
   ],
   variants: {
     isEntering: {
