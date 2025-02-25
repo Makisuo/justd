@@ -83,11 +83,10 @@ const months = [
 
 const years = Array.from({ length: new Date().getFullYear() - 1980 + 1 }, (_, i) => 1980 + i)
 
-const CalendarHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
-  const { direction, locale } = useLocale()
+const CalendarHeader = ({ className, ...props }: React.ComponentProps<'header'>) => {
+  const { direction } = useLocale()
   const context = useSlottedContext(CalendarContext)!
   const now = today(getLocalTimeZone())
-
   return (
     <header
       data-slot="calendar-header"
