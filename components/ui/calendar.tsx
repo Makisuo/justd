@@ -79,7 +79,7 @@ const CalendarHeader = ({
   return (
     <header
       data-slot="calendar-header"
-      className={cn("flex w-full justify-center gap-2 px-1 pt-1 pb-5 sm:pb-4", className)}
+      className={cn("flex w-full justify-center gap-1.5 pt-1 pr-1 pb-5 pl-1.5 sm:pb-4", className)}
       {...props}
     >
       {!isRange && (
@@ -140,7 +140,7 @@ const SelectMonth = ({ state }: { state: CalendarState }) => {
         state.setFocusedDate(state.focusedDate.set({ month: Number(value) }))
       }}
     >
-      <Select.Trigger className="h-8 text-xs" />
+      <Select.Trigger className="h-8 w-22 text-xs data-focused:ring-3 **:data-[slot=select-value]:inline-block **:data-[slot=select-value]:truncate group-data-open:ring-3" />
       <Select.List>
         {months.map((month, index) => (
           <Select.Option key={index} id={(index + 1).toString()} textValue={month}>
@@ -175,7 +175,7 @@ const SelectYear = ({ state }: { state: CalendarState }) => {
         state.setFocusedDate(years[Number(value)]?.value)
       }}
     >
-      <Select.Trigger className="h-8 text-xs" />
+      <Select.Trigger className="h-8 text-xs data-focused:ring-3 group-data-open:ring-3" />
       <Select.List>
         {years.map((year, i) => (
           <Select.Option key={i} id={i} textValue={year.formatted}>
