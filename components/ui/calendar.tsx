@@ -1,8 +1,7 @@
 "use client"
 
-import { CalendarStateContext } from "react-aria-components"
-
 import { IconChevronLgLeft, IconChevronLgRight } from "justd-icons"
+import { CalendarStateContext } from "react-aria-components"
 import type { CalendarProps as CalendarPrimitiveProps, DateValue } from "react-aria-components"
 import {
   CalendarCell,
@@ -17,13 +16,13 @@ import {
   useLocale,
 } from "react-aria-components"
 
-import { Select } from "@/components/ui/select"
 import { cn } from "@/utils/classes"
 import { type CalendarDate, getLocalTimeZone, today } from "@internationalized/date"
 import { useDateFormatter } from "@react-aria/i18n"
 import type { CalendarState } from "@react-stately/calendar"
 import { use } from "react"
 import { Button } from "./button"
+import { Select } from "./select"
 
 interface CalendarProps<T extends DateValue>
   extends Omit<CalendarPrimitiveProps<T>, "visibleDuration"> {
@@ -69,10 +68,12 @@ const Calendar = <T extends DateValue>({ errorMessage, className, ...props }: Ca
   )
 }
 
-const years = Array.from({ length: new Date().getFullYear() - 1980 + 1 }, (_, i) => 1980 + i)
-
-const CalendarHeader = ({ className, ...props }: React.ComponentProps<"header">) => {
-  const { direction, locale } = useLocale()
+const CalendarHeader = ({
+  isRange,
+  className,
+  ...props
+}: React.ComponentProps<"header"> & { isRange?: boolean }) => {
+  const { direction } = useLocale()
   const state = use(CalendarStateContext)!
 
   return (
@@ -81,11 +82,16 @@ const CalendarHeader = ({ className, ...props }: React.ComponentProps<"header">)
       className={cn("flex w-full justify-center gap-2 px-1 pt-1 pb-5 sm:pb-4", className)}
       {...props}
     >
-      <SelectMonth state={state} />
-      <SelectYear state={state} />
+      {!isRange && (
+        <>
+          <SelectMonth state={state} />
+          <SelectYear state={state} />
+        </>
+      )}
       <Heading
         className={cn(
-          "sr-only mr-2 flex-1 text-left font-medium text-muted-fg sm:text-sm",
+          "mr-2 flex-1 text-left font-medium text-muted-fg sm:text-sm",
+          !isRange && "sr-only",
           className,
         )}
       />
@@ -193,8 +199,5 @@ const CalendarGridHeader = () => {
   )
 }
 
-Calendar.Header = CalendarHeader
-Calendar.GridHeader = CalendarGridHeader
-
 export type { CalendarProps }
-export { Calendar }
+export { Calendar, CalendarHeader, CalendarGridHeader }
