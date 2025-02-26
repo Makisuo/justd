@@ -1,6 +1,7 @@
 "use client"
 
 import { IconChevronLgLeft, IconChevronLgRight } from "justd-icons"
+import { CalendarStateContext } from "react-aria-components"
 import type { CalendarProps as CalendarPrimitiveProps, DateValue } from "react-aria-components"
 import {
   CalendarCell,
@@ -16,8 +17,12 @@ import {
 } from "react-aria-components"
 
 import { cn } from "@/utils/classes"
-import { getLocalTimeZone, today } from "@internationalized/date"
+import { type CalendarDate, getLocalTimeZone, today } from "@internationalized/date"
+import { useDateFormatter } from "@react-aria/i18n"
+import type { CalendarState } from "@react-stately/calendar"
+import { use } from "react"
 import { Button } from "./button"
+import { Select } from "./select"
 
 interface CalendarProps<T extends DateValue>
   extends Omit<CalendarPrimitiveProps<T>, "visibleDuration"> {
@@ -63,17 +68,32 @@ const Calendar = <T extends DateValue>({ errorMessage, className, ...props }: Ca
   )
 }
 
-const CalendarHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
+const CalendarHeader = ({
+  isRange,
+  className,
+  ...props
+}: React.ComponentProps<"header"> & { isRange?: boolean }) => {
   const { direction } = useLocale()
+  const state = use(CalendarStateContext)!
 
   return (
     <header
       data-slot="calendar-header"
-      className={cn("flex w-full justify-center gap-1 px-1 pb-5 sm:pb-4", className)}
+      className={cn("flex w-full justify-center gap-1.5 pt-1 pr-1 pb-5 pl-1.5 sm:pb-4", className)}
       {...props}
     >
+      {!isRange && (
+        <>
+          <SelectMonth state={state} />
+          <SelectYear state={state} />
+        </>
+      )}
       <Heading
-        className={cn("mr-2 flex-1 text-left font-medium text-muted-fg sm:text-sm", className)}
+        className={cn(
+          "mr-2 flex-1 text-left font-medium text-muted-fg sm:text-sm",
+          !isRange && "sr-only",
+          className,
+        )}
       />
       <div className="flex items-center gap-1">
         <Button
@@ -99,6 +119,74 @@ const CalendarHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivEle
   )
 }
 
+const SelectMonth = ({ state }: { state: CalendarState }) => {
+  const months = []
+
+  const formatter = useDateFormatter({
+    month: "long",
+    timeZone: state.timeZone,
+  })
+
+  const numMonths = state.focusedDate.calendar.getMonthsInYear(state.focusedDate)
+  for (let i = 1; i <= numMonths; i++) {
+    const date = state.focusedDate.set({ month: i })
+    months.push(formatter.format(date.toDate(state.timeZone)))
+  }
+  return (
+    <Select
+      aria-label="Select month"
+      selectedKey={state.focusedDate.month.toString() ?? (new Date().getMonth() + 1).toString()}
+      onSelectionChange={(value) => {
+        state.setFocusedDate(state.focusedDate.set({ month: Number(value) }))
+      }}
+    >
+      <Select.Trigger className="h-8 w-22 text-xs data-focused:ring-3 **:data-[slot=select-value]:inline-block **:data-[slot=select-value]:truncate group-data-open:ring-3" />
+      <Select.List>
+        {months.map((month, index) => (
+          <Select.Option key={index} id={(index + 1).toString()} textValue={month}>
+            <Select.Label>{month}</Select.Label>
+          </Select.Option>
+        ))}
+      </Select.List>
+    </Select>
+  )
+}
+
+const SelectYear = ({ state }: { state: CalendarState }) => {
+  const years: { value: CalendarDate; formatted: string }[] = []
+  const formatter = useDateFormatter({
+    year: "numeric",
+    timeZone: state.timeZone,
+  })
+
+  for (let i = -20; i <= 20; i++) {
+    const date = state.focusedDate.add({ years: i })
+    years.push({
+      value: date,
+      formatted: formatter.format(date.toDate(state.timeZone)),
+    })
+  }
+  return (
+    <Select
+      aria-label="Select year"
+      selectedKey={20}
+      onSelectionChange={(value) => {
+        // @ts-expect-error
+        state.setFocusedDate(years[Number(value)]?.value)
+      }}
+    >
+      <Select.Trigger className="h-8 text-xs data-focused:ring-3 group-data-open:ring-3" />
+      <Select.List>
+        {years.map((year, i) => (
+          <Select.Option key={i} id={i} textValue={year.formatted}>
+            <Select.Label>{year.formatted}</Select.Label>
+          </Select.Option>
+        ))}
+      </Select.List>
+    </Select>
+  )
+}
+
 const CalendarGridHeader = () => {
   return (
     <CalendarGridHeaderPrimitive>
@@ -111,8 +199,5 @@ const CalendarGridHeader = () => {
   )
 }
 
-Calendar.Header = CalendarHeader
-Calendar.GridHeader = CalendarGridHeader
-
 export type { CalendarProps }
-export { Calendar }
+export { Calendar, CalendarHeader, CalendarGridHeader }

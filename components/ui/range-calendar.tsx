@@ -13,7 +13,7 @@ import {
   Text,
 } from "react-aria-components"
 import { twMerge } from "tailwind-merge"
-import { Calendar } from "./calendar"
+import { CalendarGridHeader, CalendarHeader } from "./calendar"
 
 interface RangeCalendarProps<T extends DateValue> extends RangeCalendarPrimitiveProps<T> {
   errorMessage?: string
@@ -28,7 +28,7 @@ const RangeCalendar = <T extends DateValue>({
   const now = today(getLocalTimeZone())
   return (
     <RangeCalendarPrimitive visibleDuration={visibleDuration} {...props}>
-      <Calendar.Header />
+      <CalendarHeader isRange />
       <div className="flex snap-x items-start justify-stretch gap-6 overflow-auto sm:gap-10">
         {Array.from({ length: visibleDuration?.months ?? 1 }).map((_, index) => {
           const id = index + 1
@@ -38,7 +38,7 @@ const RangeCalendar = <T extends DateValue>({
               offset={id >= 2 ? { months: id - 1 } : undefined}
               className="[&_td]:border-collapse [&_td]:px-0 [&_td]:py-0.5"
             >
-              <Calendar.GridHeader />
+              <CalendarGridHeader />
               <CalendarGridBody className="snap-start">
                 {(date) => (
                   <CalendarCell
