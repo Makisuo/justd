@@ -42,18 +42,16 @@ const Calendar = <T extends DateValue>({ errorMessage, className, ...props }: Ca
           {(date) => (
             <CalendarCell
               date={date}
-              className={composeRenderProps(
-                className,
-                (className, { isSelected, isDisabled, isHovered }) =>
-                  cn(
-                    "relative flex size-11 cursor-default items-center justify-center rounded-lg text-fg tabular-nums outline-hidden data-hovered:bg-secondary-fg/15 sm:size-10 sm:size-9 sm:text-sm/6 forced-colors:text-[ButtonText] forced-colors:outline-0",
-                    isSelected &&
-                      "bg-primary text-primary-fg data-hovered:bg-primary/90 data-invalid:bg-danger data-pressed:bg-primary data-invalid:text-danger-fg forced-colors:bg-[Highlight] forced-colors:text-[Highlight] forced-colors:data-invalid:bg-[Mark]",
-                    isDisabled && "text-muted-fg forced-colors:text-[GrayText]",
-                    date.compare(now) === 0 &&
-                      "after:-translate-x-1/2 after:pointer-events-none after:absolute after:start-1/2 after:bottom-1 after:z-10 after:size-[3px] after:rounded-full after:bg-primary data-focus-visible:after:bg-primary-fg data-selected:after:bg-primary-fg",
-                    className,
-                  ),
+              className={composeRenderProps(className, (className, { isSelected, isDisabled }) =>
+                cn(
+                  "relative flex size-10 cursor-default items-center justify-center rounded-lg text-fg tabular-nums outline-hidden data-hovered:bg-secondary-fg/15 sm:size-9 sm:text-sm/6 forced-colors:text-[ButtonText] forced-colors:outline-0",
+                  isSelected &&
+                    "bg-primary text-primary-fg data-hovered:bg-primary/90 data-invalid:bg-danger data-pressed:bg-primary data-invalid:text-danger-fg forced-colors:bg-[Highlight] forced-colors:text-[Highlight] forced-colors:data-invalid:bg-[Mark]",
+                  isDisabled && "text-muted-fg forced-colors:text-[GrayText]",
+                  date.compare(now) === 0 &&
+                    "after:-translate-x-1/2 after:pointer-events-none after:absolute after:start-1/2 after:bottom-1 after:z-10 after:size-[3px] after:rounded-full after:bg-primary data-focus-visible:after:bg-primary-fg data-selected:after:bg-primary-fg",
+                  className,
+                ),
               )}
             />
           )}
@@ -100,7 +98,7 @@ const CalendarHeader = ({
           size="square-petite"
           className="size-8 **:data-[slot=icon]:text-fg sm:size-7"
           shape="circle"
-          appearance="plain"
+          intent="plain"
           slot="previous"
         >
           {direction === "rtl" ? <IconChevronLgRight /> : <IconChevronLgLeft />}
@@ -109,7 +107,7 @@ const CalendarHeader = ({
           size="square-petite"
           className="size-8 **:data-[slot=icon]:text-fg sm:size-7"
           shape="circle"
-          appearance="plain"
+          intent="plain"
           slot="next"
         >
           {direction === "rtl" ? <IconChevronLgLeft /> : <IconChevronLgRight />}
@@ -134,6 +132,7 @@ const SelectMonth = ({ state }: { state: CalendarState }) => {
   }
   return (
     <Select
+      className="[popover-width:8rem]"
       aria-label="Select month"
       selectedKey={state.focusedDate.month.toString() ?? (new Date().getMonth() + 1).toString()}
       onSelectionChange={(value) => {
@@ -141,7 +140,7 @@ const SelectMonth = ({ state }: { state: CalendarState }) => {
       }}
     >
       <Select.Trigger className="h-8 w-22 text-xs data-focused:ring-3 **:data-[slot=select-value]:inline-block **:data-[slot=select-value]:truncate group-data-open:ring-3" />
-      <Select.List>
+      <Select.List className="w-34 min-w-34 max-w-34" popoverClassName="w-34 max-w-34 min-w-34">
         {months.map((month, index) => (
           <Select.Option key={index} id={(index + 1).toString()} textValue={month}>
             <Select.Label>{month}</Select.Label>
@@ -176,7 +175,7 @@ const SelectYear = ({ state }: { state: CalendarState }) => {
       }}
     >
       <Select.Trigger className="h-8 text-xs data-focused:ring-3 group-data-open:ring-3" />
-      <Select.List>
+      <Select.List className="w-34 min-w-34 max-w-34" popoverClassName="w-34 max-w-34 min-w-34">
         {years.map((year, i) => (
           <Select.Option key={i} id={i} textValue={year.formatted}>
             <Select.Label>{year.formatted}</Select.Label>

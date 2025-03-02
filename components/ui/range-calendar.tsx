@@ -46,7 +46,7 @@ const RangeCalendar = <T extends DateValue>({
                     className={twMerge([
                       "shrink-0 [--cell-fg:var(--color-primary)] [--cell:color-mix(in_oklab,var(--color-primary)_15%,white_85%)]",
                       "dark:[--cell-fg:color-mix(in_oklab,var(--color-primary)_80%,white_20%)] dark:[--cell:color-mix(in_oklab,var(--color-primary)_30%,black_45%)]",
-                      "group/calendar-cell relative size-11 cursor-default outline-hidden [line-height:2.286rem] data-selection-start:rounded-s-lg data-selection-end:rounded-e-lg data-outside-month:text-muted-fg sm:size-10 sm:text-sm lg:size-9",
+                      "group/calendar-cell relative size-10 cursor-default outline-hidden [line-height:2.286rem] data-selection-start:rounded-s-lg data-selection-end:rounded-e-lg data-outside-month:text-muted-fg sm:size-9 sm:text-sm",
                       "data-selected:bg-(--cell)/70 data-selected:text-(--cell-fg) dark:data-selected:bg-(--cell)",
                       "data-invalid:data-selected:bg-danger/10 data-focus-visible:after:bg-primary-fg data-selected:after:bg-primary-fg dark:data-invalid:data-selected:bg-danger/13",
                       "[td:first-child_&]:rounded-s-lg [td:last-child_&]:rounded-e-lg",

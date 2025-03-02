@@ -1,8 +1,12 @@
 "use client"
 import { useId, useState } from "react"
 
+import { IconBrandJustdBlocks } from "@/components/icons/icon-brand-justd-blocks"
 import { ResponsiveAside } from "@/components/responsive-aside"
+import { Keyboard } from "@/components/ui/keyboard"
 import { siteConfig } from "@/resources/config/site"
+import { cn } from "@/utils/classes"
+import { useMediaQuery } from "@/utils/use-media-query"
 import {
   IconBrandAdobe,
   IconBrandDiscord,
@@ -15,7 +19,6 @@ import {
   IconColorPalette,
   IconColors,
   IconCube,
-  IconDuplicateFill,
   IconHome,
   IconNotepad,
   IconSearch,
@@ -25,12 +28,6 @@ import {
 import { LayoutGroup } from "motion/react"
 import { usePathname } from "next/navigation"
 import { Badge, Button, Link, Menu, Separator, buttonStyles } from "ui"
-
-import { Banner } from "@/components/banner"
-import { IconBrandJustdBlocks } from "@/components/icons/icon-brand-justd-blocks"
-import { Keyboard } from "@/components/ui/keyboard"
-import { cn } from "@/utils/classes"
-import { useMediaQuery } from "@/utils/use-media-query"
 import { CommandPalette } from "./command-palette"
 import { NavLink } from "./nav-item"
 import { ThemeSwitcher } from "./theme-switcher"
@@ -43,7 +40,6 @@ export function Navbar() {
   return (
     <>
       <CommandPalette setOpen={setOpen} openCmd={open} />
-      <Banner />
       <LayoutGroup id={`navigation-${id}`}>
         <div className="xnw2 sticky top-0 z-30 hidden overflow-hidden pb-0 lg:block">
           <nav className="fg/10 border-b bg-bg py-2 dark:supports-backdrop-filter:bg-bg/60 dark:supports-backdrop-filter:backdrop-blur-3xl">
@@ -79,22 +75,24 @@ export function Navbar() {
                     Themes
                   </NavLink>
 
-                  <NavLink target="_blank" href="https://blocks.getjustd.com">
-                    Blocks
-                  </NavLink>
+                  <NavLink href="/icons">Icons</NavLink>
+
+                  <NavLink href="/colors">Colors</NavLink>
+
+                  <NavLink href="/blocks">Blocks</NavLink>
                   <Menu>
                     <Menu.Trigger
                       className={cn(
                         "group flex cursor-pointer items-center gap-x-2 py-3 text-muted-fg text-sm tracking-tight",
                       )}
                     >
-                      Ecosystem
+                      Premium Blocks
                       <IconChevronLgDown className="size-3 duration-200 group-data-pressed:rotate-180" />
                     </Menu.Trigger>
                     <Menu.Content
                       className="sm:min-w-xs sm:max-w-min"
                       placement="bottom"
-                      items={ecosystemItems}
+                      items={premium}
                     >
                       {(item) => (
                         <Menu.Item
@@ -131,7 +129,7 @@ export function Navbar() {
                     <Button
                       onPress={() => setOpen((open: boolean) => !open)}
                       size="small"
-                      appearance="outline"
+                      intent="outline"
                       className="h-9"
                     >
                       <IconSearch />
@@ -145,7 +143,7 @@ export function Navbar() {
                     <Link
                       aria-label="Join Discord"
                       className={buttonStyles({
-                        appearance: "outline",
+                        intent: "outline",
                         size: "square-petite",
                         className:
                           "data-hovered:border-indigo-500/20 data-hovered:bg-indigo-600/10 data-hovered:**:data-[slot=icon]:text-indigo-600 **:data-[slot=icon]:text-indigo-500",
@@ -158,7 +156,7 @@ export function Navbar() {
                     <Link
                       aria-label="Follow Update on X"
                       className={buttonStyles({
-                        appearance: "outline",
+                        intent: "outline",
                         size: "square-petite",
                         className: "**:data-[slot=icon]:text-fg",
                       })}
@@ -170,7 +168,7 @@ export function Navbar() {
                     <Link
                       aria-label="Follow Update on X"
                       className={buttonStyles({
-                        appearance: "outline",
+                        intent: "outline",
                         size: "square-petite",
                         className:
                           "data-hovered:border-blue-500/20 data-hovered:bg-blue-600/10 **:data-[slot=icon]:text-fg",
@@ -184,7 +182,7 @@ export function Navbar() {
                     <Link
                       aria-label="Github Repository"
                       className={buttonStyles({
-                        appearance: "outline",
+                        intent: "outline",
                         size: "square-petite",
                         className: "**:data-[slot=icon]:text-fg sm:text-xs",
                       })}
@@ -211,7 +209,7 @@ export function NavbarDropdown() {
   return (
     <div className="flex items-center gap-x-1">
       <Menu>
-        <Button aria-label={siteConfig.name} appearance="plain" className="-ml-1 group">
+        <Button aria-label={siteConfig.name} intent="plain" className="-ml-1 group">
           <span className="flex items-center gap-x-2">
             <IconBrandJustd className="-ml-1 size-4.5" />
             <span className="font-mono text-base tracking-tight sm:text-sm">{siteConfig.name}</span>
@@ -290,7 +288,7 @@ export function NavbarDropdown() {
         </Menu.Content>
       </Menu>
       <Menu>
-        <Button appearance="plain" className="group justify-between text-left sm:hidden">
+        <Button intent="plain" className="group justify-between text-left sm:hidden">
           {pathname.includes("/docs/") ? pathname.split("/")[2] : siteConfig.currentVersion}
           <IconChevronLgDown className="size-3 duration-200 group-pressed:rotate-180" />
         </Button>
@@ -302,14 +300,21 @@ export function NavbarDropdown() {
     </div>
   )
 }
-const ecosystemItems = [
+
+const premium = [
   {
     id: 1,
     label: "Premium Blocks",
     href: "https://blocks.getjustd.com",
     icon: <IconBrandJustdBlocks />,
     description: "Pre-designed, ready-to-use React components for seamless integration.",
-    badge: "15% off",
+  },
+  {
+    id: 4,
+    label: "Templates",
+    href: "https://blocks.getjustd.com/templates",
+    icon: <IconBrandJustdBlocks />,
+    description: "Pre-designed, ready-to-use React components for seamless integration.",
   },
   {
     id: 2,
@@ -327,35 +332,5 @@ const ecosystemItems = [
     icon: <IconBrandFigma />,
     description: "Enhance your Figma designs with Justd components.",
     badge: "Coming soon",
-  },
-  {
-    id: 4,
-    label: "Icons",
-    href: "/icons",
-    icon: <IconDuplicateFill />,
-    description:
-      "Justd Icons is a powerful open-source SVG icon library with over 1,191 symbols, and more added with every release.",
-  },
-  {
-    id: 5,
-    label: "Themes",
-    href: "/themes",
-    icon: <IconColorPalette />,
-    description: "Curated themes to easily create polished designs for your apps.",
-  },
-  {
-    id: 6,
-    label: "Colors",
-    href: "/colors",
-    icon: <IconColors />,
-    description: "Over 154 colors blending TailwindCSS vibes with HTML color names.",
-  },
-  {
-    id: 7,
-    label: "Basic Blocks",
-    href: "/blocks",
-    icon: <IconWindowVisit />,
-    description:
-      "Example guides demonstrating how to effectively use components in their entirety.",
   },
 ]

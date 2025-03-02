@@ -102,9 +102,6 @@ export function Resources() {
             rel="noopener noreferrer"
             href="https://dub.sh/RNMV32k"
           >
-            <span className="absolute top-0 right-0 mt-12 mr-4 rotate-12 font-mono text-2xl text-muted-fg/20 tracking-tighter sm:text-7xl">
-              15% off
-            </span>
             <div className="flex">
               <WrapperIcon>
                 <IconBrandJustdBlocks />
@@ -118,7 +115,7 @@ export function Resources() {
                   and optimized for modern web applications.
                 </Card.Description>
                 <div>
-                  <Badge>15% off</Badge>
+                  <Badge>Premium Blocks</Badge>
                 </div>
               </Card.Header>
             </div>
@@ -143,7 +140,7 @@ export function Resources() {
                   a collection of designs tailored to meet your needs.
                 </Card.Description>
                 <div>
-                  <Badge>15% off</Badge>
+                  <Badge>Premium Blocks</Badge>
                 </div>
               </Card.Header>
             </div>
