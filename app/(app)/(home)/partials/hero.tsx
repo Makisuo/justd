@@ -1,7 +1,7 @@
 "use client"
 
 import { siteConfig } from "@/resources/config/site"
-import { IconBrandGithub, IconBrandJustd, IconCube, IconStarFill } from "justd-icons"
+import { IconBrandGithub, IconBrandJustd, IconCube, IconStar } from "justd-icons"
 import { Header } from "react-aria-components"
 import { Container, Link, buttonStyles } from "ui"
 
@@ -26,10 +26,10 @@ export function Hero() {
             <Link
               target="_blank"
               href={siteConfig.repo}
-              className="inset-ring inset-ring-fg/10 inline-flex items-center gap-x-2 rounded-full bg-fg/5 px-2.5 py-1.5 text-xs/5 transition data-hovered:inset-ring/fg/15 data-hovered:bg-fg/10"
+              className="inset-ring inset-ring-fg/10 inline-flex items-center gap-x-2 rounded-full bg-fg/5 px-2.5 py-1.5 font-mono text-[0.65rem]/5 tracking-tight transition data-hovered:inset-ring/fg/15 data-hovered:bg-fg/10"
             >
-              <IconStarFill className="text-amber-400" />
-              1.1K Github <IconBrandGithub />
+              <IconStar className="fill-yellow-500/40 text-yellow-500" />
+              1.2K Github <IconBrandGithub />
             </Link>
             <h1 className="mt-4 mb-4 max-w-6xl bg-linear-to-r from-zinc-900 to-zinc-600 bg-clip-text pb-1 font-semibold text-3xl text-transparent tracking-tight lg:mb-6 lg:text-6xl dark:from-blue-400 dark:to-blue-200">
               Accessible React components made for you to copy, customize, and own.

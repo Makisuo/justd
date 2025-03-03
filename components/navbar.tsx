@@ -41,11 +41,11 @@ export function Navbar() {
     <>
       <CommandPalette setOpen={setOpen} openCmd={open} />
       <LayoutGroup id={`navigation-${id}`}>
-        <div className="xnw2 sticky top-0 z-30 hidden overflow-hidden pb-0 lg:block">
+        <div className="xnw2 sticky top-0 z-40 hidden overflow-hidden pb-0 lg:block">
           <nav className="fg/10 border-b bg-bg py-2 dark:supports-backdrop-filter:bg-bg/60 dark:supports-backdrop-filter:backdrop-blur-3xl">
             <div className="mx-auto max-w-(--breakpoint-2xl) px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-x-5">
+                <div className="flex items-center gap-x-6">
                   <NavbarDropdown />
                   <Separator orientation="vertical" className="-ml-4 mr-1 h-6" />
                   <NavLink isNextLink isActive={pathname === "/"} href="/">
@@ -90,6 +90,7 @@ export function Navbar() {
                       <IconChevronLgDown className="size-3 duration-200 group-data-pressed:rotate-180" />
                     </Menu.Trigger>
                     <Menu.Content
+                      offset={4}
                       className="sm:min-w-xs sm:max-w-min"
                       placement="bottom"
                       items={premium}
