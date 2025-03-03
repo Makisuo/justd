@@ -50,7 +50,7 @@ const ColorPicker = ({
           <Button
             isDisabled={isDisabled}
             size={label ? "medium" : "square-petite"}
-            appearance="plain"
+            intent="plain"
             className={twJoin(
               "*:data-[slot=color-swatch]:-mx-0.5 w-auto px-2.5",
               !label && "size-10",
@@ -101,7 +101,7 @@ const EyeDropper = () => {
     <Button
       aria-label="Eye dropper"
       size="square-petite"
-      appearance="outline"
+      intent="outline"
       onPress={() => {
         const eyeDropper = window.EyeDropper ? new window.EyeDropper() : null
         eyeDropper?.open().then((result) => state.setColor(parseColor(result.sRGBHex)))

@@ -16,7 +16,7 @@ export default function AppSidebarNav() {
       <SidebarTrigger />
       <div className="mx-auto flex items-center gap-x-2 sm:min-w-120">
         <SearchField className="w-full" />
-        <Button size="square-petite" className="size-10" appearance="plain">
+        <Button size="square-petite" className="size-10" intent="plain">
           <IconMic />
         </Button>
       </div>

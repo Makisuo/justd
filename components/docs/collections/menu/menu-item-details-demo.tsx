@@ -5,7 +5,7 @@ import { Button, Menu } from "ui"
 export default function MenuItemDetailsDemo() {
   return (
     <Menu>
-      <Button appearance="outline">Open</Button>
+      <Button intent="outline">Open</Button>
       <Menu.Content placement="bottom" items={roles}>
         {(item) => (
           <Menu.Item id={item.id} textValue={item.name}>

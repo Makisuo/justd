@@ -25,14 +25,14 @@ export function SidebarHeader() {
         <SidebarLabel className="font-medium text-sm">getjustd.com</SidebarLabel>
       </Link>
       <div className="-mr-2 flex items-center gap-x-0.5 text-muted-fg **:[button]:text-muted-fg **:[button]:*:data-[slot=icon]:size-3.5 **:[button]:data-hovered:text-fg">
-        <Button className="size-7" size="square-petite" appearance="plain" aria-label="Collapse">
+        <Button className="size-7" size="square-petite" intent="plain" aria-label="Collapse">
           <IconArrowUp />
         </Button>
-        <Button className="size-7" size="square-petite" appearance="plain" aria-label="Shrink All">
+        <Button className="size-7" size="square-petite" intent="plain" aria-label="Shrink All">
           <IconArrowShrink />
         </Button>
         <Menu>
-          <Button className="size-7" size="square-petite" appearance="plain" aria-label="Options">
+          <Button className="size-7" size="square-petite" intent="plain" aria-label="Options">
             <IconDotsVertical />
           </Button>
           <Menu.Content className="sm:min-w-56">
@@ -147,7 +147,7 @@ export function SidebarHeader() {
           onPress={toggleSidebar}
           className="size-7"
           size="square-petite"
-          appearance="plain"
+          intent="plain"
           aria-label="Minimize"
         >
           <IconMinus />

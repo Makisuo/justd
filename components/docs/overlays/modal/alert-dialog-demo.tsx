@@ -1,6 +1,6 @@
 "use client"
 
-import { Modal, buttonStyles } from "ui"
+import { Button, Modal, buttonStyles } from "ui"
 
 export default function AlertDialogDemo() {
   return (
@@ -14,10 +14,8 @@ export default function AlertDialogDemo() {
           </Modal.Description>
         </Modal.Header>
         <Modal.Footer>
-          <Modal.Close appearance="outline">Cancel</Modal.Close>
-          <Modal.Close appearance="solid" intent="danger">
-            Continue
-          </Modal.Close>
+          <Modal.Close>Cancel</Modal.Close>
+          <Button intent="danger">Continue</Button>
         </Modal.Footer>
       </Modal.Content>
     </Modal>

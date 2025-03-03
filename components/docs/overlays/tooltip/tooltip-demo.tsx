@@ -19,7 +19,7 @@ export default function TooltipDemo() {
       <Tooltip.Trigger
         aria-label="Manage Layout"
         className={buttonStyles({
-          appearance: "outline",
+          intent: "outline",
           size: "square-petite",
         })}
       >

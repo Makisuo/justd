@@ -6,7 +6,7 @@ import { Button, Menu } from "ui"
 export default function MenuRespectScreenDemo() {
   return (
     <Menu respectScreen={false}>
-      <Button appearance="outline">Open</Button>
+      <Button intent="outline">Open</Button>
       <Menu.Content placement="bottom" className="min-w-48">
         <Menu.Item>
           <IconDashboard />

@@ -5,7 +5,7 @@ import { Button, Menu } from "ui"
 export default function MenuSubDemo() {
   return (
     <Menu>
-      <Button appearance="outline">Open</Button>
+      <Button intent="outline">Open</Button>
       <Menu.Content placement="bottom">
         <Menu.Item>
           <Menu.Label>Dashboard</Menu.Label>

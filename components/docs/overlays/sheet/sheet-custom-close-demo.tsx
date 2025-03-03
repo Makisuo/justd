@@ -5,7 +5,7 @@ import { Button, Checkbox, CheckboxGroup, Sheet } from "ui"
 export default function SheetControlledDemo() {
   return (
     <Sheet>
-      <Button appearance="outline">Notifications</Button>
+      <Button intent="outline">Notifications</Button>
       <Sheet.Content aria-label="Notifications">
         <Sheet.Header>
           <Sheet.Title>Manage Notifications</Sheet.Title>

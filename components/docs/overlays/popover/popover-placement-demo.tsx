@@ -10,7 +10,7 @@ export default function PopoverPlacementDemo() {
     <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
       {placements.map((placement, idx) => (
         <Popover key={idx}>
-          <Button className="mx-auto" size="small" appearance="outline">
+          <Button className="mx-auto" size="small" intent="outline">
             {placement}
           </Button>
           <Popover.Content className="p-4" placement={placement}>

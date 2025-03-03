@@ -5,7 +5,7 @@ import { Drawer, buttonStyles } from "ui"
 export default function DrawerStickyDemo() {
   return (
     <Drawer>
-      <Drawer.Trigger className={buttonStyles({ shape: "circle", appearance: "outline" })}>
+      <Drawer.Trigger className={buttonStyles({ shape: "circle", intent: "outline" })}>
         Open
       </Drawer.Trigger>
       <Drawer.Content>

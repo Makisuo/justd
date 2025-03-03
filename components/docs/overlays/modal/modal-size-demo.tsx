@@ -19,7 +19,7 @@ export default function ModalSizeDemo() {
       <Grid columns={{ initial: 2, sm: 3, lg: 4 }} gap={2}>
         {sizes.map((size, idx) => (
           <Grid.Item key={idx}>
-            <Button appearance="outline" onPress={() => handlePress(size, true)}>
+            <Button intent="outline" onPress={() => handlePress(size, true)}>
               Open {size}
             </Button>
           </Grid.Item>
@@ -35,7 +35,7 @@ export default function ModalSizeDemo() {
           </Modal.Description>
         </Modal.Header>
         <Modal.Footer>
-          <Button appearance="outline" onPress={() => setIsOpen(false)}>
+          <Button intent="outline" onPress={() => setIsOpen(false)}>
             Close
           </Button>
           <Button onPress={() => setIsOpen(false)}>Confirm</Button>

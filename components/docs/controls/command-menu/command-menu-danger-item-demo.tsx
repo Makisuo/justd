@@ -8,7 +8,7 @@ export default function CommandMenuDangerItemDemo() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <Button appearance="outline" onPress={() => setIsOpen(true)}>
+      <Button intent="outline" onPress={() => setIsOpen(true)}>
         Open
       </Button>
       <CommandMenu isOpen={isOpen} onOpenChange={setIsOpen}>

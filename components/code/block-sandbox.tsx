@@ -209,7 +209,7 @@ function Component({ folders, fullscreen, isIframe = false, title, ...props }: P
                 <Link
                   href={fullscreen}
                   target="_blank"
-                  className={buttonStyles({ appearance: "plain", size: "square-petite" })}
+                  className={buttonStyles({ intent: "plain", size: "square-petite" })}
                   aria-label="Open in fullscreen"
                 >
                   <IconFullscreen />
@@ -275,7 +275,7 @@ function Component({ folders, fullscreen, isIframe = false, title, ...props }: P
                     }}
                     className="-mr-2 data-hovered:bg-transparent data-hovered:**:data-[slot=icon]:rotate-90 **:data-[slot=icon]:text-muted-fg **:data-[slot=icon]:duration-200"
                     size="square-petite"
-                    appearance="plain"
+                    intent="plain"
                   >
                     <IconX />
                   </Button>
@@ -315,7 +315,7 @@ function DisclosureGroup(props: {
 const ToggleDevice = (props: React.ComponentProps<typeof Toggle>) => {
   return (
     <Toggle
-      appearance="plain"
+      intent="plain"
       size="square-petite"
       className="relative size-7.5 data-hovered:bg-bg data-selected:bg-bg data-selected:*:data-[slot=icon]:fill-primary/20 data-hovered:*:data-[slot=icon]:text-primary data-selected:*:data-[slot=icon]:text-primary"
       {...props}

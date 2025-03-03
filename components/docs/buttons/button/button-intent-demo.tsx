@@ -1,23 +1,15 @@
 "use client"
-
-import { IconAdjustment, IconArchive2, IconDuplicate, IconTrash } from "justd-icons"
 import { Button } from "ui"
 
 export default function ButtonIntentDemo() {
   return (
     <div className="flex max-w-sm flex-wrap gap-2">
-      <Button>
-        <IconDuplicate /> Label
-      </Button>
-      <Button intent="secondary">
-        <IconAdjustment /> Label
-      </Button>
-      <Button intent="danger">
-        <IconTrash /> Label
-      </Button>
-      <Button intent="warning">
-        <IconArchive2 /> Label
-      </Button>
+      <Button intent="primary">Label</Button>
+      <Button intent="secondary">Label</Button>
+      <Button intent="warning">Label</Button>
+      <Button intent="danger">Label</Button>
+      <Button intent="outline">Label</Button>
+      <Button intent="plain">Label</Button>
     </div>
   )
 }

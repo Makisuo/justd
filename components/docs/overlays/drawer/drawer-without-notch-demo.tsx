@@ -5,7 +5,7 @@ import { Drawer, buttonStyles } from "ui"
 export default function DrawerWithoutNotchDemo() {
   return (
     <Drawer withNotch={false}>
-      <Drawer.Trigger className={buttonStyles({ shape: "circle", appearance: "outline" })}>
+      <Drawer.Trigger className={buttonStyles({ shape: "circle", intent: "outline" })}>
         Open Drawer
       </Drawer.Trigger>
       <Drawer.Content>

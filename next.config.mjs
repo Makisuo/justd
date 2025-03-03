@@ -5,10 +5,7 @@ const withMDX = createMDX()
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
-  devIndicators: {
-    buildActivity: false,
-    appIsrStatus: false,
-  },
+  // devIndicators: false,
   experimental: {
     reactCompiler: true,
   },

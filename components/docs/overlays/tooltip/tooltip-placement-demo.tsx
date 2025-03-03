@@ -10,7 +10,7 @@ export default function TooltipPlacementDemo() {
     <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6 [&_.kbt32x]:w-full">
       {placements.map((placement, idx) => (
         <Tooltip key={idx}>
-          <Button className="mx-auto" size="small" appearance="outline">
+          <Button className="mx-auto" size="small" intent="outline">
             {placement}
           </Button>
           <Tooltip.Content placement={placement}>

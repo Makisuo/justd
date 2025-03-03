@@ -9,14 +9,14 @@ export default function LinkButtonDemo() {
         Link
       </Link>
       <Link
-        className={(renderProps) => buttonStyles({ ...renderProps, appearance: "outline" })}
+        className={(renderProps) => buttonStyles({ ...renderProps, intent: "outline" })}
         href="#use-as-button"
       >
         Link
       </Link>
       <Link
         className={(renderProps) =>
-          buttonStyles({ ...renderProps, appearance: "plain", shape: "circle" })
+          buttonStyles({ ...renderProps, intent: "plain", shape: "circle" })
         }
         href="#use-as-button"
       >

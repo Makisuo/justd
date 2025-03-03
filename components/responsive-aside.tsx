@@ -30,7 +30,7 @@ export function ResponsiveAside({
         <Button
           aria-label="Open Menu."
           className="-ml-2 **:data-[slot=icon]:text-fg"
-          appearance="outline"
+          intent="outline"
           size="square-petite"
           onPress={() => {
             setOpenAside(true)
@@ -45,7 +45,7 @@ export function ResponsiveAside({
           <Button
             onPress={() => setOpenCmd(true)}
             size="square-petite"
-            appearance="outline"
+            intent="outline"
             aria-label="Open command palette"
           >
             <IconSearch />
@@ -54,7 +54,7 @@ export function ResponsiveAside({
           <Link
             href="https://x.com/irsyadadl"
             aria-label="Follow me on twitter"
-            className={buttonStyles({ appearance: "outline", size: "square-petite" })}
+            className={buttonStyles({ intent: "outline", size: "square-petite" })}
           >
             <IconBrandX />
           </Link>

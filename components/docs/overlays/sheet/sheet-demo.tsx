@@ -5,7 +5,7 @@ import { Button, Sheet, Switch, TextField } from "ui"
 export default function SheetDemo() {
   return (
     <Sheet>
-      <Button appearance="outline">Edit Settings</Button>
+      <Button intent="outline">Edit Settings</Button>
       <Sheet.Content>
         <Sheet.Header>
           <Sheet.Title>Update User Settings</Sheet.Title>

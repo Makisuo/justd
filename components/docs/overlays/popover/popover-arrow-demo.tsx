@@ -6,7 +6,7 @@ import { Button, Popover } from "ui"
 export default function PopoverArrowDemo() {
   return (
     <Popover>
-      <Button appearance="outline" size="square-petite">
+      <Button intent="outline" size="square-petite">
         <IconBell />
       </Button>
       <Popover.Content showArrow={false} className="p-4 sm:min-w-72">

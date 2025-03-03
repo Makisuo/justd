@@ -227,8 +227,7 @@ const CarouselHandler = ({ ref, className, ...props }: React.ComponentProps<"div
 const CarouselButton = ({
   segment,
   className,
-  intent = "secondary",
-  appearance = "outline",
+  intent = "outline",
   shape = "circle",
   size = "square-petite",
   ref,
@@ -246,7 +245,6 @@ const CarouselButton = ({
       data-handler={segment}
       intent={intent}
       ref={ref}
-      appearance={appearance}
       size={size}
       shape={shape}
       className={composeTailwindRenderProps(
