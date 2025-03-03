@@ -5,7 +5,7 @@ import { Button } from "ui"
 
 export default function ButtonOnlyIconDemo() {
   return (
-    <Button size="square-petite" appearance="outline">
+    <Button size="square-petite" intent="outline">
       <IconBrandParsinta />
     </Button>
   )

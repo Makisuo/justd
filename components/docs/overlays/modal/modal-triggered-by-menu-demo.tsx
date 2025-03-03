@@ -50,7 +50,7 @@ export default function ModalTriggeredByMenuDemo() {
   return (
     <>
       <Menu>
-        <Button appearance="outline" className="group">
+        <Button intent="outline" className="group">
           Actions...
           <IconChevronLgDown className="decoration-200 transition-transform group-data-pressed:rotate-180" />
         </Button>

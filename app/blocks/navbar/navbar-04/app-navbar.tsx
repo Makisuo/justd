@@ -43,7 +43,7 @@ export default function AppNavbar() {
         </Navbar.Flex>
         <Navbar.Flex>
           <Navbar.Flex>
-            <Button appearance="plain" size="square-petite" aria-label="Your Bag">
+            <Button intent="plain" size="square-petite" aria-label="Your Bag">
               <IconShoppingBag />
             </Button>
           </Navbar.Flex>

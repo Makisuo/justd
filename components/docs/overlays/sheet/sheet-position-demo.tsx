@@ -21,7 +21,7 @@ export default function SheetPositionDemo() {
     <>
       <div className="grid grid-cols-2 gap-2">
         {sides.map((side, idx) => (
-          <Button appearance="outline" onPress={() => pressHandler(side, true)} key={idx}>
+          <Button intent="outline" onPress={() => pressHandler(side, true)} key={idx}>
             {titleCase(side)}
           </Button>
         ))}

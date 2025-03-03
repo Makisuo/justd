@@ -102,7 +102,7 @@ interface SelectedFormatProps {
 export function SelectFormat({ selected, setSelected }: SelectedFormatProps) {
   return (
     <Menu>
-      <Button appearance="outline" className="w-32 justify-between font-mono uppercase">
+      <Button intent="outline" className="w-32 justify-between font-mono uppercase">
         {[...selected].join(", ")}
         <IconChevronLgDown className="ml-1" />
       </Button>

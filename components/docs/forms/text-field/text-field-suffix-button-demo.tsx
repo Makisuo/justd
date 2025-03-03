@@ -20,14 +20,14 @@ export default function TextFieldSuffixButtonDemo() {
           <TextField label="Email" placeholder="Email" type="email" />
         </Modal.Body>
         <Modal.Footer>
-          <Modal.Close appearance="outline">Cancel</Modal.Close>
+          <Modal.Close intent="outline">Cancel</Modal.Close>
           <Button onPress={close}>Continue</Button>
         </Modal.Footer>
       </Modal.Content>
       <TextField
         label="Username"
         suffix={
-          <Button aria-label="New user" onPress={() => setOpen(true)} appearance="outline">
+          <Button aria-label="New user" onPress={() => setOpen(true)} intent="outline">
             <IconPlus />
           </Button>
         }

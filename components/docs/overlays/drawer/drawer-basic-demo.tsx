@@ -5,7 +5,7 @@ import { Drawer, TextField, buttonStyles } from "ui"
 export default function DrawerBasicDemo() {
   return (
     <Drawer>
-      <Drawer.Trigger className={buttonStyles({ appearance: "outline" })}>Login</Drawer.Trigger>
+      <Drawer.Trigger className={buttonStyles({ intent: "outline" })}>Login</Drawer.Trigger>
       <Drawer.Content>
         <Drawer.Header>
           <Drawer.Title>Login</Drawer.Title>

@@ -20,7 +20,7 @@ export default function SheetControlledDemo() {
           <Textarea label="Your Feedback" placeholder="Type your feedback here..." />
         </Sheet.Body>
         <Sheet.Footer>
-          <Button appearance="outline" onPress={() => setIsOpen(false)}>
+          <Button intent="outline" onPress={() => setIsOpen(false)}>
             Close
           </Button>
           <Button intent="primary" onPress={() => setIsOpen(false)}>

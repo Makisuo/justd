@@ -10,7 +10,7 @@ export default function TooltipDelayDemo() {
         <Tooltip.Trigger
           aria-label="Follow me"
           className={buttonStyles({
-            appearance: "outline",
+            intent: "outline",
             size: "square-petite",
           })}
         >

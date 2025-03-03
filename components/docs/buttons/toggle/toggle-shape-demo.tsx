@@ -4,7 +4,7 @@ import { Toggle } from "ui"
 
 export default function ToggleShapeDemo() {
   return (
-    <Toggle appearance="outline" shape="circle">
+    <Toggle intent="outline" shape="circle">
       {({ isSelected }) => <>{isSelected ? "Disabled" : "Enabled"}</>}
     </Toggle>
   )

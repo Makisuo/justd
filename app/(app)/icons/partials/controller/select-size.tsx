@@ -30,7 +30,7 @@ export function SelectSize() {
     <Menu aria-label="Select Icon Size">
       <Button
         className="**:data-[slot=icon]:transition-transform [&[data-pressed]_[data-slot=icon]]:rotate-180"
-        appearance="outline"
+        intent="outline"
       >
         <span className="inline sm:hidden">
           {title([...selectedSize].join(", ").replace("size-", " ")) || "5"}

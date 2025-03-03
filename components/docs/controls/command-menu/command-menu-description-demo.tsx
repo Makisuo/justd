@@ -7,7 +7,7 @@ export default function CommandMenuDescriptionDemo() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <Button appearance="outline" onPress={() => setIsOpen(true)}>
+      <Button intent="outline" onPress={() => setIsOpen(true)}>
         Open
       </Button>
       <CommandMenu escapeButton={false} isOpen={isOpen} onOpenChange={setIsOpen}>

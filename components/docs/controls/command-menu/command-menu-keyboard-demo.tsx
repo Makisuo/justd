@@ -8,7 +8,7 @@ export default function CommandMenuKeyboardDemo() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <Button appearance="outline" onPress={() => setIsOpen(true)}>
+      <Button intent="outline" onPress={() => setIsOpen(true)}>
         Open
       </Button>
       <CommandMenu key="k" isOpen={isOpen} onOpenChange={setIsOpen}>

@@ -18,7 +18,7 @@ export default function CommandMenuControlledDemo() {
 
   return (
     <>
-      <Button appearance="outline" onPress={() => setIsOpen(true)}>
+      <Button intent="outline" onPress={() => setIsOpen(true)}>
         Open
       </Button>
       <CommandMenu

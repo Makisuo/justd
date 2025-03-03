@@ -7,7 +7,7 @@ export function PopoverOverlays() {
   return (
     <Wrapper>
       <Popover>
-        <Button appearance="outline">Forgot Password</Button>
+        <Button intent="outline">Forgot Password</Button>
         <Popover.Content className="max-w-[28rem]">
           <Popover.Header>
             <Popover.Title>Email</Popover.Title>
@@ -34,7 +34,7 @@ export function ModalOverlays() {
           </Modal.Header>
           <Modal.Footer>
             <Modal.Close>Later</Modal.Close>
-            <Modal.Close appearance="solid">Update Now</Modal.Close>
+            <Modal.Close intent="primary">Update Now</Modal.Close>
           </Modal.Footer>
         </Modal.Content>
       </Modal>

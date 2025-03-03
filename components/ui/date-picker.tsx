@@ -81,7 +81,7 @@ const DatePickerOverlay = ({
 }
 
 const DatePickerIcon = () => (
-  <Button size="square-petite" appearance="plain" className={datePickerIcon()}>
+  <Button size="square-petite" intent="plain" className={datePickerIcon()}>
     <IconCalendarDays aria-hidden className="ml-2 group-open:text-fg" />
   </Button>
 )

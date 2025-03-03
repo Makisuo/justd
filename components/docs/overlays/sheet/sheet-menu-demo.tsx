@@ -132,7 +132,7 @@ export default function SheetMenuDemo() {
             </MenuPrimitive>
           </Sheet.Body>
           <Sheet.Footer className="border-t bg-muted/20 sm:p-4">
-            <Button size="small" className="w-full justify-between bg-bg" appearance="outline">
+            <Button size="small" className="w-full justify-between bg-bg" intent="outline">
               <span>Sign out</span>
               <IconLogout />
             </Button>

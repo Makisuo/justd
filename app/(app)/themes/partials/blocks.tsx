@@ -45,11 +45,8 @@ export function Blocks() {
           </div>
           <Separator className="mx-auto max-w-[16rem]" />
           <div className="grid grid-cols-2 gap-2">
-            {Object.keys(buttonStyles.variants.appearance).map((appearance) => (
-              <Button
-                key={appearance}
-                appearance={appearance as keyof typeof buttonStyles.variants.appearance}
-              >
+            {Object.keys(buttonStyles.variants.intent).map((intent) => (
+              <Button key={intent} intent={intent as keyof typeof buttonStyles.variants.intent}>
                 <IconDashboard /> Label
               </Button>
             ))}

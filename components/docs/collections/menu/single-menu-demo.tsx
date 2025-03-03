@@ -35,7 +35,7 @@ export default function SingleMenuDemo() {
   const [selected, setSelected] = useState<Selection>(new Set(["bottom"]))
   return (
     <Menu>
-      <Button appearance="outline">Placement</Button>
+      <Button intent="outline">Placement</Button>
       <Menu.Content
         placement={Array.from(selected)[0] as Placement}
         selectionMode="single"

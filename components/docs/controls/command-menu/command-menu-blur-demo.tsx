@@ -9,7 +9,7 @@ export default function CommandMenuBlurDemo() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <Button appearance="outline" onPress={() => setIsOpen(true)}>
+      <Button intent="outline" onPress={() => setIsOpen(true)}>
         Open
       </Button>
       <CommandMenu isBlurred isOpen={isOpen} onOpenChange={setIsOpen}>

@@ -30,7 +30,7 @@ export function Blocks() {
           </Heading>
           <Link
             href="/docs/2.x/components/buttons/button"
-            className={buttonStyles({ size: "small", appearance: "outline" })}
+            className={buttonStyles({ size: "small", intent: "outline" })}
           >
             Show More <IconArrowRight />
           </Link>

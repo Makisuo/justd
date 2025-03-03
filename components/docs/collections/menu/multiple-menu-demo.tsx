@@ -9,7 +9,7 @@ export default function MultipleMenuDemo() {
   const [selected, setSelected] = useState<Selection>(new Set(["autoPlay"]))
   return (
     <Menu>
-      <Button appearance="outline">Open</Button>
+      <Button intent="outline">Open</Button>
       <Menu.Content
         placement="bottom"
         selectionMode="multiple"

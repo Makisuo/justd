@@ -17,7 +17,7 @@ export default function ToastPositionsDemo() {
     <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
       {positions.map((position) => (
         <Button
-          appearance="outline"
+          intent="outline"
           size="small"
           key={position}
           onPress={() =>

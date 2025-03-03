@@ -36,7 +36,7 @@ export function InstallIcon({ pkg = "justd-icons" }: { pkg?: string }) {
       <Menu>
         <Button
           size="square-petite"
-          appearance="outline"
+          intent="outline"
           className="size-7 rounded-sm"
           aria-label="Copy npm command"
         >

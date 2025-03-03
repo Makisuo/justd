@@ -139,7 +139,7 @@ function CopyButton({
       className={cn(
         buttonStyles({
           size: "square-petite",
-          appearance: "plain",
+          intent: "plain",
         }),
         "transition-opacity group-hover:opacity-100",
         !checked && "opacity-0",

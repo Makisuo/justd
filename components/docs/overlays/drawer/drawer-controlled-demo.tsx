@@ -8,7 +8,7 @@ export default function DrawerControlledDemo() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <Button onPress={() => setIsOpen(!isOpen)} appearance="outline">
+      <Button onPress={() => setIsOpen(!isOpen)} intent="outline">
         Login
       </Button>
       <Drawer isOpen={isOpen} onOpenChange={setIsOpen}>
