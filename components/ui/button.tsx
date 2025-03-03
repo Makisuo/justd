@@ -77,7 +77,6 @@ const buttonStyles = tv({
   },
   defaultVariants: {
     intent: "primary",
-    appearance: "solid",
     size: "medium",
     shape: "square",
   },
