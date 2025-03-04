@@ -16,7 +16,7 @@ const languages = [
   { id: "ar", name: "Arabic" },
 ]
 
-export function SelectSearchableDemo() {
+export default function SelectSearchableDemo() {
   const { contains } = useFilter({ sensitivity: "base" })
   return (
     <Select label="Select a language">
