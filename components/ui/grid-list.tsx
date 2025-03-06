@@ -31,13 +31,13 @@ const itemStyles = tv({
   variants: {
     isHovered: { true: "bg-subtle" },
     isSelected: {
-      true: "z-20 border-border/50 bg-(--selected-item) data-hovered:bg-(--selected-item-hovered)",
+      true: "z-20 border-border/50 bg-(--selected-item) hover:bg-(--selected-item-hovered)",
     },
     isFocused: {
       true: "outline-hidden",
     },
     isFocusVisible: {
-      true: "bg-(--selected-item) outline-hidden ring-1 ring-ring data-hovered:bg-(--selected-item-hovered) data-selected:bg-(--selected-item)",
+      true: "bg-(--selected-item) selected:bg-(--selected-item) outline-hidden ring-1 ring-ring hover:bg-(--selected-item-hovered)",
     },
     isDisabled: {
       true: "text-muted-fg/70 forced-colors:text-[GrayText]",
@@ -68,7 +68,7 @@ const GridListItem = ({ className, ...props }: GridListItemProps) => {
 
           <span
             aria-hidden
-            className="absolute inset-y-0 left-0 hidden h-full w-0.5 bg-primary group-data-selected:block"
+            className="absolute inset-y-0 left-0 hidden h-full w-0.5 bg-primary group-selected:block"
           />
           {values.selectionMode === "multiple" && values.selectionBehavior === "toggle" && (
             <Checkbox className="-mr-2" slot="selection" />

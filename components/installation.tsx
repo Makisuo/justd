@@ -54,7 +54,7 @@ export function Installation({ className, ...props }: InstallationProps) {
         <p>
           If you hit any issues, make sure you check out the installation guide{" "}
           <Link
-            className="not-prose xd2432 text-blue-600 data-hovered:underline dark:text-blue-400"
+            className="not-prose xd2432 text-blue-600 hover:underline dark:text-blue-400"
             intent="primary"
             href="/docs/2.x/getting-started/cli"
             target="_blank"

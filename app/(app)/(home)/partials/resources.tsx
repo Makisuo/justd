@@ -59,7 +59,7 @@ export function Resources() {
             <Link
               target="_blank"
               href={item.url}
-              className="group relative bg-bg p-4 data-hovered:bg-overlay sm:p-8 lg:p-10"
+              className="group relative bg-bg p-4 hover:bg-overlay sm:p-8 lg:p-10"
               aria-label={item.name}
               key={item.name.toLowerCase().replaceAll(" ", "-")}
             >
@@ -96,7 +96,7 @@ export function Resources() {
           aria-label="Extra"
         >
           <Link
-            className="group relative bg-bg p-4 data-hovered:bg-overlay sm:p-8 lg:p-10"
+            className="group relative bg-bg p-4 hover:bg-overlay sm:p-8 lg:p-10"
             target="_blank"
             aria-label={"Justd Blocks"}
             rel="noopener noreferrer"
@@ -121,7 +121,7 @@ export function Resources() {
             </div>
           </Link>
           <Link
-            className="group relative bg-bg p-4 data-hovered:bg-overlay sm:p-8 lg:p-10"
+            className="group relative bg-bg p-4 hover:bg-overlay sm:p-8 lg:p-10"
             target="_blank"
             aria-label={"Justd icons"}
             rel="noopener noreferrer"

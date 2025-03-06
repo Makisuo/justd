@@ -1,7 +1,7 @@
 "use client"
 
 import { useFilter } from "react-aria"
-import { UNSTABLE_Autocomplete as Autocomplete } from "react-aria-components"
+import { Autocomplete } from "react-aria-components"
 import { ListBox, PopoverContent, SearchField, Select } from "ui"
 const languages = [
   { id: "en", name: "English" },

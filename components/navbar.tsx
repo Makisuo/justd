@@ -71,7 +71,7 @@ export function Navbar() {
                     Components
                   </NavLink>
 
-                  <NavLink isNextLink isActive={pathname === "/themes"} href="/themes">
+                  <NavLink isNextLink href="/themes">
                     Themes
                   </NavLink>
 
@@ -87,7 +87,7 @@ export function Navbar() {
                       )}
                     >
                       <IconBrandJustdBlocks /> Premium Blocks
-                      <IconChevronLgDown className="size-3 duration-200 group-data-pressed:rotate-180" />
+                      <IconChevronLgDown className="size-3 duration-200 group-pressed:rotate-180" />
                     </Menu.Trigger>
                     <Menu.Content
                       offset={4}
@@ -147,7 +147,7 @@ export function Navbar() {
                         intent: "outline",
                         size: "square-petite",
                         className:
-                          "data-hovered:border-indigo-500/20 data-hovered:bg-indigo-600/10 data-hovered:**:data-[slot=icon]:text-indigo-600 **:data-[slot=icon]:text-indigo-500",
+                          "hover:border-indigo-500/20 hover:bg-indigo-600/10 **:data-[slot=icon]:text-indigo-500 hover:**:data-[slot=icon]:text-indigo-600",
                       })}
                       target="_blank"
                       href={siteConfig.discord}
@@ -172,7 +172,7 @@ export function Navbar() {
                         intent: "outline",
                         size: "square-petite",
                         className:
-                          "data-hovered:border-blue-500/20 data-hovered:bg-blue-600/10 **:data-[slot=icon]:text-fg",
+                          "hover:border-blue-500/20 hover:bg-blue-600/10 **:data-[slot=icon]:text-fg",
                       })}
                       target="_blank"
                       href="https://dub.sh/NfSXJrL"

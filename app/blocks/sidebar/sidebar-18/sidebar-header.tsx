@@ -24,7 +24,7 @@ export function SidebarHeader() {
         <IconFolderFill className="size-4.5" />
         <SidebarLabel className="font-medium text-sm">getjustd.com</SidebarLabel>
       </Link>
-      <div className="-mr-2 flex items-center gap-x-0.5 text-muted-fg **:[button]:text-muted-fg **:[button]:*:data-[slot=icon]:size-3.5 **:[button]:data-hovered:text-fg">
+      <div className="-mr-2 flex items-center gap-x-0.5 text-muted-fg **:[button]:text-muted-fg **:[button]:hover:text-fg **:[button]:*:data-[slot=icon]:size-3.5">
         <Button className="size-7" size="square-petite" intent="plain" aria-label="Collapse">
           <IconArrowUp />
         </Button>

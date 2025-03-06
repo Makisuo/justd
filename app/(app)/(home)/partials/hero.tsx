@@ -26,7 +26,7 @@ export function Hero() {
             <Link
               target="_blank"
               href={siteConfig.repo}
-              className="inset-ring inset-ring-fg/10 inline-flex items-center gap-x-2 rounded-full bg-fg/5 px-2.5 py-1.5 font-mono text-[0.65rem]/5 tracking-tight transition data-hovered:inset-ring/fg/15 data-hovered:bg-fg/10"
+              className="inset-ring inset-ring-fg/10 inline-flex items-center gap-x-2 rounded-full bg-fg/5 px-2.5 py-1.5 font-mono text-[0.65rem]/5 tracking-tight transition hover:inset-ring/fg/15 hover:bg-fg/10"
             >
               <IconStar className="fill-yellow-500/40 text-yellow-500" />
               1.2K Github <IconBrandGithub />

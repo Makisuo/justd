@@ -42,7 +42,7 @@ const ColorSelect = ({
       <Select.List>
         {filteredKeys.map((key) => (
           <Select.Option
-            className="capitalize data-hovered:**:data-[slot=icon]:inset-ring-fg/30"
+            className="capitalize hover:**:data-[slot=icon]:inset-ring-fg/30"
             textValue={key}
             key={key}
             id={key}

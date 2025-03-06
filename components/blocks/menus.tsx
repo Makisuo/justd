@@ -22,7 +22,7 @@ export function Menus() {
     <Wrapper>
       <Menu>
         <Button className="group" intent="outline">
-          Account <IconChevronLgDown className="duration-300 group-data-pressed:rotate-180" />
+          Account <IconChevronLgDown className="duration-300 group-pressed:rotate-180" />
         </Button>
         <Menu.Content showArrow placement="bottom" className="min-w-64">
           <Menu.Section>
