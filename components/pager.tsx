@@ -3,7 +3,7 @@
 import { cn } from "@/utils/classes"
 import { type PageTree, findNeighbour } from "fumadocs-core/server"
 import { IconChevronLgLeft, IconChevronLgRight } from "justd-icons"
-import { Link } from "next-view-transitions"
+import { Link } from "ui"
 
 export const Pager = ({
   tree,

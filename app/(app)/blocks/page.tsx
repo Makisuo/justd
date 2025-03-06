@@ -1,6 +1,5 @@
 import { BlockSandbox } from "@/components/code/block-sandbox"
 import { Header } from "@/components/header"
-import { Container } from "ui"
 
 export const metadata = {
   title: "Blocks",
@@ -15,7 +14,7 @@ export default function Page() {
         Blo
         <span className="text-muted-fg">cks</span>
       </Header>
-      <Container className="space-y-16 py-6 sm:py-16">
+      <div className="mx-auto max-w-(--breakpoint-2xl) space-y-16 px-4 py-6 sm:px-6 sm:py-16">
         <div className="flex flex-col gap-1">
           <BlockSandbox
             {...{
@@ -215,7 +214,7 @@ export default function Page() {
             }}
           />
         </div>
-      </Container>
+      </div>
     </div>
   )
 }

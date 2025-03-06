@@ -3,7 +3,7 @@ import { siteConfig } from "@/resources/config/site"
 import { source } from "@/utils/source"
 import { IconArrowRight, IconCube, IconPackage } from "justd-icons"
 import type { Metadata } from "next"
-import { Link } from "next-view-transitions"
+import { Link } from "ui"
 import { Container, Heading } from "ui"
 
 export default function Page() {

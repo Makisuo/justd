@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { motion } from "motion/react"
-import { Link as NextLink } from "next-view-transitions"
+import NextLink from "next/link"
 import { Link } from "react-aria-components"
 import { tv } from "tailwind-variants"
 

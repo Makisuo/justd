@@ -2,11 +2,10 @@
 
 import { source } from "@/utils/source"
 import type { PageTree } from "fumadocs-core/server"
-import { Link } from "next-view-transitions"
-import type { LinkProps } from "next/link"
 import { usePathname } from "next/navigation"
 import React from "react"
 import { twMerge } from "tailwind-merge"
+import { Link, type LinkProps } from "ui"
 import { Heading, Separator } from "ui"
 
 export interface SidebarItem {
@@ -29,13 +28,12 @@ export function Aside() {
 
 interface AsideLinkProps extends LinkProps {
   isActive?: boolean
-  children: React.ReactNode
 }
 
 function AsideLink({ href, ...props }: AsideLinkProps) {
   const path = usePathname()
   const isActive = path === href
-  const ref = React.useRef<HTMLAnchorElement | null>(null)
+  const ref = React.useRef<HTMLAnchorElement>(null)
 
   React.useEffect(() => {
     if (isActive && ref.current) {
@@ -46,7 +44,7 @@ function AsideLink({ href, ...props }: AsideLinkProps) {
     <Link
       {...props}
       href={href}
-      ref={ref}
+      ref={ref as any}
       className={twMerge(
         "-ml-3 mb-0.5 flex items-center justify-between rounded-lg px-3 py-1.5 text-base text-muted-fg sm:text-sm",
         "data-focused:outline-hidden",

@@ -6,7 +6,6 @@ import { cn } from "@/utils/classes"
 import "@/resources/styles/app.css"
 import { OpenPanelComponent } from "@openpanel/nextjs"
 import type { Metadata, Viewport } from "next"
-import { ViewTransitions } from "next-view-transitions"
 import { Geist_Mono } from "next/font/google"
 import localFont from "next/font/local"
 import { twJoin } from "tailwind-merge"
@@ -19,17 +18,16 @@ export default function RootLayout({
 }>) {
   const js = String.raw
   return (
-    <ViewTransitions>
-      <html
-        dir="ltr"
-        lang="en"
-        className={twJoin("scroll-smooth", fontSans.variable, fontMono.variable)}
-        suppressHydrationWarning
-      >
-        <head>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: js`
+    <html
+      dir="ltr"
+      lang="en"
+      className={twJoin("scroll-smooth", fontSans.variable, fontMono.variable)}
+      suppressHydrationWarning
+    >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: js`
               try {
                 _updateTheme(localStorage.currentTheme)
               } catch (_) {}
@@ -76,25 +74,24 @@ export default function RootLayout({
                 }
               }
             `,
-            }}
-          />
-        </head>
-        <body className={cn("min-h-screen font-sans antialiased")}>
-          <Providers>
-            <Toast />
-            <main>{children}</main>
-            {process.env.NODE_ENV === "production" && (
-              <OpenPanelComponent
-                clientSecret={process.env.ANALYTICS_CLIENT_SECRET as string}
-                clientId={process.env.ANALYTICS_CLIENT_ID as string}
-                trackScreenViews={true}
-                trackAttributes={true}
-              />
-            )}
-          </Providers>
-        </body>
-      </html>
-    </ViewTransitions>
+          }}
+        />
+      </head>
+      <body className={cn("min-h-screen font-sans antialiased")}>
+        <Providers>
+          <Toast />
+          <main>{children}</main>
+          {process.env.NODE_ENV === "production" && (
+            <OpenPanelComponent
+              clientSecret={process.env.ANALYTICS_CLIENT_SECRET as string}
+              clientId={process.env.ANALYTICS_CLIENT_ID as string}
+              trackScreenViews={true}
+              trackAttributes={true}
+            />
+          )}
+        </Providers>
+      </body>
+    </html>
   )
 }
 
