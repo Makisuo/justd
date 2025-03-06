@@ -31,13 +31,13 @@ const itemStyles = tv({
   variants: {
     isHovered: { true: "bg-subtle" },
     isSelected: {
-      true: "z-20 border-border/50 bg-(--selected-item) data-hovered:bg-(--selected-item-hovered)",
+      true: "z-20 border-border/50 bg-(--selected-item) hover:bg-(--selected-item-hovered)",
     },
     isFocused: {
       true: "outline-hidden",
     },
     isFocusVisible: {
-      true: "bg-(--selected-item) outline-hidden ring-1 ring-ring data-hovered:bg-(--selected-item-hovered) data-selected:bg-(--selected-item)",
+      true: "bg-(--selected-item) outline-hidden ring-1 ring-ring hover:bg-(--selected-item-hovered) data-selected:bg-(--selected-item)",
     },
     isDisabled: {
       true: "text-muted-fg/70 forced-colors:text-[GrayText]",

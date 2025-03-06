@@ -44,7 +44,7 @@ const SearchField = ({
 
             <Button
               intent="plain"
-              className="size-8 text-muted-fg data-hovered:bg-transparent data-pressed:bg-transparent data-hovered:text-fg data-pressed:text-fg group-data-empty/search-field:invisible"
+              className="size-8 text-muted-fg hover:bg-transparent data-pressed:bg-transparent hover:text-fg data-pressed:text-fg group-data-empty/search-field:invisible"
             >
               <IconX />
             </Button>

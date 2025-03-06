@@ -82,7 +82,7 @@ const choiceboxItemStyles = tv({
     init: {
       true: [
         "bg-(--choicebox) text-(--choicebox-fg)",
-        "inset-ring-ring/70 z-20 data-hovered:bg-(--choicebox-selected-hovered)",
+        "inset-ring-ring/70 z-20 hover:bg-(--choicebox-selected-hovered)",
         "[&_[slot=title]]:text-(--choicebox-fg)",
         "[&_[slot=description]]:text-(--choicebox-fg)",
       ],

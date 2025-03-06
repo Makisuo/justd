@@ -107,7 +107,7 @@ const toggleStyles = tv({
   base: [
     "inset-ring inset-ring-border cursor-pointer items-center gap-x-2 rounded-lg outline-hidden sm:text-sm",
     "forced-colors:[--button-icon:ButtonText] forced-colors:hover:[--button-icon:ButtonText]",
-    "*:data-[slot=icon]:-mx-0.5 data-hovered:*:data-[slot=icon]:text-current/90 data-pressed:*:data-[slot=icon]:text-current *:data-[slot=icon]:my-1 *:data-[slot=icon]:size-4 *:data-[slot=icon]:shrink-0 *:data-[slot=icon]:text-current/60",
+    "*:data-[slot=icon]:-mx-0.5 hover:*:data-[slot=icon]:text-current/90 data-pressed:*:data-[slot=icon]:text-current *:data-[slot=icon]:my-1 *:data-[slot=icon]:size-4 *:data-[slot=icon]:shrink-0 *:data-[slot=icon]:text-current/60",
   ],
   variants: {
     isDisabled: {
@@ -120,7 +120,7 @@ const toggleStyles = tv({
       plain: "inset-ring-0 data-selected:bg-secondary data-selected:text-secondary-fg",
       solid: ["inset-ring data-selected:inset-ring-fg data-selected:bg-fg data-selected:text-bg"],
       outline: [
-        "data-hovered:border-secondary-fg/10 data-pressed:border-secondary-fg/10 data-selected:border-secondary-fg/10 data-hovered:bg-muted data-selected:bg-secondary data-hovered:text-secondary-fg data-selected:text-secondary-fg",
+        "hover:border-secondary-fg/10 data-pressed:border-secondary-fg/10 data-selected:border-secondary-fg/10 hover:bg-muted data-selected:bg-secondary hover:text-secondary-fg data-selected:text-secondary-fg",
       ],
     },
     noGap: { true: "" },

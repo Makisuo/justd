@@ -35,7 +35,7 @@ const table = tv({
   slots: {
     root: "table w-full min-w-full caption-bottom border-spacing-0 text-sm outline-hidden [--table-selected-bg:color-mix(in_oklab,var(--color-primary)_5%,white_90%)] **:data-drop-target:border **:data-drop-target:border-primary dark:[--table-selected-bg:color-mix(in_oklab,var(--color-primary)_25%,black_70%)]",
     header: "x32 border-b",
-    row: "tr group relative cursor-default border-b bg-bg text-muted-fg outline-hidden ring-primary data-selected:data-hovered:bg-(--table-selected-bg)/70 data-selected:bg-(--table-selected-bg) data-focus-visible:ring-1 data-focused:ring-0 dark:data-selected:data-hovered:bg-[color-mix(in_oklab,var(--color-primary)_30%,black_70%)]",
+    row: "tr group relative cursor-default border-b bg-bg text-muted-fg outline-hidden ring-primary data-selected:hover:bg-(--table-selected-bg)/70 data-selected:bg-(--table-selected-bg) data-focus-visible:ring-1 data-focused:ring-0 dark:data-selected:hover:bg-[color-mix(in_oklab,var(--color-primary)_30%,black_70%)]",
     cellIcon:
       "grid size-[1.15rem] flex-none shrink-0 place-content-center rounded bg-secondary text-fg *:data-[slot=icon]:size-3.5 *:data-[slot=icon]:shrink-0 *:data-[slot=icon]:transition-transform *:data-[slot=icon]:duration-200",
     columnResizer: [
@@ -215,7 +215,7 @@ const TableRow = <T extends object>({
         className:
           "href" in props
             ? cn(
-                "cursor-pointer data-hovered:bg-secondary/50 data-hovered:text-secondary-fg",
+                "cursor-pointer hover:bg-secondary/50 hover:text-secondary-fg",
                 className,
               )
             : "",

@@ -29,7 +29,7 @@ const DisclosureGroup = ({ children, ref, className, ...props }: DisclosureGroup
       {...props}
       className={composeTailwindRenderProps(
         className,
-        "peer cursor-pointer data-disabled:cursor-not-allowed data-disabled:opacity-75",
+        "peer cursor-pointer disabled:cursor-not-allowed disabled:opacity-75",
       )}
     >
       {(values) => (
