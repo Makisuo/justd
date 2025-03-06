@@ -24,7 +24,7 @@ export default function SelectSearchableDemo() {
       <PopoverContent
         showArrow={false}
         respectScreen={false}
-        className="overflow-hidden sm:min-w-(--trigger-width)"
+        className="min-w-(--trigger-width) overflow-hidden"
       >
         <Autocomplete filter={contains}>
           <div className="border-b bg-muted p-2">
