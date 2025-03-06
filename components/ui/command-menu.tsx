@@ -220,14 +220,14 @@ const CommandMenuDescription = ({ intent, className, ...props }: CommandMenuDesc
       className={cn(
         "ml-auto hidden text-sm sm:inline",
         intent === "danger"
-          ? "text-danger/90 group-data-selected:text-fg/70"
+          ? "text-danger/90 group-selected:text-fg/70"
           : intent === "warning"
-            ? "text-warning/90 group-data-selected:text-fg/70"
+            ? "text-warning/90 group-selected:text-fg/70"
             : intent === "success"
-              ? "text-success/90 group-data-selected:text-fg/70"
+              ? "text-success/90 group-selected:text-fg/70"
               : intent === "primary"
-                ? "text-fg/90 group-data-selected:text-white/70"
-                : "text-muted-fg group-data-selected:text-fg/70",
+                ? "text-fg/90 group-selected:text-white/70"
+                : "text-muted-fg group-selected:text-fg/70",
         className,
       )}
     />

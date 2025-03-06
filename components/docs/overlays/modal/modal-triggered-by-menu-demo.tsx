@@ -52,7 +52,7 @@ export default function ModalTriggeredByMenuDemo() {
       <Menu>
         <Button intent="outline" className="group">
           Actions...
-          <IconChevronLgDown className="decoration-200 transition-transform group-data-pressed:rotate-180" />
+          <IconChevronLgDown className="decoration-200 transition-transform group-pressed:rotate-180" />
         </Button>
         <Menu.Content placement="bottom">
           <Menu.Item onAction={() => setState("delete")}>

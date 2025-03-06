@@ -152,7 +152,7 @@ export default async function Page(props: DocPageProps) {
               </Card.Header>
             </div>
 
-            <IconArrowUpRight className="-translate-y-1/2 absolute top-1/2 right-6 hidden size-4 text-blue-500 group-data-hovered:block" />
+            <IconArrowUpRight className="-translate-y-1/2 absolute top-1/2 right-6 hidden size-4 text-blue-500 group-hover:block" />
           </Link>
           <Pager className="pt-3" tree={source.pageTree} url={page.url} />
         </main>

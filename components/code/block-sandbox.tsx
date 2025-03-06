@@ -273,7 +273,7 @@ function Component({ folders, fullscreen, isIframe = false, title, ...props }: P
 */
                       `)
                     }}
-                    className="-mr-2 data-hovered:bg-transparent data-hovered:**:data-[slot=icon]:rotate-90 **:data-[slot=icon]:text-muted-fg **:data-[slot=icon]:duration-200"
+                    className="-mr-2 hover:bg-transparent **:data-[slot=icon]:text-muted-fg **:data-[slot=icon]:duration-200 hover:**:data-[slot=icon]:rotate-90"
                     size="square-petite"
                     intent="plain"
                   >
@@ -281,7 +281,7 @@ function Component({ folders, fullscreen, isIframe = false, title, ...props }: P
                   </Button>
                   <CopyButton
                     alwaysVisible
-                    className="text-zinc-600 data-hovered:text-zinc-70 dark:text-zinc-400 dark:data-hovered:text-zinc-50"
+                    className="text-zinc-600 hover:text-zinc-70 dark:text-zinc-400 dark:hover:text-zinc-50"
                     text={code}
                   />
                 </SidebarNav>
@@ -317,7 +317,7 @@ const ToggleDevice = (props: React.ComponentProps<typeof Toggle>) => {
     <Toggle
       intent="plain"
       size="square-petite"
-      className="relative size-7.5 data-hovered:bg-bg data-selected:bg-bg data-selected:*:data-[slot=icon]:fill-primary/20 data-hovered:*:data-[slot=icon]:text-primary data-selected:*:data-[slot=icon]:text-primary"
+      className="relative size-7.5 selected:bg-bg hover:bg-bg selected:*:data-[slot=icon]:fill-primary/20 selected:*:data-[slot=icon]:text-primary hover:*:data-[slot=icon]:text-primary"
       {...props}
     />
   )

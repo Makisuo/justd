@@ -86,7 +86,17 @@ const MenuTrigger = ({ className, ref, ...props }: MenuTriggerProps) => (
 )
 
 interface MenuContentProps<T>
-  extends Omit<PopoverProps, "children" | "style">,
+  extends Pick<
+      PopoverProps,
+      | "placement"
+      | "offset"
+      | "crossOffset"
+      | "arrowBoundaryOffset"
+      | "triggerRef"
+      | "isOpen"
+      | "onOpenChange"
+      | "shouldFlip"
+    >,
     MenuPrimitiveProps<T> {
   className?: string
   popoverClassName?: string
@@ -103,12 +113,19 @@ const MenuContent = <T extends object>({
   const { respectScreen } = use(MenuContext)
   return (
     <PopoverContent
+      isOpen={props.isOpen}
+      onOpenChange={props.onOpenChange}
+      shouldFlip={props.shouldFlip}
       respectScreen={respectScreen}
       showArrow={showArrow}
+      offset={props.offset}
+      placement={props.placement}
+      crossOffset={props.crossOffset}
+      triggerRef={props.triggerRef}
+      arrowBoundaryOffset={props.arrowBoundaryOffset}
       className={popover({
         className: popoverClassName,
       })}
-      {...props}
     >
       <MenuPrimitive className={menu({ className })} {...props} />
     </PopoverContent>
