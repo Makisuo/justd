@@ -4,11 +4,11 @@ import React, { Suspense, useEffect, useState } from "react"
 
 import { cn } from "@/utils/classes"
 import { useMediaQuery } from "@/utils/use-media-query"
-import { Heading } from "react-aria-components"
-import scrollIntoView from "scroll-into-view-if-needed"
-
 import type { TOCItemType, TableOfContents } from "fumadocs-core/server"
 import { useScrollPosition } from "hooks/use-scroll-position"
+import { IconAlignmentLeft } from "justd-icons"
+import { Heading } from "react-aria-components"
+import scrollIntoView from "scroll-into-view-if-needed"
 
 interface Props {
   className?: string
@@ -59,8 +59,11 @@ export function Toc({ className, items }: Props) {
       <nav aria-labelledby="on-this-page-title" className="w-56">
         <Suspense>
           <>
-            <Heading level={2} className="mb-6 font-medium text-base text-fg leading-7 lg:text-lg">
-              On this page
+            <Heading
+              level={2}
+              className="mb-6 flex items-center gap-x-2 font-medium text-base text-fg leading-7 lg:text-sm"
+            >
+              <IconAlignmentLeft /> On this page
             </Heading>
             {items.length > 0 && (
               <ul className="flex flex-col gap-y-2.5">
@@ -103,7 +106,7 @@ function TocLink({
   )
 }
 
-export function useActiveItem(itemIds: string[]) {
+function useActiveItem(itemIds: string[]) {
   const [activeId, setActiveId] = useState<string | null>(null)
 
   useEffect(() => {
