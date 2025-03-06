@@ -4,27 +4,29 @@ import { cn } from "@/utils/classes"
 import { IconSearch } from "justd-icons"
 import { createContext, use, useEffect } from "react"
 import { useFilter } from "react-aria"
+import type {
+  AutocompleteProps,
+  CollectionRenderer,
+  MenuProps,
+  MenuTriggerProps,
+  SearchFieldProps,
+} from "react-aria-components"
 import {
-  UNSTABLE_Autocomplete as Autocomplete,
-  type AutocompleteProps,
+  Autocomplete,
   Button,
   Collection,
-  type CollectionRenderer,
-  UNSTABLE_CollectionRendererContext as CollectionRendererContext,
-  UNSTABLE_DefaultCollectionRenderer as DefaultCollectionRenderer,
+  CollectionRendererContext,
+  DefaultCollectionRenderer,
   Dialog,
   Header,
   Input,
   Menu as MenuPrimitive,
-  type MenuProps,
   MenuSection,
-  type MenuTriggerProps,
   Modal,
   ModalContext,
   ModalOverlay,
   OverlayTriggerStateContext,
   SearchField,
-  type SearchFieldProps,
 } from "react-aria-components"
 import { tv } from "tailwind-variants"
 import { DropdownKeyboard } from "./dropdown"

@@ -34,7 +34,7 @@ import {
   dropdownItemStyles,
   dropdownSectionStyles,
 } from "./dropdown"
-import { Popover } from "./popover"
+import { PopoverContent } from "./popover"
 
 interface MenuContextProps {
   respectScreen: boolean
@@ -102,7 +102,7 @@ const MenuContent = <T extends object>({
 }: MenuContentProps<T>) => {
   const { respectScreen } = use(MenuContext)
   return (
-    <Popover.Content
+    <PopoverContent
       respectScreen={respectScreen}
       showArrow={showArrow}
       className={popover({
@@ -111,7 +111,7 @@ const MenuContent = <T extends object>({
       {...props}
     >
       <MenuPrimitive className={menu({ className })} {...props} />
-    </Popover.Content>
+    </PopoverContent>
   )
 }
 
