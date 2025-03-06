@@ -6,6 +6,7 @@
 
 @import "tailwindcss";
 @plugin 'tailwindcss-animate';
+@plugin 'tailwindcss-react-aria-components';
 
 @theme {
   /* Recommended font is: Inter, Sathosi, Geist */
