@@ -4,7 +4,6 @@ import { Providers } from "@/components/providers"
 import { siteConfig } from "@/resources/config/site"
 import { cn } from "@/utils/classes"
 import "@/resources/styles/app.css"
-import { OpenPanelComponent } from "@openpanel/nextjs"
 import type { Metadata, Viewport } from "next"
 import { Geist_Mono } from "next/font/google"
 import localFont from "next/font/local"
@@ -81,14 +80,6 @@ export default function RootLayout({
         <Providers>
           <Toast />
           <main>{children}</main>
-          {process.env.NODE_ENV === "production" && (
-            <OpenPanelComponent
-              clientSecret={process.env.ANALYTICS_CLIENT_SECRET as string}
-              clientId={process.env.ANALYTICS_CLIENT_ID as string}
-              trackScreenViews={true}
-              trackAttributes={true}
-            />
-          )}
         </Providers>
       </body>
     </html>

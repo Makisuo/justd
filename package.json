@@ -24,7 +24,6 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@openpanel/nextjs": "^1.0.7",
     "@radix-ui/react-scroll-area": "^1.2.3",
     "@shikijs/transformers": "^2.5.0",
     "clsx": "^2.1.1",

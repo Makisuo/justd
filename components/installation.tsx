@@ -5,9 +5,9 @@ import React, { useState } from "react"
 import { CodeHighlighter } from "@/components/code/code-highlighter"
 import { CopyButton } from "@/components/code/copy-button"
 import { copyToClipboard } from "@/resources/lib/copy"
-import { useOpenPanel } from "@openpanel/nextjs"
+import { IconCheck, IconDuplicate } from "justd-icons"
 import { Group } from "react-aria-components"
-import { Link, Menu, composeTailwindRenderProps } from "ui"
+import { Button, Link, Menu, composeTailwindRenderProps } from "ui"
 
 export interface InstallationProps {
   items: string[]
@@ -148,8 +148,6 @@ function ChoosePkgManager({
   setIsCopied,
   setPkgManager,
 }: ChoosePkgManagerProps) {
-  const op = useOpenPanel()
-
   function handleAction(tool: string) {
     let selectedPkgManager: PkgManager = {
       name: "",
@@ -193,15 +191,18 @@ function ChoosePkgManager({
     const executor = isExecutor ? selectedPkgManager.executor : selectedPkgManager.name
     copyToClipboard(`${executor} ${selectedPkgManager.action} ${items.join(" ")}`).then(() => {
       setIsCopied(true)
-      op.track("cli pressed", {
-        copy: `${executor} ${selectedPkgManager.action} ${items.join(" ")}`,
-      })
     })
   }
 
   return (
     <Menu>
-      <CopyButton isCopied={isCopied} setIsCopied={setIsCopied} />
+      <Button
+        size="square-petite"
+        intent="plain"
+        className="pressed:bg-transparent hover:bg-transparent"
+      >
+        {isCopied ? <IconCheck /> : <IconDuplicate />}
+      </Button>
       <Menu.Content showArrow placement="bottom end">
         {[
           { name: "NPM", vendor: "npm" },
