@@ -6,6 +6,7 @@
 
 @import "tailwindcss";
 @plugin 'tailwindcss-animate';
+@plugin 'tailwindcss-react-aria-components';
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
