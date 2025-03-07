@@ -9,7 +9,7 @@ import { tv } from "tailwind-variants"
 
 const buttonStyles = tv({
   base: [
-    "outline-0 focus-visible:outline-2 outline-offset-2 forced-colors:outline-[Highlight]",
+    "outline-0 outline-offset-2 focus-visible:outline-2 forced-colors:outline-[Highlight]",
     "relative inline-flex items-center justify-center gap-x-2 border font-medium",
     "forced-colors:[--btn-icon:ButtonText] forced-colors:hover:[--btn-icon:ButtonText]",
     "*:data-[slot=icon]:-mx-0.5 *:data-[slot=icon]:my-1 *:data-[slot=icon]:size-4 *:data-[slot=icon]:shrink-0 *:data-[slot=icon]:text-current/60 pressed:*:data-[slot=icon]:text-current *:data-[slot=icon]:transition hover:*:data-[slot=icon]:text-current/90",
@@ -47,10 +47,10 @@ const buttonStyles = tv({
         "inset-shadow-danger-fg/30 pressed:inset-shadow-danger-fg/30 hover:inset-shadow-danger-fg/35",
       ],
       outline: [
-        "outline-ring inset-ring-0 inset-shadow-none pressed:bg-secondary [--btn-border:var(--color-border)] hover:bg-secondary",
+        "inset-ring-0 inset-shadow-none pressed:bg-secondary outline-ring [--btn-border:var(--color-border)] hover:bg-secondary",
       ],
       plain:
-        "outline-ring inset-ring-0 inset-shadow-none pressed:bg-secondary [--btn-border:transparent] hover:bg-secondary",
+        "inset-ring-0 inset-shadow-none pressed:bg-secondary outline-ring [--btn-border:transparent] hover:bg-secondary",
     },
     size: {
       "extra-small":

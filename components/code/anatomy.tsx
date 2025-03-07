@@ -3,7 +3,7 @@
 import React, { useState } from "react"
 
 import { CodeHighlighter } from "@/components/code/code-highlighter"
-import { CopyButton, CopyMotionButton } from "@/components/code/copy-button"
+import { CopyButton } from "@/components/code/copy-button"
 import { extractImports, extractJSX } from "@/resources/lib/utils"
 import { Group } from "react-aria-components"
 

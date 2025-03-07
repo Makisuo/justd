@@ -12,8 +12,8 @@ import {
   useCallback,
   useRef,
 } from "react"
+import { twMerge } from "tailwind-merge"
 import { buttonStyles } from "ui"
-import { twJoin, twMerge } from "tailwind-merge";
 
 export type PreProps = HTMLAttributes<HTMLElement> & {
   ref?: React.Ref<HTMLElement>
@@ -145,14 +145,14 @@ function CopyButton({
             "transition-opacity hover:bg-transparent group-hover:opacity-100",
             !checked && "opacity-0",
             className,
-          )
+          ),
         }),
       )}
       aria-label="Copy Text"
       onClick={onClick}
       {...props}
     >
-      {checked ? <IconCheck/> :<IconDuplicate/>}
+      {checked ? <IconCheck /> : <IconDuplicate />}
     </button>
   )
 }

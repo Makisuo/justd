@@ -7,10 +7,8 @@ import {
 } from "react-aria-components"
 import { tv } from "tailwind-variants"
 
-import { focusButtonStyles } from "./primitive"
-
 const linkStyles = tv({
-  base: "transition-[color,_opacity] outline-0 focus-visible:outline-2 outline-offset-2 forced-colors:outline-[Highlight] focus-visible:outline-ring",
+  base: "outline-0 outline-offset-2 transition-[color,_opacity] focus-visible:outline-2 focus-visible:outline-ring forced-colors:outline-[Highlight]",
   variants: {
     intent: {
       unstyled: "text-current",

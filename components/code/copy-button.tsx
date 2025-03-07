@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react"
 
 import { copyToClipboard } from "@/resources/lib/copy"
 import { cn } from "@/utils/classes"
+import { IconCheck, IconDuplicate } from "justd-icons"
 import { Button } from "react-aria-components"
 import { composeTailwindRenderProps } from "ui"
-import { IconCheck, IconDuplicate } from "justd-icons";
 
 interface CopyButtonProps extends React.ComponentProps<typeof Button> {
   isCopied?: boolean

@@ -65,7 +65,7 @@ export function CmdK() {
   return (
     <>
       <Button
-        className="flex items-center gap-1 self-center rounded px-4 py-2 text-stone-800 ring-stone-600 ring-offset-2 transition hover:bg-stone-100 focus-visible:ring-3 focus:outline-hidden"
+        className="flex items-center gap-1 self-center rounded px-4 py-2 text-stone-800 ring-stone-600 ring-offset-2 transition hover:bg-stone-100 focus:outline-hidden focus-visible:ring-3"
         onPress={() => setOpen(true)}
       >
         <kbd className="rounded-md border border-stone-400 border-b-2 p-1">cmd+k</kbd>

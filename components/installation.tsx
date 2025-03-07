@@ -98,11 +98,7 @@ export function Installation({ className, ...props }: InstallationProps) {
           }
         />
         {props.command ? (
-          <CopyButton
-            isCopied={isCopied}
-            setIsCopied={setIsCopied}
-
-          />
+          <CopyButton isCopied={isCopied} setIsCopied={setIsCopied} />
         ) : options.isComponent ? (
           <CopyButton
             isCopied={isCopied}
