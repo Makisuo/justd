@@ -2,14 +2,14 @@
 
 import { Card, Skeleton } from "ui"
 
-export default function SkeletonShapeDemo() {
+export default function SkeletonSoftDemo() {
   return (
     <Card className="p-4">
-      <div className="flex gap-2 *:data-[slot=skeleton]:rounded-full">
+      <div className="flex gap-2">
         <Skeleton className="size-8" />
         <div className="space-y-1">
-          <Skeleton className="h-4 w-56" />
-          <Skeleton className="h-4 w-10" />
+          <Skeleton soft className="h-3.5 w-20" />
+          <Skeleton soft className="h-3.5 w-48" />
         </div>
       </div>
     </Card>

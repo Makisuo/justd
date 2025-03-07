@@ -67,4 +67,4 @@ const Separator = ({
 Breadcrumbs.Item = BreadcrumbsItem
 
 export type { BreadcrumbsProps, BreadcrumbsItemProps }
-export { Breadcrumbs }
+export { Breadcrumbs, BreadcrumbsItem }

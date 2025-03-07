@@ -16,12 +16,14 @@ import { cn } from "@/utils/classes"
 import { Checkbox } from "./checkbox"
 import { composeTailwindRenderProps } from "./primitive"
 
-const gridListStyles = tv({
-  base: "relative max-h-96 overflow-auto rounded-lg border [scrollbar-width:thin] *:data-drop-target:border *:data-drop-target:border-accent [&::-webkit-scrollbar]:size-0.5",
-})
-
 const GridList = <T extends object>({ children, className, ...props }: GridListProps<T>) => (
-  <GridListPrimitive className={composeTailwindRenderProps(className, gridListStyles())} {...props}>
+  <GridListPrimitive
+    className={composeTailwindRenderProps(
+      className,
+      "relative max-h-96 overflow-auto rounded-lg border [scrollbar-width:thin] *:data-drop-target:border *:data-drop-target:border-accent [&::-webkit-scrollbar]:size-0.5",
+    )}
+    {...props}
+  >
     {children}
   </GridListPrimitive>
 )
