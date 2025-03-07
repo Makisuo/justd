@@ -65,7 +65,7 @@ export function CmdK() {
   return (
     <>
       <Button
-        className="flex items-center gap-1 self-center rounded px-4 py-2 text-stone-800 ring-stone-600 ring-offset-2 transition hover:bg-stone-100 focus-visible:ring-3 data-focused:outline-hidden"
+        className="flex items-center gap-1 self-center rounded px-4 py-2 text-stone-800 ring-stone-600 ring-offset-2 transition hover:bg-stone-100 focus-visible:ring-3 focus:outline-hidden"
         onPress={() => setOpen(true)}
       >
         <kbd className="rounded-md border border-stone-400 border-b-2 p-1">cmd+k</kbd>
@@ -76,7 +76,7 @@ export function CmdK() {
         className="entering:fade-in fixed inset-0 z-10 flex min-h-full entering:animate-in justify-center overflow-y-auto bg-black/25 p-4 pt-[33dvh] text-center backdrop-blur-sm duration-150"
       >
         <Modal>
-          <Dialog className="data-focused:outline-hidden" aria-label="command bar">
+          <Dialog className="focus:outline-hidden" aria-label="command bar">
             <ComboBox
               aria-label="command bar"
               items={filteredItems}
@@ -92,7 +92,7 @@ export function CmdK() {
                   ref={inputRef}
                   aria-label="Search for apps, files, anything..."
                   placeholder="Search for apps, files, anything..."
-                  className="w-[66vw] rounded-t-lg bg-stone-100 p-3 text-stone-800 data-focused:outline-hidden"
+                  className="w-[66vw] rounded-t-lg bg-stone-100 p-3 text-stone-800 focus:outline-hidden"
                 />
                 {filteredItems.length === 0 ? (
                   <Text
@@ -114,7 +114,7 @@ export function CmdK() {
                   {(i: (typeof items)[number]) => (
                     <ListBoxItem
                       textValue={i.name}
-                      className="flex items-center gap-4 rounded-md p-2 data-focused:bg-stone-200"
+                      className="flex items-center gap-4 rounded-md p-2 focus:bg-stone-200"
                     >
                       {i.name}
                     </ListBoxItem>

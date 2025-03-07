@@ -15,13 +15,13 @@ import { Description, FieldError, FieldGroup, Input, Label } from "./field"
 import { composeTailwindRenderProps } from "./primitive"
 
 const fieldBorderStyles = tv({
-  base: "group-data-focused:border-primary/70 forced-colors:border-[Highlight]",
+  base: "group-focus:border-primary/70 forced-colors:border-[Highlight]",
   variants: {
     isInvalid: {
-      true: "group-data-focused:border-danger/70 forced-colors:border-[Mark]",
+      true: "group-focus:border-danger/70 forced-colors:border-[Mark]",
     },
     isDisabled: {
-      true: "group-data-focused:border-input/70",
+      true: "group-focus:border-input/70",
     },
   },
 })

@@ -219,7 +219,7 @@ const NavbarSection = ({ className, ...props }: React.ComponentProps<"div">) => 
 const navItemStyles = tv({
   base: [
     "*:data-[slot=icon]:-mx-0.5 relative flex cursor-pointer items-center gap-x-2 px-2 text-muted-fg no-underline outline-hidden transition-colors md:text-sm forced-colors:transform-none forced-colors:outline-0 forced-colors:disabled:text-[GrayText]",
-    "pressed:text-fg hover:text-fg data-focused:text-fg data-focus-visible:outline-1 data-focus-visible:outline-primary",
+    "pressed:text-fg hover:text-fg focus:text-fg data-focus-visible:outline-1 data-focus-visible:outline-primary",
     "**:data-[slot=chevron]:size-4 **:data-[slot=chevron]:transition-transform",
     "*:data-[slot=icon]:size-4 *:data-[slot=icon]:shrink-0 pressed:**:data-[slot=chevron]:rotate-180",
     "disabled:cursor-default disabled:opacity-50 disabled:forced-colors:text-[GrayText]",
@@ -268,7 +268,7 @@ const NavbarLogo = ({ className, ...props }: LinkProps) => {
     <Link
       className={composeTailwindRenderProps(
         className,
-        "relative flex items-center gap-x-2 px-2 py-4 text-fg data-focus-visible:outline-1 data-focus-visible:outline-primary data-focused:outline-hidden md:mr-4 md:px-0 md:py-0",
+        "relative flex items-center gap-x-2 px-2 py-4 text-fg data-focus-visible:outline-1 data-focus-visible:outline-primary focus:outline-hidden md:mr-4 md:px-0 md:py-0",
       )}
       {...props}
     />

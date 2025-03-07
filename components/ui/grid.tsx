@@ -176,7 +176,7 @@ const Grid = ({
 
 const gridItemStyles = tv(
   {
-    base: "grid-cell data-focused:outline-hidden",
+    base: "grid-cell focus:outline-hidden",
     variants: {
       colSpan: {
         auto: "col-auto",

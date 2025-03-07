@@ -10,13 +10,15 @@ import { tv } from "tailwind-variants"
 import { focusButtonStyles } from "./primitive"
 
 const linkStyles = tv({
-  extend: focusButtonStyles,
-  base: "transition-[color,_opacity] disabled:cursor-default disabled:opacity-60 forced-colors:disabled:text-[GrayText]",
+  base: "transition-[color,_opacity] outline-0 focus-visible:outline-2 outline-offset-2 forced-colors:outline-[Highlight] focus-visible:outline-ring",
   variants: {
     intent: {
       unstyled: "text-current",
-      primary: "text-fg hover:underline",
-      secondary: "text-muted-fg hover:text-secondary-fg",
+      primary: "text-primary hover:underline",
+      secondary: "text-secondary-fg hover:underline",
+    },
+    isDisabled: {
+      true: "cursor-default opacity-60 forced-colors:disabled:text-[GrayText]",
     },
   },
   defaultVariants: {

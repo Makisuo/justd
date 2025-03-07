@@ -38,7 +38,7 @@ export function ResponsiveAside({
         >
           <IconHamburger />
         </Button>
-        <Link className="-mr-6 rounded data-focused:outline-hidden" href="/" aria-label="Logo">
+        <Link className="-mr-6 rounded focus:outline-hidden" href="/" aria-label="Logo">
           <IconBrandJustd className="size-6" />
         </Link>
         <div className="flex items-center gap-x-1">

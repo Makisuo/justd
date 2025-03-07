@@ -23,7 +23,6 @@ export interface InstallationProps {
 }
 
 export function Installation({ className, ...props }: InstallationProps) {
-  const op = useOpenPanel()
   const {
     options = {
       isExecutor: false,
@@ -102,34 +101,19 @@ export function Installation({ className, ...props }: InstallationProps) {
           <CopyButton
             isCopied={isCopied}
             setIsCopied={setIsCopied}
-            onPress={() => {
-              copyToClipboard(props.command as string).then(() => {
-                setIsCopied(true)
-                op.track("cli pressed", { copy: props.command })
-              })
-            }}
+
           />
         ) : options.isComponent ? (
           <CopyButton
             isCopied={isCopied}
             setIsCopied={setIsCopied}
-            onPress={() => {
-              copyToClipboard(`npx justd-cli@latest add ${items[0]}`).then(() => {
-                setIsCopied(true)
-                op.track("cli pressed", { copy: `add ${items.join(" ")}` })
-              })
-            }}
+            text={`npx justd-cli@latest add ${items[0]}`}
           />
         ) : options.isInit ? (
           <CopyButton
             isCopied={isCopied}
             setIsCopied={setIsCopied}
-            onPress={() => {
-              copyToClipboard("npx justd-cli@latest init").then(() => {
-                setIsCopied(true)
-                op.track("cli pressed", { copy: "init" })
-              })
-            }}
+            text="npx justd-cli@latest init"
           />
         ) : (
           <ChoosePkgManager
