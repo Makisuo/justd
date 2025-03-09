@@ -3,13 +3,13 @@
 import { cn } from "@/utils/classes"
 import { IconSearch } from "justd-icons"
 import { createContext, use, useEffect } from "react"
-import { useFilter } from "react-aria"
 import type {
   AutocompleteProps,
   CollectionRenderer,
   MenuProps,
   MenuTriggerProps,
   SearchFieldProps,
+
 } from "react-aria-components"
 import {
   Autocomplete,
@@ -17,6 +17,7 @@ import {
   Collection,
   CollectionRendererContext,
   DefaultCollectionRenderer,
+  useFilter,
   Dialog,
   Header,
   Input,
