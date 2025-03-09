@@ -9,7 +9,6 @@ import type {
   MenuProps,
   MenuTriggerProps,
   SearchFieldProps,
-
 } from "react-aria-components"
 import {
   Autocomplete,
@@ -17,7 +16,6 @@ import {
   Collection,
   CollectionRendererContext,
   DefaultCollectionRenderer,
-  useFilter,
   Dialog,
   Header,
   Input,
@@ -28,6 +26,7 @@ import {
   ModalOverlay,
   OverlayTriggerStateContext,
   SearchField,
+  useFilter,
 } from "react-aria-components"
 import { tv } from "tailwind-variants"
 import { DropdownKeyboard } from "./dropdown"
