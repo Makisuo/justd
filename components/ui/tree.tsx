@@ -49,7 +49,7 @@ const itemStyles = tv({
       true: "[&_[slot=chevron]_[data-slot=icon]]:rotate-90 [&_[slot=chevron]_[data-slot=icon]]:text-fg [&_[slot=chevron]_[data-slot=icon]]:transition [&_[slot=chevron]_[data-slot=icon]]:duration-200",
     },
     isFocusVisible: {
-      true: "data-focused:outline-hidden data-focus-visible:ring-1 data-focus-visible:ring-primary [&_[slot=chevron]_[data-slot=icon]]:text-fg",
+      true: "focus:outline-hidden data-focus-visible:ring-1 data-focus-visible:ring-primary [&_[slot=chevron]_[data-slot=icon]]:text-fg",
     },
     isDisabled: {
       true: "opacity-50 forced-colors:text-[GrayText]",

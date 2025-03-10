@@ -48,7 +48,7 @@ export default function CarouselDApiDemo() {
           {Array.from({ length: 10 }).map((_, index) => (
             <Button
               className={twJoin(
-                "rounded-xl transition data-focused:outline-hidden",
+                "rounded-xl transition focus:outline-hidden",
                 current === index + 1
                   ? "h-3 w-5 bg-primary transition-all hover:bg-primary/80"
                   : "h-3 w-3 bg-fg/10 hover:bg-fg/15",

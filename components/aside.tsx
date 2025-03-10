@@ -47,7 +47,7 @@ function AsideLink({ href, ...props }: AsideLinkProps) {
       ref={ref as any}
       className={twMerge(
         "-ml-3 mb-0.5 flex items-center justify-between rounded-lg px-3 py-1.5 text-base text-muted-fg sm:text-sm",
-        "data-focused:outline-hidden",
+        "focus:outline-hidden",
         "hover:bg-muted hover:text-secondary-fg",
         isActive && [
           "font-medium",

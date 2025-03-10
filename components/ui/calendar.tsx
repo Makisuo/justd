@@ -139,7 +139,7 @@ const SelectMonth = ({ state }: { state: CalendarState }) => {
         state.setFocusedDate(state.focusedDate.set({ month: Number(value) }))
       }}
     >
-      <Select.Trigger className="h-8 w-22 text-xs data-focused:ring-3 **:data-[slot=select-value]:inline-block **:data-[slot=select-value]:truncate group-data-open:ring-3" />
+      <Select.Trigger className="h-8 w-22 text-xs focus:ring-3 **:data-[slot=select-value]:inline-block **:data-[slot=select-value]:truncate group-data-open:ring-3" />
       <Select.List className="w-34 min-w-34 max-w-34" popoverClassName="w-34 max-w-34 min-w-34">
         {months.map((month, index) => (
           <Select.Option key={index} id={(index + 1).toString()} textValue={month}>
@@ -174,7 +174,7 @@ const SelectYear = ({ state }: { state: CalendarState }) => {
         state.setFocusedDate(years[Number(value)]?.value)
       }}
     >
-      <Select.Trigger className="h-8 text-xs data-focused:ring-3 group-data-open:ring-3" />
+      <Select.Trigger className="h-8 text-xs focus:ring-3 group-data-open:ring-3" />
       <Select.List className="w-34 min-w-34 max-w-34" popoverClassName="w-34 max-w-34 min-w-34">
         {years.map((year, i) => (
           <Select.Option key={i} id={i} textValue={year.formatted}>

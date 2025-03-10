@@ -6,7 +6,6 @@ import { tv } from "tailwind-variants"
 
 import type { MenuContentProps } from "./menu"
 import { Menu } from "./menu"
-import { focusButtonStyles } from "./primitive"
 
 interface ContextMenuTriggerContextType {
   buttonRef: React.RefObject<HTMLButtonElement | null>
@@ -48,8 +47,7 @@ const ContextMenu = ({ children }: ContextMenuProps) => {
 }
 
 const contextMenuTriggerStyles = tv({
-  extend: focusButtonStyles,
-  base: "cursor-default data-focused:outline-hidden",
+  base: "cursor-default focus:outline-hidden",
   variants: {
     isDisabled: {
       false: "forced-colors:disabled:text-[GrayText]",

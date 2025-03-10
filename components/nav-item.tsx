@@ -6,17 +6,17 @@ import { motion } from "motion/react"
 import NextLink from "next/link"
 import { usePathname } from "next/navigation"
 import { Link } from "react-aria-components"
-import { tv } from "tailwind-variants"
+import { twMerge } from "tailwind-merge"
 
-const navLinkStyles = tv({
-  base: "**:[svg]:-mx-0.5 relative flex items-center gap-x-2 py-4.5 text-muted-fg text-sm tracking-tight transition-colors focus-visible:text-fg data-focused:outline-hidden sm:py-3",
-  variants: {
-    isActive: {
-      false: "text-muted-fg hover:text-fg forced-colors:text-[Gray]",
-      true: "text-fg forced-colors:text-[WindowText]",
-    },
-  },
-})
+// const navLinkStyles = tv({
+//   base: "**:[svg]:-mx-0.5 relative flex outline-hidden items-center gap-x-2 py-4.5 text-muted-fg text-sm tracking-tight transition-colors focus-visible:text-fg focus:outline-hidden sm:py-3",
+//   variants: {
+//     isActive: {
+//       false: "text-muted-fg hover:text-fg forced-colors:text-[Gray]",
+//       true: "text-fg forced-colors:text-[WindowText]",
+//     },
+//   },
+// })
 
 interface NavLinkProps {
   href: string
@@ -32,7 +32,14 @@ const NavLink = ({ href, isActive, className, isNextLink, ...props }: NavLinkPro
   const pathname = usePathname()
   const isCurrent = isActive || href === pathname
   return (
-    <El href={href} className={navLinkStyles({ isActive, className })} {...props}>
+    <El
+      href={href}
+      className={twMerge(
+        "**:[svg]:-mx-0.5 relative flex items-center gap-x-2 py-4.5 text-muted-fg text-sm tracking-tight outline-hidden transition-colors focus:outline-hidden focus-visible:text-fg sm:py-3",
+        className,
+      )}
+      {...props}
+    >
       <>
         {props.children}
         {isCurrent && (

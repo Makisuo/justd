@@ -3,7 +3,6 @@
 import { cn } from "@/utils/classes"
 import { IconSearch } from "justd-icons"
 import { createContext, use, useEffect } from "react"
-import { useFilter } from "react-aria"
 import type {
   AutocompleteProps,
   CollectionRenderer,
@@ -27,6 +26,7 @@ import {
   ModalOverlay,
   OverlayTriggerStateContext,
   SearchField,
+  useFilter,
 } from "react-aria-components"
 import { tv } from "tailwind-variants"
 import { DropdownKeyboard } from "./dropdown"
@@ -145,7 +145,7 @@ const CommandMenuSearch = ({ className, placeholder, ...props }: CommandMenuSear
       )}
       <Input
         placeholder={placeholder ?? "Search..."}
-        className="w-full min-w-0 bg-transparent px-2.5 py-2 text-base text-fg placeholder-muted-fg outline-hidden data-focused:outline-hidden sm:text-sm [&::-ms-reveal]:hidden [&::-webkit-search-cancel-button]:hidden"
+        className="w-full min-w-0 bg-transparent px-2.5 py-2 text-base text-fg placeholder-muted-fg outline-hidden focus:outline-hidden sm:text-sm [&::-ms-reveal]:hidden [&::-webkit-search-cancel-button]:hidden"
       />
       {escapeButton && (
         <Button

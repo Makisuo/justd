@@ -12,6 +12,7 @@ import {
   useCallback,
   useRef,
 } from "react"
+import { twMerge } from "tailwind-merge"
 import { buttonStyles } from "ui"
 
 export type PreProps = HTMLAttributes<HTMLElement> & {
@@ -108,7 +109,7 @@ export const PlainCode = ({
         </div>
       ) : (
         allowCopy && (
-          <CopyButton className="absolute top-2 right-2 z-[2] backdrop-blur-md" onCopy={onCopy} />
+          <CopyButton className="absolute top-0 right-0 z-[2] backdrop-blur-md" onCopy={onCopy} />
         )
       )}
       <ScrollArea ref={areaRef} className="w-full" dir="ltr">
@@ -140,19 +141,18 @@ function CopyButton({
         buttonStyles({
           size: "square-petite",
           intent: "plain",
+          className: twMerge(
+            "transition-opacity hover:bg-transparent group-hover:opacity-100",
+            !checked && "opacity-0",
+            className,
+          ),
         }),
-        "transition-opacity group-hover:opacity-100",
-        !checked && "opacity-0",
-        className,
       )}
       aria-label="Copy Text"
       onClick={onClick}
       {...props}
     >
-      <IconCheck className={cn("size-3.5 transition-transform", !checked && "scale-0")} />
-      <IconDuplicate
-        className={cn("absolute size-3.5 transition-transform", checked && "scale-0")}
-      />
+      {checked ? <IconCheck /> : <IconDuplicate />}
     </button>
   )
 }

@@ -1,15 +1,20 @@
 "use client"
+
 import { Button } from "ui"
 
 export default function ButtonIntentDemo() {
   return (
-    <div className="flex max-w-sm flex-wrap gap-2">
-      <Button intent="primary">Label</Button>
-      <Button intent="secondary">Label</Button>
-      <Button intent="warning">Label</Button>
-      <Button intent="danger">Label</Button>
-      <Button intent="outline">Label</Button>
-      <Button intent="plain">Label</Button>
+    <div className="grid grid-cols-2 gap-2 *:flex *:flex-col *:gap-y-2">
+      <div>
+        <Button intent="primary">Label</Button>
+        <Button intent="secondary">Label</Button>
+        <Button intent="warning">Label</Button>
+      </div>
+      <div>
+        <Button intent="danger">Label</Button>
+        <Button intent="outline">Label</Button>
+        <Button intent="plain">Label</Button>
+      </div>
     </div>
   )
 }

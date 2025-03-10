@@ -74,8 +74,11 @@ export const DocHow = ({
   }
   const divProps = { ...props } as React.HTMLProps<HTMLDivElement>
   return (
-    <div className={cn("not-prose forced-color-adjust-non relative my-4", className)} {...divProps}>
-      <Tabs className="group" aria-label="Packages">
+    <div
+      className={cn("not-prose group/how forced-color-adjust-non relative my-4", className)}
+      {...divProps}
+    >
+      <Tabs aria-label="Packages">
         <TabsList copyButton={copyButton} code={processedSourceCode as string} src={src} />
         <Tabs.Panel className="w-full" id="preview">
           <div

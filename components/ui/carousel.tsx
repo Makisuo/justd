@@ -178,7 +178,7 @@ const CarouselContent = <T extends object>({ className, ...props }: ListBoxSecti
 
 const carouselItem = tv({
   base: [
-    "xd24r min-w-0 shrink-0 grow-0 basis-full data-focus-visible:outline-hidden data-focused:outline-hidden",
+    "xd24r min-w-0 shrink-0 grow-0 basis-full focus:outline-hidden data-focus-visible:outline-hidden",
     "group relative",
   ],
   variants: {

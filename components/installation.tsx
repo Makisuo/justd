@@ -5,9 +5,9 @@ import React, { useState } from "react"
 import { CodeHighlighter } from "@/components/code/code-highlighter"
 import { CopyButton } from "@/components/code/copy-button"
 import { copyToClipboard } from "@/resources/lib/copy"
-import { useOpenPanel } from "@openpanel/nextjs"
+import { IconCheck, IconDuplicate } from "justd-icons"
 import { Group } from "react-aria-components"
-import { Link, Menu, composeTailwindRenderProps } from "ui"
+import { Button, Link, Menu, composeTailwindRenderProps } from "ui"
 
 export interface InstallationProps {
   items: string[]
@@ -23,7 +23,6 @@ export interface InstallationProps {
 }
 
 export function Installation({ className, ...props }: InstallationProps) {
-  const op = useOpenPanel()
   const {
     options = {
       isExecutor: false,
@@ -99,37 +98,18 @@ export function Installation({ className, ...props }: InstallationProps) {
           }
         />
         {props.command ? (
-          <CopyButton
-            isCopied={isCopied}
-            setIsCopied={setIsCopied}
-            onPress={() => {
-              copyToClipboard(props.command as string).then(() => {
-                setIsCopied(true)
-                op.track("cli pressed", { copy: props.command })
-              })
-            }}
-          />
+          <CopyButton isCopied={isCopied} setIsCopied={setIsCopied} />
         ) : options.isComponent ? (
           <CopyButton
             isCopied={isCopied}
             setIsCopied={setIsCopied}
-            onPress={() => {
-              copyToClipboard(`npx justd-cli@latest add ${items[0]}`).then(() => {
-                setIsCopied(true)
-                op.track("cli pressed", { copy: `add ${items.join(" ")}` })
-              })
-            }}
+            text={`npx justd-cli@latest add ${items[0]}`}
           />
         ) : options.isInit ? (
           <CopyButton
             isCopied={isCopied}
             setIsCopied={setIsCopied}
-            onPress={() => {
-              copyToClipboard("npx justd-cli@latest init").then(() => {
-                setIsCopied(true)
-                op.track("cli pressed", { copy: "init" })
-              })
-            }}
+            text="npx justd-cli@latest init"
           />
         ) : (
           <ChoosePkgManager
@@ -168,8 +148,6 @@ function ChoosePkgManager({
   setIsCopied,
   setPkgManager,
 }: ChoosePkgManagerProps) {
-  const op = useOpenPanel()
-
   function handleAction(tool: string) {
     let selectedPkgManager: PkgManager = {
       name: "",
@@ -213,15 +191,18 @@ function ChoosePkgManager({
     const executor = isExecutor ? selectedPkgManager.executor : selectedPkgManager.name
     copyToClipboard(`${executor} ${selectedPkgManager.action} ${items.join(" ")}`).then(() => {
       setIsCopied(true)
-      op.track("cli pressed", {
-        copy: `${executor} ${selectedPkgManager.action} ${items.join(" ")}`,
-      })
     })
   }
 
   return (
     <Menu>
-      <CopyButton isCopied={isCopied} setIsCopied={setIsCopied} />
+      <Button
+        size="square-petite"
+        intent="plain"
+        className="pressed:bg-transparent hover:bg-transparent"
+      >
+        {isCopied ? <IconCheck /> : <IconDuplicate />}
+      </Button>
       <Menu.Content showArrow placement="bottom end">
         {[
           { name: "NPM", vendor: "npm" },

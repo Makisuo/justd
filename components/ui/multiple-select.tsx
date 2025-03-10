@@ -29,13 +29,13 @@ const multiSelectStyles = tv({
     multiSelectField: "group flex w-full min-w-80 flex-col",
     multiSelect: [
       "relative flex min-h-10 flex-row flex-wrap items-center rounded-lg border px-1 shadow-xs transition",
-      "has-[input[data-focused=true]]:border-ring/70",
-      "has-[input[data-invalid=true][data-focused=true]]:border-blue-500",
+      "has-[input[focus=true]]:border-ring/70",
+      "has-[input[data-invalid=true][focus=true]]:border-blue-500",
       "has-[input[data-invalid=true]]:border-danger",
-      "has-[input[data-focused=true]]:ring-4 has-[input[data-focused=true]]:ring-ring/20",
+      "has-[input[focus=true]]:ring-4 has-[input[focus=true]]:ring-ring/20",
     ],
     chevronButton:
-      "-mr-2 grid size-8 place-content-center rounded-sm text-muted-fg hover:text-fg data-focused:text-fg",
+      "-mr-2 grid size-8 place-content-center rounded-sm text-muted-fg hover:text-fg focus:text-fg",
     input: "ml-1 flex-1 px-0.5 py-1 shadow-none ring-0",
     comboBoxChild: "inline-flex flex-1 flex-wrap items-center px-0",
     comboBox: "group peer flex flex-1",
