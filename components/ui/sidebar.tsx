@@ -709,6 +709,7 @@ const SidebarLabel = ({ className, ref, ...props }: SidebarLabelProps) => {
   if (!collapsed) {
     return (
       <Text
+        tabIndex={-1}
         ref={ref}
         slot="label"
         className={cn("col-start-2 overflow-hidden whitespace-nowrap", className)}

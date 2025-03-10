@@ -68,13 +68,13 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
             </SidebarItem>
 
             <SidebarItem tooltip="Orders">
-              {({ isHovered, isCollapsed }) => (
+              {({ isCollapsed }) => (
                 <>
                   <SidebarLink href="#">
                     <IconShoppingBag />
                     <SidebarLabel>Orders</SidebarLabel>
                   </SidebarLink>
-                  {!isCollapsed && isHovered && (
+                  {!isCollapsed && (
                     <Menu>
                       <Menu.Trigger aria-label="Manage">
                         <IconDotsHorizontal />
@@ -107,12 +107,12 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
               )}
             </SidebarItem>
             <SidebarItem tooltip="Products">
-              {({ isHovered, isCollapsed }) => (
+              {({ isCollapsed }) => (
                 <>
                   <SidebarLink href="#">
                     <SidebarLabel>Products</SidebarLabel>
                   </SidebarLink>
-                  {!isCollapsed && isHovered && (
+                  {!isCollapsed && (
                     <Menu>
                       <Menu.Trigger aria-label="Manage">
                         <IconDotsHorizontal />
