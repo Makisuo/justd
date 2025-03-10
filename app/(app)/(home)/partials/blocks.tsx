@@ -13,7 +13,7 @@ import TagFieldDemo from "@/components/docs/forms/tag-field/tag-field-demo"
 import ComboBoxAvatarDemo from "@/components/docs/pickers/combo-box/combo-box-avatar-demo"
 import MultipleSelectDemo from "@/components/docs/pickers/multiple-select/multiple-select-demo"
 import { IconArrowRight, IconPackage } from "justd-icons"
-import { Container, DatePicker, DateRangePicker, Grid, Heading, Link, Note, buttonStyles } from "ui"
+import { Container, DatePicker, DateRangePicker, Heading, Link, Note, buttonStyles } from "ui"
 import { Wrapper } from "./resources"
 
 export function Blocks() {
@@ -53,7 +53,7 @@ export function Blocks() {
             </Wrapper>
           </div>
           <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 lg:grid-cols-3">
-            <Grid.Item className="flex flex-col gap-y-1 lg:gap-y-1">
+            <div className="flex flex-col gap-y-1 lg:gap-y-1">
               <ToolbarBlock />
 
               <Wrapper>
@@ -61,9 +61,9 @@ export function Blocks() {
               </Wrapper>
               <Buttons />
               <Menus />
-            </Grid.Item>
+            </div>
 
-            <Grid.Item>
+            <div>
               <div className="grid grid-cols-1 gap-1">
                 <Wrapper className="grid gap-6 lg:px-0 lg:py-9">
                   <DateRangePicker className="w-full sm:min-w-2xs" label="Reservations date" />
@@ -80,15 +80,15 @@ export function Blocks() {
                   </div>
                 </Wrapper>
               </div>
-            </Grid.Item>
+            </div>
 
-            <Grid.Item className="grid grid-cols-1 gap-1">
+            <div className="grid grid-cols-1 gap-1">
               <PopoverOverlays />
               <Wrapper>
                 <SwitchDemo />
               </Wrapper>
               <ModalOverlays />
-            </Grid.Item>
+            </div>
           </div>
         </div>
 
