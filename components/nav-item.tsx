@@ -35,7 +35,8 @@ const NavLink = ({ href, isActive, className, isNextLink, ...props }: NavLinkPro
     <El
       href={href}
       className={twMerge(
-        "**:[svg]:-mx-0.5 relative flex items-center gap-x-2 py-4.5 text-muted-fg text-sm tracking-tight outline-hidden transition-colors focus:outline-hidden focus-visible:text-fg sm:py-3",
+        "**:[svg]:-mx-0.5 relative flex items-center gap-x-2 py-4.5 text-sm tracking-tight outline-hidden transition-colors focus:outline-hidden focus-visible:text-fg sm:py-3",
+        isCurrent ? "font-medium text-fg" : "text-muted-fg hover:text-fg",
         className,
       )}
       {...props}
