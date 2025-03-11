@@ -1,7 +1,6 @@
 "use client"
 
 import { IconBrandJustdBlocks } from "@/components/icons/icon-brand-justd-blocks"
-import { cn } from "@/utils/classes"
 import {
   IconBrandAstro,
   IconBrandLaravel,
@@ -9,6 +8,7 @@ import {
   IconBrandRemix,
   IconWindowVisitFill,
 } from "justd-icons"
+import { twMerge } from "tailwind-merge"
 import { Badge, Card, Container, Heading, Link } from "ui"
 
 const resources = [
@@ -159,7 +159,10 @@ export function Wrapper({
   return (
     <div
       data-slot={slot}
-      className={cn("relative rounded-md border bg-overlay px-4 py-10 sm:px-6 sm:py-8", className)}
+      className={twMerge(
+        "relative rounded-md border bg-overlay px-4 py-10 sm:px-6 sm:py-8",
+        className,
+      )}
       {...props}
     />
   )

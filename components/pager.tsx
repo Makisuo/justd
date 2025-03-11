@@ -1,8 +1,7 @@
 "use client"
-
-import { cn } from "@/utils/classes"
 import { type PageTree, findNeighbour } from "fumadocs-core/server"
 import { IconChevronLgLeft, IconChevronLgRight } from "justd-icons"
+import { twMerge } from "tailwind-merge"
 import { Link } from "ui"
 
 export const Pager = ({
@@ -13,7 +12,7 @@ export const Pager = ({
   const neighbours = findNeighbour(tree, url)
 
   return (
-    <div className={cn("not-prose flex w-full justify-between gap-3", className)}>
+    <div className={twMerge("not-prose flex w-full justify-between gap-3", className)}>
       {neighbours.previous && (
         <div className="group w-40">
           <Link className="inline-flex justify-start text-sm" href={neighbours.previous.url}>

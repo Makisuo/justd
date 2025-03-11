@@ -11,7 +11,6 @@ import type { ListBoxItemProps, ListBoxProps, ListBoxSectionProps } from "react-
 import { ListBox, ListBoxItem, ListBoxSection, Separator } from "react-aria-components"
 
 import { composeTailwindRenderProps } from "@/components/ui/primitive"
-import { cn } from "@/utils/classes"
 import { twMerge } from "tailwind-merge"
 import { buttonStyles } from "./button"
 
@@ -94,15 +93,14 @@ const PaginationItem = ({
         textValue: segment,
         "aria-current": isCurrent ? "page" : undefined,
         isDisabled: isCurrent,
-        className: cn(
-          buttonStyles({
-            intent: "outline",
-            size: "small",
-            className:
-              "cursor-pointer font-normal text-fg data-focus-visible:border-primary data-focus-visible:bg-primary/10 data-focus-visible:ring-4 data-focus-visible:ring-primary/20",
-          }),
-          className,
-        ),
+        className: buttonStyles({
+          intent: "outline",
+          size: "small",
+          className: twMerge(
+            "cursor-pointer font-normal text-fg data-focus-visible:border-primary data-focus-visible:bg-primary/10 data-focus-visible:ring-4 data-focus-visible:ring-primary/20",
+            className,
+          ),
+        }),
         ...props,
       },
       indicator,
@@ -158,17 +156,14 @@ const PaginationItem = ({
           textValue: textValue,
           "aria-current": isCurrent ? "page" : undefined,
           isDisabled: isCurrent,
-          className: cn(
-            buttonStyles({
-              intent: isCurrent ? "primary" : intent,
-              size,
-              className: twMerge(
-                "cursor-pointer font-normal tabular-nums disabled:cursor-default disabled:opacity-100 data-focus-visible:border-primary data-focus-visible:bg-primary/10 data-focus-visible:ring-4 data-focus-visible:ring-primary/20",
-                className,
-              ),
-            }),
-            className,
-          ),
+          className: buttonStyles({
+            intent: isCurrent ? "primary" : intent,
+            size,
+            className: twMerge(
+              "cursor-pointer font-normal tabular-nums disabled:cursor-default disabled:opacity-100 data-focus-visible:border-primary data-focus-visible:bg-primary/10 data-focus-visible:ring-4 data-focus-visible:ring-primary/20",
+              className,
+            ),
+          }),
           ...props,
         },
         children,

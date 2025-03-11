@@ -16,10 +16,9 @@ import {
   Tabs as TabsPrimitive,
   composeRenderProps,
 } from "react-aria-components"
-import { twJoin } from "tailwind-merge"
+import { twJoin, twMerge } from "tailwind-merge"
 import { tv } from "tailwind-variants"
 
-import { cn } from "@/utils/classes"
 import { composeTailwindRenderProps } from "./primitive"
 
 const tabsStyles = tv({
@@ -117,7 +116,7 @@ const Tab = ({ children, ref, ...props }: TabProps) => {
           {isSelected && (
             <motion.span
               data-slot="selected-indicator"
-              className={cn(
+              className={twMerge(
                 "absolute rounded bg-fg",
                 // horizontal
                 "group-data-[orientation=horizontal]/tabs:-bottom-px group-data-[orientation=horizontal]/tabs:inset-x-0 group-data-[orientation=horizontal]/tabs:h-0.5 group-data-[orientation=horizontal]/tabs:w-full",

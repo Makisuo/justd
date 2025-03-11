@@ -5,7 +5,6 @@ import { createContext, useContext } from "react"
 import type { GroupProps, SeparatorProps, ToolbarProps } from "react-aria-components"
 import { Group, Toolbar as ToolbarPrimitive, composeRenderProps } from "react-aria-components"
 
-import { cn } from "@/utils/classes"
 import { twMerge } from "tailwind-merge"
 import { composeTailwindRenderProps } from "./primitive"
 import { Separator } from "./separator"
@@ -67,7 +66,7 @@ const ToolbarSeparator = ({ className, ...props }: ToolbarSeparatorProps) => {
   return (
     <Separator
       orientation={effectiveOrientation}
-      className={cn(effectiveOrientation === "vertical" ? "mx-1.5" : "my-1.5 w-9", className)}
+      className={twMerge(effectiveOrientation === "vertical" ? "mx-1.5" : "my-1.5 w-9", className)}
       {...props}
     />
   )

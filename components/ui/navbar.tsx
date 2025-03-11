@@ -2,15 +2,13 @@
 
 import { createContext, use, useCallback, useId, useMemo, useState } from "react"
 
+import { useMediaQuery } from "@/utils/use-media-query"
 import { IconHamburger } from "justd-icons"
 import { LayoutGroup, motion } from "motion/react"
 import type { LinkProps } from "react-aria-components"
 import { Link } from "react-aria-components"
-import { tv } from "tailwind-variants"
-
-import { cn } from "@/utils/classes"
-import { useMediaQuery } from "@/utils/use-media-query"
 import { twJoin, twMerge } from "tailwind-merge"
+import { tv } from "tailwind-variants"
 import { Button, type ButtonProps } from "./button"
 import { composeTailwindRenderProps } from "./primitive"
 import { Sheet } from "./sheet"
@@ -199,7 +197,7 @@ const NavbarSection = ({ className, ...props }: React.ComponentProps<"div">) => 
     <LayoutGroup id={id}>
       <div
         data-navbar-section="true"
-        className={cn(
+        className={twMerge(
           "flex",
           isCompact ? "flex-col gap-y-4" : "flex-row items-center gap-x-3",
           className,
@@ -265,7 +263,9 @@ const NavbarLogo = ({ className, ...props }: LinkProps) => {
 }
 
 const NavbarFlex = ({ className, ref, ...props }: React.ComponentProps<"div">) => {
-  return <div ref={ref} className={cn("flex items-center gap-2 md:gap-3", className)} {...props} />
+  return (
+    <div ref={ref} className={twMerge("flex items-center gap-2 md:gap-3", className)} {...props} />
+  )
 }
 
 interface NavbarCompactProps extends React.ComponentProps<"div">, Pick<NavbarOptions, "intent"> {
@@ -306,7 +306,7 @@ const NavbarInset = ({ className, ref, ...props }: React.ComponentProps<"div">) 
     <main
       ref={ref}
       data-navbar-intent={intent}
-      className={cn(
+      className={twMerge(
         "flex flex-1 flex-col",
         intent === "inset" && "bg-navbar pb-2 md:px-2 dark:bg-bg",
         className,

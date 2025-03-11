@@ -5,7 +5,6 @@ import { IconBrandJustdBlocks } from "@/components/icons/icon-brand-justd-blocks
 import { ResponsiveAside } from "@/components/responsive-aside"
 import { Keyboard } from "@/components/ui/keyboard"
 import { siteConfig } from "@/resources/config/site"
-import { cn } from "@/utils/classes"
 import { useMediaQuery } from "@/utils/use-media-query"
 import {
   IconBrandAdobe,
@@ -81,11 +80,7 @@ export function Navbar() {
 
                   <NavLink href="/blocks">Blocks</NavLink>
                   <Menu>
-                    <Menu.Trigger
-                      className={cn(
-                        "group flex cursor-pointer items-center gap-x-2 py-3 text-muted-fg text-sm tracking-tight outline-hidden focus-visible:text-fg",
-                      )}
-                    >
+                    <Menu.Trigger className="group flex cursor-pointer items-center gap-x-2 py-3 text-muted-fg text-sm tracking-tight outline-hidden focus-visible:text-fg">
                       <IconBrandJustdBlocks /> Premium Blocks
                       <IconChevronLgDown className="size-3 duration-200 group-pressed:rotate-180" />
                     </Menu.Trigger>

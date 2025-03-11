@@ -1,6 +1,10 @@
 "use client"
 
+import { type CalendarDate, getLocalTimeZone, today } from "@internationalized/date"
+import { useDateFormatter } from "@react-aria/i18n"
+import type { CalendarState } from "@react-stately/calendar"
 import { IconChevronLgLeft, IconChevronLgRight } from "justd-icons"
+import { use } from "react"
 import { CalendarStateContext } from "react-aria-components"
 import type { CalendarProps as CalendarPrimitiveProps, DateValue } from "react-aria-components"
 import {
@@ -15,12 +19,7 @@ import {
   composeRenderProps,
   useLocale,
 } from "react-aria-components"
-
-import { cn } from "@/utils/classes"
-import { type CalendarDate, getLocalTimeZone, today } from "@internationalized/date"
-import { useDateFormatter } from "@react-aria/i18n"
-import type { CalendarState } from "@react-stately/calendar"
-import { use } from "react"
+import { twMerge } from "tailwind-merge"
 import { Button } from "./button"
 import { Select } from "./select"
 
@@ -43,7 +42,7 @@ const Calendar = <T extends DateValue>({ errorMessage, className, ...props }: Ca
             <CalendarCell
               date={date}
               className={composeRenderProps(className, (className, { isSelected, isDisabled }) =>
-                cn(
+                twMerge(
                   "relative flex size-10 cursor-default items-center justify-center rounded-lg text-fg tabular-nums outline-hidden hover:bg-secondary-fg/15 sm:size-9 sm:text-sm/6 forced-colors:text-[ButtonText] forced-colors:outline-0",
                   isSelected &&
                     "bg-primary pressed:bg-primary text-primary-fg hover:bg-primary/90 data-invalid:bg-danger data-invalid:text-danger-fg forced-colors:bg-[Highlight] forced-colors:text-[Highlight] forced-colors:data-invalid:bg-[Mark]",
@@ -77,7 +76,10 @@ const CalendarHeader = ({
   return (
     <header
       data-slot="calendar-header"
-      className={cn("flex w-full justify-center gap-1.5 pt-1 pr-1 pb-5 pl-1.5 sm:pb-4", className)}
+      className={twMerge(
+        "flex w-full justify-center gap-1.5 pt-1 pr-1 pb-5 pl-1.5 sm:pb-4",
+        className,
+      )}
       {...props}
     >
       {!isRange && (
@@ -87,7 +89,7 @@ const CalendarHeader = ({
         </>
       )}
       <Heading
-        className={cn(
+        className={twMerge(
           "mr-2 flex-1 text-left font-medium text-muted-fg sm:text-sm",
           !isRange && "sr-only",
           className,

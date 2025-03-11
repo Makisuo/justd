@@ -13,7 +13,6 @@ import { Menu } from "ui"
 import { copyToClipboard } from "usemods"
 
 import { aliasLookup } from "@/app/(app)/icons/partials/aliases"
-import { cn } from "@/utils/classes"
 import { Controller } from "./controller"
 import { box, item } from "./styles"
 
@@ -89,7 +88,7 @@ export function IconListItem({ name, Icon }: IconListItemProps) {
       className={item()}
       textValue={name}
     >
-      <Icon className={cn(selectedSize)} key={name} />
+      <Icon className={selectedSize} key={name} />
       <Menu isOpen={isSelected} onOpenChange={setSelected}>
         <Menu.Content
           triggerRef={triggerRef}

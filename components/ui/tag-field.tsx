@@ -5,10 +5,9 @@ import { useCallback, useState } from "react"
 import type { Key } from "react-aria-components"
 import { Group, TextField } from "react-aria-components"
 import type { ListData } from "react-stately"
-import { twJoin } from "tailwind-merge"
+import { twJoin, twMerge } from "tailwind-merge"
 import { tv } from "tailwind-variants"
 
-import { cn } from "@/utils/classes"
 import type { FieldProps } from "./field"
 import { Description, Input, Label } from "./field"
 import type { RestrictedIntent, TagGroupProps } from "./tag-group"
@@ -141,7 +140,7 @@ const TagField = ({
   }, [list, onItemCleared])
 
   return (
-    <div className={cn("flex w-full flex-col gap-y-1.5", className)}>
+    <div className={twMerge("flex w-full flex-col gap-y-1.5", className)}>
       {props.label && <Label>{props.label}</Label>}
       <Group className={twJoin("flex flex-col", props.isDisabled && "opacity-50")}>
         <TagGroup

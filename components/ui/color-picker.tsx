@@ -8,10 +8,9 @@ import {
   ColorPickerStateContext,
 } from "react-aria-components"
 
-import { cn } from "@/utils/classes"
 import { parseColor } from "@react-stately/color"
 import { IconEyeDropper } from "justd-icons"
-import { twJoin } from "tailwind-merge"
+import { twJoin, twMerge } from "tailwind-merge"
 import { Button } from "./button"
 import { ColorArea } from "./color-area"
 import { ColorField } from "./color-field"
@@ -44,7 +43,7 @@ const ColorPicker = ({
   ...props
 }: ColorPickerProps) => {
   return (
-    <div className={cn("flex flex-col items-start gap-y-1.5", className)}>
+    <div className={twMerge("flex flex-col items-start gap-y-1.5", className)}>
       <ColorPickerPrimitive {...props}>
         <Popover>
           <Button

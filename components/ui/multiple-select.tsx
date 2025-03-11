@@ -12,8 +12,6 @@ import type {
 import { ComboBox } from "react-aria-components"
 import type { ListData } from "react-stately"
 import { useListData } from "react-stately"
-
-import { cn } from "@/utils/classes"
 import { twMerge } from "tailwind-merge"
 import { Button } from "./button"
 import type { FieldProps } from "./field"
@@ -213,7 +211,7 @@ const MultipleSelect = <T extends SelectedKey>({
           >
             <TagList
               items={selectedItems.items}
-              className={cn(
+              className={twMerge(
                 selectedItems.items.length !== 0 && "px-1 py-1.5",
                 "[&_.jdt3lr2x]:last:-mr-1 gap-1.5 outline-hidden",
                 props.shape === "square" && "[&_.jdt3lr2x]:rounded-[calc(var(--radius-lg)-4px)]",

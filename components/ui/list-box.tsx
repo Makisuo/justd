@@ -12,7 +12,7 @@ import {
 } from "react-aria-components"
 
 import { composeTailwindRenderProps } from "@/components/ui/primitive"
-import { cn } from "@/utils/classes"
+import { twMerge } from "tailwind-merge"
 import { DropdownItemDetails, DropdownLabel, DropdownSection, dropdownItemStyles } from "./dropdown"
 
 const ListBox = <T extends object>({ className, ...props }: ListBoxProps<T>) => (
@@ -47,7 +47,7 @@ const ListBoxItem = <T extends object>({ children, className, ...props }: ListBo
         <>
           {allowsDragging && (
             <IconHamburger
-              className={cn(
+              className={twMerge(
                 "size-4 shrink-0 text-muted-fg transition",
                 isFocused && "text-fg",
                 isDragging && "text-fg",
@@ -66,7 +66,10 @@ const ListBoxItem = <T extends object>({ children, className, ...props }: ListBo
 type ListBoxSectionProps = React.ComponentProps<typeof DropdownSection>
 const ListBoxSection = ({ className, ...props }: ListBoxSectionProps) => {
   return (
-    <DropdownSection className={cn(className, "[&_.lbi:last-child]:-mb-1.5 gap-y-1")} {...props} />
+    <DropdownSection
+      className={twMerge("[&_.lbi:last-child]:-mb-1.5 gap-y-1", className)}
+      {...props}
+    />
   )
 }
 

@@ -2,7 +2,6 @@ import type React from "react"
 
 import { Providers } from "@/components/providers"
 import { siteConfig } from "@/resources/config/site"
-import { cn } from "@/utils/classes"
 import "@/resources/styles/app.css"
 import type { Metadata, Viewport } from "next"
 import { Geist_Mono } from "next/font/google"
@@ -76,7 +75,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={cn("min-h-screen font-sans antialiased")}>
+      <body className="min-h-screen font-sans antialiased">
         <Providers>
           <Toast />
           <main>{children}</main>

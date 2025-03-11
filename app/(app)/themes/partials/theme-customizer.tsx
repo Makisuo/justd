@@ -5,8 +5,8 @@ import type React from "react"
 import { useTheme } from "@/components/theme-provider"
 import colors from "@/resources/colors/colors.json"
 import { neutralColors } from "@/resources/lib/colors"
-import { cn } from "@/utils/classes"
 import type { Key } from "react-aria-components"
+import { twMerge } from "tailwind-merge"
 import { Badge, Select } from "ui"
 
 interface ColorSelectProps extends React.ComponentProps<typeof Select> {
@@ -49,7 +49,7 @@ const ColorSelect = ({
           >
             <div
               data-slot="icon"
-              className={cn(
+              className={twMerge(
                 "inset-ring inset-ring-(--inset-ring-color)/15 size-4 rounded-sm dark:inset-ring-(--inset-ring-color)/5",
                 className,
               )}
