@@ -1,41 +1,28 @@
 "use client"
 
-import {
-  Link as LinkPrimitive,
-  type LinkProps as LinkPrimitiveProps,
-  composeRenderProps,
-} from "react-aria-components"
-import { tv } from "tailwind-variants"
-
-const linkStyles = tv({
-  base: "outline-0 outline-offset-2 transition-[color,_opacity] focus-visible:outline-2 focus-visible:outline-ring forced-colors:outline-[Highlight]",
-  variants: {
-    intent: {
-      unstyled: "text-current",
-      primary: "text-primary hover:underline",
-      secondary: "text-secondary-fg hover:underline",
-    },
-    isDisabled: {
-      true: "cursor-default opacity-60 forced-colors:disabled:text-[GrayText]",
-    },
-  },
-  defaultVariants: {
-    intent: "unstyled",
-  },
-})
+import { composeTailwindRenderProps } from "@/components/ui/primitive"
+import { Link as LinkPrimitive, type LinkProps as LinkPrimitiveProps } from "react-aria-components"
+import { twJoin } from "tailwind-merge"
 
 interface LinkProps extends LinkPrimitiveProps {
   intent?: "primary" | "secondary" | "unstyled"
   ref?: React.RefObject<HTMLAnchorElement>
 }
 
-const Link = ({ className, ref, ...props }: LinkProps) => {
+const Link = ({ className, ref, intent = "unstyled", ...props }: LinkProps) => {
   return (
     <LinkPrimitive
       ref={ref}
       {...props}
-      className={composeRenderProps(className, (className, renderProps) =>
-        linkStyles({ ...renderProps, intent: props.intent, className }),
+      className={composeTailwindRenderProps(
+        className,
+        twJoin([
+          "outline-0 outline-offset-2 transition-[color,_opacity] focus-visible:outline-2 focus-visible:outline-ring forced-colors:outline-[Highlight]",
+          "disabled:cursor-default disabled:opacity-60 forced-colors:disabled:text-[GrayText]",
+          intent === "unstyled" && "text-current",
+          intent === "primary" && "text-primary hover:underline",
+          intent === "secondary" && "text-secondary-fg hover:underline",
+        ]),
       )}
     >
       {(values) => (
@@ -46,4 +33,4 @@ const Link = ({ className, ref, ...props }: LinkProps) => {
 }
 
 export type { LinkProps }
-export { Link, linkStyles }
+export { Link }

@@ -2,7 +2,6 @@
 
 import React from "react"
 
-import { cn } from "@/utils/classes"
 import { IconChevronLgDown, IconX } from "justd-icons"
 import type {
   ComboBoxProps as ComboboxPrimitiveProps,
@@ -82,10 +81,14 @@ const ComboBoxList = <T extends object>({
       showArrow={false}
       respectScreen={false}
       isNonModal
-      className={cn("sm:min-w-(--trigger-width)", popoverClassName)}
+      className={composeTailwindRenderProps(popoverClassName, "sm:min-w-(--trigger-width)")}
       placement={props.placement}
     >
-      <ListBox className={cn("border-0", className)} items={items} {...props}>
+      <ListBox
+        className={composeTailwindRenderProps(className, "border-0")}
+        items={items}
+        {...props}
+      >
         {children}
       </ListBox>
     </PopoverContent>

@@ -4,9 +4,9 @@ import { createContext, useContext } from "react"
 
 import type { GroupProps, SeparatorProps, ToolbarProps } from "react-aria-components"
 import { Group, Toolbar as ToolbarPrimitive, composeRenderProps } from "react-aria-components"
-import { tv } from "tailwind-variants"
 
 import { cn } from "@/utils/classes"
+import { twMerge } from "tailwind-merge"
 import { composeTailwindRenderProps } from "./primitive"
 import { Separator } from "./separator"
 import { Toggle, type ToggleProps } from "./toggle"
@@ -15,25 +15,19 @@ const ToolbarContext = createContext<{ orientation?: ToolbarProps["orientation"]
   orientation: "horizontal",
 })
 
-const toolbarStyles = tv({
-  base: "group flex gap-2",
-  variants: {
-    orientation: {
-      horizontal:
-        "flex-row [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
-      vertical: "flex-col items-start",
-    },
-  },
-})
-
 const Toolbar = ({ orientation = "horizontal", className, ...props }: ToolbarProps) => {
   return (
     <ToolbarContext.Provider value={{ orientation }}>
       <ToolbarPrimitive
         orientation={orientation}
         {...props}
-        className={composeRenderProps(className, (className, renderProps) =>
-          toolbarStyles({ ...renderProps, className }),
+        className={composeRenderProps(className, (className, { orientation }) =>
+          twMerge(
+            "group flex flex-row gap-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
+            orientation === "horizontal"
+              ? "flex-row [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              : "flex-col items-start",
+          ),
         )}
       />
     </ToolbarContext.Provider>

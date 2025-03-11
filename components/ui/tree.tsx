@@ -11,25 +11,19 @@ import {
 } from "react-aria-components"
 import { tv } from "tailwind-variants"
 
+import { composeTailwindRenderProps } from "@/components/ui/primitive"
+import { twJoin } from "tailwind-merge"
 import { Checkbox } from "./checkbox"
-
-const treeStyles = tv({
-  base: "flex max-h-96 min-w-72 cursor-default flex-col overflow-auto rounded-lg border py-2 outline-hidden forced-color-adjust-none [scrollbar-width:thin] sm:text-sm [&::-webkit-scrollbar]:size-0.5",
-  variants: {
-    isFocusVisible: {
-      true: "outline-2 outline-primary outline-offset-[-1px]",
-    },
-  },
-})
 
 const Tree = <T extends object>({ className, ...props }: TreeProps<T>) => {
   return (
     <TreePrimitive
-      className={composeRenderProps(className, (className, renderProps) =>
-        treeStyles({
-          ...renderProps,
-          className,
-        }),
+      className={composeTailwindRenderProps(
+        className,
+        twJoin(
+          "flex max-h-96 min-w-72 cursor-default flex-col overflow-auto rounded-lg border py-2 outline-hidden forced-color-adjust-none [scrollbar-width:thin] sm:text-sm [&::-webkit-scrollbar]:size-0.5",
+          "focus-visible:outline-2 focus-visible:outline-ring/70 focus-visible:outline-offset-[-1px]",
+        ),
       )}
       {...props}
     >

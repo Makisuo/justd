@@ -71,12 +71,12 @@ interface RadioProps extends RadioPrimitiveProps {
   ref?: React.Ref<HTMLLabelElement>
 }
 
-const Radio = ({ description, label, ref, ...props }: RadioProps) => {
+const Radio = ({ description, label, ref, className, ...props }: RadioProps) => {
   return (
     <RadioPrimitive
       ref={ref}
       className={composeTailwindRenderProps(
-        props.className,
+        className,
         "group flex items-center gap-2 text-fg text-sm transition disabled:text-fg/50 forced-colors:disabled:text-[GrayText]",
       )}
       {...props}

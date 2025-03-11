@@ -13,9 +13,7 @@ import {
   Disclosure as Collapsible,
   DisclosurePanel as CollapsiblePanel,
   Heading,
-  composeRenderProps,
 } from "react-aria-components"
-import { tv } from "tailwind-variants"
 import { composeTailwindRenderProps } from "./primitive"
 
 interface DisclosureGroupProps extends AccordionProps {
@@ -41,15 +39,6 @@ const DisclosureGroup = ({ children, ref, className, ...props }: DisclosureGroup
   )
 }
 
-const disclosure = tv({
-  base: ["peer group/disclosure w-full min-w-60 border-border border-b"],
-  variants: {
-    isDisabled: {
-      true: "cursor-not-allowed opacity-70",
-    },
-  },
-})
-
 interface DisclosureProps extends CollapsibleProps {
   ref?: React.Ref<HTMLDivElement>
 }
@@ -59,31 +48,15 @@ const Disclosure = ({ className, ref, ...props }: DisclosureProps) => {
       ref={ref}
       data-slot="disclosure"
       {...props}
-      className={composeRenderProps(className, (className, renderProps) =>
-        disclosure({ ...renderProps, className }),
+      className={composeTailwindRenderProps(
+        className,
+        "peer group/disclosure w-full min-w-60 border-border border-b disabled:opacity-60",
       )}
     >
       {props.children}
     </Collapsible>
   )
 }
-
-const disclosureTrigger = tv({
-  base: [
-    "group/trigger [&[aria-expanded=true]_[data-slot=disclosure-chevron]]:-rotate-90 **:data-[slot=icon]:-mx-0.5 flex w-full items-center justify-between gap-x-2 py-3 text-left font-medium **:data-[slot=disclosure-chevron]:size-5 **:data-[slot=icon]:shrink-0 **:data-[slot=icon]:text-muted-fg sm:text-sm **:[span]:flex **:[span]:items-center **:[span]:gap-x-1 **:[span]:*:data-[slot=icon]:mr-1",
-  ],
-  variants: {
-    isFocused: {
-      true: "text-fg outline-hidden",
-    },
-    isOpen: {
-      true: "text-fg",
-    },
-    isDisabled: {
-      true: "cursor-default opacity-50",
-    },
-  },
-})
 
 interface DisclosureTriggerProps extends ButtonProps {
   ref?: React.Ref<HTMLButtonElement>
@@ -94,11 +67,9 @@ const DisclosureTrigger = ({ className, ref, ...props }: DisclosureTriggerProps)
       <Button
         ref={ref}
         slot="trigger"
-        className={composeRenderProps(className, (className, renderProps) =>
-          disclosureTrigger({
-            ...renderProps,
-            className,
-          }),
+        className={composeTailwindRenderProps(
+          className,
+          "group/trigger [&[aria-expanded=true]_[data-slot=disclosure-chevron]]:-rotate-90 **:data-[slot=icon]:-mx-0.5 flex w-full items-center justify-between gap-x-2 py-3 text-left font-medium open:text-fg focus:text-fg focus:outline-hidden disabled:cursor-default disabled:opacity-50 **:data-[slot=disclosure-chevron]:size-5 **:data-[slot=icon]:shrink-0 **:data-[slot=icon]:text-muted-fg sm:text-sm forced-colors:disabled:text-[GrayText] **:[span]:flex **:[span]:items-center **:[span]:gap-x-1 **:[span]:*:data-[slot=icon]:mr-1",
         )}
         {...props}
       >

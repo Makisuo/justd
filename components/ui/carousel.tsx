@@ -14,7 +14,7 @@ import {
   composeRenderProps,
 } from "react-aria-components"
 
-import { cn } from "@/utils/classes"
+import { twMerge } from "tailwind-merge"
 import { tv } from "tailwind-variants"
 import type { ButtonProps } from "./button"
 import { Button } from "./button"
@@ -146,7 +146,7 @@ const Carousel = ({
     >
       <div
         onKeyDownCapture={handleKeyDown}
-        className={cn("relative", className)}
+        className={twMerge("relative", className)}
         role="region"
         aria-roledescription="carousel"
         {...props}
@@ -169,7 +169,11 @@ const CarouselContent = <T extends object>({ className, ...props }: ListBoxSecti
       className="overflow-hidden"
     >
       <ListBoxSection
-        className={cn("flex", orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col", className)}
+        className={twMerge(
+          "flex",
+          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
+          className,
+        )}
         {...props}
       />
     </ListBox>
@@ -214,7 +218,7 @@ const CarouselHandler = ({ ref, className, ...props }: React.ComponentProps<"div
     <div
       data-slot="carousel-handler"
       ref={ref}
-      className={cn(
+      className={twMerge(
         "relative z-10 mt-6 flex items-center gap-x-2",
         orientation === "horizontal" ? "justify-end" : "justify-center",
         className,

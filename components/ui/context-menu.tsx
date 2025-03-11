@@ -2,8 +2,7 @@
 
 import { createContext, use, useRef, useState } from "react"
 
-import { tv } from "tailwind-variants"
-
+import { twMerge } from "tailwind-merge"
 import type { MenuContentProps } from "./menu"
 import { Menu } from "./menu"
 
@@ -46,16 +45,6 @@ const ContextMenu = ({ children }: ContextMenuProps) => {
   )
 }
 
-const contextMenuTriggerStyles = tv({
-  base: "cursor-default focus:outline-hidden",
-  variants: {
-    isDisabled: {
-      false: "forced-colors:disabled:text-[GrayText]",
-      true: "cursor-default opacity-60 forced-colors:disabled:text-[GrayText]",
-    },
-  },
-})
-
 type ContextMenuTriggerProps = React.ButtonHTMLAttributes<HTMLButtonElement>
 
 const ContextMenuTrigger = ({ className, ...props }: ContextMenuTriggerProps) => {
@@ -71,7 +60,10 @@ const ContextMenuTrigger = ({ className, ...props }: ContextMenuTriggerProps) =>
   }
   return (
     <button
-      className={contextMenuTriggerStyles({ isDisabled: props.disabled, className })}
+      className={twMerge(
+        "cursor-default focus:outline-hidden disabled:opacity-60 disabled:forced-colors:disabled:text-[GrayText]",
+        className,
+      )}
       ref={buttonRef}
       aria-haspopup="menu"
       onContextMenu={onContextMenu}

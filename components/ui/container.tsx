@@ -1,4 +1,4 @@
-import { cn } from "@/utils/classes"
+import { twMerge } from "tailwind-merge"
 
 interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   constrained?: boolean
@@ -7,7 +7,7 @@ interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Container = ({ className, constrained = false, ref, ...props }: ContainerProps) => (
   <div
-    className={cn(
+    className={twMerge(
       "mx-auto w-full max-w-7xl lg:max-w-(--breakpoint-xl) 2xl:max-w-(--breakpoint-2xl)",
       constrained ? "sm:px-6 lg:px-8" : "px-4 sm:px-6 lg:px-8",
       className,

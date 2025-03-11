@@ -26,16 +26,6 @@ const fieldBorderStyles = tv({
   },
 })
 
-const numberFieldStyles = tv({
-  slots: {
-    base: "group flex flex-col gap-y-1.5",
-    stepperButton:
-      "h-10 cursor-default pressed:bg-primary px-3 pressed:text-primary-fg text-muted-fg group-disabled:bg-secondary/70 forced-colors:group-disabled:text-[GrayText]",
-  },
-})
-
-const { base, stepperButton } = numberFieldStyles()
-
 interface NumberFieldProps extends NumberFieldPrimitiveProps {
   label?: string
   description?: string
@@ -53,7 +43,10 @@ const NumberField = ({
 }: NumberFieldProps) => {
   const isMobile = useMediaQuery("(max-width: 768px)")
   return (
-    <NumberFieldPrimitive {...props} className={composeTailwindRenderProps(className, base())}>
+    <NumberFieldPrimitive
+      {...props}
+      className={composeTailwindRenderProps(className, "group flex flex-col gap-y-1.5")}
+    >
       {label && <Label>{label}</Label>}
       <FieldGroup className="overflow-hidden">
         {(renderProps) => (
@@ -115,7 +108,14 @@ const StepperButton = ({
       <IconMinus />
     )
   return (
-    <Button className={stepperButton({ className })} slot={slot} {...props}>
+    <Button
+      className={composeTailwindRenderProps(
+        className,
+        "h-10 cursor-default pressed:bg-primary px-3 pressed:text-primary-fg text-muted-fg group-disabled:bg-secondary/70 forced-colors:group-disabled:text-[GrayText]",
+      )}
+      slot={slot}
+      {...props}
+    >
       {icon}
     </Button>
   )
