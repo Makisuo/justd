@@ -122,7 +122,7 @@ export function Footer() {
 
       <Container className="relative z-20 space-y-1.5 border-t bg-bg py-6 text-center text-muted-fg text-sm **:[a]:font-semibold **:[a]:text-fg **:[strong]:font-semibold **:[strong]:text-fg">
         <p>
-          <strong>{siteConfig.name} &trade; 2024</strong> - This project’s crafted with{" "}
+          <strong>{siteConfig.name} &trade; 2025</strong> - This project’s crafted with{" "}
           <span className="font-[ui-sans-serif,-apple-system,system-ui] text-pink-500">♥</span> by{" "}
           <Link href="https://twitter.com/irsyadadl">Irsyad</Link>. Peep the Source Code on{" "}
           <Link href={siteConfig.repo}>GitHub</Link>.
