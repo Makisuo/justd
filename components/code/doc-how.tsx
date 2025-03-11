@@ -7,8 +7,8 @@ import { CodeHighlighter } from "@/components/code/code-highlighter"
 import { TabsList } from "@/components/code/code-sandbox"
 import { createFetchRegistryFile } from "@/resources/lib/fetch-registry"
 import type { RegistryItem } from "@/resources/types"
-import { cn } from "@/utils/classes"
 import { Group } from "react-aria-components"
+import { twMerge } from "tailwind-merge"
 import { Loader, Tabs } from "ui"
 
 const registry = generated as Record<string, RegistryItem>
@@ -75,14 +75,14 @@ export const DocHow = ({
   const divProps = { ...props } as React.HTMLProps<HTMLDivElement>
   return (
     <div
-      className={cn("not-prose group/how forced-color-adjust-non relative my-4", className)}
+      className={twMerge("not-prose group/how forced-color-adjust-non relative my-4", className)}
       {...divProps}
     >
       <Tabs aria-label="Packages">
         <TabsList copyButton={copyButton} code={processedSourceCode as string} src={src} />
         <Tabs.Panel className="w-full" id="preview">
           <div
-            className={cn(
+            className={twMerge(
               !withNoPadding && "relative gap-4 rounded-lg border bg-bg p-6 dark:bg-secondary/40",
               isCenter &&
                 "preview flex min-h-56 items-center justify-center overflow-x-auto py-6 sm:py-24 lg:min-h-110",
@@ -96,7 +96,7 @@ export const DocHow = ({
                 </div>
               }
             >
-              <div className={cn(minW72 && "min-w-72", "not-prose", className)}>
+              <div className={twMerge(minW72 && "min-w-72", "not-prose", className)}>
                 <Component />
               </div>
             </React.Suspense>

@@ -6,7 +6,7 @@ import type {
 } from "react-aria-components"
 import { ColorField as ColorFieldPrimitive } from "react-aria-components"
 
-import { cn } from "@/utils/classes"
+import { twJoin } from "tailwind-merge"
 import { ColorPicker } from "./color-picker"
 import { ColorSwatch } from "./color-swatch"
 import { Description, FieldError, FieldGroup, Input, Label } from "./field"
@@ -52,7 +52,7 @@ const ColorField = ({
         ) : (
           prefix
         )}
-        <div className={cn("flex w-full items-center", prefix && "ml-6")}>
+        <div className={twJoin("flex w-full items-center", prefix && "ml-6")}>
           {value && (
             <span className="ml-1">
               {enableColorPicker ? (

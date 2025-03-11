@@ -1,7 +1,6 @@
 "use client"
 import { ScrollArea, ScrollBar, ScrollViewport } from "@/components/ui/scroll-area"
 import { useCopyButton } from "@/resources/lib/copy"
-import { cn } from "@/utils/classes"
 import type { ScrollAreaViewportProps } from "@radix-ui/react-scroll-area"
 import { IconCheck, IconDuplicate } from "justd-icons"
 import {
@@ -45,7 +44,7 @@ export const Pre = ({ className, ref, ...props }: React.ComponentProps<"pre">) =
   return (
     <pre
       ref={ref}
-      className={cn("w-full p-4 leading-relaxed focus-visible:outline-hidden", className)}
+      className={twMerge("w-full p-4 leading-relaxed focus-visible:outline-hidden", className)}
       {...props}
     >
       {props.children}
@@ -81,7 +80,7 @@ export const PlainCode = ({
     <figure
       ref={ref}
       {...props}
-      className={cn(
+      className={twMerge(
         "not-prose group relative my-6 max-w-4xl overflow-hidden rounded-lg border bg-secondary/50 text-sm",
         keepBackground && "bg-white dark:bg-zinc-950!",
         className,
@@ -115,7 +114,7 @@ export const PlainCode = ({
       <ScrollArea ref={areaRef} className="w-full" dir="ltr">
         <ScrollViewport
           {...viewportProps}
-          className={cn("max-h-[600px]", viewportProps?.className)}
+          className={twMerge("max-h-[600px]", viewportProps?.className)}
         >
           {props.children}
         </ScrollViewport>
@@ -137,7 +136,7 @@ function CopyButton({
   return (
     <button
       type="button"
-      className={cn(
+      className={twMerge(
         buttonStyles({
           size: "square-petite",
           intent: "plain",

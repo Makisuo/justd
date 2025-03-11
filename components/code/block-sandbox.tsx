@@ -10,7 +10,6 @@ import { IconDevicePhone } from "@/components/icon-device"
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/resizable"
 import quotes from "@/resources/json/quotes.json"
 import type { RegistryItem } from "@/resources/types"
-import { cn } from "@/utils/classes"
 import {
   IconCube,
   IconDeviceDesktop2,
@@ -24,6 +23,7 @@ import {
 } from "justd-icons"
 import { type Key, Tab, TabList, ToggleButtonGroup } from "react-aria-components"
 import type { ImperativePanelHandle } from "react-resizable-panels"
+import { twMerge } from "tailwind-merge"
 import {
   Button,
   Link,
@@ -161,7 +161,7 @@ function Component({ folders, fullscreen, isIframe = false, title, ...props }: P
               <TabList className="flex items-center text-xs">
                 <Tab
                   className={({ isSelected }) =>
-                    cn(
+                    twMerge(
                       "cursor-pointer rounded-sm px-2.5 py-1.5 outline-hidden",
                       isSelected && "bg-primary text-primary-fg",
                     )
@@ -172,7 +172,7 @@ function Component({ folders, fullscreen, isIframe = false, title, ...props }: P
                 </Tab>
                 <Tab
                   className={({ isSelected }) =>
-                    cn(
+                    twMerge(
                       "cursor-pointer rounded-sm px-2.5 py-1.5 outline-hidden",
                       isSelected && "bg-primary text-primary-fg",
                     )

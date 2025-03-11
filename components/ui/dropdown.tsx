@@ -1,6 +1,4 @@
 "use client"
-
-import { cn } from "@/utils/classes"
 import { IconCheck } from "justd-icons"
 import type {
   ListBoxItemProps,
@@ -17,6 +15,7 @@ import {
   Text,
   composeRenderProps,
 } from "react-aria-components"
+import { twMerge } from "tailwind-merge"
 import { tv } from "tailwind-variants"
 import { Keyboard } from "./keyboard"
 
@@ -118,7 +117,7 @@ const DropdownItemDetails = ({
       {label && (
         <Text
           slot={slot ?? "label"}
-          className={cn("font-medium sm:text-sm", classNames?.label)}
+          className={twMerge("font-medium sm:text-sm", classNames?.label)}
           {...restProps}
         >
           {label}
@@ -127,7 +126,7 @@ const DropdownItemDetails = ({
       {description && (
         <Text
           slot={slot ?? "description"}
-          className={cn("text-muted-fg text-xs", classNames?.description)}
+          className={twMerge("text-muted-fg text-xs", classNames?.description)}
           {...restProps}
         >
           {description}
@@ -143,19 +142,19 @@ interface DropdownLabelProps extends TextProps {
 }
 
 const DropdownLabel = ({ className, ref, ...props }: DropdownLabelProps) => (
-  <Text slot="label" ref={ref} className={cn("col-start-2", className)} {...props} />
+  <Text slot="label" ref={ref} className={twMerge("col-start-2", className)} {...props} />
 )
 
 const DropdownSeparator = ({ className, ...props }: SeparatorProps) => (
   <Separator
     orientation="horizontal"
-    className={cn("-mx-1 col-span-full my-1 h-px bg-border", className)}
+    className={twMerge("-mx-1 col-span-full my-1 h-px bg-border", className)}
     {...props}
   />
 )
 
 const DropdownKeyboard = ({ className, ...props }: React.ComponentProps<typeof Keyboard>) => {
-  return <Keyboard className={cn("absolute right-2 pl-2", className)} {...props} />
+  return <Keyboard className={twMerge("absolute right-2 pl-2", className)} {...props} />
 }
 
 /**

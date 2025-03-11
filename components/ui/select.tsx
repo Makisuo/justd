@@ -1,6 +1,6 @@
 "use client"
 
-import { cn } from "@/utils/classes"
+import { clsx } from "clsx"
 import { IconChevronLgDown } from "justd-icons"
 import type {
   ListBoxProps,
@@ -14,6 +14,7 @@ import {
   SelectValue,
   composeRenderProps,
 } from "react-aria-components"
+import { twMerge } from "tailwind-merge"
 import { tv } from "tailwind-variants"
 import {
   DropdownItem,
@@ -91,10 +92,14 @@ const SelectList = <T extends object>({
     <PopoverContent
       showArrow={false}
       respectScreen={false}
-      className={cn("sm:min-w-(--trigger-width)", popoverClassName)}
+      className={twMerge(clsx("sm:min-w-(--trigger-width)", popoverClassName))}
       placement={props.placement}
     >
-      <ListBox className={cn("border-0 shadow-none", className)} items={items} {...props}>
+      <ListBox
+        className={twMerge(clsx("border-0 shadow-none", className))}
+        items={items}
+        {...props}
+      >
         {children}
       </ListBox>
     </PopoverContent>

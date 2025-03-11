@@ -21,14 +21,15 @@ The `ShowMore` component is primarily used to encapsulate content that can be ex
 Import the components and use them as shown below, adapting the structure to fit each component.
 ```
 import { IconChevronLgDown } from "justd-icons"
-import { cn, ShowMore } from "ui"
+import { ShowMore } from "ui"
+import { twMerge } from "tailwind-merge"
 
 <ShowMore>
   {({ isSelected }) => (
     <>
       Show {isSelected ? "less" : "more"}
       <IconChevronLgDown
-        className={cn(
+        className={twMerge(
           isSelected ? "rotate-180" : "",
           "size-4 transition-transform duration-200"
         )}

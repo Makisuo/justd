@@ -1,10 +1,8 @@
 "use client"
 
-import { createContext, use, useCallback, useEffect, useMemo, useState } from "react"
-
-import { cn } from "@/utils/classes"
 import { useMediaQuery } from "@/utils/use-media-query"
 import { IconChevronLgDown, IconHamburger, IconSidebarFill } from "justd-icons"
+import { createContext, use, useCallback, useEffect, useMemo, useState } from "react"
 import type {
   ButtonProps,
   DisclosureGroupProps,
@@ -25,7 +23,7 @@ import {
   Button as Trigger,
   composeRenderProps,
 } from "react-aria-components"
-import { twJoin } from "tailwind-merge"
+import { twJoin, twMerge } from "tailwind-merge"
 import { tv } from "tailwind-variants"
 import { Badge } from "./badge"
 import { Button } from "./button"
@@ -127,7 +125,7 @@ const SidebarProvider = ({
   return (
     <SidebarContext value={contextValue}>
       <div
-        className={cn(
+        className={twMerge(
           "@container **:data-[slot=icon]:shrink-0",
           "[--sidebar-width-dock:3.25rem] [--sidebar-width-mobile:18rem] [--sidebar-width:17rem]",
           "[--sidebar-border:color-mix(in_oklch,var(--color-sidebar)_25%,black_6%)]",
@@ -218,7 +216,7 @@ const Sidebar = ({
       <div
         data-sidebar-intent={intent}
         data-sidebar-collapsible="none"
-        className={cn(
+        className={twMerge(
           "flex h-full w-(--sidebar-width) flex-col border-r bg-sidebar text-sidebar-fg",
           className,
         )}
@@ -337,7 +335,7 @@ const SidebarContent = ({ className, ...props }: React.ComponentProps<"div">) =>
   return (
     <div
       data-sidebar-content="true"
-      className={cn(
+      className={twMerge(
         "flex min-h-0 flex-1 scroll-mb-96 flex-col overflow-auto *:data-sidebar-section:border-l-0",
         state === "collapsed" && "items-center",
         className,
@@ -353,7 +351,7 @@ const SidebarSectionGroup = ({ className, ...props }: React.ComponentProps<"sect
   return (
     <section
       data-sidebar-section-group="true"
-      className={cn(
+      className={twMerge(
         "flex w-full flex-col gap-y-6",
         collapsed && "items-center justify-center",
         className,
@@ -371,7 +369,7 @@ const SidebarSection = ({
   return (
     <div
       data-sidebar-section="true"
-      className={cn(
+      className={twMerge(
         "col-span-full flex flex-col gap-y-0.5 in-data-[sidebar-intent=fleet]:px-0 px-2 **:data-sidebar-section:**:gap-y-0 **:data-sidebar-section:pr-0",
         className,
       )}
@@ -528,7 +526,7 @@ const SidebarInset = ({ className, ref, ...props }: React.ComponentProps<"main">
   return (
     <main
       ref={ref}
-      className={cn(
+      className={twMerge(
         "relative flex min-h-svh w-full flex-1 flex-col peer-data-[sidebar-intent=inset]:border peer-data-[sidebar-intent=inset]:border-(--sidebar-border)",
         "bg-bg peer-data-[sidebar-intent=inset]:overflow-hidden dark:peer-data-[sidebar-intent=inset]:bg-sidebar",
         "peer-data-[sidebar-intent=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[sidebar-state=collapsed]:peer-data-[sidebar-intent=inset]:ml-2 md:peer-data-[sidebar-intent=inset]:m-2 md:peer-data-[sidebar-intent=inset]:ml-0 md:peer-data-[sidebar-intent=inset]:rounded-xl md:peer-data-[sidebar-intent=inset]:shadow-xs",
@@ -566,7 +564,10 @@ const SidebarDisclosure = ({ className, ref, ...props }: SidebarDisclosureProps)
       data-sidebar-disclosure="true"
       className={composeTailwindRenderProps(
         className,
-        cn("in-data-[sidebar-intent=fleet]:px-0 px-2.5", state !== "collapsed" && "col-span-full"),
+        twMerge(
+          "in-data-[sidebar-intent=fleet]:px-0 px-2.5",
+          state !== "collapsed" && "col-span-full",
+        ),
       )}
       {...props}
     />
@@ -643,7 +644,7 @@ const SidebarSeparator = ({ className, ...props }: SidebarSeparatorProps) => {
   return (
     <Separator
       orientation="horizontal"
-      className={cn(
+      className={twMerge(
         "col-span-full mx-auto my-2.5 h-px w-[calc(var(--sidebar-width)-theme(spacing.6))] bg-border",
         className,
       )}
@@ -688,7 +689,7 @@ const SidebarRail = ({ className, ref, ...props }: React.ComponentProps<"button"
       title="Toggle Sidebar"
       tabIndex={-1}
       onClick={toggleSidebar}
-      className={cn(
+      className={twMerge(
         "-translate-x-1/2 group-data-[sidebar-side=left]/sidebar-container:-right-4 absolute inset-y-0 z-20 hidden w-4 outline-hidden transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-transparent group-data-[sidebar-side=right]/sidebar-container:left-0 sm:flex",
         "in-data-[sidebar-side=left]:cursor-w-resize in-data-[sidebar-side=right]:cursor-e-resize",
         "[[data-sidebar-side=left][data-sidebar-state=collapsed]_&]:cursor-e-resize [[data-sidebar-side=right][data-sidebar-state=collapsed]_&]:cursor-w-resize",
@@ -712,7 +713,7 @@ const SidebarLabel = ({ className, ref, ...props }: SidebarLabelProps) => {
         tabIndex={-1}
         ref={ref}
         slot="label"
-        className={cn("col-start-2 overflow-hidden whitespace-nowrap", className)}
+        className={twMerge("col-start-2 overflow-hidden whitespace-nowrap", className)}
         {...props}
       >
         {props.children}
