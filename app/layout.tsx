@@ -4,7 +4,6 @@ import { Providers } from "@/components/providers"
 import { siteConfig } from "@/resources/config/site"
 import "@/resources/styles/app.css"
 import type { Metadata, Viewport } from "next"
-import { Geist_Mono } from "next/font/google"
 import localFont from "next/font/local"
 import { twJoin } from "tailwind-merge"
 import { Toast } from "ui"
@@ -166,8 +165,7 @@ const fontSans = localFont({
   ],
   variable: "--font-inter",
 })
-
-const fontMono = Geist_Mono({
+const fontMono = localFont({
+  src: [{ path: "./fonts/GeistMono[wght].woff2", weight: "300 900", style: "normal" }],
   variable: "--font-geist-mono",
-  subsets: ["latin"],
 })
