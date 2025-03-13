@@ -42,7 +42,6 @@ const generateComponentRegistry = () => {
   }
 
   const registryEntries: string[] = []
-  const generatedFiles: { Type: string; Path: string }[] = []
 
   for (const { type, path: sourcePath } of sources) {
     const resolvedPath = path.resolve(sourcePath)
@@ -85,7 +84,6 @@ const generateComponentRegistry = () => {
       }
       fs.writeFileSync(jsonOutputPath, JSON.stringify(registryItem, null, 2))
 
-      generatedFiles.push({ Type: type, Path: path.basename(jsonOutputPath) })
       if (type !== "anatomies") {
         registryEntries.push(`
         "${key}": {
@@ -131,8 +129,6 @@ export default registry;
   fs.writeFileSync(generatedFilePath, generatedContent)
 
   clearInterval(loadingInterval)
-
-  console.table(generatedFiles)
 
   console.info("Registry generation complete.")
 }
