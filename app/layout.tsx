@@ -4,7 +4,8 @@ import { Providers } from "@/components/providers"
 import { siteConfig } from "@/resources/config/site"
 import "@/resources/styles/app.css"
 import type { Metadata, Viewport } from "next"
-import { Geist_Mono, Inter } from "next/font/google"
+import { Geist_Mono } from "next/font/google"
+import localFont from "next/font/local"
 import { twJoin } from "tailwind-merge"
 import { Toast } from "ui"
 
@@ -154,24 +155,19 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
-// const fontSans = localFont({
-//   src: [
-//     { path: "./fonts/InterVariable.woff2", weight: "300 900", style: "normal" },
-//     {
-//       path: "./fonts/InterVariable-Italic.woff2",
-//       weight: "300 900",
-//       style: "italic",
-//     },
-//   ],
-//   variable: "--font-inter",
-// })
+const fontSans = localFont({
+  src: [
+    { path: "./fonts/InterVariable.woff2", weight: "300 900", style: "normal" },
+    {
+      path: "./fonts/InterVariable-Italic.woff2",
+      weight: "300 900",
+      style: "italic",
+    },
+  ],
+  variable: "--font-inter",
+})
 
 const fontMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
-
-const fontSans = Inter({
-  variable: "--font-inter",
   subsets: ["latin"],
 })
