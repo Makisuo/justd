@@ -68,9 +68,7 @@ export function Resources() {
                   <item.icon />
                 </WrapperIcon>
                 <Card.Header className="flex flex-col gap-y-2 sm:gap-y-4">
-                  <Card.Title level={3} className="sm:mb-2 sm:text-2xl/0">
-                    {item.name}
-                  </Card.Title>
+                  <Card.Title className="sm:mb-2 sm:text-2xl/0">{item.name}</Card.Title>
                   <Card.Description>{item.description}</Card.Description>
                   <div>
                     <Badge>{item.label}</Badge>
@@ -107,9 +105,7 @@ export function Resources() {
                 <IconBrandJustdBlocks />
               </WrapperIcon>
               <Card.Header className="flex flex-col gap-y-2 sm:gap-y-4">
-                <Card.Title level={3} className="sm:mb-2 sm:text-2xl/0">
-                  Justd Blocks
-                </Card.Title>
+                <Card.Title className="sm:mb-2 sm:text-2xl/0">Justd Blocks</Card.Title>
                 <Card.Description>
                   Pre-designed, ready-to-use React components for seamless integration, customizable
                   and optimized for modern web applications.
@@ -132,9 +128,7 @@ export function Resources() {
                 <IconWindowVisitFill className="size-6" />
               </WrapperIcon>
               <Card.Header className="flex flex-col gap-y-2 sm:gap-y-4">
-                <Card.Title level={3} className="sm:mb-2 sm:text-2xl/0">
-                  Templates
-                </Card.Title>
+                <Card.Title className="sm:mb-2 sm:text-2xl/0">Templates</Card.Title>
                 <Card.Description>
                   Looking for beautifully crafted templates to elevate your project? Browse through
                   a collection of designs tailored to meet your needs.

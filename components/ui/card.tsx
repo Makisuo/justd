@@ -22,7 +22,7 @@ const CardHeader = ({ className, title, description, children, ...props }: Heade
   <div
     data-slot="card-header"
     className={twMerge(
-      "has-data-[slot=card-action]:*:data-[slot=card-description]:-mt-4 grid w-full grid-cols-[1fr_auto] gap-y-1.5 px-(--card-spacing) py-6",
+      "grid w-full grid-cols-[1fr_auto] gap-y-1 px-(--card-spacing) py-6",
       className,
     )}
     {...props}
@@ -33,15 +33,11 @@ const CardHeader = ({ className, title, description, children, ...props }: Heade
   </div>
 )
 
-interface CardTitleProps extends React.ComponentProps<"div"> {
-  level?: number
-}
-
-const CardTitle = ({ className, level = 3, ...props }: CardTitleProps) => {
+const CardTitle = ({ className, ...props }: React.ComponentProps<"div">) => {
   return (
     <div
       data-slot="card-title"
-      className={twMerge("font-semibold text-lg/6 leading-none tracking-tight", className)}
+      className={twMerge("font-semibold text-lg/6 tracking-tight", className)}
       {...props}
     />
   )
