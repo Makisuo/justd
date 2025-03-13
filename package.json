@@ -57,7 +57,7 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@shikijs/rehype": "^2.5.0",
-    "@tailwindcss/postcss": "^4.0.13",
+    "@tailwindcss/postcss": "^4.0.14",
     "@tailwindcss/typography": "^0.5.16",
     "@types/culori": "^2.1.1",
     "@types/mdx": "^2.0.13",
@@ -73,7 +73,7 @@
     "rehype-slug": "^6.0.0",
     "tailwind-merge": "^3.0.2",
     "tailwind-variants": "^1.0.0",
-    "tailwindcss": "^4.0.13",
+    "tailwindcss": "^4.0.14",
     "typescript": "^5.8.2"
   },
   "repository": {
