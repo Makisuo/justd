@@ -47,100 +47,102 @@ const resources = [
 export function Resources() {
   return (
     <Container>
-      <section id="starter-kit" className="mb-12">
-        <Heading level={2} className="mb-4 text-2xl sm:text-2xl">
-          Starter Kit
-        </Heading>
-        <div
-          className="grid grid-cols-1 gap-px divide-y border-y p-px sm:grid-cols-2 sm:divide-y-0 sm:border-y-0 sm:bg-border"
-          aria-label="Resources"
-        >
-          {resources.map((item) => (
+      <div className="-mx-4 sm:mx-0">
+        <section id="starter-kit" className="mb-14">
+          <Heading level={2} className="mb-4 px-4 text-2xl sm:px-0 sm:text-2xl">
+            Starter Kit
+          </Heading>
+          <div
+            className="grid grid-cols-1 gap-px divide-y border-y p-px sm:grid-cols-2 sm:divide-y-0 sm:border-y-0 sm:bg-border"
+            aria-label="Resources"
+          >
+            {resources.map((item) => (
+              <Link
+                target="_blank"
+                href={item.url}
+                className="group relative bg-bg p-4 hover:bg-overlay sm:p-8 lg:p-10"
+                aria-label={item.name}
+                key={item.name.toLowerCase().replaceAll(" ", "-")}
+              >
+                <div className="flex">
+                  <WrapperIcon>
+                    <item.icon />
+                  </WrapperIcon>
+                  <Card.Header className="flex flex-col gap-y-2">
+                    <Card.Title>{item.name}</Card.Title>
+                    <Card.Description>{item.description}</Card.Description>
+                    <div>
+                      <Badge>{item.label}</Badge>
+                    </div>
+                  </Card.Header>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section id="extra">
+          <div className="mb-4 px-4 sm:px-0">
+            <Heading level={2} className="text-2xl sm:text-2xl">
+              Justd Blocks
+            </Heading>
+            <p className="text-muted-fg leading-relaxed lg:text-lg">
+              Create Beautiful Pages Effortlessly in No Time
+            </p>
+          </div>
+          <div
+            className="grid grid-cols-1 gap-px divide-y border-y p-px sm:grid-cols-2 sm:divide-y-0 sm:border-y-0 sm:bg-border"
+            aria-label="Extra"
+          >
             <Link
-              target="_blank"
-              href={item.url}
               className="group relative bg-bg p-4 hover:bg-overlay sm:p-8 lg:p-10"
-              aria-label={item.name}
-              key={item.name.toLowerCase().replaceAll(" ", "-")}
+              target="_blank"
+              aria-label={"Justd Blocks"}
+              rel="noopener noreferrer"
+              href="https://dub.sh/RNMV32k"
             >
               <div className="flex">
                 <WrapperIcon>
-                  <item.icon />
+                  <IconBrandJustdBlocks />
                 </WrapperIcon>
-                <Card.Header className="flex flex-col gap-y-2 sm:gap-y-4">
-                  <Card.Title className="sm:mb-2 sm:text-2xl/0">{item.name}</Card.Title>
-                  <Card.Description>{item.description}</Card.Description>
+                <Card.Header className="flex flex-col gap-y-2">
+                  <Card.Title>Justd Blocks</Card.Title>
+                  <Card.Description>
+                    Pre-designed, ready-to-use React components for seamless integration,
+                    customizable and optimized for modern web applications.
+                  </Card.Description>
                   <div>
-                    <Badge>{item.label}</Badge>
+                    <Badge>Premium Blocks</Badge>
                   </div>
                 </Card.Header>
               </div>
             </Link>
-          ))}
-        </div>
-      </section>
-
-      <section id="extra">
-        <div className="mb-4">
-          <Heading level={2} className="text-2xl sm:text-2xl">
-            Justd Blocks
-          </Heading>
-          <p className="text-muted-fg leading-relaxed lg:text-lg">
-            Create Beautiful Pages Effortlessly in No Time
-          </p>
-        </div>
-        <div
-          className="grid grid-cols-1 gap-px divide-y border-y p-px sm:grid-cols-2 sm:divide-y-0 sm:border-y-0 sm:bg-border"
-          aria-label="Extra"
-        >
-          <Link
-            className="group relative bg-bg p-4 hover:bg-overlay sm:p-8 lg:p-10"
-            target="_blank"
-            aria-label={"Justd Blocks"}
-            rel="noopener noreferrer"
-            href="https://dub.sh/RNMV32k"
-          >
-            <div className="flex">
-              <WrapperIcon>
-                <IconBrandJustdBlocks />
-              </WrapperIcon>
-              <Card.Header className="flex flex-col gap-y-2 sm:gap-y-4">
-                <Card.Title className="sm:mb-2 sm:text-2xl/0">Justd Blocks</Card.Title>
-                <Card.Description>
-                  Pre-designed, ready-to-use React components for seamless integration, customizable
-                  and optimized for modern web applications.
-                </Card.Description>
-                <div>
-                  <Badge>Premium Blocks</Badge>
-                </div>
-              </Card.Header>
-            </div>
-          </Link>
-          <Link
-            className="group relative bg-bg p-4 hover:bg-overlay sm:p-8 lg:p-10"
-            target="_blank"
-            aria-label={"Justd icons"}
-            rel="noopener noreferrer"
-            href="https://blocks.getjustd.com/templates"
-          >
-            <div className="flex">
-              <WrapperIcon>
-                <IconWindowVisitFill className="size-6" />
-              </WrapperIcon>
-              <Card.Header className="flex flex-col gap-y-2 sm:gap-y-4">
-                <Card.Title className="sm:mb-2 sm:text-2xl/0">Templates</Card.Title>
-                <Card.Description>
-                  Looking for beautifully crafted templates to elevate your project? Browse through
-                  a collection of designs tailored to meet your needs.
-                </Card.Description>
-                <div>
-                  <Badge>Premium Blocks</Badge>
-                </div>
-              </Card.Header>
-            </div>
-          </Link>
-        </div>
-      </section>
+            <Link
+              className="group relative bg-bg p-4 hover:bg-overlay sm:p-8 lg:p-10"
+              target="_blank"
+              aria-label={"Justd icons"}
+              rel="noopener noreferrer"
+              href="https://blocks.getjustd.com/templates"
+            >
+              <div className="flex">
+                <WrapperIcon>
+                  <IconWindowVisitFill className="size-6" />
+                </WrapperIcon>
+                <Card.Header className="flex flex-col gap-y-2">
+                  <Card.Title>Templates</Card.Title>
+                  <Card.Description>
+                    Looking for beautifully crafted templates to elevate your project? Browse
+                    through a collection of designs tailored to meet your needs.
+                  </Card.Description>
+                  <div>
+                    <Badge>Premium Blocks</Badge>
+                  </div>
+                </Card.Header>
+              </div>
+            </Link>
+          </div>
+        </section>
+      </div>
     </Container>
   )
 }
@@ -166,7 +168,7 @@ export function WrapperIcon(props: React.ComponentProps<"div">) {
   return (
     <div
       id="support"
-      className="inset-ring inset-ring-fg/10 grid size-14 shrink-0 place-content-center rounded-full bg-secondary/20 text-xl group-hover:inset-ring-primary/25 group-hover:bg-primary/5 **:group-hover:text-primary **:[svg]:size-6"
+      className="inset-ring inset-ring-fg/10 mr-4 grid size-14 shrink-0 place-content-center rounded-full bg-secondary/20 text-xl group-hover:inset-ring-primary/25 group-hover:bg-primary/5 **:group-hover:text-primary **:[svg]:size-6"
       {...props}
     />
   )

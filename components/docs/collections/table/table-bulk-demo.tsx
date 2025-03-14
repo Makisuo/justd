@@ -9,7 +9,7 @@ export default function TableBulkDemo() {
   const [selectedKeys, setSelectedKeys] = useState<Selection>(new Set())
   return (
     <>
-      <Card>
+      <Card className="py-0">
         <Table
           aria-label="Books"
           selectionMode="multiple"

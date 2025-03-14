@@ -39,7 +39,7 @@ export default function TableSortingDemo() {
     },
   })
   return (
-    <Card>
+    <Card className="py-0">
       <Table
         aria-label="Movies"
         selectionMode="multiple"

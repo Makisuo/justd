@@ -4,7 +4,7 @@ import { Card, Table } from "ui"
 
 export default function TableResizeDemo() {
   return (
-    <Card>
+    <Card className="py-0">
       <Table allowResize aria-label="Vocalists">
         <Table.Header>
           <Table.Column className="max-w-0">ID</Table.Column>

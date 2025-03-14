@@ -9,7 +9,7 @@ export default function TableDemo() {
 
   const priceFormat = (price: number) => formatter.format(price)
   return (
-    <Card>
+    <Card className="py-0">
       <Table aria-label="Products">
         <Table.Header>
           <Table.Column className="w-0">#</Table.Column>

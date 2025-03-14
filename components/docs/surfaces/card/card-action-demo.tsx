@@ -1,3 +1,5 @@
+"use client"
+
 import { IconChevronLgDown } from "justd-icons"
 import { Button, Card, Menu } from "ui"
 
