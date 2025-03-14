@@ -13,6 +13,7 @@ interface FileTriggerProps extends FileTriggerPrimitiveProps, VariantProps<typeo
   withIcon?: boolean
   isDisabled?: boolean
   ref?: React.RefObject<HTMLInputElement>
+  className?: string
 }
 
 const FileTrigger = ({
@@ -21,11 +22,18 @@ const FileTrigger = ({
   shape = "square",
   withIcon = true,
   ref,
+  className,
   ...props
 }: FileTriggerProps) => {
   return (
     <FileTriggerPrimitive ref={ref} {...props}>
-      <Button isDisabled={props.isDisabled} intent={intent} size={size} shape={shape}>
+      <Button
+        className={className}
+        isDisabled={props.isDisabled}
+        intent={intent}
+        size={size}
+        shape={shape}
+      >
         {withIcon &&
           (props.defaultCamera ? (
             <IconCamera />
