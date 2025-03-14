@@ -156,16 +156,13 @@ export const viewport: Viewport = {
 
 const fontSans = localFont({
   src: [
-    { path: "./fonts/InterVariable.woff2", weight: "300 900", style: "normal" },
-    {
-      path: "./fonts/InterVariable-Italic.woff2",
-      weight: "300 900",
-      style: "italic",
-    },
+    { path: "./fonts/InterVariable.woff2", weight: "100 900", style: "normal" },
+    { path: "./fonts/InterVariable-Italic.woff2", weight: "100 900", style: "italic" },
   ],
   variable: "--font-inter",
 })
+
 const fontMono = localFont({
-  src: [{ path: "./fonts/GeistMono[wght].woff2", weight: "300 900", style: "normal" }],
+  src: [{ path: "./fonts/GeistMono[wght].woff2", weight: "100 900", style: "normal" }],
   variable: "--font-geist-mono",
 })
