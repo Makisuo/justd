@@ -1,4 +1,5 @@
 "use client"
+import { buttonStyles } from "@/components/ui/button"
 import { ScrollArea, ScrollBar, ScrollViewport } from "@/components/ui/scroll-area"
 import { useCopyButton } from "@/resources/lib/copy"
 import type { ScrollAreaViewportProps } from "@radix-ui/react-scroll-area"
@@ -12,7 +13,6 @@ import {
   useRef,
 } from "react"
 import { twMerge } from "tailwind-merge"
-import { buttonStyles } from "ui"
 
 export type PreProps = HTMLAttributes<HTMLElement> & {
   ref?: React.Ref<HTMLElement>

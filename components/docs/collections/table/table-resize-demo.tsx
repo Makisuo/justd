@@ -1,6 +1,7 @@
 "use client"
 
-import { Card, Table } from "ui"
+import { Card } from "@/components/ui/card"
+import { Table } from "@/components/ui/table"
 
 export default function TableResizeDemo() {
   return (

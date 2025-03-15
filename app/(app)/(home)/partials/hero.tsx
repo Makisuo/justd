@@ -1,9 +1,11 @@
 "use client"
 
+import { buttonStyles } from "@/components/ui/button"
+import { Container } from "@/components/ui/container"
+import { Link } from "@/components/ui/link"
 import { siteConfig } from "@/resources/config/site"
 import { IconBrandGithub, IconBrandJustd, IconCube, IconStar } from "justd-icons"
 import { Header } from "react-aria-components"
-import { Container, Link, buttonStyles } from "ui"
 
 export function Hero() {
   return (

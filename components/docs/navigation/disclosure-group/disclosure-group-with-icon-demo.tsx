@@ -1,6 +1,12 @@
 "use client"
 
 import {
+  Disclosure,
+  DisclosureGroup,
+  DisclosurePanel,
+  DisclosureTrigger,
+} from "@/components/ui/disclosure"
+import {
   IconArchive,
   IconChartTrending,
   IconCheck,
@@ -15,7 +21,6 @@ import {
   IconShieldCheck,
   IconWhiteboard,
 } from "justd-icons"
-import { Disclosure, DisclosureGroup, DisclosurePanel, DisclosureTrigger } from "ui"
 
 export default function DisclosureGroupWithIconDemo() {
   return (

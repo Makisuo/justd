@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 
-import { Button, Modal } from "ui"
+import { Button } from "@/components/ui/button"
+import { Modal } from "@/components/ui/modal"
 
 type Size = Pick<React.ComponentProps<typeof Modal.Content>, "size">["size"]
 const sizes: Size[] = ["xs", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl", "5xl"]

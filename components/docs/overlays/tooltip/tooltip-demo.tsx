@@ -1,5 +1,7 @@
 "use client"
 
+import { buttonStyles } from "@/components/ui/button"
+import { Tooltip } from "@/components/ui/tooltip"
 import {
   IconFullscreen,
   IconGrid4,
@@ -11,7 +13,6 @@ import {
   IconLayoutColumnLeftside,
   IconLayoutColumnVerticalAdd,
 } from "justd-icons"
-import { Tooltip, buttonStyles } from "ui"
 
 export default function TooltipDemo() {
   return (

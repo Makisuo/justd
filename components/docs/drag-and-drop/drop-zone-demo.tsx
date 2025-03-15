@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 
-import { DropZone, Label } from "ui"
+import { DropZone } from "@/components/ui/drop-zone"
+import { Label } from "@/components/ui/field"
 
 export default function DropZoneDemo() {
   const [dropped, setDropped] = useState(false)

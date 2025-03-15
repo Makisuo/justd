@@ -2,7 +2,7 @@
 
 import React, { useState } from "react"
 
-import { ProgressCircle } from "ui"
+import { ProgressCircle } from "@/components/ui/progress-circle"
 
 export default function ProgressCircleDemo() {
   const [value, setValue] = useState(1)

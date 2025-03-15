@@ -1,3 +1,7 @@
+import { Button } from "@/components/ui/button"
+import { Link } from "@/components/ui/link"
+import { Menu } from "@/components/ui/menu"
+import { SidebarHeader as Header, SidebarLabel, useSidebar } from "@/components/ui/sidebar"
 import {
   IconArrowDownLeft,
   IconArrowDownRight,
@@ -11,7 +15,6 @@ import {
   IconFolderFill,
   IconMinus,
 } from "justd-icons"
-import { Button, SidebarHeader as Header, Link, Menu, SidebarLabel, useSidebar } from "ui"
 
 export function SidebarHeader() {
   const { toggleSidebar } = useSidebar()

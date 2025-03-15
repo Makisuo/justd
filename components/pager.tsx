@@ -1,8 +1,8 @@
 "use client"
+import { Link } from "@/components/ui/link"
 import { type PageTree, findNeighbour } from "fumadocs-core/server"
 import { IconChevronLgLeft, IconChevronLgRight } from "justd-icons"
 import { twMerge } from "tailwind-merge"
-import { Link } from "ui"
 
 export const Pager = ({
   tree,

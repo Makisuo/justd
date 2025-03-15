@@ -1,10 +1,10 @@
 import { useState } from "react"
 
-import { useQueryString } from "hooks/use-query-string"
+import { Button } from "@/components/ui/button"
 import { IconBullet, IconBulletFill } from "justd-icons"
 import { usePathname, useRouter } from "next/navigation"
-import { Button } from "ui"
 
+import { useQueryString } from "@/resources/hooks/use-query-string"
 import type { SearchParamsProps } from "../icons-list"
 import { InstallIcon } from "./install-icon"
 import { Search } from "./search"

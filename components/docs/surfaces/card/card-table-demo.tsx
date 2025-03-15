@@ -1,7 +1,10 @@
 "use client"
 
+import { Card } from "@/components/ui/card"
+import { Menu } from "@/components/ui/menu"
+import { Pagination } from "@/components/ui/pagination"
+import { Table } from "@/components/ui/table"
 import { IconDotsVertical, IconEye, IconHighlight, IconTrash } from "justd-icons"
-import { Card, Menu, Pagination, Table } from "ui"
 
 export default function CardTableDemo() {
   return (

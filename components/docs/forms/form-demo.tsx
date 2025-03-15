@@ -1,6 +1,9 @@
 "use client"
 
-import { Button, Form, Heading, TextField } from "ui"
+import { Button } from "@/components/ui/button"
+import { Form } from "@/components/ui/form"
+import { Heading } from "@/components/ui/heading"
+import { TextField } from "@/components/ui/text-field"
 
 export default function FormDemo() {
   return (

@@ -1,9 +1,10 @@
 "use client"
 
+import { Card } from "@/components/ui/card"
+import { Table } from "@/components/ui/table"
 import { IconStarFill } from "justd-icons"
 import { useDragAndDrop } from "react-aria-components"
 import { useListData } from "react-stately"
-import { Card, Table } from "ui"
 
 export default function TableDragDemo() {
   const list = useListData({

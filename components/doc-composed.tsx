@@ -1,8 +1,8 @@
 "use client"
 
 import { docs } from "@/.source"
+import { Choicebox } from "@/components/ui/choicebox"
 import { usePathname } from "next/navigation"
-import { Choicebox } from "ui"
 
 export function DocComposed({
   components,

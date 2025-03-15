@@ -2,6 +2,7 @@
 
 import { CodeHighlighter } from "@/components/code/code-highlighter"
 import { CopyButton } from "@/components/code/copy-button"
+import { Tabs } from "@/components/ui/tabs"
 import { copyToClipboard } from "@/resources/lib/copy"
 import {
   IconBrackets2,
@@ -13,7 +14,6 @@ import {
 import { useEffect, useState } from "react"
 import { Tab } from "react-aria-components"
 import { twMerge } from "tailwind-merge"
-import { Tabs } from "ui"
 
 interface Props {
   source: Record<string, string>

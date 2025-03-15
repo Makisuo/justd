@@ -1,7 +1,9 @@
 "use client"
 
+import { Button } from "@/components/ui/button"
+import { DateField } from "@/components/ui/date-field"
+import { Form } from "@/components/ui/form"
 import { IconCalendar2 } from "justd-icons"
-import { Button, DateField, Form } from "ui"
 
 export default function DateFieldSuffixDemo() {
   return (

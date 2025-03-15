@@ -1,8 +1,9 @@
 "use client"
 
+import { Description } from "@/components/ui/field"
+import { MultipleSelect } from "@/components/ui/multiple-select"
+import type { SelectedKey } from "@/components/ui/multiple-select"
 import { useListData } from "react-stately"
-import type { SelectedKey } from "ui"
-import { Description, MultipleSelect } from "ui"
 
 const tags = [
   { id: 1, name: "Travel" },

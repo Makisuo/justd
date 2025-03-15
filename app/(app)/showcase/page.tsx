@@ -1,8 +1,8 @@
 import { ListSites } from "@/app/(app)/showcase/partials/list-sites"
 import { Header } from "@/components/header"
+import { Container } from "@/components/ui/container"
 import { siteConfig } from "@/resources/config/site"
 import type { Metadata } from "next"
-import { Container } from "ui"
 
 export const metadata: Metadata = {
   title: "Showcase",

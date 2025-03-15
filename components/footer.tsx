@@ -1,8 +1,9 @@
 "use client"
 
+import { Container } from "@/components/ui/container"
+import { Link } from "@/components/ui/link"
 import { siteConfig } from "@/resources/config/site"
 import { IconBrandJustd } from "justd-icons"
-import { Container, Link } from "ui"
 
 const navigation = {
   starterKits: [

@@ -1,6 +1,6 @@
 "use client"
 
-import { Loader } from "ui"
+import { Loader } from "@/components/ui/loader"
 
 export default function LoaderVariantDemo() {
   return (

@@ -1,7 +1,8 @@
 import { useState } from "react"
 
+import { Button } from "@/components/ui/button"
+import { Menu } from "@/components/ui/menu"
 import { IconCheck, IconChevronRight, IconDuplicate } from "justd-icons"
-import { Button, Menu } from "ui"
 import { copyToClipboard } from "usemods"
 
 type Tool = "Bun" | "Yarn" | "PNPM" | "NPM"

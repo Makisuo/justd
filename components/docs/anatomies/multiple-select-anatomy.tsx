@@ -1,5 +1,5 @@
+import { MultipleSelect, type SelectedKey } from "@/components/ui/multiple-select"
 import { useListData } from "react-stately"
-import { MultipleSelect, type SelectedKey } from "ui"
 
 export default function MultipleSelectAnatomy() {
   const selectedItems = useListData<SelectedKey>({ initialItems: [] })

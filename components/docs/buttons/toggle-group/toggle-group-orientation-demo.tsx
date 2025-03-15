@@ -1,3 +1,4 @@
+import { Toggle, ToggleGroup } from "@/components/ui/toggle"
 import {
   IconBell,
   IconBellFill,
@@ -6,7 +7,6 @@ import {
   IconTranslate,
   IconTranslateFill,
 } from "justd-icons"
-import { Toggle, ToggleGroup } from "ui"
 
 export default function ToggleGroupOrientationDemo() {
   return (

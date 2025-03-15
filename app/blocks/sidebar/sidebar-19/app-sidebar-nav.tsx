@@ -1,5 +1,10 @@
 "use client"
 
+import { Avatar } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import { Menu } from "@/components/ui/menu"
+import { SearchField } from "@/components/ui/search-field"
+import { SidebarNav, SidebarTrigger } from "@/components/ui/sidebar"
 import {
   IconCommandRegular,
   IconDashboard,
@@ -8,7 +13,6 @@ import {
   IconMic,
   IconSettings,
 } from "justd-icons"
-import { Avatar, Button, Menu, SearchField, SidebarNav, SidebarTrigger } from "ui"
 
 export default function AppSidebarNav() {
   return (

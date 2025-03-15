@@ -1,5 +1,7 @@
 "use client"
 
+import { Avatar } from "@/components/ui/avatar"
+import { Menu } from "@/components/ui/menu"
 import {
   IconCommandRegular,
   IconDashboard,
@@ -10,7 +12,6 @@ import {
   IconSun,
 } from "justd-icons"
 import { useTheme } from "next-themes"
-import { Avatar, Menu } from "ui"
 
 export default function MenuWithIconDemo() {
   const { resolvedTheme, setTheme } = useTheme()

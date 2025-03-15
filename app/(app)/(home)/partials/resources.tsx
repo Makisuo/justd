@@ -1,6 +1,11 @@
 "use client"
 
 import { IconBrandJustdBlocks } from "@/components/icons/icon-brand-justd-blocks"
+import { Badge } from "@/components/ui/badge"
+import { Card } from "@/components/ui/card"
+import { Container } from "@/components/ui/container"
+import { Heading } from "@/components/ui/heading"
+import { Link } from "@/components/ui/link"
 import {
   IconBrandAstro,
   IconBrandLaravel,
@@ -9,7 +14,6 @@ import {
   IconWindowVisitFill,
 } from "justd-icons"
 import { twMerge } from "tailwind-merge"
-import { Badge, Card, Container, Heading, Link } from "ui"
 
 const resources = [
   {

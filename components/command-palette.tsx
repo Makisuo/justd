@@ -1,7 +1,8 @@
 "use client"
 
 import { useEffect, useMemo, useState } from "react"
-import { CommandMenu } from "ui"
+
+import { CommandMenu } from "@/components/ui/command-menu"
 
 import { useMediaQuery } from "@/utils/use-media-query"
 import {

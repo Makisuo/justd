@@ -1,6 +1,7 @@
 "use client"
 
-import { Button, Popover } from "ui"
+import { Button } from "@/components/ui/button"
+import { Popover } from "@/components/ui/popover"
 
 export default function PopoverDemo() {
   return (

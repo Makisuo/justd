@@ -1,8 +1,8 @@
 "use client"
 
+import { useScrollPosition } from "@/resources/hooks/use-scroll-position"
 import { useMediaQuery } from "@/utils/use-media-query"
 import type { TOCItemType, TableOfContents } from "fumadocs-core/server"
-import { useScrollPosition } from "hooks/use-scroll-position"
 import { IconAlignmentLeft } from "justd-icons"
 import React, { Suspense, useEffect, useState } from "react"
 import { Heading } from "react-aria-components"

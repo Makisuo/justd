@@ -3,10 +3,12 @@
 import type React from "react"
 import { useState } from "react"
 
+import { Button } from "@/components/ui/button"
+import { Form } from "@/components/ui/form"
+import { MultipleSelect } from "@/components/ui/multiple-select"
+import type { SelectedKey } from "@/components/ui/multiple-select"
 import type { Key } from "react-aria-components"
 import { useListData } from "react-stately"
-import type { SelectedKey } from "ui"
-import { Button, Form, MultipleSelect } from "ui"
 
 export default function MultipleSelectInvalidDemo() {
   const [invalid, setInvalid] = useState(false)

@@ -1,9 +1,9 @@
 "use client"
 import { IconBrandJustdBlocks } from "@/components/icons/icon-brand-justd-blocks"
+import { Link } from "@/components/ui/link"
 import { IconArrowRight } from "justd-icons"
 import { useEffect } from "react"
 import { toast } from "sonner"
-import { Link } from "ui"
 
 export function Banner() {
   useEffect(() => {

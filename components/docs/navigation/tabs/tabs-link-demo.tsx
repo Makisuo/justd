@@ -1,6 +1,6 @@
 "use client"
 
-import { Tabs } from "ui"
+import { Tabs } from "@/components/ui/tabs"
 
 const navs = [
   { url: "/", label: "Home" },

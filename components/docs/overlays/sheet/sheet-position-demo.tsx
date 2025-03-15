@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 
-import { Button, Sheet } from "ui"
+import { Button } from "@/components/ui/button"
+import { Sheet } from "@/components/ui/sheet"
 import { titleCase } from "usemods"
 
 type Side = "left" | "right" | "top" | "bottom"

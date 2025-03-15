@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from "react"
 
+import { Card } from "@/components/ui/card"
+import { Carousel, type CarouselApi } from "@/components/ui/carousel"
 import { Button } from "react-aria-components"
 import { twJoin } from "tailwind-merge"
-import { Card, Carousel, type CarouselApi } from "ui"
 
 export default function CarouselDApiDemo() {
   const [api, setApi] = useState<CarouselApi>()

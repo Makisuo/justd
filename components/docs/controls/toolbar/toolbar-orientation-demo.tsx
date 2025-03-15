@@ -1,5 +1,9 @@
 "use client"
 
+import { Button } from "@/components/ui/button"
+import { Menu } from "@/components/ui/menu"
+import { Toggle } from "@/components/ui/toggle"
+import { Toolbar } from "@/components/ui/toolbar"
 import {
   IconAlignmentCenter,
   IconAlignmentCenterFill,
@@ -23,7 +27,6 @@ import {
   IconToolboxFill,
   IconUndo,
 } from "justd-icons"
-import { Button, Menu, Toggle, Toolbar } from "ui"
 
 export default function ToolbarOrientationDemo() {
   return (

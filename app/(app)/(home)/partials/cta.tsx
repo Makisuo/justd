@@ -2,8 +2,11 @@
 
 import { siteConfig } from "@/resources/config/site"
 import { IconBrandGithub } from "justd-icons"
-import { Container, Heading, Link, buttonStyles } from "ui"
 
+import { buttonStyles } from "@/components/ui/button"
+import { Container } from "@/components/ui/container"
+import { Heading } from "@/components/ui/heading"
+import { Link } from "@/components/ui/link"
 export function Cta() {
   return (
     <div className="border-t bg-muted/40 py-8 lg:py-16">

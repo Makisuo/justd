@@ -2,10 +2,13 @@
 
 import React, { useEffect, useState } from "react"
 
+import { buttonStyles } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
+import { Link } from "@/components/ui/link"
+import { Sheet } from "@/components/ui/sheet"
 import { IconBrandJustd, IconBrandX, IconHamburger, IconSearch } from "justd-icons"
 import { LayoutGroup } from "motion/react"
 import { usePathname } from "next/navigation"
-import { Button, Link, Sheet, buttonStyles } from "ui"
 
 import { Aside } from "./aside"
 import { CommandPalette } from "./command-palette"

@@ -1,7 +1,8 @@
 "use client"
 
+import { Button } from "@/components/ui/button"
+import { Popover } from "@/components/ui/popover"
 import { IconBell } from "justd-icons"
-import { Button, Popover } from "ui"
 
 export default function PopoverArrowDemo() {
   return (

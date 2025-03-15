@@ -3,11 +3,12 @@
 import type React from "react"
 
 import { useTheme } from "@/components/theme-provider"
+import { Badge } from "@/components/ui/badge"
+import { Select } from "@/components/ui/select"
 import colors from "@/resources/colors/colors.json"
 import { neutralColors } from "@/resources/lib/colors"
 import type { Key } from "react-aria-components"
 import { twMerge } from "tailwind-merge"
-import { Badge, Select } from "ui"
 
 interface ColorSelectProps extends React.ComponentProps<typeof Select> {
   selectedKey: string

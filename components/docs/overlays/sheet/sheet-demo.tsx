@@ -1,6 +1,9 @@
 "use client"
 
-import { Button, Sheet, Switch, TextField } from "ui"
+import { Button } from "@/components/ui/button"
+import { Sheet } from "@/components/ui/sheet"
+import { Switch } from "@/components/ui/switch"
+import { TextField } from "@/components/ui/text-field"
 
 export default function SheetDemo() {
   return (

@@ -6,6 +6,11 @@ import { Blocks } from "@/app/(app)/themes/partials/blocks"
 import { GeneratedTheme } from "@/app/(app)/themes/partials/generated-theme"
 import { ThemeCustomizer } from "@/app/(app)/themes/partials/theme-customizer"
 import { CodeHighlighter } from "@/components/code/code-highlighter"
+import { Button } from "@/components/ui/button"
+import { Container } from "@/components/ui/container"
+import { Heading } from "@/components/ui/heading"
+import { Menu } from "@/components/ui/menu"
+import { Sheet } from "@/components/ui/sheet"
 import {
   IconBrandCss,
   IconChevronLgDown,
@@ -13,7 +18,6 @@ import {
   IconLayoutColumnRightsideFill,
 } from "justd-icons"
 import { toast } from "sonner"
-import { Button, Container, Heading, Menu, Sheet } from "ui"
 
 import { generateTheme } from "./themes"
 

@@ -1,6 +1,7 @@
 "use client"
 
-import { Button, Menu } from "ui"
+import { Button } from "@/components/ui/button"
+import { Menu } from "@/components/ui/menu"
 
 export default function MenuItemDetailsDemo() {
   return (

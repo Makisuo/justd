@@ -2,7 +2,9 @@
 
 import { useState } from "react"
 
-import { Button, Sheet, Textarea } from "ui"
+import { Button } from "@/components/ui/button"
+import { Sheet } from "@/components/ui/sheet"
+import { Textarea } from "@/components/ui/textarea"
 
 export default function SheetControlledDemo() {
   const [isOpen, setIsOpen] = useState(false)

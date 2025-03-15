@@ -1,8 +1,8 @@
 "use client"
 
+import { MultipleSelect } from "@/components/ui/multiple-select"
+import type { SelectedKey } from "@/components/ui/multiple-select"
 import { useListData } from "react-stately"
-import type { SelectedKey } from "ui"
-import { MultipleSelect } from "ui"
 
 export default function MultipleSelectIntentDemo() {
   const selectedItems = useListData<SelectedKey>({

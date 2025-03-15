@@ -2,7 +2,7 @@
 
 import React, { useState } from "react"
 
-import { ProgressBar } from "ui"
+import { ProgressBar } from "@/components/ui/progress-bar"
 
 export default function ProgressBarDemo() {
   const [value, setValue] = useState(1)

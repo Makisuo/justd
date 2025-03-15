@@ -1,7 +1,8 @@
 "use client"
 
+import { buttonStyles } from "@/components/ui/button"
+import { Tooltip } from "@/components/ui/tooltip"
 import { IconBrandX } from "justd-icons"
-import { Tooltip, buttonStyles } from "ui"
 
 export default function TooltipDelayDemo() {
   return (

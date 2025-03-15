@@ -1,8 +1,9 @@
 "use client"
 
+import { Button } from "@/components/ui/button"
+import { composeTailwindRenderProps } from "@/components/ui/primitive"
 import { IconDeviceDesktop2, IconMoon, IconSun } from "justd-icons"
 import { useTheme } from "next-themes"
-import { Button, composeTailwindRenderProps } from "ui"
 
 export function ThemeSwitcher({
   shape = "square",

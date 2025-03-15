@@ -1,6 +1,10 @@
 "use client"
 
-import { Avatar, Breadcrumbs, Menu, Separator, SidebarNav, SidebarTrigger } from "ui"
+import { Avatar } from "@/components/ui/avatar"
+import { Breadcrumbs } from "@/components/ui/breadcrumbs"
+import { Menu } from "@/components/ui/menu"
+import { Separator } from "@/components/ui/separator"
+import { SidebarNav, SidebarTrigger } from "@/components/ui/sidebar"
 
 import {
   IconCommandRegular,

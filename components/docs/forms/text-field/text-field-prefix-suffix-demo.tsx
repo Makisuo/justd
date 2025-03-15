@@ -1,7 +1,7 @@
 "use client"
 
+import { TextField } from "@/components/ui/text-field"
 import { IconAt, IconBrandTwitter } from "justd-icons"
-import { TextField } from "ui"
 
 export default function TextFieldPrefixSuffixDemo() {
   return (

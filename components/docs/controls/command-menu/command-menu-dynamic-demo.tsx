@@ -2,7 +2,9 @@
 
 import { useState } from "react"
 
-import { Avatar, Button, CommandMenu } from "ui"
+import { Avatar } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import { CommandMenu } from "@/components/ui/command-menu"
 
 export default function CommandMenuDynamicDemo() {
   const [isOpen, setIsOpen] = useState(false)

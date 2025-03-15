@@ -3,13 +3,13 @@
 import type React from "react"
 import { useRef, useState } from "react"
 
+import { Menu } from "@/components/ui/menu"
 import * as icons from "justd-icons"
 import { IconDownload } from "justd-icons"
 import { useSearchParams } from "next/navigation"
 import { ListBox, ListBoxItem } from "react-aria-components"
 import * as ReactDOMServer from "react-dom/server"
 import { toast } from "sonner"
-import { Menu } from "ui"
 import { copyToClipboard } from "usemods"
 
 import { aliasLookup } from "@/app/(app)/icons/partials/aliases"

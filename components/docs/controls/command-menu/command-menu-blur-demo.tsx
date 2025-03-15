@@ -3,7 +3,10 @@
 import { useState } from "react"
 
 import { IconBill, IconCube, IconGear, IconHome, IconNotes, IconShield } from "justd-icons"
-import { Avatar, Button, CommandMenu } from "ui"
+
+import { Avatar } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import { CommandMenu } from "@/components/ui/command-menu"
 
 export default function CommandMenuBlurDemo() {
   const [isOpen, setIsOpen] = useState(false)

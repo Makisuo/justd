@@ -23,8 +23,6 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "ui": ["./components/ui"],
-      "hooks/*": ["./resources/hooks/*"],
       "content-collections": ["./.content-collections/generated"],
       "#site/content": ["./.source"]
     }

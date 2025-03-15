@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 
-import { Button, CommandMenu } from "ui"
+import { Button } from "@/components/ui/button"
+import { CommandMenu } from "@/components/ui/command-menu"
 
 export default function CommandMenuDisabledDemo() {
   const [isOpen, setIsOpen] = useState(false)

@@ -24,7 +24,11 @@ import {
   IconUnderlineFill,
   IconUndo,
 } from "justd-icons"
-import { Button, Checkbox, Menu, Toolbar } from "ui"
+
+import { Button } from "@/components/ui/button"
+import { Checkbox } from "@/components/ui/checkbox"
+import { Menu } from "@/components/ui/menu"
+import { Toolbar } from "@/components/ui/toolbar"
 
 export default function ToolbarDemo() {
   return (

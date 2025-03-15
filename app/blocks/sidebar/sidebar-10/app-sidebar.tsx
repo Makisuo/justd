@@ -1,5 +1,18 @@
 "use client"
 
+import { Link } from "@/components/ui/link"
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarDisclosure,
+  SidebarDisclosureGroup,
+  SidebarDisclosurePanel,
+  SidebarDisclosureTrigger,
+  SidebarHeader,
+  SidebarItem,
+  SidebarLabel,
+  SidebarSeparator,
+} from "@/components/ui/sidebar"
 import {
   IconBrandApple,
   IconBulletList,
@@ -16,19 +29,6 @@ import {
   IconStore,
   IconWhiteboard,
 } from "justd-icons"
-import {
-  Link,
-  Sidebar,
-  SidebarContent,
-  SidebarDisclosure,
-  SidebarDisclosureGroup,
-  SidebarDisclosurePanel,
-  SidebarDisclosureTrigger,
-  SidebarHeader,
-  SidebarItem,
-  SidebarLabel,
-  SidebarSeparator,
-} from "ui"
 
 export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
   return (

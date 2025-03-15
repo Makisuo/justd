@@ -1,11 +1,12 @@
 import { useState } from "react"
 
+import { Button } from "@/components/ui/button"
+import { Menu } from "@/components/ui/menu"
+import { useQueryString } from "@/resources/hooks/use-query-string"
 import { title } from "@/resources/lib/utils"
-import { useQueryString } from "hooks/use-query-string"
 import { IconChevronLgDown } from "justd-icons"
 import { usePathname, useRouter } from "next/navigation"
 import type { Selection } from "react-aria-components"
-import { Button, Menu } from "ui"
 
 const sizes = [
   { id: "size-4", name: "Size 4" },

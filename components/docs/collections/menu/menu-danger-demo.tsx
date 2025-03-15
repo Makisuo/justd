@@ -1,7 +1,7 @@
 "use client"
 
+import { Menu } from "@/components/ui/menu"
 import { IconHighlight, IconTrash } from "justd-icons"
-import { Menu } from "ui"
 
 export default function MenuDangerDemo() {
   return (

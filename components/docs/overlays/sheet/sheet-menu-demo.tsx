@@ -2,6 +2,14 @@
 
 import { useState } from "react"
 
+import { Avatar } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import { Checkbox } from "@/components/ui/checkbox"
+import { Menu } from "@/components/ui/menu"
+import { Modal } from "@/components/ui/modal"
+import { Select } from "@/components/ui/select"
+import { Sheet } from "@/components/ui/sheet"
+import { TextField } from "@/components/ui/text-field"
 import {
   IconBook,
   IconBrandCopilot,
@@ -14,11 +22,9 @@ import {
   IconStar,
 } from "justd-icons"
 import { Menu as MenuPrimitive } from "react-aria-components"
-import { Avatar, Button, Checkbox, Menu, Modal, Select, Sheet, TextField } from "ui"
 
 export default function SheetMenuDemo() {
   const [isOpen, setIsOpen] = useState(false)
-  const openModal = () => setIsOpen(true)
   const closeModal = () => setIsOpen(false)
   return (
     <>

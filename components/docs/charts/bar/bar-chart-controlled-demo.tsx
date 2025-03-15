@@ -2,9 +2,11 @@
 
 import { useMemo, useState } from "react"
 
+import { Card } from "@/components/ui/card"
+import { Chart, type ChartConfig, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
+import { Select } from "@/components/ui/select"
 import type { Key } from "react-aria-components"
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
-import { Card, Chart, type ChartConfig, ChartTooltip, ChartTooltipContent, Select } from "ui"
 
 const chartData = Array.from({ length: 50 }, (_, index) => {
   const date = new Date(2024, 0, 1 + index)
@@ -39,14 +41,10 @@ export default function BarChartControlledDemo() {
 
   return (
     <Card>
-      <Card.Header className="flex-row items-center justify-between">
-        <div className="space-y-1">
-          <Card.Title>Business Overview</Card.Title>
-          <Card.Description>
-            Displaying total sales and revenue for the last 50 days
-          </Card.Description>
-        </div>
-        <div>
+      <Card.Header>
+        <Card.Title>Business Overview</Card.Title>
+        <Card.Description>Displaying total sales and revenue for the last 50 days</Card.Description>
+        <Card.Action>
           <Select selectedKey={activeChart} onSelectionChange={setActiveChart}>
             <Select.Trigger />
             <Select.List placement="bottom end" className="sm:min-w-40">
@@ -60,7 +58,7 @@ export default function BarChartControlledDemo() {
               })}
             </Select.List>
           </Select>
-        </div>
+        </Card.Action>
       </Card.Header>
       <Card.Content className="px-2 sm:p-6">
         <Chart config={chartConfig} className="aspect-auto h-[250px] w-full">

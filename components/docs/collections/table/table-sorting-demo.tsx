@@ -1,8 +1,9 @@
 "use client"
 
+import { Card } from "@/components/ui/card"
+import { Table } from "@/components/ui/table"
 import { useAsyncList } from "@react-stately/data"
 import { IconLoader } from "justd-icons"
-import { Card, Table } from "ui"
 
 interface Character {
   title: string

@@ -1,8 +1,15 @@
 "use client"
 
+import { Card } from "@/components/ui/card"
+import {
+  Chart,
+  type ChartConfig,
+  ChartLegend,
+  ChartLegendContent,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart"
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
-import type { ChartConfig } from "ui"
-import { Card, Chart, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent } from "ui"
 
 const chartData = [
   { month: "Jan", revenue: 3200, expenses: 2400 },

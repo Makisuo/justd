@@ -1,5 +1,5 @@
+import { Choicebox } from "@/components/ui/choicebox"
 import { IconBrandLaravel, IconBrandReactjs, IconBrandTypescript } from "justd-icons"
-import { Choicebox } from "ui"
 
 export default function ChoiceboxIconDemo() {
   return (

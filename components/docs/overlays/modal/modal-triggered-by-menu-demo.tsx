@@ -2,9 +2,12 @@
 
 import { useState } from "react"
 
+import { Button } from "@/components/ui/button"
+import { Loader } from "@/components/ui/loader"
+import { Menu } from "@/components/ui/menu"
+import { Modal } from "@/components/ui/modal"
 import { wait } from "@/resources/lib/utils"
 import { IconBlock, IconChevronLgDown, IconTrash } from "justd-icons"
-import { Button, Loader, Menu, Modal } from "ui"
 
 export default function ModalTriggeredByMenuDemo() {
   const [state, setState] = useState<string | null>(null)

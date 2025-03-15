@@ -3,7 +3,8 @@
 import { useState } from "react"
 
 import { IconVolumeFull, IconVolumeOff } from "justd-icons"
-import { Slider } from "ui"
+
+import { Slider } from "@/components/ui/slider"
 
 export default function SliderPrefixSuffixDemo() {
   const [volume, setVolume] = useState<number>(0.5)

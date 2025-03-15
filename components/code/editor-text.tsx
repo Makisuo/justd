@@ -5,6 +5,7 @@ import React, { useState } from "react"
 import generated from "@/__registry__/generated"
 import { CodeHighlighter } from "@/components/code/code-highlighter"
 import { CopyButton } from "@/components/code/copy-button"
+import { Tabs } from "@/components/ui/tabs"
 import { copyToClipboard } from "@/resources/lib/copy"
 import type { RegistryItem } from "@/resources/types"
 import {
@@ -16,7 +17,6 @@ import {
 } from "justd-icons"
 import { Tab } from "react-aria-components"
 import { twMerge } from "tailwind-merge"
-import { Tabs } from "ui"
 
 interface Props {
   source: Record<string, string>

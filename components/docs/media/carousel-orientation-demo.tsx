@@ -1,6 +1,7 @@
 "use client"
 
-import { Card, Carousel } from "ui"
+import { Card } from "@/components/ui/card"
+import { Carousel } from "@/components/ui/carousel"
 
 export default function CarouselOrientationDemo() {
   return (

@@ -2,8 +2,9 @@
 
 import { useMemo } from "react"
 
+import { Card } from "@/components/ui/card"
+import { Chart, type ChartConfig, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
 import { Label, Pie, PieChart } from "recharts"
-import { Card, Chart, type ChartConfig, ChartTooltip, ChartTooltipContent } from "ui"
 
 const chartData = [
   { category: "Electronics", sales: 275, fill: "var(--color-electronics)" },

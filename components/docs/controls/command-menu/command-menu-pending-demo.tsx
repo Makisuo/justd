@@ -1,7 +1,9 @@
 "use client"
 
+import { Avatar } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import { CommandMenu } from "@/components/ui/command-menu"
 import { useState } from "react"
-import { Avatar, Button, CommandMenu } from "ui"
 
 export default function CommandMenuControlledDemo() {
   const [isOpen, setIsOpen] = useState(false)

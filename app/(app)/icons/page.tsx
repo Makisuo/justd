@@ -1,9 +1,10 @@
 import { Suspense } from "react"
 
 import { Header } from "@/components/header"
+import { Container } from "@/components/ui/container"
+import { Loader } from "@/components/ui/loader"
 import { siteConfig } from "@/resources/config/site"
 import type { Metadata } from "next"
-import { Container, Loader } from "ui"
 
 import { IconsList } from "./partials/icons-list"
 

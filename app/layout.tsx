@@ -3,10 +3,10 @@ import type React from "react"
 import { Providers } from "@/components/providers"
 import { siteConfig } from "@/resources/config/site"
 import "@/resources/styles/app.css"
+import { Toast } from "@/components/ui/toast"
 import type { Metadata, Viewport } from "next"
 import localFont from "next/font/local"
 import { twJoin } from "tailwind-merge"
-import { Toast } from "ui"
 
 export default function RootLayout({
   children,

@@ -10,7 +10,11 @@ import {
   IconShield,
   IconShoppingBag,
 } from "justd-icons"
-import { Avatar, Button, Menu, Navbar, Separator } from "ui"
+import { Avatar} from "@/components/ui/avatar"
+import { Menu} from "@/components/ui/menu"
+import { Separator} from "@/components/ui/separator"
+import { Navbar} from "@/components/ui/navbar"
+import { Button} from "@/components/ui/button"
 
 export default function AppNavbar() {
   return (

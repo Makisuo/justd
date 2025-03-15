@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 
 import { SelectFormat, isOklch, toOklchString } from "@/app/(app)/colors/(colors)/color-item"
+import { ColorField } from "@/components/ui/color-field"
+import { Heading } from "@/components/ui/heading"
 import { getColorName, getTextColor } from "@/resources/lib/colors"
 import { type Color as RacColor, parseColor } from "@react-stately/color"
 import type { Color } from "culori"
@@ -9,7 +11,6 @@ import { IconCheck, IconDuplicate } from "justd-icons"
 import { ListBox, ListBoxItem, type Selection } from "react-aria-components"
 import { toast } from "sonner"
 import { twJoin } from "tailwind-merge"
-import { ColorField, Heading } from "ui"
 
 export function ColorGenerator() {
   const [value, setValue] = useState(parseColor("#0D6DFD"))
@@ -92,7 +93,7 @@ export function ColorGenerator() {
             <div className="mb-7">
               <Heading level={2}>Generate</Heading>
               <p className="text-muted-fg text-sm">
-                Genereate your desired color by picking a shade from the color picker or by entering
+                Generate your desired color by picking a shade from the color picker or by entering
                 a hex code.
               </p>
             </div>

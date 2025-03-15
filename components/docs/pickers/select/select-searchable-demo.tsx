@@ -1,7 +1,10 @@
 "use client"
 
+import { ListBox } from "@/components/ui/list-box"
+import { PopoverContent } from "@/components/ui/popover"
+import { SearchField } from "@/components/ui/search-field"
+import { Select } from "@/components/ui/select"
 import { Autocomplete, useFilter } from "react-aria-components"
-import { ListBox, PopoverContent, SearchField, Select } from "ui"
 const languages = [
   { id: "en", name: "English" },
   { id: "es", name: "Spanish" },

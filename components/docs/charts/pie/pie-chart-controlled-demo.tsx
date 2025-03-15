@@ -2,18 +2,18 @@
 
 import { useMemo, useState } from "react"
 
-import type { Key } from "react-aria-components"
-import { Label, Pie, PieChart, Sector } from "recharts"
-import type { PieSectorDataItem } from "recharts/types/polar/Pie"
+import { Card } from "@/components/ui/card"
 import {
-  Card,
   Chart,
   type ChartConfig,
   ChartStyle,
   ChartTooltip,
   ChartTooltipContent,
-  Select,
-} from "ui"
+} from "@/components/ui/chart"
+import { Select } from "@/components/ui/select"
+import type { Key } from "react-aria-components"
+import { Label, Pie, PieChart, Sector } from "recharts"
+import type { PieSectorDataItem } from "recharts/types/polar/Pie"
 
 const data = [
   { month: "january", sales: 3186, fill: "var(--color-january)" },
@@ -68,15 +68,13 @@ export default function PieChartControlledDemo() {
   return (
     <Card data-chart={id} className="flex flex-col">
       <ChartStyle id={id} config={config} />
-      <Card.Header className="flex-row items-start space-y-0 pb-0">
-        <div className="grid w-full gap-1">
-          <Card.Title className="capitalize">{activeMonth}</Card.Title>
-          <Card.Description>
-            The total sales for the month is{" "}
-            <strong className="font-semibold">{data[activeIndex]?.sales.toLocaleString()}</strong>
-          </Card.Description>
-        </div>
-        <div className="ml-auto max-w-[130px]">
+      <Card.Header>
+        <Card.Title className="capitalize">{activeMonth}</Card.Title>
+        <Card.Description>
+          The total sales for the month is{" "}
+          <strong className="font-semibold">{data[activeIndex]?.sales.toLocaleString()}</strong>
+        </Card.Description>
+        <Card.Action>
           <Select selectedKey={activeMonth} onSelectionChange={setActiveMonth}>
             <Select.Trigger />
             <Select.List aria-label="Options" className="sm:min-w-40" placement="bottom end">
@@ -95,7 +93,7 @@ export default function PieChartControlledDemo() {
               })}
             </Select.List>
           </Select>
-        </div>
+        </Card.Action>
       </Card.Header>
       <Card.Content className="flex flex-1 justify-center pb-0">
         <Chart id={id} config={config} className="mx-auto aspect-square w-full max-w-[315px]">

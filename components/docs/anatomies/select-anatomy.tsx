@@ -1,5 +1,5 @@
+import { Select } from "@/components/ui/select"
 import { IconBrandDiscord, IconBrandGithub } from "justd-icons"
-import { Select } from "ui"
 
 export default function SelectAnatomy() {
   return (

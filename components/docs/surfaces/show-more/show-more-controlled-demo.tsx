@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 
+import { ShowMore } from "@/components/ui/show-more"
 import { IconChevronLgDown } from "justd-icons"
-import { ShowMore } from "ui"
 
 export default function ShowMoreControlledDemo() {
   const [isExpanded, setIsExpanded] = useState(false)

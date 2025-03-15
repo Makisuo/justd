@@ -1,5 +1,6 @@
+import { Checkbox } from "@/components/ui/checkbox"
+import { Toolbar } from "@/components/ui/toolbar"
 import { IconBold, IconBoldFill, IconItalic, IconItalicFill } from "justd-icons"
-import { Checkbox, Toolbar } from "ui"
 
 export default function ToolbarAnatomy() {
   return (

@@ -1,6 +1,8 @@
 "use client"
 
 import { Wrapper } from "@/app/(app)/(home)/partials/resources"
+import { Button } from "@/components/ui/button"
+import { Menu } from "@/components/ui/menu"
 import {
   IconBrandBluesky,
   IconBrandTelegram,
@@ -15,7 +17,6 @@ import {
   IconPlus,
   IconSettings,
 } from "justd-icons"
-import { Button, Menu } from "ui"
 
 export function Menus() {
   return (

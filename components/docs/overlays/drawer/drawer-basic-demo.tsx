@@ -1,6 +1,8 @@
 "use client"
 
-import { Drawer, TextField, buttonStyles } from "ui"
+import { buttonStyles } from "@/components/ui/button"
+import { Drawer } from "@/components/ui/drawer"
+import { TextField } from "@/components/ui/text-field"
 
 export default function DrawerBasicDemo() {
   return (

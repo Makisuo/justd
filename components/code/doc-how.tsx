@@ -5,11 +5,12 @@ import React, { useState } from "react"
 import generated from "@/__registry__/generated"
 import { CodeHighlighter } from "@/components/code/code-highlighter"
 import { TabsList } from "@/components/code/code-sandbox"
+import { Loader } from "@/components/ui/loader"
+import { Tabs } from "@/components/ui/tabs"
 import { createFetchRegistryFile } from "@/resources/lib/fetch-registry"
 import type { RegistryItem } from "@/resources/types"
 import { Group } from "react-aria-components"
 import { twMerge } from "tailwind-merge"
-import { Loader, Tabs } from "ui"
 
 const registry = generated as Record<string, RegistryItem>
 

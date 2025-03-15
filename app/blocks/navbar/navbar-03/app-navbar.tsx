@@ -1,6 +1,11 @@
 "use client"
 
 import { ThemeSwitcher } from "@/components/theme-switcher"
+import { Avatar } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import { Menu } from "@/components/ui/menu"
+import { Navbar } from "@/components/ui/navbar"
+import { Separator } from "@/components/ui/separator"
 import {
   IconBrandApple,
   IconCommandRegular,
@@ -12,7 +17,6 @@ import {
   IconShield,
   IconShoppingBag,
 } from "justd-icons"
-import { Avatar, Button, Menu, Navbar, Separator } from "ui"
 
 export default function AppNavbar({ children, ...props }: React.ComponentProps<typeof Navbar>) {
   return (

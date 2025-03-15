@@ -1,13 +1,14 @@
 "use client"
 
-import { Drawer, buttonStyles } from "ui"
+import { Button } from "@/components/ui/button"
+import { Drawer } from "@/components/ui/drawer"
 
 export default function DrawerWithoutNotchDemo() {
   return (
     <Drawer withNotch={false}>
-      <Drawer.Trigger className={buttonStyles({ shape: "circle", intent: "outline" })}>
-        Open Drawer
-      </Drawer.Trigger>
+      <Button shape="circle" intent="outline">
+        Open
+      </Button>
       <Drawer.Content>
         <Drawer.Header>
           <Drawer.Title>The Beatles</Drawer.Title>

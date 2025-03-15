@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 
-import { ProgressCircle, Slider } from "ui"
+import { ProgressCircle } from "@/components/ui/progress-circle"
+import { Slider } from "@/components/ui/slider"
 
 export default function ProgressCircleControlledDemo() {
   const [value, setValue] = useState(10)

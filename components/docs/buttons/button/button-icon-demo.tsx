@@ -1,7 +1,7 @@
 "use client"
 
+import { Button } from "@/components/ui/button"
 import { IconBrandLaravel } from "justd-icons"
-import { Button } from "ui"
 
 export default function ButtonIconDemo() {
   return (

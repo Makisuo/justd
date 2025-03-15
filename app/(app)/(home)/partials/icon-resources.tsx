@@ -1,5 +1,8 @@
 "use client"
 import { InstallIcon } from "@/app/(app)/icons/partials/controller/install-icon"
+import { buttonStyles } from "@/components/ui/button"
+import { Container } from "@/components/ui/container"
+import { Link } from "@/components/ui/link"
 import {
   IconArrowRight,
   IconCheck,
@@ -65,7 +68,6 @@ import {
   IconTriangleExclamationFill,
 } from "justd-icons"
 import { useEffect, useState } from "react"
-import { Container, Link, buttonStyles } from "ui"
 
 export function IconResources() {
   const [isCopied, setIsCopied] = useState(false)

@@ -1,7 +1,7 @@
 "use client"
 
+import { Toggle } from "@/components/ui/toggle"
 import { IconAccessible, IconAccessibleFill } from "justd-icons"
-import { Toggle } from "ui"
 
 export default function ToggleSizeDemo() {
   return (

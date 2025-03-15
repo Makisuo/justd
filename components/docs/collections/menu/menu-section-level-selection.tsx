@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 
+import { Menu } from "@/components/ui/menu"
 import {
   IconAlignmentCenter,
   IconAlignmentLeft,
@@ -14,7 +15,6 @@ import {
   IconUnderline,
 } from "justd-icons"
 import type { Selection } from "react-aria-components"
-import { Menu } from "ui"
 
 export default function MenuSectionLevelSelection() {
   const [style, setStyle] = useState<Selection>(new Set(["bold"]))

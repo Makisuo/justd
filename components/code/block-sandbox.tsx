@@ -8,6 +8,25 @@ import { CodeHighlighter } from "@/components/code/code-highlighter"
 import { CopyButton } from "@/components/code/copy-button"
 import { IconDevicePhone } from "@/components/icon-device"
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/resizable"
+import { Button, buttonStyles } from "@/components/ui/button"
+import { Link } from "@/components/ui/link"
+import { Separator } from "@/components/ui/separator"
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarDisclosure,
+  SidebarDisclosureGroup,
+  SidebarDisclosurePanel,
+  SidebarDisclosureTrigger,
+  SidebarHeader,
+  SidebarInset,
+  SidebarItem,
+  SidebarLabel,
+  SidebarNav,
+  SidebarProvider,
+} from "@/components/ui/sidebar"
+import { Tabs } from "@/components/ui/tabs"
+import { Toggle } from "@/components/ui/toggle"
 import quotes from "@/resources/json/quotes.json"
 import type { RegistryItem } from "@/resources/types"
 import {
@@ -24,26 +43,6 @@ import {
 import { type Key, Tab, TabList, ToggleButtonGroup } from "react-aria-components"
 import type { ImperativePanelHandle } from "react-resizable-panels"
 import { twMerge } from "tailwind-merge"
-import {
-  Button,
-  Link,
-  Separator,
-  Sidebar,
-  SidebarContent,
-  SidebarDisclosure,
-  SidebarDisclosureGroup,
-  SidebarDisclosurePanel,
-  SidebarDisclosureTrigger,
-  SidebarHeader,
-  SidebarInset,
-  SidebarItem,
-  SidebarLabel,
-  SidebarNav,
-  SidebarProvider,
-  Tabs,
-  Toggle,
-  buttonStyles,
-} from "ui"
 
 const registry = generated as Record<string, RegistryItem>
 interface FolderStructure {

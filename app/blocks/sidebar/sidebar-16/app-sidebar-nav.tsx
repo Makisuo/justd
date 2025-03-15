@@ -1,7 +1,8 @@
 "use client"
 
+import { Breadcrumbs } from "@/components/ui/breadcrumbs"
+import { SidebarNav, SidebarTrigger } from "@/components/ui/sidebar"
 import { IconLayoutAlignRight } from "justd-icons"
-import { Breadcrumbs, SidebarNav, SidebarTrigger } from "ui"
 
 export default function AppSidebarNav() {
   return (

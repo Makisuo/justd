@@ -1,6 +1,6 @@
 "use client"
 
-import { Choicebox } from "ui"
+import { Choicebox } from "@/components/ui/choicebox"
 
 export default function ChoiceboxDisabledDemo() {
   return (

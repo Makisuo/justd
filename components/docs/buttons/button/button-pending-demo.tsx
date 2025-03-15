@@ -2,8 +2,9 @@
 
 import { useState } from "react"
 
+import { Button } from "@/components/ui/button"
+import { ProgressCircle } from "@/components/ui/progress-circle"
 import { IconPlus } from "justd-icons"
-import { Button, ProgressCircle } from "ui"
 
 export default function ButtonPendingDemo() {
   const [isLoading, setLoading] = useState(false)

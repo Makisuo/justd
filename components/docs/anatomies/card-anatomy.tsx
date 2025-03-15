@@ -1,4 +1,4 @@
-import { Card } from "ui"
+import { Card } from "@/components/ui/card"
 
 export default function CardAnatomy() {
   return (

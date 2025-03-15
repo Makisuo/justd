@@ -1,8 +1,10 @@
 "use client"
 
+import { Card } from "@/components/ui/card"
+import { Menu } from "@/components/ui/menu"
+import { Table } from "@/components/ui/table"
 import { NumberFormatter } from "@internationalized/number"
 import { IconDotsVertical } from "justd-icons"
-import { Card, Menu, Table } from "ui"
 
 export default function TableDemo() {
   const formatter = new NumberFormatter("en-US", { style: "currency", currency: "USD" })

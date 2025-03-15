@@ -1,5 +1,6 @@
 import { Wrapper } from "@/app/(app)/(home)/partials/resources"
 import { SliderOnPopoverBlock } from "@/components/blocks/slider-on-popover-block"
+import { Toolbar } from "@/components/ui/toolbar"
 import {
   IconCamera,
   IconCameraFill,
@@ -12,7 +13,6 @@ import {
   IconVideoPlaylist,
   IconVideoPlaylistFill,
 } from "justd-icons"
-import { Toolbar } from "ui"
 
 export function ToolbarBlock() {
   return (

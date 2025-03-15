@@ -8,7 +8,8 @@ import {
   IconTrash,
   IconTrashPaper,
 } from "justd-icons"
-import { ContextMenu } from "ui"
+
+import { ContextMenu } from "@/components/ui/context-menu"
 
 export default function ContextMenuWithIconDemo() {
   return (

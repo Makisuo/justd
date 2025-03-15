@@ -2,16 +2,10 @@
 
 import { useState } from "react"
 
+import { Card } from "@/components/ui/card"
+import { Chart, type ChartConfig, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
+import { Toggle, ToggleGroup } from "@/components/ui/toggle"
 import { CartesianGrid, Line, LineChart, XAxis } from "recharts"
-import {
-  Card,
-  Chart,
-  type ChartConfig,
-  ChartTooltip,
-  ChartTooltipContent,
-  Toggle,
-  ToggleGroup,
-} from "ui"
 
 const generateChartData = (startDate: string, endDate: string) => {
   const result = []

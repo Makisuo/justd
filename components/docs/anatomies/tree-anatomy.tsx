@@ -1,5 +1,5 @@
+import { Tree, TreeItem } from "@/components/ui/tree"
 import { Collection } from "react-aria-components"
-import { Tree, TreeItem } from "ui"
 
 export default function TreeAnatomy() {
   return (

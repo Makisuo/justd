@@ -4,10 +4,13 @@ import React, { useState } from "react"
 
 import { CodeHighlighter } from "@/components/code/code-highlighter"
 import { CopyButton } from "@/components/code/copy-button"
+import { Button } from "@/components/ui/button"
+import { Link } from "@/components/ui/link"
+import { Menu } from "@/components/ui/menu"
+import { composeTailwindRenderProps } from "@/components/ui/primitive"
 import { copyToClipboard } from "@/resources/lib/copy"
 import { IconCheck, IconDuplicate } from "justd-icons"
 import { Group } from "react-aria-components"
-import { Button, Link, Menu, composeTailwindRenderProps } from "ui"
 
 export interface InstallationProps {
   items: string[]

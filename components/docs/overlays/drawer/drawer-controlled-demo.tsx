@@ -2,7 +2,9 @@
 
 import { useState } from "react"
 
-import { Button, Drawer, TextField } from "ui"
+import { Button } from "@/components/ui/button"
+import { Drawer } from "@/components/ui/drawer"
+import { TextField } from "@/components/ui/text-field"
 
 export default function DrawerControlledDemo() {
   const [isOpen, setIsOpen] = useState(false)

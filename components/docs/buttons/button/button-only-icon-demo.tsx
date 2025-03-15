@@ -1,7 +1,7 @@
 "use client"
 
+import { Button } from "@/components/ui/button"
 import { IconBrandParsinta } from "justd-icons"
-import { Button } from "ui"
 
 export default function ButtonOnlyIconDemo() {
   return (

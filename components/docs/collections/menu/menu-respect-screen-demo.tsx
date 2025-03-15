@@ -1,7 +1,8 @@
 "use client"
 
+import { Button } from "@/components/ui/button"
+import { Menu } from "@/components/ui/menu"
 import { IconDashboard, IconSettings, IconShield } from "justd-icons"
-import { Button, Menu } from "ui"
 
 export default function MenuRespectScreenDemo() {
   return (

@@ -1,5 +1,7 @@
 "use client"
 
+import { Toggle } from "@/components/ui/toggle"
+import { Toolbar } from "@/components/ui/toolbar"
 import {
   IconAlignmentJustify,
   IconAlignmentJustifyFill,
@@ -16,7 +18,6 @@ import {
   IconToolbox,
   IconToolboxFill,
 } from "justd-icons"
-import { Toggle, Toolbar } from "ui"
 
 export default function ToolbarDisabledDemo() {
   return (

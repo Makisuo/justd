@@ -2,8 +2,10 @@
 
 import { useState } from "react"
 
+import { Card } from "@/components/ui/card"
+import { Description } from "@/components/ui/field"
+import { Table } from "@/components/ui/table"
 import type { Selection } from "react-aria-components"
-import { Card, Description, Table } from "ui"
 
 export default function TableBulkDemo() {
   const [selectedKeys, setSelectedKeys] = useState<Selection>(new Set())

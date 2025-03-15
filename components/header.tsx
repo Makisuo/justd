@@ -2,7 +2,8 @@
 
 import type React from "react"
 
-import { Container, Heading } from "ui"
+import { Container } from "@/components/ui/container"
+import { Heading } from "@/components/ui/heading"
 
 export function Header({ children }: { children: React.ReactNode }) {
   return (

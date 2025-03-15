@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react"
 
+import { composeTailwindRenderProps } from "@/components/ui/primitive"
 import { copyToClipboard } from "@/resources/lib/copy"
 import { IconCheck, IconDuplicate } from "justd-icons"
 import { Button } from "react-aria-components"
 import { twMerge } from "tailwind-merge"
-import { composeTailwindRenderProps } from "ui"
 
 interface CopyButtonProps extends React.ComponentProps<typeof Button> {
   isCopied?: boolean

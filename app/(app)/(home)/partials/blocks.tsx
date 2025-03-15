@@ -13,7 +13,14 @@ import TagFieldDemo from "@/components/docs/forms/tag-field/tag-field-demo"
 import ComboBoxAvatarDemo from "@/components/docs/pickers/combo-box/combo-box-avatar-demo"
 import MultipleSelectDemo from "@/components/docs/pickers/multiple-select/multiple-select-demo"
 import { IconArrowRight, IconPackage } from "justd-icons"
-import { Container, DatePicker, DateRangePicker, Heading, Link, Note, buttonStyles } from "ui"
+
+import { buttonStyles } from "@/components/ui/button"
+import { Container } from "@/components/ui/container"
+import { DatePicker } from "@/components/ui/date-picker"
+import { DateRangePicker } from "@/components/ui/date-range-picker"
+import { Heading } from "@/components/ui/heading"
+import { Link } from "@/components/ui/link"
+import { Note } from "@/components/ui/note"
 import { Wrapper } from "./resources"
 
 export function Blocks() {

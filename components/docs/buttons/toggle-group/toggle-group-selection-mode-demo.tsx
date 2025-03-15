@@ -1,10 +1,10 @@
+import { Toggle, ToggleGroup } from "@/components/ui/toggle"
 import {
   IconAlignmentCenter,
   IconAlignmentJustify,
   IconAlignmentLeft,
   IconAlignmentRight,
 } from "justd-icons"
-import { Toggle, ToggleGroup } from "ui"
 
 export default function ToggleGroupSelectionModeDemo() {
   return (

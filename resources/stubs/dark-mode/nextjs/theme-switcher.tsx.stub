@@ -2,7 +2,7 @@
 
 import { IconDeviceDesktop2, IconMoon, IconSun } from "justd-icons"
 import { useTheme } from "next-themes"
-import { Button } from "ui"
+import { Button } from "@/components/ui/button"
 
 export function ThemeSwitcher({
   shape = "square",

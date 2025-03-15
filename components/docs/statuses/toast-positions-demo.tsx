@@ -1,7 +1,7 @@
 "use client"
 
+import { Button } from "@/components/ui/button"
 import { type ToastT, toast } from "sonner"
-import { Button } from "ui"
 
 const positions: ToastT["position"][] = [
   "top-left",

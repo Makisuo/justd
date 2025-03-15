@@ -1,12 +1,14 @@
 "use client"
 
+import { Breadcrumbs } from "@/components/ui/breadcrumbs"
+import { Button } from "@/components/ui/button"
+import { Menu } from "@/components/ui/menu"
 import {
   IconDotsHorizontal,
   IconLayoutAlignLeft,
   IconLayoutAlignTop,
   IconWindowVisit,
 } from "justd-icons"
-import { Breadcrumbs, Button, Menu } from "ui"
 
 export default function BreadcrumbsMenuDemo() {
   return (

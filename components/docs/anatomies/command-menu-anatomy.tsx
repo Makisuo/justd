@@ -1,7 +1,7 @@
 import { useState } from "react"
 
+import { CommandMenu } from "@/components/ui/command-menu"
 import { IconHome } from "justd-icons"
-import { CommandMenu } from "ui"
 
 export default function CommandMenuAnatomy() {
   const [isOpen, setIsOpen] = useState(false)

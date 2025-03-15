@@ -9,24 +9,21 @@ import ModalDemo from "@/components/docs/overlays/modal/modal-demo"
 import PopoverDemo from "@/components/docs/overlays/popover/popover-demo"
 import { users } from "@/components/docs/pickers/combo-box/combo-box-avatar-demo"
 import { roles } from "@/components/docs/pickers/select/select-item-details-demo"
+import { Avatar } from "@/components/ui/avatar"
+import { Button, buttonStyles } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { Checkbox } from "@/components/ui/checkbox"
+import { CheckboxGroup } from "@/components/ui/checkbox"
+import { Choicebox } from "@/components/ui/choicebox"
+import { ComboBox } from "@/components/ui/combo-box"
+import { Link } from "@/components/ui/link"
+import { Radio } from "@/components/ui/radio"
+import { RadioGroup } from "@/components/ui/radio"
+import { Select } from "@/components/ui/select"
+import { Separator } from "@/components/ui/separator"
+import { Switch } from "@/components/ui/switch"
+import { TextField } from "@/components/ui/text-field"
 import { IconDashboard } from "justd-icons"
-import {
-  Avatar,
-  Button,
-  Card,
-  Checkbox,
-  CheckboxGroup,
-  Choicebox,
-  ComboBox,
-  Link,
-  Radio,
-  RadioGroup,
-  Select,
-  Separator,
-  Switch,
-  TextField,
-  buttonStyles,
-} from "ui"
 
 export function Blocks() {
   return (

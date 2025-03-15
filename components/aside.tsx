@@ -1,12 +1,13 @@
 "use client"
 
+import { Heading } from "@/components/ui/heading"
+import { Link, type LinkProps } from "@/components/ui/link"
+import { Separator } from "@/components/ui/separator"
 import { source } from "@/utils/source"
 import type { PageTree } from "fumadocs-core/server"
 import { usePathname } from "next/navigation"
 import React from "react"
 import { twMerge } from "tailwind-merge"
-import { Link, type LinkProps } from "ui"
-import { Heading, Separator } from "ui"
 
 export interface SidebarItem {
   title: string

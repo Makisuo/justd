@@ -2,8 +2,11 @@
 
 import { useState } from "react"
 
+import { Button } from "@/components/ui/button"
+import { Drawer } from "@/components/ui/drawer"
+import { Form } from "@/components/ui/form"
+import { Textarea } from "@/components/ui/textarea"
 import { toast } from "sonner"
-import { Button, Drawer, Form, Textarea } from "ui"
 
 export default function DrawerNestedDemo() {
   const [isRegistrationDrawerOpen, setIsRegistrationDrawerOpen] = useState(false)
