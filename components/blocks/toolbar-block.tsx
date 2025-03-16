@@ -1,4 +1,4 @@
-import { Wrapper } from "@/app/(app)/(home)/partials/resources"
+import { Wrapper } from "@/app/(home)/partials/resources"
 import { SliderOnPopoverBlock } from "@/components/blocks/slider-on-popover-block"
 import { Toolbar } from "@/components/ui/toolbar"
 import {

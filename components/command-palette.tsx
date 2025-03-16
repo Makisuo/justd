@@ -76,7 +76,7 @@ export function CommandPalette({ openCmd, setOpen }: OpenCloseProps) {
     <CommandMenu
       shortcut="k"
       classNames={{
-        content: "dark:bg-bg/70 dark:backdrop-blur-xl",
+        content: "dark:bg-bg/60 dark:backdrop-blur-2xl",
       }}
       isOpen={openCmd}
       onOpenChange={setOpen}

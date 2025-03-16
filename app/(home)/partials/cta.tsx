@@ -3,14 +3,14 @@
 import { siteConfig } from "@/resources/config/site"
 import { IconBrandGithub } from "justd-icons"
 
+import { PageContainer } from "@/components/page-container"
 import { buttonStyles } from "@/components/ui/button"
-import { Container } from "@/components/ui/container"
 import { Heading } from "@/components/ui/heading"
 import { Link } from "@/components/ui/link"
 export function Cta() {
   return (
     <div className="border-t bg-muted/40 py-8 lg:py-16">
-      <Container>
+      <PageContainer>
         <div className="mx-auto max-w-md text-center">
           <Heading className="text-2xl sm:text-3xl" level={3}>
             Justd is Open Source
@@ -29,7 +29,7 @@ export function Cta() {
             GitHub
           </Link>
         </div>
-      </Container>
+      </PageContainer>
     </div>
   )
 }

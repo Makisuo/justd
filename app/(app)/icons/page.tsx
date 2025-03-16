@@ -1,11 +1,11 @@
 import { Suspense } from "react"
 
 import { Header } from "@/components/header"
-import { Container } from "@/components/ui/container"
 import { Loader } from "@/components/ui/loader"
 import { siteConfig } from "@/resources/config/site"
 import type { Metadata } from "next"
 
+import { PageContainer } from "@/components/page-container"
 import { IconsList } from "./partials/icons-list"
 
 export const metadata: Metadata = {
@@ -70,7 +70,7 @@ export default async function Page({
         Ico
         <span className="text-muted-fg">ns</span>
       </Header>
-      <Container className="py-4 sm:py-16">
+      <PageContainer className="py-4 sm:py-16">
         <Suspense
           fallback={
             <div className="flex min-h-96 items-center justify-center">
@@ -80,7 +80,7 @@ export default async function Page({
         >
           <IconsList searchParams={{ query, t }} />
         </Suspense>
-      </Container>
+      </PageContainer>
     </>
   )
 }

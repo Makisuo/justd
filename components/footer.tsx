@@ -1,6 +1,5 @@
 "use client"
-
-import { Container } from "@/components/ui/container"
+import { PageContainer } from "@/components/page-container"
 import { Link } from "@/components/ui/link"
 import { siteConfig } from "@/resources/config/site"
 import { IconBrandJustd } from "justd-icons"
@@ -41,7 +40,7 @@ export function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="relative z-20 mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:pt-16 lg:pb-32">
+      <PageContainer className="relative z-20 py-16 sm:py-24 lg:pt-16 lg:pb-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <IconBrandJustd className="size-7" />
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
@@ -114,7 +113,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-      </div>
+      </PageContainer>
 
       <div className="-mt-28 -mb-20 sm:-mt-32 relative z-10 flex h-[14rem] flex-col items-center justify-center overflow-hidden text-center">
         <div className="absolute h-32 w-full bg-linear-to-b sm:w-1/2 lg:w-1/4 dark:from-bg dark:via-fg dark:to-bg dark:blur-xl" />
@@ -123,7 +122,7 @@ export function Footer() {
         </strong>
       </div>
 
-      <Container className="relative z-20 space-y-1.5 border-t bg-bg py-6 text-center text-muted-fg text-sm **:[a]:font-semibold **:[a]:text-fg **:[strong]:font-semibold **:[strong]:text-fg">
+      <PageContainer className="relative z-20 space-y-1.5 border-t bg-bg py-6 text-center text-muted-fg text-sm **:[a]:font-semibold **:[a]:text-fg **:[strong]:font-semibold **:[strong]:text-fg">
         <p>
           <strong>
             {siteConfig.name} &trade; {currentYear}
@@ -157,7 +156,7 @@ export function Footer() {
           . The source code's got the{" "}
           <Link href="https://github.com/justdlabs/justd/blob/main/LICENSE">MIT</Link> license.
         </p>
-      </Container>
+      </PageContainer>
     </footer>
   )
 }

@@ -1,7 +1,7 @@
 "use client"
 import { InstallIcon } from "@/app/(app)/icons/partials/controller/install-icon"
+import { PageContainer } from "@/components/page-container"
 import { buttonStyles } from "@/components/ui/button"
-import { Container } from "@/components/ui/container"
 import { Link } from "@/components/ui/link"
 import {
   IconArrowRight,
@@ -81,7 +81,7 @@ export function IconResources() {
   }, [isCopied])
   return (
     <div className="border-y py-8 sm:py-16">
-      <Container>
+      <PageContainer>
         <div className="grid items-end gap-6 md:grid-cols-2 md:gap-10">
           <div className="">
             <div className="grid size-10 place-content-center rounded-xl bg-secondary/50 ring-1 ring-fg/20 group-hover:bg-secondary">
@@ -172,7 +172,7 @@ export function IconResources() {
             </div>
           </div>
         </div>
-      </Container>
+      </PageContainer>
     </div>
   )
 }

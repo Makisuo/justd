@@ -2,6 +2,7 @@
 import { useId, useState } from "react"
 
 import { IconBrandJustdBlocks } from "@/components/icons/icon-brand-justd-blocks"
+import { PageContainer } from "@/components/page-container"
 import { ResponsiveAside } from "@/components/responsive-aside"
 import { Badge } from "@/components/ui/badge"
 import { Button, buttonStyles } from "@/components/ui/button"
@@ -46,7 +47,7 @@ export function Navbar() {
       <LayoutGroup id={`navigation-${id}`}>
         <div className="xnw2 sticky top-0 z-40 hidden overflow-hidden pb-0 lg:block">
           <nav className="fg/10 border-fg/10 border-b bg-bg py-2 dark:supports-backdrop-filter:bg-bg/60 dark:supports-backdrop-filter:backdrop-blur-3xl">
-            <div className="mx-auto max-w-(--breakpoint-2xl) px-4 sm:px-6 lg:px-8">
+            <PageContainer className="lg:px-8">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-x-6">
                   <NavbarDropdown />
@@ -194,7 +195,7 @@ export function Navbar() {
                   </>
                 </div>
               </div>
-            </div>
+            </PageContainer>
           </nav>
         </div>
       </LayoutGroup>

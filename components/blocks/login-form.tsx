@@ -1,6 +1,6 @@
 "use client"
 
-import { Wrapper } from "@/app/(app)/(home)/partials/resources"
+import { Wrapper } from "@/app/(home)/partials/resources"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Checkbox } from "@/components/ui/checkbox"

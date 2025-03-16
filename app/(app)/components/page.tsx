@@ -1,5 +1,5 @@
 import { Header } from "@/components/header"
-import { Container } from "@/components/ui/container"
+import { PageContainer } from "@/components/page-container"
 import { Heading } from "@/components/ui/heading"
 import { Link } from "@/components/ui/link"
 import { siteConfig } from "@/resources/config/site"
@@ -19,7 +19,7 @@ export default function Page() {
         <span className="text-muted-fg tracking-tight">onents</span>
       </Header>
       <div className="bg-muted/35 py-10 lg:py-16">
-        <Container>
+        <PageContainer>
           <div className="columns-1 gap-(--gap) [--gap:0.5rem] sm:columns-2 md:columns-3 lg:columns-4">
             {components.map((item: ComponentProps, index: number) => (
               <div
@@ -51,7 +51,7 @@ export default function Page() {
               </div>
             ))}
           </div>
-        </Container>
+        </PageContainer>
       </div>
     </div>
   )

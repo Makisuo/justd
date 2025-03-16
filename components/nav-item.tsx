@@ -1,10 +1,8 @@
 "use client"
 
-import type React from "react"
-
-import { motion } from "motion/react"
 import NextLink from "next/link"
 import { usePathname } from "next/navigation"
+import type React from "react"
 import { Link } from "react-aria-components"
 import { twMerge } from "tailwind-merge"
 
@@ -40,17 +38,7 @@ const NavLink = ({ href, isActive, className, isNextLink, ...props }: NavLinkPro
         className,
       )}
       {...props}
-    >
-      <>
-        {props.children}
-        {isCurrent && (
-          <motion.span
-            layoutId="current-indicator-navlink"
-            className="absolute inset-x-0 bottom-[-0.550rem] h-0.5 w-full rounded bg-fg"
-          />
-        )}
-      </>
-    </El>
+    />
   )
 }
 

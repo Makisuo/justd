@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-import { Wrapper } from "@/app/(app)/(home)/partials/resources"
+import { Wrapper } from "@/app/(home)/partials/resources"
 import { Checkbox, CheckboxGroup } from "@/components/ui/checkbox"
 import { Radio, RadioGroup } from "@/components/ui/radio"
 

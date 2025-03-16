@@ -14,8 +14,8 @@ import ComboBoxAvatarDemo from "@/components/docs/pickers/combo-box/combo-box-av
 import MultipleSelectDemo from "@/components/docs/pickers/multiple-select/multiple-select-demo"
 import { IconArrowRight, IconPackage } from "justd-icons"
 
+import { PageContainer } from "@/components/page-container"
 import { buttonStyles } from "@/components/ui/button"
-import { Container } from "@/components/ui/container"
 import { DatePicker } from "@/components/ui/date-picker"
 import { DateRangePicker } from "@/components/ui/date-range-picker"
 import { Heading } from "@/components/ui/heading"
@@ -25,10 +25,10 @@ import { Wrapper } from "./resources"
 
 export function Blocks() {
   return (
-    <Container>
+    <PageContainer>
       <section
         id="blocks"
-        className="relative **:data-[slot=wrapper-card]:grid **:data-[slot=wrapper-card]:place-content-center sm:mb-12"
+        className="relative overflow-hidden rounded-2xl border bg-overlay p-6 **:data-[slot=wrapper-card]:grid **:data-[slot=wrapper-card]:place-content-center sm:mb-12"
       >
         <div className="absolute bottom-0 z-20 h-70 w-full bg-linear-to-t from-bg via-bg/60 to-transparent" />
         <div className="mb-4 flex items-center justify-between">
@@ -105,6 +105,6 @@ export function Blocks() {
           </Link>
         </div>
       </section>
-    </Container>
+    </PageContainer>
   )
 }

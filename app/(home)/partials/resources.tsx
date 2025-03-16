@@ -1,9 +1,9 @@
 "use client"
 
 import { IconBrandJustdBlocks } from "@/components/icons/icon-brand-justd-blocks"
+import { PageContainer } from "@/components/page-container"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
-import { Container } from "@/components/ui/container"
 import { Heading } from "@/components/ui/heading"
 import { Link } from "@/components/ui/link"
 import {
@@ -50,7 +50,7 @@ const resources = [
 
 export function Resources() {
   return (
-    <Container>
+    <PageContainer>
       <div className="-mx-4 sm:mx-0">
         <section id="starter-kit" className="mb-14">
           <Heading level={2} className="mb-4 px-4 text-2xl sm:px-0 sm:text-2xl">
@@ -147,7 +147,7 @@ export function Resources() {
           </div>
         </section>
       </div>
-    </Container>
+    </PageContainer>
   )
 }
 

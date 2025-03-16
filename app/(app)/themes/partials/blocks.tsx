@@ -28,7 +28,7 @@ import { IconDashboard } from "justd-icons"
 export function Blocks() {
   return (
     <div className="grid gap-1 **:data-[slot=card]:rounded-md">
-      <div className="-mx-2.5">
+      <div className="-mx-4">
         <AppNavbar className="-mt-1 *:data-navbar-nav:rounded-md" intent="floating" />
       </div>
       <div className="grid gap-1 sm:grid-cols-2 md:grid-cols-3">

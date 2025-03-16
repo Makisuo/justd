@@ -7,7 +7,6 @@ import { GeneratedTheme } from "@/app/(app)/themes/partials/generated-theme"
 import { ThemeCustomizer } from "@/app/(app)/themes/partials/theme-customizer"
 import { CodeHighlighter } from "@/components/code/code-highlighter"
 import { Button } from "@/components/ui/button"
-import { Container } from "@/components/ui/container"
 import { Heading } from "@/components/ui/heading"
 import { Menu } from "@/components/ui/menu"
 import { Sheet } from "@/components/ui/sheet"
@@ -19,6 +18,7 @@ import {
 } from "justd-icons"
 import { toast } from "sonner"
 
+import { PageContainer } from "@/components/page-container"
 import { generateTheme } from "./themes"
 
 export function ThemeContainer() {
@@ -39,7 +39,7 @@ export function ThemeContainer() {
   const handleClose = () => setOpen(false)
   return (
     <div className="py-4 sm:py-16">
-      <Container>
+      <PageContainer>
         <div className="flex flex-col divide-y rounded-lg border lg:flex-row lg:divide-x lg:divide-y-0">
           <div className="w-full p-4 lg:w-1/2 lg:p-6">
             <div className="mb-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between lg:mb-6">
@@ -99,7 +99,7 @@ export function ThemeContainer() {
         <Suspense fallback={<div>Loading...</div>}>
           <style>{generateTheme(selectedColors)}</style>
         </Suspense>
-      </Container>
+      </PageContainer>
 
       <Sheet.Content
         onOpenChange={setOpen}
