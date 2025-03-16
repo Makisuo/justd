@@ -1,14 +1,12 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { composeTailwindRenderProps } from "@/components/ui/primitive"
 import { IconDeviceDesktop2, IconMoon, IconSun } from "justd-icons"
 import { useTheme } from "next-themes"
 
 export function ThemeSwitcher({
   shape = "square",
   intent = "outline",
-  className,
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { theme, setTheme } = useTheme()
@@ -23,7 +21,6 @@ export function ThemeSwitcher({
       shape={shape}
       intent={intent}
       size="square-petite"
-      className={composeTailwindRenderProps(className, "**:data-[slot=icon]:text-fg")}
       aria-label="Switch theme"
       onPress={toggleTheme}
       {...props}

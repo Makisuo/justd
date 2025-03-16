@@ -18,7 +18,7 @@ export default function Page() {
         <span className="text-fg tracking-tight">Comp</span>
         <span className="text-muted-fg tracking-tight">onents</span>
       </Header>
-      <div className="bg-muted/35 py-10 lg:py-16">
+      <div className="bg-muted/35 py-4 lg:py-16">
         <PageContainer>
           <div className="columns-1 gap-(--gap) [--gap:0.5rem] sm:columns-2 md:columns-3 lg:columns-4">
             {components.map((item: ComponentProps, index: number) => (

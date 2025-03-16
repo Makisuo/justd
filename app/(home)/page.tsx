@@ -14,7 +14,7 @@ export default function Page() {
         <Hero />
       </div>
       <div className="h-96 bg-linear-to-b from-black via-70% via-bg to-bg" />
-      <div className="-mt-80 space-y-8 py-6 sm:space-y-16 lg:pt-0">
+      <div className="-mt-90 sm:-mt-80 space-y-8 pb-6 sm:space-y-16 lg:pt-0">
         <Blocks />
         <IconResources />
         <Resources />

@@ -59,7 +59,7 @@ export function Navbar() {
           </Link>
           <Link
             className="text-blue-200 outline-hidden hover:text-white focus-visible:ring-2 focus-visible:ring-blue-500"
-            href="https://blocks.getjustd.com"
+            href="https://x.com/getjustd"
             target="_blank"
           >
             <IconBrandX />
@@ -74,7 +74,7 @@ export function Navbar() {
           <Link
             target="_blank"
             href={siteConfig.repo}
-            className="inset-ring-fg/10 inline-flex items-center gap-x-1 rounded-full bg-conic from-blue-700 via-sky-500 to-blue-700 px-2 py-1 font-medium text-white text-xs/5 tabular-nums shadow-black/50"
+            className="inset-ring inset-ring-fg/10 inset-ring-white/10 inline-flex items-center gap-x-1 rounded-full bg-linear-to-r from-blue-600 via-blue-700 to-sky-500 px-2 py-1 font-medium text-white text-xs/5 tabular-nums shadow-black/50"
           >
             {/*<IconStar className="fill-yellow-500/40 text-yellow-500" />*/}
             <IconBrandGithub />
@@ -124,7 +124,7 @@ function NavLink({ ...props }: React.ComponentProps<typeof Link>) {
   )
 }
 
-const menus = [
+export const menus = [
   { href: "/docs/2.x/getting-started/introduction", label: "Docs" },
   { href: "/components", label: "Components" },
   { href: "/themes", label: "Themes" },
