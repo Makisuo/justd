@@ -28,16 +28,20 @@ export function Blocks() {
     <PageContainer>
       <section
         id="blocks"
-        className="relative overflow-hidden rounded-2xl border bg-overlay p-6 **:data-[slot=wrapper-card]:grid **:data-[slot=wrapper-card]:place-content-center sm:mb-12"
+        className="relative overflow-hidden rounded-2xl border bg-overlay p-0.5 pb-6 **:data-[slot=wrapper-card]:grid **:data-[slot=wrapper-card]:place-content-center sm:mb-12 sm:p-4 sm:pb-8"
       >
-        <div className="absolute bottom-0 z-20 h-70 w-full bg-linear-to-t from-bg via-bg/60 to-transparent" />
-        <div className="mb-4 flex items-center justify-between">
-          <Heading level={2} className="sm:text-2xl">
+        <div className="absolute bottom-0 z-20 h-70 w-full bg-linear-to-t from-bg via-bg" />
+        <div className="flex items-center justify-between px-4 py-1.5 sm:mb-2 sm:p-0">
+          <Heading level={2} className="sm:text-lg">
             At a Glance
           </Heading>
           <Link
             href="/docs/2.x/components/buttons/button"
-            className={buttonStyles({ size: "small", intent: "outline" })}
+            className={buttonStyles({
+              size: "small",
+              intent: "outline",
+              className: "-mr-3 sm:mr-0",
+            })}
           >
             Show More <IconArrowRight />
           </Link>
@@ -99,7 +103,7 @@ export function Blocks() {
           </div>
         </div>
 
-        <div className="-mt-4 relative z-30 flex items-center justify-center">
+        <div className="-mt-10 relative z-30 flex items-center justify-center">
           <Link className={buttonStyles()} href="/components">
             <IconPackage /> Show More
           </Link>
