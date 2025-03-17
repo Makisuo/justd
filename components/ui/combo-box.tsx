@@ -64,7 +64,7 @@ const ComboBox = <T extends object>({
 }
 
 interface ComboBoxListProps<T extends object>
-  extends ListBoxProps<T>,
+  extends Omit<ListBoxProps<T>, "layout" | "orientation">,
     Pick<PopoverContentProps, "placement"> {
   popoverClassName?: PopoverContentProps["className"]
 }
@@ -86,6 +86,8 @@ const ComboBoxList = <T extends object>({
     >
       <ListBox
         className={composeTailwindRenderProps(className, "border-0")}
+        layout="stack"
+        orientation="vertical"
         items={items}
         {...props}
       >

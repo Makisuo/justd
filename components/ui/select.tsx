@@ -75,7 +75,7 @@ const Select = <T extends object>({
 }
 
 interface SelectListProps<T extends object>
-  extends ListBoxProps<T>,
+  extends Omit<ListBoxProps<T>, "layout" | "orientation">,
     Pick<PopoverProps, "placement"> {
   items?: Iterable<T>
   popoverClassName?: PopoverProps["className"]
@@ -96,6 +96,8 @@ const SelectList = <T extends object>({
       placement={props.placement}
     >
       <ListBox
+        layout="stack"
+        orientation="vertical"
         className={twMerge(clsx("border-0 shadow-none", className))}
         items={items}
         {...props}
