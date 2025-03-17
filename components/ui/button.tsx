@@ -9,44 +9,33 @@ import { tv } from "tailwind-variants"
 
 const buttonStyles = tv({
   base: [
-    "outline-0 outline-offset-2 hover:no-underline focus-visible:outline-2 forced-colors:outline-[Highlight]",
-    "relative inline-flex items-center justify-center gap-x-2 font-medium",
-    "forced-colors:[--btn-icon:ButtonText] forced-colors:hover:[--btn-icon:ButtonText]",
+    "relative isolate inline-flex items-center justify-center gap-x-2 font-medium",
+    "outline-0 outline-offset-2 hover:no-underline focus-visible:outline-2",
+    "inset-ring inset-ring-fg/20 bg-(--btn-bg) pressed:bg-(--btn-overlay) text-(--btn-fg) text-(--btn-fg) shadow-[shadow:inset_0_2px_--theme(--color-white/15%)] hover:bg-(--btn-overlay) dark:inset-ring-fg/15 dark:shadow-none",
+    "forced-colors:outline-[Highlight] forced-colors:[--btn-icon:ButtonText] forced-colors:hover:[--btn-icon:ButtonText]",
     "*:data-[slot=icon]:-mx-0.5 *:data-[slot=icon]:my-1 *:data-[slot=icon]:size-4 *:data-[slot=icon]:shrink-0 *:data-[slot=icon]:text-current/60 pressed:*:data-[slot=icon]:text-current *:data-[slot=icon]:transition hover:*:data-[slot=icon]:text-current/90",
     "*:data-[slot=avatar]:-mx-0.5 *:data-[slot=avatar]:my-1 *:data-[slot=avatar]:*:size-4 *:data-[slot=avatar]:size-4 *:data-[slot=avatar]:shrink-0",
-    "border border-black/20 dark:border-(--btn-border)",
-    "bg-(--btn-bg) text-(--btn-fg) shadow-[shadow:inset_0_1px_--theme(--color-white/20%)]",
-    "hover:bg-(--btn-bg-hovered) hover:ring-(--btn-border-hovered)",
-    "pressed:border-(--btn-border) pressed:bg-(--btn-bg)",
   ],
   variants: {
     intent: {
       primary: [
-        "outline-ring [--btn-bg:theme(--color-primary/95%)] [--btn-border:var(--color-primary)] [--btn-fg:var(--color-primary-fg)] dark:[--btn-bg:theme(--color-primary/90%)]",
-        "[--btn-bg-hovered:theme(--color-primary/87%)] [--btn-border-hovered:theme(--color-primary/87%)] dark:[--btn-bg-hovered:theme(--color-primary)] dark:[--btn-border-hovered:theme(--color-primary)]",
+        "outline-primary [--btn-bg:theme(--color-primary/95%)] [--btn-fg:var(--color-primary-fg)] [--btn-overlay:var(--color-primary)]",
       ],
       secondary: [
-        "outline-ring [--btn-bg:theme(--color-secondary/95%)] [--btn-border:theme(--color-border)] [--btn-fg:var(--color-secondary-fg)] dark:[--btn-bg:theme(--color-secondary/85%)]",
-        "[--btn-bg-hovered:color-mix(in_oklab,var(--color-secondary)_60%,white_20%)] dark:[--btn-bg-hovered:color-mix(in_oklab,var(--color-secondary)_96%,white_4%)]",
+        "outline-primary [--btn-bg:theme(--color-secondary/90%)] [--btn-fg:var(--color-secondary-fg)] [--btn-overlay:var(--color-secondary)]",
       ],
       warning: [
-        "[--btn-warning:theme(--color-warning/97%)]",
-        "[--btn-warning-hovered:color-mix(in_oklab,var(--color-warning)_85%,white_15%)]",
-        "dark:[--btn-warning-hovered:color-mix(in_oklab,var(--color-warning)_90%,white_10%)]",
-        "outline-warning [--btn-bg:var(--btn-warning)] [--btn-border:var(--btn-warning)] [--btn-fg:var(--color-warning-fg)]",
-        "[--btn-bg-hovered:var(--btn-warning-hovered)] [--btn-border-hovered:var(--btn-warning-hovered)]",
+        "outline-warning [--btn-bg:theme(--color-warning/95%)] [--btn-fg:var(--color-warning-fg)] [--btn-overlay:var(--color-warning)]",
       ],
       danger: [
-        "outline-danger [--btn-bg:theme(--color-danger/95%)] [--btn-border:theme(--color-black/15%)] [--btn-fg:var(--color-danger-fg)] dark:[--btn-bg:var(--color-danger)]",
-        "[--btn-danger-hovered:color-mix(in_oklab,var(--color-danger)_93%,white_7%)]",
-        "dark:[--btn-danger-hovered:color-mix(in_oklab,var(--color-danger)_96%,white_4%)]",
-        "[--btn-bg-hovered:var(--btn-danger-hovered)] [--btn-border-hovered:var(--btn-danger-hovered)]",
+        "outline-danger [--btn-bg:theme(--color-danger/95%)] [--btn-fg:var(--color-danger-fg)] [--btn-overlay:var(--color-danger)]",
       ],
       outline: [
-        "pressed:bg-secondary shadow-none outline-ring [--btn-border:var(--color-border)] hover:bg-secondary",
+        "shadow-none outline-primary [--btn-fg:var(--color-fg)] [--btn-overlay:theme(--color-secondary/90%)]",
       ],
-      plain:
-        "pressed:bg-secondary shadow-none shadow-none outline-ring [--btn-border:transparent] hover:bg-secondary",
+      plain: [
+        "inset-ring-transparent outline-primary [--btn-fg:var(--color-fg)] [--btn-overlay:theme(--color-secondary/90%)] dark:inset-ring-transparent",
+      ],
     },
     size: {
       "extra-small":
@@ -63,7 +52,7 @@ const buttonStyles = tv({
     },
     isDisabled: {
       false: "cursor-pointer forced-colors:disabled:text-[GrayText]",
-      true: "cursor-default border-0 opacity-50 shadow-none forced-colors:disabled:text-[GrayText]",
+      true: "inset-shadow-none cursor-default border-0 opacity-50 ring-0 dark:inset-ring-0 forced-colors:disabled:text-[GrayText]",
     },
     isPending: {
       true: "cursor-default opacity-50",

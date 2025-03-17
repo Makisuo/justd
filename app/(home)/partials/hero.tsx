@@ -4,7 +4,6 @@ import { PageContainer } from "@/components/page-container"
 import { buttonStyles } from "@/components/ui/button"
 import { Link } from "@/components/ui/link"
 import { siteConfig } from "@/resources/config/site"
-import { IconBrandJustd, IconCube } from "justd-icons"
 import { Header } from "react-aria-components"
 
 export function Hero() {
@@ -30,20 +29,20 @@ export function Hero() {
             <Link
               className={buttonStyles({
                 size: "large",
+                className: "inset-ring-white/10 shadow-none",
               })}
               href="/docs/2.x/getting-started/installation"
             >
-              <IconBrandJustd />
               Get started
             </Link>
             <Link
               className={buttonStyles({
                 size: "large",
-                intent: "secondary",
+                intent: "outline",
+                className: "shadow-none",
               })}
               href="/docs/2.x/components/buttons/button"
             >
-              <IconCube />
               Components
             </Link>
           </div>
