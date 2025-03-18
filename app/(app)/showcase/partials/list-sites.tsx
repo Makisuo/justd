@@ -27,7 +27,7 @@ export function ListSites({ sites }: Props) {
               <ListBoxItem
                 rel="nofollow"
                 target="_blank"
-                className="flex items-center gap-x-3 rounded-lg bg-secondary/70 px-3 py-2.5 ring-1 ring-border transition hover:bg-secondary focus:outline-hidden data-focus-visible:ring-1 data-focus-visible:ring-ring"
+                className="flex items-center gap-x-3 rounded-lg bg-secondary/70 px-3 py-2.5 ring-1 ring-border transition hover:bg-secondary focus:outline-hidden focus-visible:ring-1 focus-visible:ring-ring"
                 textValue={item.name}
                 href={`${item.url}?ref=getjustd.com/showcase`}
                 id={getSiteName(item.url)}

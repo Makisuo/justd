@@ -68,15 +68,15 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
             </SidebarItem>
 
             <SidebarItem tooltip="Orders">
-              {({ isCollapsed }) => (
+              {({ isCollapsed, isFocused }) => (
                 <>
                   <SidebarLink href="#">
                     <IconShoppingBag />
                     <SidebarLabel>Orders</SidebarLabel>
                   </SidebarLink>
-                  {!isCollapsed && (
+                  {(!isCollapsed || isFocused) && (
                     <Menu>
-                      <Menu.Trigger aria-label="Manage">
+                      <Menu.Trigger data-slot="menu-trigger" aria-label="Manage">
                         <IconDotsHorizontal />
                       </Menu.Trigger>
                       <Menu.Content offset={0} placement="right top">
@@ -107,12 +107,12 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
               )}
             </SidebarItem>
             <SidebarItem tooltip="Products">
-              {({ isCollapsed }) => (
+              {({ isCollapsed, isFocused }) => (
                 <>
                   <SidebarLink href="#">
                     <SidebarLabel>Products</SidebarLabel>
                   </SidebarLink>
-                  {!isCollapsed && (
+                  {(!isCollapsed || isFocused) && (
                     <Menu>
                       <Menu.Trigger aria-label="Manage">
                         <IconDotsHorizontal />
@@ -199,7 +199,7 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
 
       <SidebarFooter>
         <Menu>
-          <Menu.Trigger className="group" aria-label="Profile" data-slot="menu-trigger">
+          <Menu.Trigger className="group" aria-label="Profile">
             <Avatar shape="square" src="/images/avatar/cobain.jpg" />
             <div className="in-data-[sidebar-collapsible=dock]:hidden text-sm">
               <SidebarLabel>Kurt Cobain</SidebarLabel>

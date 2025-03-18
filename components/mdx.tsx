@@ -43,7 +43,7 @@ export function Mdx({ code }: { code: MDXContent }) {
         Image,
         NewTab: (props: React.ComponentProps<typeof Link>) => (
           <Link
-            className="not-prose xd2432 text-blue-600 outline-hidden hover:underline data-focus-visible:ring-1 dark:text-blue-400"
+            className="not-prose xd2432 text-blue-600 outline-hidden hover:underline focus-visible:ring-1 dark:text-blue-400"
             target="_blank"
             {...props}
           >
