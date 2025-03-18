@@ -34,7 +34,7 @@ const buttonStyles = tv({
         "shadow-none outline-primary [--btn-fg:var(--color-fg)] [--btn-overlay:theme(--color-secondary/90%)]",
       ],
       plain: [
-        "inset-ring-transparent outline-primary [--btn-fg:var(--color-fg)] [--btn-overlay:theme(--color-secondary/90%)] dark:inset-ring-transparent",
+        "inset-ring-transparent shadow-none outline-primary [--btn-fg:var(--color-fg)] [--btn-overlay:theme(--color-secondary/90%)] dark:inset-ring-transparent",
       ],
     },
     size: {
