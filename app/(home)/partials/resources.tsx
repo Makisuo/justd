@@ -6,18 +6,11 @@ import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
 import { Heading } from "@/components/ui/heading"
 import { Link } from "@/components/ui/link"
-import {
-  IconBrandAstro,
-  IconBrandLaravel,
-  IconBrandNextjs,
-  IconBrandRemix,
-  IconWindowVisitFill,
-} from "justd-icons"
+import { IconWindowVisitFill } from "justd-icons"
 import { twMerge } from "tailwind-merge"
 
 const resources = [
   {
-    icon: IconBrandNextjs,
     name: "Next.js Starter Kit",
     url: "https://next.getjustd.com/",
     description:
@@ -25,7 +18,6 @@ const resources = [
     label: "Starter Kit",
   },
   {
-    icon: IconBrandLaravel,
     name: "Laravel Starter Kit",
     url: "https://github.com/justdlabs/inertia.ts",
     description:
@@ -33,17 +25,27 @@ const resources = [
     label: "Starter Kit",
   },
   {
-    icon: IconBrandRemix,
     name: "Remix Starter Kit",
     url: "https://github.com/justdlabs/remix",
     description: "A Remix starter kit with Justd installed, ready for use in any application.",
     label: "Starter Kit",
   },
   {
-    icon: IconBrandAstro,
     name: "Astro Starter Kit",
-    url: "https://astro.getjustd.com/",
+    url: "https://github.com/justdlabs/astro",
     description: "A Astro starter kit with Justd installed, ready for use in any application.",
+    label: "Starter Kit",
+  },
+  {
+    name: "Tanstack Router",
+    url: "https://tanstack-router.getjustd.com/",
+    description: "Tanstack Router is a powerful and flexible router for React applications.",
+    label: "Starter Kit",
+  },
+  {
+    name: "Vite",
+    url: "https://github.com/justdlabs/vite",
+    description: "The simple way to start vite with Justd installed.",
     label: "Starter Kit",
   },
 ]
@@ -57,7 +59,7 @@ export function Resources() {
             Starter Kit
           </Heading>
           <div
-            className="grid grid-cols-1 gap-px divide-y border-y p-px sm:grid-cols-2 sm:divide-y-0 sm:border-y-0 sm:bg-border"
+            className="grid grid-cols-1 gap-px divide-y border-y p-px sm:grid-cols-3 sm:divide-y-0 sm:border-y-0 sm:bg-border"
             aria-label="Resources"
           >
             {resources.map((item) => (
@@ -69,15 +71,9 @@ export function Resources() {
                 key={item.name.toLowerCase().replaceAll(" ", "-")}
               >
                 <div className="flex">
-                  <WrapperIcon>
-                    <item.icon />
-                  </WrapperIcon>
                   <Card.Header className="flex flex-col gap-y-2">
                     <Card.Title>{item.name}</Card.Title>
                     <Card.Description>{item.description}</Card.Description>
-                    <div>
-                      <Badge>{item.label}</Badge>
-                    </div>
                   </Card.Header>
                 </div>
               </Link>
@@ -91,7 +87,7 @@ export function Resources() {
               Justd Blocks
             </Heading>
             <p className="text-muted-fg leading-relaxed lg:text-lg">
-              Create Beautiful Pages Effortlessly in No Time
+              Build your next idea even faster with ready-made blocks & templates.
             </p>
           </div>
           <div
@@ -116,7 +112,7 @@ export function Resources() {
                     customizable and optimized for modern web applications.
                   </Card.Description>
                   <div>
-                    <Badge>Premium Blocks</Badge>
+                    <Badge>Premium</Badge>
                   </div>
                 </Card.Header>
               </div>
@@ -139,7 +135,7 @@ export function Resources() {
                     through a collection of designs tailored to meet your needs.
                   </Card.Description>
                   <div>
-                    <Badge>Premium Blocks</Badge>
+                    <Badge>Premium</Badge>
                   </div>
                 </Card.Header>
               </div>
