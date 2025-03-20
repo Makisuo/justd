@@ -9,7 +9,6 @@ import { Link } from "@/components/ui/link"
 import { siteConfig } from "@/resources/config/site"
 import { title } from "@/resources/lib/utils"
 import { source } from "@/utils/source"
-import { IconArrowUpRight } from "justd-icons"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { twJoin } from "tailwind-merge"
@@ -135,11 +134,11 @@ export default async function Page(props: DocPageProps) {
           <Mdx code={page.data.body} />
           <Link
             target="_blank"
-            className="not-prose group relative inset-ring inset-ring-blue-300/30 my-6 flex rounded-xl bg-blue-500/10 p-2"
-            href="https://blocks.getjustd.com"
+            className="not-prose group relative my-6 flex min-h-48 overflow-hidden rounded-xl bg-[url(https://blocks.getjustd.com/opengraph-image.jpg)] bg-blue-500/10 bg-center bg-no-repeat ring ring-blue-300/30 transition [background-size:100%] hover:ring-blue-300/70 sm:min-h-110 sm:bg-cover"
+            href="https://blocks.getjustd.com?ref=getjustd.com"
           >
-            <div className="flex items-start gap-x-2">
-              <div className="inset-ring inset-ring-fg/10 grid size-10 place-content-center rounded-sm bg-blue-500/20">
+            <div className="absolute bottom-0 flex w-full items-start gap-x-3 bg-linear-to-t from-black via-black/90 p-4 sm:p-6">
+              <div className="inset-ring inset-ring-fg/10 grid size-10 shrink-0 place-content-center rounded-sm bg-blue-500/20">
                 <IconBrandJustdBlocks className="size-8" />
               </div>
               <Card.Header className="p-0">
@@ -150,8 +149,6 @@ export default async function Page(props: DocPageProps) {
                 </Card.Description>
               </Card.Header>
             </div>
-
-            <IconArrowUpRight className="-translate-y-1/2 absolute top-1/2 right-6 hidden size-4 text-blue-500 group-hover:block" />
           </Link>
           <Pager className="pt-3" tree={source.pageTree} url={page.url} />
         </main>
