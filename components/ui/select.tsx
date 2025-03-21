@@ -1,6 +1,4 @@
 "use client"
-
-import { clsx } from "clsx"
 import { IconChevronLgDown } from "justd-icons"
 import type {
   ListBoxProps,
@@ -78,7 +76,7 @@ interface SelectListProps<T extends object>
   extends Omit<ListBoxProps<T>, "layout" | "orientation">,
     Pick<PopoverProps, "placement"> {
   items?: Iterable<T>
-  popoverClassName?: PopoverProps["className"]
+  popoverClassName?: string
 }
 
 const SelectList = <T extends object>({
@@ -92,13 +90,13 @@ const SelectList = <T extends object>({
     <PopoverContent
       showArrow={false}
       respectScreen={false}
-      className={twMerge(clsx("sm:min-w-(--trigger-width)", popoverClassName))}
+      className={twMerge("sm:min-w-(--trigger-width)", popoverClassName)}
       placement={props.placement}
     >
       <ListBox
         layout="stack"
         orientation="vertical"
-        className={twMerge(clsx("border-0 shadow-none", className))}
+        className={composeTailwindRenderProps(className, "border-0 shadow-none")}
         items={items}
         {...props}
       >

@@ -16,26 +16,12 @@ import {
   ComboBox as ComboboxPrimitive,
   useSlottedContext,
 } from "react-aria-components"
-import { tv } from "tailwind-variants"
 import { Button } from "./button"
 import { DropdownItem, DropdownLabel, DropdownSection } from "./dropdown"
 import { Description, FieldError, FieldGroup, Input, Label } from "./field"
 import { ListBox } from "./list-box"
 import { PopoverContent, type PopoverContentProps } from "./popover"
 import { composeTailwindRenderProps } from "./primitive"
-
-const comboboxStyles = tv({
-  slots: {
-    base: "group flex w-full flex-col gap-y-1.5",
-    chevronButton:
-      "h-7 w-8 rounded pressed:bg-transparent outline-offset-0 hover:bg-transparent active:bg-transparent **:data-[slot=icon]:pressed:text-fg **:data-[slot=icon]:text-muted-fg **:data-[slot=icon]:hover:text-fg",
-    chevronIcon: "size-4 shrink-0 transition duration-200 group-open:rotate-180 group-open:text-fg",
-    clearButton:
-      "absolute inset-y-0 right-0 flex items-center pr-2 text-muted-fg hover:text-fg focus:outline-hidden",
-  },
-})
-
-const { base, chevronButton, chevronIcon, clearButton } = comboboxStyles()
 
 interface ComboBoxProps<T extends object> extends Omit<ComboboxPrimitiveProps<T>, "children"> {
   label?: string
@@ -54,7 +40,10 @@ const ComboBox = <T extends object>({
   ...props
 }: ComboBoxProps<T>) => {
   return (
-    <ComboboxPrimitive {...props} className={composeTailwindRenderProps(className, base())}>
+    <ComboboxPrimitive
+      {...props}
+      className={composeTailwindRenderProps(className, "group flex w-full flex-col gap-y-1.5")}
+    >
       {label && <Label>{label}</Label>}
       {children}
       {description && <Description>{description}</Description>}
@@ -102,8 +91,14 @@ const ComboBoxInput = (props: InputProps) => {
   return (
     <FieldGroup className="relative pl-0">
       <Input {...props} placeholder={props?.placeholder} />
-      <Button size="square-petite" intent="plain" className={chevronButton()}>
-        {!context?.inputValue && <IconChevronLgDown className={chevronIcon()} />}
+      <Button
+        size="square-petite"
+        intent="plain"
+        className="h-7 w-8 rounded pressed:bg-transparent outline-offset-0 hover:bg-transparent active:bg-transparent **:data-[slot=icon]:pressed:text-fg **:data-[slot=icon]:text-muted-fg **:data-[slot=icon]:hover:text-fg"
+      >
+        {!context?.inputValue && (
+          <IconChevronLgDown className="size-4 shrink-0 transition duration-200 group-open:rotate-180 group-open:text-fg" />
+        )}
       </Button>
       {context?.inputValue && <ComboBoxClearButton />}
     </FieldGroup>
@@ -115,7 +110,7 @@ const ComboBoxClearButton = () => {
 
   return (
     <ButtonPrimitive
-      className={clearButton()}
+      className="absolute inset-y-0 right-0 flex items-center pr-2 text-muted-fg hover:text-fg focus:outline-hidden"
       slot={null}
       aria-label="Clear"
       onPress={() => {
