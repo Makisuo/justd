@@ -18,7 +18,9 @@ import {
   SidebarRail,
   SidebarSection,
   SidebarSectionGroup,
+  useSidebar,
 } from "@/components/ui/sidebar"
+import { Switch } from "@/components/ui/switch"
 import {
   IconArchive,
   IconArrowDown,
@@ -29,7 +31,6 @@ import {
   IconChevronLgDown,
   IconCircleQuestionmark,
   IconClock,
-  IconCommandRegular,
   IconCreditCard,
   IconDashboard,
   IconDotsHorizontal,
@@ -38,16 +39,22 @@ import {
   IconListBullets,
   IconLogout,
   IconMessage,
+  IconMoon,
   IconNotes,
   IconPackage,
   IconPlus,
   IconSettings,
   IconShield,
   IconShoppingBag,
+  IconSun,
   IconTicket,
 } from "justd-icons"
+import { useTheme } from "next-themes"
+import { twMerge } from "tailwind-merge"
 
 export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
+  const { theme, setTheme } = useTheme()
+  const { state } = useSidebar()
   return (
     <Sidebar {...props}>
       <SidebarHeader>
@@ -210,7 +217,10 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
               className="absolute right-3 size-4 transition-transform group-pressed:rotate-180"
             />
           </Menu.Trigger>
-          <Menu.Content placement="bottom right" className="sm:min-w-(--trigger-width)">
+          <Menu.Content
+            placement="bottom right"
+            className={twMerge(state === "expanded" ? "sm:min-w-(--trigger-width)" : "sm:min-w-60")}
+          >
             <Menu.Section>
               <Menu.Header separator>
                 <span className="block">Kurt Cobain</span>
@@ -231,9 +241,17 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
               Security
             </Menu.Item>
             <Menu.Separator />
-            <Menu.Item>
-              <IconCommandRegular />
-              Command Menu
+            <Menu.Item className="[&>[slot=label]+[data-slot=icon]]:right-4 [&>[slot=label]+[data-slot=icon]]:bottom-3">
+              {theme === "dark" ? <IconMoon /> : <IconSun />}
+              <Menu.Label>Theme</Menu.Label>
+              <span data-slot="icon">
+                <Switch
+                  className="ml-auto"
+                  isSelected={theme === "dark"}
+                  onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  aria-label="Toggle theme"
+                />
+              </span>
             </Menu.Item>
 
             <Menu.Item href="#contact">

@@ -310,6 +310,10 @@ const footer = tv({
     "**:data-[slot=menu-trigger]:hover:bg-(--sidebar-accent) **:data-[slot=menu-trigger]:hover:text-fg",
   ],
   variants: {
+    expanded: {
+      true: "",
+      false: "**:data-[slot=menu-content]:min-w-60",
+    },
     collapsed: {
       false: [
         "**:data-[slot=avatar]:*:size-8 **:data-[slot=menu-trigger]:**:data-[slot=avatar]:mr-2 **:data-[slot=avatar]:size-8",
@@ -327,7 +331,18 @@ const footer = tv({
 const SidebarFooter = ({ className, ...props }: React.ComponentProps<"div">) => {
   const { state, isMobile } = useSidebar()
   const collapsed = state === "collapsed" && !isMobile
-  return <div data-sidebar-footer="true" className={footer({ collapsed, className })} {...props} />
+  const expanded = state === "expanded"
+  return (
+    <div
+      data-sidebar-footer="true"
+      className={footer({
+        collapsed,
+        expanded,
+        className,
+      })}
+      {...props}
+    />
+  )
 }
 
 const SidebarContent = ({ className, ...props }: React.ComponentProps<"div">) => {
