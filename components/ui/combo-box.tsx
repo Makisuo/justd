@@ -74,7 +74,7 @@ const ComboBoxList = <T extends object>({
       placement={props.placement}
     >
       <ListBox
-        className={composeTailwindRenderProps(className, "border-0")}
+        className={composeTailwindRenderProps(className, "border-0 shadow-none")}
         layout="stack"
         orientation="vertical"
         items={items}
