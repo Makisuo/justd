@@ -12,7 +12,6 @@ import {
   SelectValue,
   composeRenderProps,
 } from "react-aria-components"
-import { twMerge } from "tailwind-merge"
 import { tv } from "tailwind-variants"
 import {
   DropdownItem,
@@ -23,7 +22,7 @@ import {
 } from "./dropdown"
 import { Description, FieldError, Label } from "./field"
 import { ListBox } from "./list-box"
-import { PopoverContent } from "./popover"
+import { PopoverContent, type PopoverContentProps } from "./popover"
 import { composeTailwindRenderProps, focusStyles } from "./primitive"
 
 const selectTriggerStyles = tv({
@@ -76,7 +75,7 @@ interface SelectListProps<T extends object>
   extends Omit<ListBoxProps<T>, "layout" | "orientation">,
     Pick<PopoverProps, "placement"> {
   items?: Iterable<T>
-  popoverClassName?: string
+  popoverClassName?: PopoverContentProps["className"]
 }
 
 const SelectList = <T extends object>({
@@ -90,7 +89,7 @@ const SelectList = <T extends object>({
     <PopoverContent
       showArrow={false}
       respectScreen={false}
-      className={twMerge("sm:min-w-(--trigger-width)", popoverClassName)}
+      className={composeTailwindRenderProps(popoverClassName, "sm:min-w-(--trigger-width)")}
       placement={props.placement}
     >
       <ListBox
