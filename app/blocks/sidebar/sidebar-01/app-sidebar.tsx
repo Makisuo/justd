@@ -241,18 +241,7 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
               Security
             </Menu.Item>
             <Menu.Separator />
-            <Menu.Item className="[&>[slot=label]+[data-slot=icon]]:right-4 [&>[slot=label]+[data-slot=icon]]:bottom-3">
-              {theme === "dark" ? <IconMoon /> : <IconSun />}
-              <Menu.Label>Theme</Menu.Label>
-              <span data-slot="icon">
-                <Switch
-                  className="ml-auto"
-                  isSelected={theme === "dark"}
-                  onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  aria-label="Toggle theme"
-                />
-              </span>
-            </Menu.Item>
+
 
             <Menu.Item href="#contact">
               <IconHeadphones />
