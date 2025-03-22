@@ -47,7 +47,7 @@ export default function PieChartDonutWithTextDemo() {
 
   return (
     <Card>
-      <Card.Header className="items-center pb-0">
+      <Card.Header className="text-center">
         <Card.Title>Sales Allocation by Category</Card.Title>
         <Card.Description>Jan - Jun 2024</Card.Description>
       </Card.Header>
