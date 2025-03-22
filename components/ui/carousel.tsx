@@ -11,11 +11,9 @@ import {
   type ListBoxItemProps,
   ListBoxSection,
   type ListBoxSectionProps,
-  composeRenderProps,
 } from "react-aria-components"
 
-import { twMerge } from "tailwind-merge"
-import { tv } from "tailwind-variants"
+import { twJoin, twMerge } from "tailwind-merge"
 import type { ButtonProps } from "./button"
 import { Button } from "./button"
 import { composeTailwindRenderProps } from "./primitive"
@@ -180,19 +178,6 @@ const CarouselContent = <T extends object>({ className, ...props }: ListBoxSecti
   )
 }
 
-const carouselItem = tv({
-  base: [
-    "xd24r min-w-0 shrink-0 grow-0 basis-full focus:outline-hidden focus-visible:outline-hidden",
-    "group relative",
-  ],
-  variants: {
-    orientation: {
-      horizontal: "pl-4",
-      vertical: "pt-4",
-    },
-  },
-})
-
 const CarouselItem = ({ className, ...props }: ListBoxItemProps) => {
   const { orientation } = useCarousel()
 
@@ -200,12 +185,12 @@ const CarouselItem = ({ className, ...props }: ListBoxItemProps) => {
     <ListBoxItem
       aria-label={`Slide ${props.id}`}
       aria-roledescription="slide"
-      className={composeRenderProps(className, (className, renderProps) =>
-        carouselItem({
-          ...renderProps,
-          orientation,
-          className,
-        }),
+      className={composeTailwindRenderProps(
+        className,
+        twJoin(
+          "xd24r group relative min-w-0 shrink-0 grow-0 basis-full focus:outline-hidden focus-visible:outline-hidden",
+          orientation === "horizontal" ? "pl-4" : "pt-4",
+        ),
       )}
       {...props}
     />
@@ -270,4 +255,4 @@ Carousel.Item = CarouselItem
 Carousel.Button = CarouselButton
 
 export type { CarouselApi }
-export { Carousel }
+export { Carousel, CarouselContent, CarouselHandler, CarouselItem, CarouselButton }

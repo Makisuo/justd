@@ -7,13 +7,15 @@ import {
   SliderOutput,
   Slider as SliderPrimitive,
   SliderStateContext,
-  SliderThumb,
-  SliderTrack,
+  SliderThumb as SliderThumbPrimitive,
+  SliderTrack as SliderTrackPrimitive,
   type SliderTrackProps,
   composeRenderProps,
 } from "react-aria-components"
 import { tv } from "tailwind-variants"
 
+import { composeTailwindRenderProps } from "@/components/ui/primitive"
+import { twJoin, twMerge } from "tailwind-merge"
 import { Description, Label } from "./field"
 import { Tooltip } from "./tooltip"
 
@@ -73,7 +75,7 @@ const Slider = ({
 
   const renderThumb = (value: number) => {
     const thumb = (
-      <Thumb
+      <SliderThumb
         index={value}
         aria-label={props.thumbLabels?.[value]}
         onFocusChange={onFocusChange}
@@ -115,47 +117,38 @@ const Slider = ({
           </SliderOutput>
         )}
       </div>
-      <Track>
+      <SliderTrack>
         {({ state }) => (
           <>
-            <Filler />
+            <SliderFiller />
             {state.values.map((_, i) => (
               <React.Fragment key={i}>{renderThumb(i)}</React.Fragment>
             ))}
           </>
         )}
-      </Track>
+      </SliderTrack>
       {props.description && <Description>{props.description}</Description>}
     </SliderPrimitive>
   )
 }
 
-const controlsStyles = tv({
-  slots: {
-    filler: [
-      "rounded-full bg-primary group-data-disabled/track:opacity-60",
-      "group-data-[orientation=horizontal]/top-0 pointer-events-none absolute group-data-[orientation=vertical]/track:bottom-0 group-data-[orientation=horizontal]/track:h-full group-data-[orientation=vertical]/track:w-full",
-    ],
-    track: [
-      "[--slider:color-mix(in_oklab,var(--color-muted)_90%,black_10%)] dark:[--slider:color-mix(in_oklab,var(--color-muted)_90%,white_10%)]",
-      "group/track relative cursor-pointer rounded-full bg-(--slider) disabled:cursor-default disabled:opacity-60",
-      "grow group-data-[orientation=horizontal]:h-1.5 group-data-[orientation=horizontal]:w-full group-data-[orientation=vertical]:w-1.5 group-data-[orientation=vertical]:flex-1",
-    ],
-  },
-})
-
-const { track, filler } = controlsStyles()
-
-const Track = (props: SliderTrackProps) => {
+const SliderTrack = ({ className, ...props }: SliderTrackProps) => {
   return (
-    <SliderTrack
+    <SliderTrackPrimitive
       {...props}
-      className={composeRenderProps(props.className, (className) => track({ className }))}
+      className={composeTailwindRenderProps(
+        className,
+        twJoin([
+          "[--slider:color-mix(in_oklab,var(--color-muted)_90%,black_10%)] dark:[--slider:color-mix(in_oklab,var(--color-muted)_90%,white_10%)]",
+          "group/track relative cursor-pointer rounded-full bg-(--slider) disabled:cursor-default disabled:opacity-60",
+          "grow group-data-[orientation=horizontal]:h-1.5 group-data-[orientation=horizontal]:w-full group-data-[orientation=vertical]:w-1.5 group-data-[orientation=vertical]:flex-1",
+        ]),
+      )}
     />
   )
 }
 
-const Filler = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
+const SliderFiller = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => {
   const state = React.useContext(SliderStateContext)
   const { orientation, getThumbPercent, values } = state || {}
 
@@ -172,7 +165,16 @@ const Filler = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) =
       : { bottom: `${percent0}%`, height: `${Math.abs(percent0 - percent1)}%` }
   }
 
-  return <div {...props} style={getStyle()} className={filler({ className })} />
+  return (
+    <div
+      {...props}
+      style={getStyle()}
+      className={twMerge(
+        "group-data-[orientation=horizontal]/top-0 pointer-events-none absolute rounded-full bg-primary group-disabled/track:opacity-60 group-data-[orientation=vertical]/track:bottom-0 group-data-[orientation=horizontal]/track:h-full group-data-[orientation=vertical]/track:w-full",
+        className,
+      )}
+    />
+  )
 }
 
 const thumbStyles = tv({
@@ -191,9 +193,9 @@ const thumbStyles = tv({
     },
   },
 })
-const Thumb = ({ className, ...props }: SliderThumbProps) => {
+const SliderThumb = ({ className, ...props }: SliderThumbProps) => {
   return (
-    <SliderThumb
+    <SliderThumbPrimitive
       {...props}
       className={composeRenderProps(className, (className, renderProps) =>
         thumbStyles({ ...renderProps, className }),
@@ -203,4 +205,4 @@ const Thumb = ({ className, ...props }: SliderThumbProps) => {
 }
 
 export type { SliderProps }
-export { Slider }
+export { Slider, SliderFiller, SliderTrack, SliderThumb }

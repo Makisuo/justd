@@ -15,7 +15,7 @@ import {
 } from "motion/react"
 import type { DialogProps } from "react-aria-components"
 import { type ButtonProps, Modal, ModalOverlay } from "react-aria-components"
-import { twJoin, twMerge } from "tailwind-merge"
+import { twMerge } from "tailwind-merge"
 
 import { Dialog } from "./dialog"
 
@@ -102,10 +102,7 @@ const DrawerContentPrimitive = ({ children, ...props }: DrawerOverlayPrimitivePr
         isDismissable
         isOpen
         onOpenChange={closeDrawer}
-        className={twJoin([
-          "fixed top-0 left-0 isolate z-50 h-(--visual-viewport-height) w-full touch-none will-change-transform",
-          "flex items-end [--visual-viewport-vertical-padding:100px]",
-        ])}
+        className="fixed top-0 left-0 isolate z-50 flex h-(--visual-viewport-height) w-full touch-none items-end will-change-transform [--visual-viewport-vertical-padding:100px]"
         style={{
           backgroundColor: bg as any,
         }}

@@ -20,7 +20,6 @@ import {
   SidebarSectionGroup,
   useSidebar,
 } from "@/components/ui/sidebar"
-import { Switch } from "@/components/ui/switch"
 import {
   IconArchive,
   IconArrowDown,
@@ -39,14 +38,12 @@ import {
   IconListBullets,
   IconLogout,
   IconMessage,
-  IconMoon,
   IconNotes,
   IconPackage,
   IconPlus,
   IconSettings,
   IconShield,
   IconShoppingBag,
-  IconSun,
   IconTicket,
 } from "justd-icons"
 import { useTheme } from "next-themes"
@@ -241,7 +238,6 @@ export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) 
               Security
             </Menu.Item>
             <Menu.Separator />
-
 
             <Menu.Item href="#contact">
               <IconHeadphones />
