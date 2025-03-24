@@ -5,6 +5,10 @@ order: 2
 published: true
 ---
 
+## Framework Guides
+You can choose from a list of frameworks to get started with Justd.
+<FrameworkGuides/>
+
 ## Installation via CLI
 Before executing the command, ensure that **tailwind** is installed. If not, follow the instructions [here](https://tailwindcss.com/docs/installation) for installation.
 
@@ -117,66 +121,15 @@ This command will present a list of available components, which you can navigate
   ```
 
 ### Diff
-You can see the differences between your current setup and the new one by using the following command:
+Compare your current setup with the new one using the following command:
 
 <Installation options={{isExecutor: true}} command='npx justd-cli@latest diff' items={['']} />
 
-You can see this [tweet](https://x.com/irsyadadl/status/1823355475020402781) if you're not sure.
+If you're unsure, check out [this tweet](https://x.com/irsyadadl/status/1823355475020402781).
 
-You can also doing a diff to specific components by using the following command:
+To diff specific components, use:
+
 <Installation command='npx justd-cli@latest diff multiple-select menu modal' items={['']}/>
-
-## Starter Kit
-Explore our range of starter kits designed to suit various project needs. Whether you're working with Next.js, Laravel, Vite, or other frameworks, we've got you covered.
-
-<Note intent='info'>
-    Got a starter kit for something else, like Remix or Astro? Consider submitting a [PR](https://github.com/justdlabs/next.js/issues/new) to help expand our list!
-</Note>
-
-### Vite
-For a simple and speedy setup with React Router 7 and Vite, try the [Vite Starter Kit](https://github.com/justdlabs/vite):
-
-```
-git clone https://github.com/justdlabs/vite.git my-app
-cd my-app
-bun i && bun run dev
-```
-
-### Laravel
-Start your Laravel journey with our [Laravel Starter Kit](https://github.com/justdlabs/laravel). Make sure you have [Composer](https://getcomposer.org/download/) installed. Follow these steps:
-
-```
-laravel new app --using=justd/laravel
-cd app
-npm i
-composer run dev
-```
-
-Your Laravel project is now up and running!
-
-### Next.js
-Elevate your projects with the [Next.js Starter Kit](https://next.getjustd.com/). Fully loaded and ready to go:
-
-<Installation command='npx create-next-app@latest -e https://github.com/justdlabs/next.js project-name'/>
-
-### Remix
-Interested in Remix? Dive into the [Remix Starter Kit](https://github.com/justdlabs/remix), crafted by [José Miguel](https://github.com/m1guer). Here’s how to get started:
-
-<Installation command='npx create-remix@latest --template justdlabs/remix'/>
-
-### Tanstack Router
-The starter kit for Tanstack Router is available [here](https://github.com/justdlabs/tanstack-router). Start with this command:
-
-<Installation command='git clone https://github.com/justdlabs/tanstack-router.git tanstack-router-app'/>
-    After cloning the repository, navigate to the `tanstack-router-app` directory and run the following command to install the dependencies and start the development server:
-<Installation command='npm i && npm run dev'/>
-
-### Astro
-Looking for a production-ready Astro setup? Check out our [Astro Starter Kit](https://astro.getjustd.com/). Start with this command:
-
-<Installation command='npm create astro@latest -- --template justdlabs/astro'/>
-
-For more details, visit the [Astro repository](https://github.com/justdlabs/astro).
 
 
 

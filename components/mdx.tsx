@@ -15,6 +15,7 @@ import Image from "next/image"
 
 import { BlockSandbox } from "@/components/code/block-sandbox"
 import { PlainCode, Pre } from "@/components/code/plain-code"
+import { FrameworkGuides } from "@/components/framework-guides"
 import type { MDXContent } from "mdx/types"
 import { DocHow } from "./code/doc-how"
 
@@ -40,6 +41,7 @@ export function Mdx({ code }: { code: MDXContent }) {
         Note: DocNote,
         Anatomy: Anatomy,
         Composed: DocComposed,
+        FrameworkGuides,
         Image,
         NewTab: (props: React.ComponentProps<typeof Link>) => (
           <Link
