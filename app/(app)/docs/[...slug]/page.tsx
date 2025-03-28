@@ -142,8 +142,8 @@ export default async function Page(props: DocPageProps) {
                 <IconBrandJustdBlocks className="size-8" />
               </div>
               <Card.Header className="p-0">
-                <Card.Title className="sm:text-base/6">Get premium Blocks</Card.Title>
-                <Card.Description className="max-w-md">
+                <Card.Title className="text-white sm:text-base/6">Get premium Blocks</Card.Title>
+                <Card.Description className="max-w-md text-zinc-400">
                   Create stunning, professional-grade layouts that not only save time but also
                   elevate the quality of your projects.
                 </Card.Description>
