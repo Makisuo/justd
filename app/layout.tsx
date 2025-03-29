@@ -22,6 +22,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <script defer src="https://assets.onedollarstats.com/stonks.js" />
         <script
           dangerouslySetInnerHTML={{
             __html: js`
