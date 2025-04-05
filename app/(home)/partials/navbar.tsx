@@ -130,6 +130,11 @@ export const menus = [
   { href: "/icons", label: "Icons" },
   { href: "/colors", label: "Colors" },
   { href: "/blocks", label: "Blocks" },
-  { href: "https://blocks.getjustd.com", label: "Pro", icon: IconBrandJustdBlocks, external: true },
+  {
+    href: "https://blocks.getjustd.com",
+    label: "Premium blocks",
+    icon: IconBrandJustdBlocks,
+    external: true,
+  },
   { href: "https://blocks.getjustd.com/templates", label: "Templates", external: true },
 ]

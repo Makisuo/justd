@@ -147,5 +147,5 @@ Select.Section = SelectSection
 Select.Trigger = SelectTrigger
 Select.List = SelectList
 
-export type { SelectProps, SelectTriggerProps }
 export { Select }
+export type { SelectProps, SelectTriggerProps }
