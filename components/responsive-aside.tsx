@@ -8,7 +8,6 @@ import {
   IconBrandGithub,
   IconBrandJustd,
   IconBrandX,
-  IconChevronLgDown,
   IconHamburger,
   IconHome,
   IconSearch,
@@ -20,8 +19,8 @@ import React, { useEffect, useState } from "react"
 
 import { menus } from "@/app/(home)/partials/navbar"
 import { IconBrandJustdBlocks } from "@/components/icons/icon-brand-justd-blocks"
-import { Button } from "@/components/ui/button"
 import { Menu } from "@/components/ui/menu"
+import { composeTailwindRenderProps } from "@/components/ui/primitive"
 import { Separator } from "@/components/ui/separator"
 import { siteConfig } from "@/resources/config/site"
 import { Button as ButtonPrimitive } from "react-aria-components"
@@ -43,25 +42,25 @@ export function ResponsiveAside({
   return (
     <>
       <CommandPalette setOpen={setOpenCmd} openCmd={openCmd} />
-      <nav className="relative z-10 flex items-center justify-between border-b px-4 py-2.5 shadow-xs lg:hidden">
+      <nav className="sticky top-0 z-30 flex items-center justify-between border-b bg-bg px-4 py-2.5 shadow-xs lg:hidden">
         <div className="flex items-center gap-x-2">
           <ButtonPrimitive
             onPress={() => setOpenAside(true)}
             aria-label="Search docs"
-            className="-ml-2 p-1.5 pressed:text-fg text-muted-fg outline-hidden hover:text-fg focus-visible:ring-2 focus-visible:ring-blue-500"
+            className="-ml-2 p-2 outline-hidden hover:text-fg focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             <IconSidebarFill className="size-5" />
           </ButtonPrimitive>
           <Separator orientation="vertical" className="h-5" />
-          <Link className="rounded p-1.5 focus:outline-hidden" href="/" aria-label="Logo">
+          <Link className="rounded p-2 focus:outline-hidden" href="/" aria-label="Logo">
             <IconBrandJustd className="size-5" />
           </Link>
         </div>
-        <div className="flex items-center gap-x-2 **:data-[slot=icon]:size-5">
+        <div className="flex items-center gap-x-0.5 **:data-[slot=icon]:size-5">
           <ButtonPrimitive
             onPress={() => setOpenCmd(true)}
             aria-label="Search docs"
-            className="p-1.5 pressed:text-fg text-muted-fg outline-hidden hover:text-fg focus-visible:ring-2 focus-visible:ring-blue-500"
+            className="p-2 pressed:text-fg text-muted-fg outline-hidden hover:text-fg focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             <IconSearch />
           </ButtonPrimitive>
@@ -70,49 +69,37 @@ export function ResponsiveAside({
             className="pressed:bg-transparent px-0 hover:bg-transparent"
             intent="plain"
           />
-          <Menu>
-            <Button size="extra-small" intent="outline" aria-label="Search docs">
-              Extra...
-              <IconChevronLgDown className="duration-300 group-pressed:rotate-180" />
-            </Button>
-            <Menu.Content placement="bottom" className="min-w-64">
-              <Menu.Item href="https://blocks.getjustd.com" target="_blank">
-                <IconBrandJustdBlocks />
-                <Menu.Label>Premium Blocks</Menu.Label>
-                <IconArrowUpRight />
-              </Menu.Item>
-              <Menu.Item href="https://blocks.getjustd.com/templates" target="_blank">
-                <IconBrandJustdBlocks />
-                <Menu.Label>Templates</Menu.Label>
-                <IconArrowUpRight />
-              </Menu.Item>
-              <Menu.Item href="https://x.com/getjustd" target="_blank">
-                <IconBrandX />
-                <Menu.Label>Twitter</Menu.Label>
-                <IconArrowUpRight />
-              </Menu.Item>
-              <Menu.Item
-                className="pressed:text-fg text-muted-fg outline-hidden hover:text-fg focus-visible:ring-2 focus-visible:ring-blue-500"
-                href="https://discord.gg/DYmVJ66JUD"
-                target="_blank"
-              >
-                <IconBrandDiscord />
-                <Menu.Label>Discord</Menu.Label>
-                <IconArrowUpRight />
-              </Menu.Item>
+          <Separator orientation="vertical" className="mx-1 h-5" />
+          <LinkIcon
+            aria-label="Open Justd Blocks"
+            href="https://blocks.getjustd.com/templates"
+            target="_blank"
+          >
+            <IconBrandJustdBlocks />
+          </LinkIcon>
+          <LinkIcon
+            aria-label="Open Justd X / Twitter"
+            href="https://x.com/getjustd"
+            target="_blank"
+          >
+            <IconBrandX />
+          </LinkIcon>
+          <LinkIcon
+            aria-label="Open Justd Discord"
+            href="https://discord.gg/DYmVJ66JUD"
+            target="_blank"
+          >
+            <IconBrandDiscord />
+          </LinkIcon>
 
-              <Menu.Item href={siteConfig.repo} target="_blank">
-                <IconBrandGithub />
-                <Menu.Label>Github</Menu.Label>
-                <IconArrowUpRight />
-              </Menu.Item>
-            </Menu.Content>
-          </Menu>
-          <Separator orientation="vertical" className="-mr-1 h-5" />
+          <LinkIcon aria-label="Open Justd Github" href={siteConfig.repo} target="_blank">
+            <IconBrandGithub />
+          </LinkIcon>
+          <Separator orientation="vertical" className="mx-1 h-5" />
           <Menu>
             <ButtonPrimitive
               aria-label="Open menu"
-              className="p-1.5 pressed:text-fg text-muted-fg outline-hidden hover:text-fg focus-visible:ring-2 focus-visible:ring-blue-500"
+              className="p-2 pressed:text-fg text-muted-fg outline-hidden hover:text-fg focus-visible:ring-2 focus-visible:ring-blue-500"
             >
               <IconHamburger className="size-4" />
             </ButtonPrimitive>
@@ -154,5 +141,17 @@ export function ResponsiveAside({
         </Sheet.Body>
       </Sheet.Content>
     </>
+  )
+}
+
+function LinkIcon({ className, ...props }: React.ComponentProps<typeof Link>) {
+  return (
+    <Link
+      {...props}
+      className={composeTailwindRenderProps(
+        className,
+        "p-1.5 pressed:text-fg text-muted-fg outline-hidden hover:text-fg focus-visible:ring-2 focus-visible:ring-blue-500",
+      )}
+    />
   )
 }
