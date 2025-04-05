@@ -6,10 +6,10 @@ import { IconBrandJustd } from "justd-icons"
 
 const navigation = {
   starterKits: [
-    { name: "Inertia.js", href: "https://github.com/justdlabs/inertia.ts/" },
-    { name: "Next.js", href: "https://next.getjustd.com/" },
+    { name: "Laravel", href: "https://github.com/justdlabs/laravel" },
+    { name: "Next.js", href: "https://github.com/justdlabs/next" },
     { name: "Remix", href: "https://github.com/justdlabs/remix" },
-    { name: "Astro", href: "https://astro.getjustd.com/" },
+    { name: "Astro", href: "https://github.com/justdlabs/astro" },
   ],
   resources: [
     { name: "Icons", href: "/icons" },
@@ -46,14 +46,11 @@ export function Footer() {
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="font-semibold text-fg text-sm leading-6">Resources</h3>
-                <ul className="mt-6 space-y-4">
+                <h3 className="font-semibold text-fg text-sm">Resources</h3>
+                <ul className="mt-3 space-y-2">
                   {navigation.resources.map((item) => (
                     <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-muted-fg text-sm leading-6 hover:text-fg"
-                      >
+                      <Link href={item.href} className="text-muted-fg text-sm hover:text-fg">
                         {item.name}
                       </Link>
                     </li>
@@ -61,14 +58,14 @@ export function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="font-semibold text-fg text-sm leading-6">Starter Kits</h3>
-                <ul className="mt-6 space-y-4">
+                <h3 className="font-semibold text-fg text-sm">Starter Kits</h3>
+                <ul className="mt-3 space-y-2">
                   {navigation.starterKits.map((item) => (
                     <li key={item.name}>
                       <Link
                         target="_blank"
                         href={item.href}
-                        className="text-muted-fg text-sm leading-6 hover:text-fg"
+                        className="text-muted-fg text-sm hover:text-fg"
                       >
                         {item.name}
                       </Link>
@@ -79,14 +76,14 @@ export function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="font-semibold text-fg text-sm leading-6">Labs</h3>
-                <ul className="mt-6 space-y-4">
+                <h3 className="font-semibold text-fg text-sm">Labs</h3>
+                <ul className="mt-3 space-y-2">
                   {navigation.labs.map((item) => (
                     <li key={item.name}>
                       <Link
                         target="_blank"
                         href={item.href}
-                        className="text-muted-fg text-sm leading-6 hover:text-fg"
+                        className="text-muted-fg text-sm hover:text-fg"
                       >
                         {item.name}
                       </Link>
@@ -95,14 +92,14 @@ export function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="font-semibold text-fg text-sm leading-6">Legal</h3>
-                <ul className="mt-6 space-y-4">
+                <h3 className="font-semibold text-fg text-sm">Legal</h3>
+                <ul className="mt-3 space-y-2">
                   {navigation.extra.map((item) => (
                     <li key={item.name}>
                       <Link
                         target="_blank"
                         href={item.href}
-                        className="text-muted-fg text-sm leading-6 hover:text-fg"
+                        className="text-muted-fg text-sm hover:text-fg"
                       >
                         {item.name}
                       </Link>
