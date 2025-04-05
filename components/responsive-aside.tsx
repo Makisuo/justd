@@ -44,32 +44,24 @@ export function ResponsiveAside({
     <>
       <CommandPalette setOpen={setOpenCmd} openCmd={openCmd} />
       <nav className="relative z-10 flex items-center justify-between border-b px-4 py-2.5 shadow-xs lg:hidden">
-        <div className="flex items-center gap-x-4">
+        <div className="flex items-center gap-x-2">
           <ButtonPrimitive
             onPress={() => setOpenAside(true)}
             aria-label="Search docs"
-            className="pressed:text-fg text-muted-fg outline-hidden hover:text-fg focus-visible:ring-2 focus-visible:ring-blue-500"
+            className="-ml-2 p-1.5 pressed:text-fg text-muted-fg outline-hidden hover:text-fg focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             <IconSidebarFill className="size-5" />
           </ButtonPrimitive>
           <Separator orientation="vertical" className="h-5" />
-          <Link className="rounded focus:outline-hidden" href="/" aria-label="Logo">
+          <Link className="rounded p-1.5 focus:outline-hidden" href="/" aria-label="Logo">
             <IconBrandJustd className="size-5" />
-          </Link>
-          <Link
-            className="rounded focus:outline-hidden"
-            href="https://blocks.getjustd.com"
-            target="_blank"
-            aria-label="Logo"
-          >
-            <IconBrandJustdBlocks className="size-5" />
           </Link>
         </div>
         <div className="flex items-center gap-x-2 **:data-[slot=icon]:size-5">
           <ButtonPrimitive
             onPress={() => setOpenCmd(true)}
             aria-label="Search docs"
-            className="pressed:text-fg text-muted-fg outline-hidden hover:text-fg focus-visible:ring-2 focus-visible:ring-blue-500"
+            className="p-1.5 pressed:text-fg text-muted-fg outline-hidden hover:text-fg focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             <IconSearch />
           </ButtonPrimitive>
@@ -116,13 +108,13 @@ export function ResponsiveAside({
               </Menu.Item>
             </Menu.Content>
           </Menu>
-          <Separator orientation="vertical" className="h-5" />
+          <Separator orientation="vertical" className="-mr-1 h-5" />
           <Menu>
             <ButtonPrimitive
-              aria-label="Search docs"
-              className="pressed:text-fg text-muted-fg outline-hidden hover:text-fg focus-visible:ring-2 focus-visible:ring-blue-500"
+              aria-label="Open menu"
+              className="p-1.5 pressed:text-fg text-muted-fg outline-hidden hover:text-fg focus-visible:ring-2 focus-visible:ring-blue-500"
             >
-              <IconHamburger className="size-5" />
+              <IconHamburger className="size-4" />
             </ButtonPrimitive>
             <Menu.Content placement="bottom" className="min-w-64">
               <Menu.Item href="/">

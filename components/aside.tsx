@@ -38,7 +38,7 @@ function AsideLink({ href, ...props }: AsideLinkProps) {
 
   React.useEffect(() => {
     if (isActive && ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth", block: "center" })
+      ref.current.scrollIntoView({ behavior: "instant", block: "center" })
     }
   }, [isActive])
   return (
