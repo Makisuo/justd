@@ -62,7 +62,7 @@ export const SourceCode = ({ toShow, ...props }: SourceCodeProps) => {
         <p className="-mt-2 mb-4">
           {props.message
             ? props.message
-            : "And next, you can copy the code below and paste it into your component folder."}
+            : "You can copy the code below and paste it into your component folder."}
         </p>
         {props.title && <figcaption data-rehype-pretty-code-title="">{props.title}</figcaption>}
         <div className="mb-1 flex items-center justify-between">

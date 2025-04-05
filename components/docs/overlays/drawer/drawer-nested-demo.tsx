@@ -15,7 +15,9 @@ export default function DrawerNestedDemo() {
 
   return (
     <>
-      <Button onPress={() => setIsRegistrationDrawerOpen(true)}>Register</Button>
+      <Button intent="outline" onPress={() => setIsRegistrationDrawerOpen(true)}>
+        Register
+      </Button>
 
       <Drawer
         isOpen={isRegistrationDrawerOpen}
