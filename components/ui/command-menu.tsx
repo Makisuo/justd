@@ -260,14 +260,14 @@ const CommandMenuSeparator = ({
 )
 
 const CommandMenuLabel = Menu.Label
-
+const CommandMenuKeyboard = DropdownKeyboard
 CommandMenu.Search = CommandMenuSearch
 CommandMenu.List = CommandMenuList
 CommandMenu.Item = CommandMenuItem
 CommandMenu.Label = CommandMenuLabel
 CommandMenu.Section = CommandMenuSection
 CommandMenu.Description = CommandMenuDescription
-CommandMenu.Keyboard = DropdownKeyboard
+CommandMenu.Keyboard = CommandMenuKeyboard
 CommandMenu.Separator = CommandMenuSeparator
 
 export type { CommandMenuProps, CommandMenuSearchProps, CommandMenuDescriptionProps }
