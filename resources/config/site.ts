@@ -1,11 +1,11 @@
 export const siteConfig = {
-  name: "Intent",
+  name: "Intent UI",
   url: "https://intentui.com",
   description:
     "Intent offers customizable, accessible React components with Tailwind CSS, ready for easy copy and paste into your projects.",
   author: "irsyadadl",
   links: {
-    twitter: "https://x.com/intent/follow?screen_name=getjustd",
+    twitter: "https://x.com/intent/follow?screen_name=intentui",
     github: "https://github.com/intentuilabs",
     personalSite: "https://irsyad.co",
   },
