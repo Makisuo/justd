@@ -269,7 +269,7 @@ export function NavbarDropdown() {
             <Menu.Item href="https://x.com/intent/follow?screen_name=irsyadadl" target="_blank">
               <IconBrandX /> <Menu.Label>X / Twitter</Menu.Label>
             </Menu.Item>
-            <Menu.Item href="https://github.com/justdlabs" target="_blank">
+            <Menu.Item href="https://github.com/intentuilabs" target="_blank">
               <IconBrandGithub />
               <Menu.Label>Github</Menu.Label>
             </Menu.Item>
@@ -330,7 +330,7 @@ const premium = [
     label: "Figma",
     href: "#",
     icon: <IconBrandFigma />,
-    description: "Enhance your Figma designs with Justd components.",
+    description: "Enhance your Figma designs with Intent components.",
     badge: "Coming soon",
   },
 ]

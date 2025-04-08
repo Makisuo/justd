@@ -70,28 +70,28 @@ export function ResponsiveAside({
           />
           <Separator orientation="vertical" className="mx-1 h-5" />
           <LinkIcon
-            aria-label="Open Justd Blocks"
+            aria-label="Open Intent Blocks"
             href="https://blocks.intentui.com/templates"
             target="_blank"
           >
             <IconBrandIntentui />
           </LinkIcon>
           <LinkIcon
-            aria-label="Open Justd X / Twitter"
+            aria-label="Open Intent X / Twitter"
             href="https://x.com/getjustd"
             target="_blank"
           >
             <IconBrandX />
           </LinkIcon>
           <LinkIcon
-            aria-label="Open Justd Discord"
+            aria-label="Open Intent Discord"
             href="https://discord.gg/DYmVJ66JUD"
             target="_blank"
           >
             <IconBrandDiscord />
           </LinkIcon>
 
-          <LinkIcon aria-label="Open Justd Github" href={siteConfig.repo} target="_blank">
+          <LinkIcon aria-label="Open Intent Github" href={siteConfig.repo} target="_blank">
             <IconBrandGithub />
           </LinkIcon>
           <Separator orientation="vertical" className="mx-1 h-5" />
