@@ -10,7 +10,7 @@ import {
   IconBrandReactjs,
   IconBrandTypescript,
   IconFile,
-} from "justd-icons"
+} from "@intentui/icons"
 import { useEffect, useState } from "react"
 import { Tab } from "react-aria-components"
 import { twMerge } from "tailwind-merge"

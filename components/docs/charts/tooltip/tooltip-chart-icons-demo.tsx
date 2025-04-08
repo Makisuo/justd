@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card"
 import { Chart, type ChartConfig, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
-import { IconShippingBag, IconStrikeThrough } from "justd-icons"
+import { IconShippingBag, IconStrikeThrough } from "@intentui/icons"
 import { Bar, BarChart, XAxis } from "recharts"
 
 const chartData = Array.from({ length: 24 }, (_, index) => {

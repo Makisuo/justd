@@ -1,6 +1,6 @@
 "use client"
 
-import { IconChevronLeft } from "justd-icons"
+import { IconChevronLeft } from "@intentui/icons"
 import type {
   DisclosureGroupProps as AccordionProps,
   ButtonProps,

@@ -6,7 +6,7 @@ import {
   IconSun,
   IconTranslate,
   IconTranslateFill,
-} from "justd-icons"
+} from "@intentui/icons"
 
 export default function ToggleGroupOrientationDemo() {
   return (

@@ -1,7 +1,7 @@
 "use client"
 
+import { IconCalendarDays } from "@intentui/icons"
 import type { DateDuration } from "@internationalized/date"
-import { IconCalendarDays } from "justd-icons"
 import {
   DatePicker as DatePickerPrimitive,
   type DatePickerProps as DatePickerPrimitiveProps,

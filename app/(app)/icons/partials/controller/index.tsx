@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 import { Button } from "@/components/ui/button"
-import { IconBullet, IconBulletFill } from "justd-icons"
+import { IconBullet, IconBulletFill } from "@intentui/icons"
 import { usePathname, useRouter } from "next/navigation"
 
 import { useQueryString } from "@/resources/hooks/use-query-string"

@@ -39,7 +39,7 @@ import {
   IconLayoutAlignLeft,
   IconLayoutAlignTop,
   IconX,
-} from "justd-icons"
+} from "@intentui/icons"
 import { type Key, Tab, TabList, ToggleButtonGroup } from "react-aria-components"
 import type { ImperativePanelHandle } from "react-resizable-panels"
 import { twMerge } from "tailwind-merge"
@@ -253,7 +253,7 @@ function Component({ folders, fullscreen, isIframe = false, title, ...props }: P
                     href="/docs/2.x/components/layouts/sidebar"
                   >
                     <IconFolderFill className="size-4.5" />
-                    <SidebarLabel className="font-medium text-sm">getjustd.com</SidebarLabel>
+                    <SidebarLabel className="font-medium text-sm">intentui.com</SidebarLabel>
                   </Link>
                 </SidebarHeader>
                 <SidebarContent className="pb-10">{renderTree(folders)}</SidebarContent>

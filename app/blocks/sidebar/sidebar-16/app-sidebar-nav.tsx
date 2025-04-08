@@ -2,7 +2,7 @@
 
 import { Breadcrumbs } from "@/components/ui/breadcrumbs"
 import { SidebarNav, SidebarTrigger } from "@/components/ui/sidebar"
-import { IconLayoutAlignRight } from "justd-icons"
+import { IconLayoutAlignRight } from "@intentui/icons"
 
 export default function AppSidebarNav() {
   return (

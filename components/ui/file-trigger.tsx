@@ -1,6 +1,6 @@
 "use client"
 
-import { IconCamera, IconFolder, IconPaperclip45 } from "justd-icons"
+import { IconCamera, IconFolder, IconPaperclip45 } from "@intentui/icons"
 import {
   FileTrigger as FileTriggerPrimitive,
   type FileTriggerProps as FileTriggerPrimitiveProps,

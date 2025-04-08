@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 
 import { composeTailwindRenderProps } from "@/components/ui/primitive"
 import { copyToClipboard } from "@/resources/lib/copy"
-import { IconCheck, IconDuplicate } from "justd-icons"
+import { IconCheck, IconDuplicate } from "@intentui/icons"
 import { Button } from "react-aria-components"
 import { twMerge } from "tailwind-merge"
 

@@ -1,7 +1,7 @@
 "use client"
 
 import { Toggle } from "@/components/ui/toggle"
-import { IconAccessible, IconAccessibleFill } from "justd-icons"
+import { IconAccessible, IconAccessibleFill } from "@intentui/icons"
 
 export default function ToggleSizeDemo() {
   return (

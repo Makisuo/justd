@@ -7,7 +7,7 @@ import { Description } from "@/components/ui/field"
 import { Popover } from "@/components/ui/popover"
 import { Separator } from "@/components/ui/separator"
 import { Slider } from "@/components/ui/slider"
-import { IconAdjustment } from "justd-icons"
+import { IconAdjustment } from "@intentui/icons"
 
 export function SliderOnPopoverBlock() {
   const [fontSize, setFontSize] = useState<number>(16)

@@ -7,7 +7,7 @@ import {
   IconHighlight,
   IconTrash,
   IconTrashPaper,
-} from "justd-icons"
+} from "@intentui/icons"
 
 import { ContextMenu } from "@/components/ui/context-menu"
 

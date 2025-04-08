@@ -12,7 +12,7 @@ import {
   IconHeartFill,
   IconVideoPlaylist,
   IconVideoPlaylistFill,
-} from "justd-icons"
+} from "@intentui/icons"
 
 export function ToolbarBlock() {
   return (

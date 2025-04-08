@@ -1,5 +1,5 @@
 import { Tooltip } from "@/components/ui/tooltip"
-import { IconBrandX } from "justd-icons"
+import { IconBrandX } from "@intentui/icons"
 
 export default function TooltipAnatomy() {
   return (

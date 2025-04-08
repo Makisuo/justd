@@ -1,15 +1,15 @@
 ---
 title: "CLI"
-description: "The CLI isn’t the only way to install Justd, but it’s by far the most convenient. It’s built to make setting up your project fast and hassle-free."
+description: "The CLI isn’t the only way to install Intent, but it’s by far the most convenient. It’s built to make setting up your project fast and hassle-free."
 order: 4
 published: true
 ---
 
 ## Command Line Interface (CLI)
-The CLI is designed to help you set up your project with Justd quickly and efficiently. It’s the easiest and most convenient way to install Justd, allowing you to get started with your project in just minutes.
+The CLI is designed to help you set up your project with Intent quickly and efficiently. It’s the easiest and most convenient way to install Intent, allowing you to get started with your project in just minutes.
 
 ## Existing Project
-If you already have a project set up—whether it’s built with Laravel, Next.js, Remix, Tanstack, or any other framework—simply run the following command to install Justd:
+If you already have a project set up—whether it’s built with Laravel, Next.js, Remix, Tanstack, or any other framework—simply run the following command to install Intent:
 <Installation options={{ isInit: true }} items={['initial setup']} />
 This command will prompt you to confirm your project’s setup. However, the CLI is smart enough to detect your project type and provide default values.
 Here’s an example of the output when running the command in a Next.js project:
@@ -25,7 +25,7 @@ Here’s an example of the output when running the command in a Next.js project:
 ✔ Classes file saved to `src/utils/classes.ts`
 ✔ Theme Provider file saved to `"src/components/theme-provider.tsx"`
 ✔ Providers file saved to `"src/components/providers.tsx"`
-✔ Configuration saved to `justd.json`
+✔ Configuration saved to `intentui.json`
 ✔ Installation complete.
 ```
 
@@ -47,18 +47,18 @@ To get started, run: `cd new-project && npm run dev`
 ```
 
 ## Add
-Once you’ve set up Justd, you can start adding components easily by running the `add` command:
+Once you’ve set up Intent, you can start adding components easily by running the `add` command:
 <Installation options={{ isComponent: true, noText: true }} items={['combo-box']} />
 
 ## Diff
-If you think your Justd setup might be outdated, don’t worry. You can check for changes by running the `diff` command:
-<Installation options={{isExecutor: true}} command='npx justd-cli@latest diff' items={['']} />
+If you think your Intent setup might be outdated, don’t worry. You can check for changes by running the `diff` command:
+<Installation options={{isExecutor: true}} command='npx @intentui/cli@latest diff' items={['']} />
 
 This will display the components that differ from your installed versions and provide a list so you can quickly choose which components to update.
 
 ## Change Gray
 Not satisfied with the default gray base color? You can easily customize it by running the `change` command:
-<Installation options={{isExecutor: true, noText: true}} command='npx justd-cli@latest change-gray'/>
+<Installation options={{isExecutor: true, noText: true}} command='npx @intentui/cli@latest change-gray'/>
 The output will be like this:
 ```
 ? The specified CSS path 'src/app/globals.css' exists. Do you want to use this path? yes
@@ -72,13 +72,13 @@ The output will be like this:
 ```
 
 ## Alias
-If you’re tired of typing `npx justd-cli@latest`, you can create an alias for the CLI by adding the following line to your `.bashrc` or `.zshrc` file:
+If you’re tired of typing `npx @intentui/cli@latest`, you can create an alias for the CLI by adding the following line to your `.bashrc` or `.zshrc` file:
 ```
-alias justd='npx justd-cli@latest'
+alias intentui='npx @intentui/cli@latest'
 ```
-Then you can run the CLI using the `justd` command:
+Then you can run the CLI using the `intentui` command:
 ```
-justd [command]
+intentui [command]
 ```
 
 ## Options
@@ -86,14 +86,14 @@ The CLI is highly customizable, allowing you to use various flags for a more tai
 
 ### Skip
 If you’re confident with the default values provided by the CLI, you can skip prompts by using the `--yes` or `-y` flag:
-<Installation options={{isExecutor: true}} command='npx justd-cli@latest -y' items={['']} />
+<Installation options={{isExecutor: true}} command='npx @intentui/cli@latest -y' items={['']} />
 
 ### Dirty
 When running the `init` command, the CLI checks whether your project is clean. If it’s not, it will throw an error and halt the process. If you want to proceed regardless, you can use the `--force` flag:
-<Installation options={{isExecutor: true}} command='npx justd-cli@latest init --force' items={['']} />
+<Installation options={{isExecutor: true}} command='npx @intentui/cli@latest init --force' items={['']} />
 
 ### Help
 If you’re unsure about the next steps, you can always refer to the `help` command for guidance:
-<Installation options={{isExecutor: true}} command='npx justd-cli@latest help' items={['']} />
+<Installation options={{isExecutor: true}} command='npx @intentui/cli@latest help' items={['']} />
 
 ## Schema

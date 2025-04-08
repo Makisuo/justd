@@ -6,7 +6,7 @@ published: true
 ---
 
 ## Framework Guides
-You can choose from a list of frameworks to get started with Justd.
+You can choose from a list of frameworks to get started with Intent.
 <FrameworkGuides/>
 
 ## Installation via CLI
@@ -40,10 +40,10 @@ When you're run this command, it will ask a couple of questions. Like where's yo
 If it's all good, you will see the following:
 ```
 Not sure what to do next?
-Visit our documentation at: https://getjustd.com
+Visit our documentation at: https://intentui.com
 
 Now try to add some components to your project
-by running: npx justd-cli@latest add
+by running: npx @intentui/cli@latest add
 
       _           _      _
      | |_   _ ___| |_ __| |
@@ -52,11 +52,11 @@ by running: npx justd-cli@latest add
   \___/ \__,_|___/\__\__,_|
 ```
 
-### Justd Config
-After running the `init` command, a `.justd` file will appear in your project. This file holds your project's configuration, including settings for gray tones, paths, and more.
+### Intent Config
+After running the `init` command, a `intentui.json` file will appear in your project. This file holds your project's configuration, including settings for gray tones, paths, and more.
 ```
 {
-  "$schema": "https://getjustd.com/schema.json",
+  "$schema": "https://intentui.com/schema.json",
   "ui": "src/components/ui",
   "utils": "src/utils",
   "gray": "zinc",
@@ -123,18 +123,18 @@ This command will present a list of available components, which you can navigate
 ### Diff
 Compare your current setup with the new one using the following command:
 
-<Installation options={{isExecutor: true}} command='npx justd-cli@latest diff' items={['']} />
+<Installation options={{isExecutor: true}} command='npx @intentui/cli@latest diff' items={['']} />
 
 If you're unsure, check out [this tweet](https://x.com/irsyadadl/status/1823355475020402781).
 
 To diff specific components, use:
 
-<Installation command='npx justd-cli@latest diff multiple-select menu modal' items={['']}/>
+<Installation command='npx @intentui/cli@latest diff multiple-select menu modal' items={['']}/>
 
 
 
 ## Formatter
-Justd utilizes the <NewTab href='https://biomejs.dev/'>Biome</NewTab> formatter for code formatting. To use the Biome formatter with Justd components, we recommend the following configuration:
+Intent utilizes the <NewTab href='https://biomejs.dev/'>Biome</NewTab> formatter for code formatting. To use the Biome formatter with Intent components, we recommend the following configuration:
 
 <CodeBlock
     source={{
@@ -150,9 +150,9 @@ Next, add **Tailwind Variant**, **Tailwind Merge**, and for utility functions:
 
 <Installation options={{isManual: true}} items={['tailwind-variants', 'tailwind-merge', 'clsx']} />
 
-Following that, include the **Tailwind Animate** for managing animations and **Justd Icons** for icons:
+Following that, include the **Tailwind Animate** for managing animations and **Intent Icons** for icons:
 
-<Installation options={{isManual: true}} items={['justd-icons', 'tw-animate-css']} />
+<Installation options={{isManual: true}} items={['@intentui/icons', 'tw-animate-css']} />
 
 ### Style and Primitive
 After installing the required packages, you can copy the CSS below into your global CSS file and move the primitives to your UI folder. Primitives serve as utilities for managing states, including `focusRing`, `focusStyles`, and `focusButtonStyles`.
@@ -165,7 +165,7 @@ After installing the required packages, you can copy the CSS below into your glo
 
 ### Classes and Hooks
 
-Hooks are only used in specific components like the **Navbar**, **Sidebar**, **Popover**, and **Command Menu**. If you're using the **Justd CLI**, it will handle this automatically; otherwise, download the file below.
+Hooks are only used in specific components like the **Navbar**, **Sidebar**, **Popover**, and **Command Menu**. If you're using the **Intent CLI**, it will handle this automatically; otherwise, download the file below.
 
 <CodeBlock
     source={{
@@ -260,7 +260,7 @@ For more information, refer to the [Tailwind documentation](https://tailwindcss.
 If you want your development environment to be more intelligent, you can follow instructions here at [Tailwind Variants](https://www.tailwind-variants.org/docs/getting-started#intellisense-setup-optional).
 
 ## Dark Mode
-Justd supports dark mode out of the box. Every framework has its own way of implementing dark mode. So you better check the docs list below:
+Intent supports dark mode out of the box. Every framework has its own way of implementing dark mode. So you better check the docs list below:
 - [Vite](/docs/dark-mode/vite)
 - [Inertia.js](/docs/dark-mode/inertia-js)
 - [Next.js](/docs/dark-mode/next-js)

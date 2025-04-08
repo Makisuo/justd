@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/ui/navbar"
 import { Separator } from "@/components/ui/separator"
-import { IconBrandApple, IconSearch, IconShoppingBag } from "justd-icons"
+import { IconBrandApple, IconSearch, IconShoppingBag } from "@intentui/icons"
 
 export default function NavbarAnatomy() {
   return (

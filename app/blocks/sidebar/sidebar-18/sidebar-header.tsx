@@ -14,7 +14,7 @@ import {
   IconDotsVertical,
   IconFolderFill,
   IconMinus,
-} from "justd-icons"
+} from "@intentui/icons"
 
 export function SidebarHeader() {
   const { toggleSidebar } = useSidebar()
@@ -25,7 +25,7 @@ export function SidebarHeader() {
         href="/docs/2.x/components/layouts/sidebar"
       >
         <IconFolderFill className="size-4.5" />
-        <SidebarLabel className="font-medium text-sm">getjustd.com</SidebarLabel>
+        <SidebarLabel className="font-medium text-sm">intentui.com</SidebarLabel>
       </Link>
       <div className="-mr-2 flex items-center gap-x-0.5 text-muted-fg **:[button]:text-muted-fg **:[button]:hover:text-fg **:[button]:*:data-[slot=icon]:size-3.5">
         <Button className="size-7" size="square-petite" intent="plain" aria-label="Collapse">

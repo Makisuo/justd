@@ -2,14 +2,14 @@
 import { PageContainer } from "@/components/page-container"
 import { Link } from "@/components/ui/link"
 import { siteConfig } from "@/resources/config/site"
-import { IconBrandJustd } from "justd-icons"
+import { IconBrandIntentui } from "@intentui/icons"
 
 const navigation = {
   starterKits: [
-    { name: "Laravel", href: "https://github.com/justdlabs/laravel" },
-    { name: "Next.js", href: "https://github.com/justdlabs/next" },
-    { name: "Remix", href: "https://github.com/justdlabs/remix" },
-    { name: "Astro", href: "https://github.com/justdlabs/astro" },
+    { name: "Laravel", href: "https://github.com/intentuilabs/laravel" },
+    { name: "Next.js", href: "https://github.com/intentuilabs/next" },
+    { name: "Remix", href: "https://github.com/intentuilabs/remix" },
+    { name: "Astro", href: "https://github.com/intentuilabs/astro" },
   ],
   resources: [
     { name: "Icons", href: "/icons" },
@@ -20,15 +20,15 @@ const navigation = {
     { name: "Blog", href: "/blog" },
   ],
   labs: [
-    { name: "Github", href: "https://github.com/justdlabs" },
+    { name: "Github", href: "https://github.com/intentuilabs" },
     { name: "X / Formerly Twitter", href: "https://x.com/intent/follow?screen_name=irsyadadl" },
-    { name: "CLI", href: "https://github.com/justdlabs/cli" },
-    { name: "Premium Blocks", href: "https://blocks.getjustd.com" },
-    { name: "Templates", href: "https://blocks.getjustd.com/templates" },
+    { name: "CLI", href: "https://github.com/intentuilabs/cli" },
+    { name: "Premium Blocks", href: "https://blocks.intentui.com" },
+    { name: "Templates", href: "https://blocks.intentui.com/templates" },
   ],
   extra: [
     { name: "Discord", href: "https://discord.gg/DYmVJ66JUD" },
-    { name: "MIT", href: "https://github.com/justdlabs/justd/blob/main/LICENSE" },
+    { name: "MIT", href: "https://github.com/irsyadadl/intentui/blob/main/LICENSE" },
   ],
 }
 
@@ -42,7 +42,7 @@ export function Footer() {
       </h2>
       <PageContainer className="relative z-20 py-16 sm:py-24 lg:pt-16 lg:pb-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <IconBrandJustd className="size-7" />
+          <IconBrandIntentui className="size-7" />
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
@@ -151,7 +151,7 @@ export function Footer() {
             Vercel
           </Link>
           . The source code's got the{" "}
-          <Link href="https://github.com/justdlabs/justd/blob/main/LICENSE">MIT</Link> license.
+          <Link href="https://github.com/irsyadadl/intentui/blob/main/LICENSE">MIT</Link> license.
         </p>
       </PageContainer>
     </footer>

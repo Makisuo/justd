@@ -12,7 +12,7 @@ import {
   SidebarLabel,
   SidebarRail,
 } from "@/components/ui/sidebar"
-import { IconFolderFill, IconFolderOpen } from "justd-icons"
+import { IconFolderFill, IconFolderOpen } from "@intentui/icons"
 
 import { folders } from "./folders"
 import { SidebarHeader } from "./sidebar-header"

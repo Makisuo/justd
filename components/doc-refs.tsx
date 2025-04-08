@@ -8,9 +8,9 @@ import {
   IconBrandAdobe,
   IconBrandFramer,
   IconBrandGithub,
-  IconBrandJustd,
+  IconBrandIntentui,
   IconChartBar,
-} from "justd-icons"
+} from "@intentui/icons"
 import { ListBox, ListBoxItem } from "react-aria-components"
 
 function getComponentName(url: string): string {
@@ -30,7 +30,7 @@ export function DocRefs({ references }: { references: string[] }) {
         break
       case url.includes("icons"):
         title = "Explore"
-        icon = IconBrandJustd
+        icon = IconBrandIntentui
         break
       case url.includes("recharts"):
         title = "Props"

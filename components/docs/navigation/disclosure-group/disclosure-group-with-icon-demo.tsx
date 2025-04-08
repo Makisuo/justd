@@ -20,7 +20,7 @@ import {
   IconService,
   IconShieldCheck,
   IconWhiteboard,
-} from "justd-icons"
+} from "@intentui/icons"
 
 export default function DisclosureGroupWithIconDemo() {
   return (

@@ -1,9 +1,9 @@
 "use client"
 
+import { IconChevronLgLeft, IconChevronLgRight } from "@intentui/icons"
 import { type CalendarDate, getLocalTimeZone, today } from "@internationalized/date"
 import { useDateFormatter } from "@react-aria/i18n"
 import type { CalendarState } from "@react-stately/calendar"
-import { IconChevronLgLeft, IconChevronLgRight } from "justd-icons"
 import { use } from "react"
 import { CalendarStateContext } from "react-aria-components"
 import type { CalendarProps as CalendarPrimitiveProps, DateValue } from "react-aria-components"

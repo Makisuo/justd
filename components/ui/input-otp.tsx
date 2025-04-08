@@ -2,8 +2,8 @@
 
 import { use } from "react"
 
+import { IconBulletFill } from "@intentui/icons"
 import { OTPInput, OTPInputContext } from "input-otp"
-import { IconBulletFill } from "justd-icons"
 import { twMerge } from "tailwind-merge"
 
 type InputOTOPProps = React.ComponentProps<typeof OTPInput>

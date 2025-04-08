@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Menu } from "@/components/ui/menu"
 import { useQueryString } from "@/resources/hooks/use-query-string"
 import { title } from "@/resources/lib/utils"
-import { IconChevronLgDown } from "justd-icons"
+import { IconChevronLgDown } from "@intentui/icons"
 import { usePathname, useRouter } from "next/navigation"
 import type { Selection } from "react-aria-components"
 

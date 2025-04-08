@@ -2,8 +2,8 @@
 
 import { Card } from "@/components/ui/card"
 import { Table } from "@/components/ui/table"
+import { IconLoader } from "@intentui/icons"
 import { useAsyncList } from "@react-stately/data"
-import { IconLoader } from "justd-icons"
 
 interface Character {
   title: string

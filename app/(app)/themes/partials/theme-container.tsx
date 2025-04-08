@@ -15,7 +15,7 @@ import {
   IconChevronLgDown,
   IconDuplicate,
   IconLayoutColumnRightsideFill,
-} from "justd-icons"
+} from "@intentui/icons"
 import { toast } from "sonner"
 
 import { PageContainer } from "@/components/page-container"

@@ -8,7 +8,7 @@ import {
   IconLayoutAlignLeft,
   IconLayoutAlignTop,
   IconWindowVisit,
-} from "justd-icons"
+} from "@intentui/icons"
 
 export default function BreadcrumbsMenuDemo() {
   return (

@@ -10,7 +10,7 @@ import {
   SidebarRail,
   SidebarSection,
 } from "@/components/ui/sidebar"
-import { IconBrandApple, IconCart, IconDashboard, IconGear, IconPackage } from "justd-icons"
+import { IconBrandApple, IconCart, IconDashboard, IconGear, IconPackage } from "@intentui/icons"
 
 export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
   return (

@@ -13,7 +13,7 @@ import {
   IconSettings,
   IconShield,
   IconSupport,
-} from "justd-icons"
+} from "@intentui/icons"
 
 export default function DisclosureGroupBorderHiddenDemo() {
   return (

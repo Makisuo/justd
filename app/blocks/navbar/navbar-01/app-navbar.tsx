@@ -16,7 +16,7 @@ import {
   IconSettings,
   IconShield,
   IconShoppingBag,
-} from "justd-icons"
+} from "@intentui/icons"
 
 export default function AppNavbar() {
   return (

@@ -1,6 +1,6 @@
 "use client"
 
-import { IconChevronRight } from "justd-icons"
+import { IconChevronRight } from "@intentui/icons"
 import type { TreeItemProps, TreeProps } from "react-aria-components"
 import {
   Button,

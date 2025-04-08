@@ -1,5 +1,5 @@
 import { Menu } from "@/components/ui/menu"
-import { IconSettings } from "justd-icons"
+import { IconSettings } from "@intentui/icons"
 
 export default function MenuAnatomy() {
   return (

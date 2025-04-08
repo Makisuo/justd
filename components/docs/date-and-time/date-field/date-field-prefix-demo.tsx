@@ -1,6 +1,6 @@
 "use client"
 
-import { IconCalendar2 } from "justd-icons"
+import { IconCalendar2 } from "@intentui/icons"
 
 import { Button } from "@/components/ui/button"
 import { DateField } from "@/components/ui/date-field"

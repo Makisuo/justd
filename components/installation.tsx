@@ -9,7 +9,7 @@ import { Link } from "@/components/ui/link"
 import { Menu } from "@/components/ui/menu"
 import { composeTailwindRenderProps } from "@/components/ui/primitive"
 import { copyToClipboard } from "@/resources/lib/copy"
-import { IconCheck, IconDuplicate } from "justd-icons"
+import { IconCheck, IconDuplicate } from "@intentui/icons"
 import { Group } from "react-aria-components"
 
 export interface InstallationProps {
@@ -94,9 +94,9 @@ export function Installation({ className, ...props }: InstallationProps) {
           code={
             props.command ||
             (options.isInit
-              ? "npx justd-cli@latest init"
+              ? "npx @intentui/cli@latest init"
               : options.isComponent
-                ? `npx justd-cli@latest add ${items[0]}`
+                ? `npx @intentui/cli@latest add ${items[0]}`
                 : `${pkgManager.name} ${pkgManager.action} ${items.join(" ")}`)
           }
         />
@@ -106,13 +106,13 @@ export function Installation({ className, ...props }: InstallationProps) {
           <CopyButton
             isCopied={isCopied}
             setIsCopied={setIsCopied}
-            text={`npx justd-cli@latest add ${items[0]}`}
+            text={`npx @intentui/cli@latest add ${items[0]}`}
           />
         ) : options.isInit ? (
           <CopyButton
             isCopied={isCopied}
             setIsCopied={setIsCopied}
-            text="npx justd-cli@latest init"
+            text="npx @intentui/cli@latest init"
           />
         ) : (
           <ChoosePkgManager

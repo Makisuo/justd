@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Menu } from "@/components/ui/menu"
-import { IconChevronLgDown } from "justd-icons"
+import { IconChevronLgDown } from "@intentui/icons"
 
 export default function CardActionDemo() {
   return (

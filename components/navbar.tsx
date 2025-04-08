@@ -1,7 +1,6 @@
 "use client"
 import { useId, useState } from "react"
 
-import { IconBrandJustdBlocks } from "@/components/icons/icon-brand-justd-blocks"
 import { PageContainer } from "@/components/page-container"
 import { ResponsiveAside } from "@/components/responsive-aside"
 import { Badge } from "@/components/ui/badge"
@@ -17,7 +16,7 @@ import {
   IconBrandDiscord,
   IconBrandFigma,
   IconBrandGithub,
-  IconBrandJustd,
+  IconBrandIntentui,
   IconBrandTailwindcss,
   IconBrandX,
   IconChevronLgDown,
@@ -29,7 +28,7 @@ import {
   IconSearch,
   IconWindowVisit,
   IconWindowVisitFill,
-} from "justd-icons"
+} from "@intentui/icons"
 import { LayoutGroup } from "motion/react"
 import { usePathname } from "next/navigation"
 import { CommandPalette } from "./command-palette"
@@ -86,7 +85,7 @@ export function Navbar() {
                   <NavLink href="/blocks">Blocks</NavLink>
                   <Menu>
                     <Menu.Trigger className="group flex cursor-pointer items-center gap-x-2 py-3 text-muted-fg text-sm tracking-tight outline-hidden focus-visible:text-fg">
-                      <IconBrandJustdBlocks /> Premium Blocks
+                      <IconBrandIntentui /> Premium Blocks
                       <IconChevronLgDown className="size-3 duration-200 group-pressed:rotate-180" />
                     </Menu.Trigger>
                     <Menu.Content
@@ -177,7 +176,7 @@ export function Navbar() {
                       target="_blank"
                       href="https://dub.sh/NfSXJrL"
                     >
-                      <IconBrandJustdBlocks />
+                      <IconBrandIntentui />
                     </Link>
 
                     <Link
@@ -212,7 +211,7 @@ export function NavbarDropdown() {
       <Menu>
         <Button aria-label={siteConfig.name} intent="plain" className="-ml-1 group">
           <span className="flex items-center gap-x-2">
-            <IconBrandJustd className="-ml-1 size-4.5" />
+            <IconBrandIntentui className="-ml-1 size-4.5" />
             <span className="font-mono text-base tracking-tight sm:text-sm">{siteConfig.name}</span>
             <Badge intent="secondary">
               {pathname.includes("/docs/") ? pathname.split("/")[2] : siteConfig.currentVersion}
@@ -250,12 +249,12 @@ export function NavbarDropdown() {
               <IconWindowVisit />
               <Menu.Label>Blocks</Menu.Label>
             </Menu.Item>
-            <Menu.Item target="_blank" href="https://blocks.getjustd.com">
-              <IconBrandJustdBlocks />
+            <Menu.Item target="_blank" href="https://blocks.intentui.com">
+              <IconBrandIntentui />
               <Menu.Label>Premium Blocks</Menu.Label>
             </Menu.Item>
             <Menu.Item href="/icons">
-              <IconBrandJustd />
+              <IconBrandIntentui />
               <Menu.Label>Icons</Menu.Label>
             </Menu.Item>
             <Menu.Item href="/blog">
@@ -270,7 +269,7 @@ export function NavbarDropdown() {
             <Menu.Item href="https://x.com/intent/follow?screen_name=irsyadadl" target="_blank">
               <IconBrandX /> <Menu.Label>X / Twitter</Menu.Label>
             </Menu.Item>
-            <Menu.Item href="https://github.com/justdlabs" target="_blank">
+            <Menu.Item href="https://github.com/intentuilabs" target="_blank">
               <IconBrandGithub />
               <Menu.Label>Github</Menu.Label>
             </Menu.Item>
@@ -306,15 +305,15 @@ const premium = [
   {
     id: 1,
     label: "Premium Blocks",
-    href: "https://blocks.getjustd.com",
-    icon: <IconBrandJustdBlocks />,
+    href: "https://blocks.intentui.com",
+    icon: <IconBrandIntentui />,
     description: "Pre-designed, ready-to-use React components for seamless integration.",
   },
   {
     id: 4,
     label: "Templates",
-    href: "https://blocks.getjustd.com/templates",
-    icon: <IconBrandJustdBlocks />,
+    href: "https://blocks.intentui.com/templates",
+    icon: <IconBrandIntentui />,
     description: "Pre-designed, ready-to-use React components for seamless integration.",
   },
   {
@@ -331,7 +330,7 @@ const premium = [
     label: "Figma",
     href: "#",
     icon: <IconBrandFigma />,
-    description: "Enhance your Figma designs with Justd components.",
+    description: "Enhance your Figma designs with Intent components.",
     badge: "Coming soon",
   },
 ]

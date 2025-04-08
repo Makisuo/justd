@@ -1,7 +1,7 @@
 import type React from "react"
 
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import { IconBrandPhp, IconX } from "justd-icons"
+import { IconBrandPhp, IconX } from "@intentui/icons"
 
 import AppSidebar from "./app-sidebar"
 

@@ -9,7 +9,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
-import { IconMoneybag, IconShippingBag } from "justd-icons"
+import { IconMoneybag, IconShippingBag } from "@intentui/icons"
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts"
 
 const chartData = [

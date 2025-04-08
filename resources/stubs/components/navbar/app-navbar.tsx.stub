@@ -9,7 +9,7 @@ import {
   IconSettings,
   IconShield,
   IconShoppingBag,
-} from "justd-icons"
+} from "@intentui/icons"
 import { Avatar} from "@/components/ui/avatar"
 import { Menu} from "@/components/ui/menu"
 import { Separator} from "@/components/ui/separator"

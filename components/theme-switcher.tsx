@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { IconDeviceDesktop2, IconMoon, IconSun } from "justd-icons"
+import { IconDeviceDesktop2, IconMoon, IconSun } from "@intentui/icons"
 import { useTheme } from "next-themes"
 
 export function ThemeSwitcher({

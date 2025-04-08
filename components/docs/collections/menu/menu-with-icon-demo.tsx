@@ -10,7 +10,7 @@ import {
   IconMoon,
   IconSettings,
   IconSun,
-} from "justd-icons"
+} from "@intentui/icons"
 import { useTheme } from "next-themes"
 
 export default function MenuWithIconDemo() {

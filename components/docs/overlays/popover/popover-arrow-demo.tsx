@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Popover } from "@/components/ui/popover"
-import { IconBell } from "justd-icons"
+import { IconBell } from "@intentui/icons"
 
 export default function PopoverArrowDemo() {
   return (

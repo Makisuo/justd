@@ -12,7 +12,7 @@ import {
   IconLayoutColumnHorizontalHalf,
   IconLayoutColumnLeftside,
   IconLayoutColumnVerticalAdd,
-} from "justd-icons"
+} from "@intentui/icons"
 
 export default function TooltipDemo() {
   return (

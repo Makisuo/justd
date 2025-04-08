@@ -1,5 +1,5 @@
 "use client"
-import { IconChevronLgRight } from "justd-icons"
+import { IconChevronLgRight } from "@intentui/icons"
 import { createContext, use } from "react"
 import type { BreadcrumbProps, BreadcrumbsProps, LinkProps } from "react-aria-components"
 import { Breadcrumb, Breadcrumbs as BreadcrumbsPrimitive } from "react-aria-components"

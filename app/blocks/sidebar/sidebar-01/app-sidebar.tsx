@@ -45,7 +45,7 @@ import {
   IconShield,
   IconShoppingBag,
   IconTicket,
-} from "justd-icons"
+} from "@intentui/icons"
 import { useTheme } from "next-themes"
 import { twMerge } from "tailwind-merge"
 

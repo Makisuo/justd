@@ -20,7 +20,7 @@ import {
   IconMessageDots,
   IconPerson,
   IconStar,
-} from "justd-icons"
+} from "@intentui/icons"
 import { Menu as MenuPrimitive } from "react-aria-components"
 
 export default function SheetMenuDemo() {

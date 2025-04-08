@@ -6,19 +6,18 @@ import {
   IconArrowUpRight,
   IconBrandDiscord,
   IconBrandGithub,
-  IconBrandJustd,
+  IconBrandIntentui,
   IconBrandX,
   IconHamburger,
   IconHome,
   IconSearch,
   IconSidebarFill,
-} from "justd-icons"
+} from "@intentui/icons"
 import { LayoutGroup } from "motion/react"
 import { usePathname } from "next/navigation"
 import React, { useEffect, useState } from "react"
 
 import { menus } from "@/app/(home)/partials/navbar"
-import { IconBrandJustdBlocks } from "@/components/icons/icon-brand-justd-blocks"
 import { Menu } from "@/components/ui/menu"
 import { composeTailwindRenderProps } from "@/components/ui/primitive"
 import { Separator } from "@/components/ui/separator"
@@ -53,7 +52,7 @@ export function ResponsiveAside({
           </ButtonPrimitive>
           <Separator orientation="vertical" className="h-5" />
           <Link className="rounded p-2 focus:outline-hidden" href="/" aria-label="Logo">
-            <IconBrandJustd className="size-5" />
+            <IconBrandIntentui className="size-5" />
           </Link>
         </div>
         <div className="flex items-center gap-x-0.5 **:data-[slot=icon]:size-5">
@@ -71,28 +70,28 @@ export function ResponsiveAside({
           />
           <Separator orientation="vertical" className="mx-1 h-5" />
           <LinkIcon
-            aria-label="Open Justd Blocks"
-            href="https://blocks.getjustd.com/templates"
+            aria-label="Open Intent Blocks"
+            href="https://blocks.intentui.com/templates"
             target="_blank"
           >
-            <IconBrandJustdBlocks />
+            <IconBrandIntentui />
           </LinkIcon>
           <LinkIcon
-            aria-label="Open Justd X / Twitter"
-            href="https://x.com/getjustd"
+            aria-label="Open Intent X / Twitter"
+            href={siteConfig.links.twitter}
             target="_blank"
           >
             <IconBrandX />
           </LinkIcon>
           <LinkIcon
-            aria-label="Open Justd Discord"
-            href="https://discord.gg/DYmVJ66JUD"
+            aria-label="Open Intent Discord"
+            href={siteConfig.links.discord}
             target="_blank"
           >
             <IconBrandDiscord />
           </LinkIcon>
 
-          <LinkIcon aria-label="Open Justd Github" href={siteConfig.repo} target="_blank">
+          <LinkIcon aria-label="Open Intent Github" href={siteConfig.repo} target="_blank">
             <IconBrandGithub />
           </LinkIcon>
           <Separator orientation="vertical" className="mx-1 h-5" />

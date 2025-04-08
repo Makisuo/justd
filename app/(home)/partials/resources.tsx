@@ -1,51 +1,51 @@
 "use client"
 
-import { IconBrandJustdBlocks } from "@/components/icons/icon-brand-justd-blocks"
 import { PageContainer } from "@/components/page-container"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
 import { Heading } from "@/components/ui/heading"
 import { Link } from "@/components/ui/link"
-import { IconWindowVisitFill } from "justd-icons"
+import { IconBrandIntentui } from "@intentui/icons"
+import { IconWindowVisitFill } from "@intentui/icons"
 import { twMerge } from "tailwind-merge"
 
 const resources = [
   {
     name: "Next.js Starter Kit",
-    url: "https://next.getjustd.com/",
+    url: "https://next.intentui.com/",
     description:
-      "A Next.js starter kit with Justd installed. You don't need to set up anything, just run clone it and you're good to go!",
+      "A Next.js starter kit with Intent installed. You don't need to set up anything, just run clone it and you're good to go!",
     label: "Starter Kit",
   },
   {
     name: "Laravel Starter Kit",
-    url: "https://github.com/justdlabs/inertia.ts",
+    url: "https://github.com/intentuilabs/inertia.ts",
     description:
-      "A Laravel starter kit with Justd installed. It includes a authentication system out of the box.",
+      "A Laravel starter kit with Intent installed. It includes a authentication system out of the box.",
     label: "Starter Kit",
   },
   {
     name: "Remix Starter Kit",
-    url: "https://github.com/justdlabs/remix",
-    description: "A Remix starter kit with Justd installed, ready for use in any application.",
+    url: "https://github.com/intentuilabs/remix",
+    description: "A Remix starter kit with Intent installed, ready for use in any application.",
     label: "Starter Kit",
   },
   {
     name: "Astro Starter Kit",
-    url: "https://github.com/justdlabs/astro",
-    description: "A Astro starter kit with Justd installed, ready for use in any application.",
+    url: "https://github.com/intentuilabs/astro",
+    description: "A Astro starter kit with Intent installed, ready for use in any application.",
     label: "Starter Kit",
   },
   {
     name: "Tanstack Router",
-    url: "https://tanstack-router.getjustd.com/",
+    url: "https://tanstack-router.intentui.com/",
     description: "Tanstack Router is a powerful and flexible router for React applications.",
     label: "Starter Kit",
   },
   {
     name: "Vite",
-    url: "https://github.com/justdlabs/vite",
-    description: "The simple way to start vite with Justd installed.",
+    url: "https://github.com/intentuilabs/vite",
+    description: "The simple way to start vite with Intent installed.",
     label: "Starter Kit",
   },
 ]
@@ -84,7 +84,7 @@ export function Resources() {
         <section id="extra">
           <div className="mb-4 px-4 sm:px-0">
             <Heading level={2} className="text-2xl sm:text-2xl">
-              Justd Blocks
+              Intent Blocks
             </Heading>
             <p className="text-muted-fg leading-relaxed lg:text-lg">
               Build your next idea even faster with ready-made blocks & templates.
@@ -97,16 +97,16 @@ export function Resources() {
             <Link
               className="group relative bg-bg p-4 hover:bg-overlay sm:p-8 lg:p-10"
               target="_blank"
-              aria-label={"Justd Blocks"}
+              aria-label={"Intent Blocks"}
               rel="noopener noreferrer"
               href="https://dub.sh/RNMV32k"
             >
               <div className="flex">
                 <WrapperIcon>
-                  <IconBrandJustdBlocks />
+                  <IconBrandIntentui />
                 </WrapperIcon>
                 <Card.Header className="flex flex-col gap-y-2">
-                  <Card.Title>Justd Blocks</Card.Title>
+                  <Card.Title>Intent Blocks</Card.Title>
                   <Card.Description>
                     Pre-designed, ready-to-use React components for seamless integration,
                     customizable and optimized for modern web applications.
@@ -120,9 +120,9 @@ export function Resources() {
             <Link
               className="group relative bg-bg p-4 hover:bg-overlay sm:p-8 lg:p-10"
               target="_blank"
-              aria-label={"Justd icons"}
+              aria-label={"Intent icons"}
               rel="noopener noreferrer"
-              href="https://blocks.getjustd.com/templates"
+              href="https://blocks.intentui.com/templates"
             >
               <div className="flex">
                 <WrapperIcon>
