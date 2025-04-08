@@ -4,7 +4,7 @@ import {
   IconAlignmentJustify,
   IconAlignmentLeft,
   IconAlignmentRight,
-} from "justd-icons"
+} from "@intentui/icons"
 
 export default function ToggleGroupGapDemo() {
   return (

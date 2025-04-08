@@ -9,7 +9,7 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 import type { ChartConfig } from "@/components/ui/chart"
-import { IconShoppingBag, IconStore } from "justd-icons"
+import { IconShoppingBag, IconStore } from "@intentui/icons"
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 
 const revenueData = Array.from({ length: 24 }, (_, index) => {

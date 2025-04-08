@@ -1,5 +1,5 @@
 import { Button } from 'ui'
-import { IconMoon, IconSun } from 'justd-icons'
+import { IconMoon, IconSun } from '@intentui/icons'
 import { Theme, useTheme } from '@/components/theme-provider'
 
 export function ThemeSwitcher() {

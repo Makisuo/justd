@@ -12,7 +12,7 @@ import {
   IconHashtag,
   IconHome,
   IconNotes,
-} from "justd-icons"
+} from "@intentui/icons"
 import { usePathname, useRouter } from "next/navigation"
 
 import { source } from "@/utils/source"

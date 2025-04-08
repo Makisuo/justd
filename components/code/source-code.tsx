@@ -6,7 +6,7 @@ import generated from "@/__registry__/generated"
 import { CodeHighlighter } from "@/components/code/code-highlighter"
 import { CopyMotionButton } from "@/components/code/copy-button"
 import { createFetchRegistryFile } from "@/resources/lib/fetch-registry"
-import { IconBrandReactjs } from "justd-icons"
+import { IconBrandReactjs } from "@intentui/icons"
 
 type RegistryItem = {
   component: React.LazyExoticComponent<any>

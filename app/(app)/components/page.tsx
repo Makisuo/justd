@@ -4,7 +4,7 @@ import { Heading } from "@/components/ui/heading"
 import { Link } from "@/components/ui/link"
 import { siteConfig } from "@/resources/config/site"
 import { source } from "@/utils/source"
-import { IconArrowRight, IconCube, IconPackage } from "justd-icons"
+import { IconArrowRight, IconCube, IconPackage } from "@intentui/icons"
 import type { Metadata } from "next"
 
 export default function Page() {
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   title: "Components",
   description:
     "Over 50 accessible components, neatly grouped into sections. Guaranteed usability for all!",
-  metadataBase: new URL("https://getjustd.com"),
+  metadataBase: new URL("https://intentui.com"),
   applicationName: siteConfig.name,
   keywords: [
     "Components",

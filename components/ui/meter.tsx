@@ -1,6 +1,6 @@
 "use client"
 
-import { IconCircleExclamation } from "justd-icons"
+import { IconCircleExclamation } from "@intentui/icons"
 import { motion } from "motion/react"
 import {
   Meter as MeterPrimitive,

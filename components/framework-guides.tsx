@@ -1,7 +1,7 @@
 "use client"
 
 import { Choicebox } from "@/components/ui/choicebox"
-import { IconBrandAstro, IconBrandLaravel, IconBrandNextjs, IconBrandRemix } from "justd-icons"
+import { IconBrandAstro, IconBrandLaravel, IconBrandNextjs, IconBrandRemix } from "@intentui/icons"
 
 const IconBrandTanstack = (props: React.ComponentProps<"svg">) => (
   <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">

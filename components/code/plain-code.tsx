@@ -2,8 +2,8 @@
 import { buttonStyles } from "@/components/ui/button"
 import { ScrollArea, ScrollBar, ScrollViewport } from "@/components/ui/scroll-area"
 import { useCopyButton } from "@/resources/lib/copy"
+import { IconCheck, IconDuplicate } from "@intentui/icons"
 import type { ScrollAreaViewportProps } from "@radix-ui/react-scroll-area"
-import { IconCheck, IconDuplicate } from "justd-icons"
 import {
   type ButtonHTMLAttributes,
   type HTMLAttributes,

@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card"
 import { Chart, type ChartConfig, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
-import { IconMoneybag } from "justd-icons"
+import { IconMoneybag } from "@intentui/icons"
 import { CartesianGrid, Line, LineChart, XAxis } from "recharts"
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]

@@ -3,8 +3,8 @@
 import { Card } from "@/components/ui/card"
 import { Menu } from "@/components/ui/menu"
 import { Table } from "@/components/ui/table"
+import { IconDotsVertical } from "@intentui/icons"
 import { NumberFormatter } from "@internationalized/number"
-import { IconDotsVertical } from "justd-icons"
 
 export default function TableDemo() {
   const formatter = new NumberFormatter("en-US", { style: "currency", currency: "USD" })

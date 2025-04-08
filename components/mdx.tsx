@@ -10,7 +10,7 @@ import { DocComposed } from "@/components/doc-composed"
 import { DocNote } from "@/components/doc-note"
 import { Installation } from "@/components/installation"
 import { Link } from "@/components/ui/link"
-import { IconArrowUpRight } from "justd-icons"
+import { IconArrowUpRight } from "@intentui/icons"
 import Image from "next/image"
 
 import { BlockSandbox } from "@/components/code/block-sandbox"

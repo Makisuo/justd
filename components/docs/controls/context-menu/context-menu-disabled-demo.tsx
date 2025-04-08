@@ -1,6 +1,6 @@
 "use client"
 
-import { IconClipboard, IconDuplicate, IconHighlight } from "justd-icons"
+import { IconClipboard, IconDuplicate, IconHighlight } from "@intentui/icons"
 
 import { ContextMenu } from "@/components/ui/context-menu"
 

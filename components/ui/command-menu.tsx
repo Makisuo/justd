@@ -1,6 +1,6 @@
 "use client"
 
-import { IconSearch } from "justd-icons"
+import { IconSearch } from "@intentui/icons"
 import { createContext, use, useEffect } from "react"
 import type {
   AutocompleteProps,

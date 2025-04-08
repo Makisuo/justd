@@ -1,7 +1,6 @@
 "use client"
 
 import { CommandPalette } from "@/components/command-palette"
-import { IconBrandJustdBlocks } from "@/components/icons/icon-brand-justd-blocks"
 import { PageContainer } from "@/components/page-container"
 import { Link } from "@/components/ui/link"
 import { Menu } from "@/components/ui/menu"
@@ -11,12 +10,12 @@ import {
   IconArrowUpRight,
   IconBrandDiscord,
   IconBrandGithub,
-  IconBrandJustd,
+  IconBrandIntentui,
   IconBrandX,
   IconHamburger,
   IconHome,
   IconSearch,
-} from "justd-icons"
+} from "@intentui/icons"
 import { useState } from "react"
 import { Button } from "react-aria-components"
 
@@ -28,7 +27,7 @@ export function Navbar() {
       <PageContainer className="flex items-center justify-between py-4 sm:py-6">
         <div className="flex items-center">
           <Link href="/" className="mr-4 p-2" aria-label="Goto homepage">
-            <IconBrandJustd className="size-5 text-white" />
+            <IconBrandIntentui className="size-5 text-white" />
           </Link>
           <div className="hidden items-center gap-x-1 lg:flex">
             {menus.map((menu) => (
@@ -52,10 +51,10 @@ export function Navbar() {
           </Button>
           <Link
             className="p-2 text-blue-200 outline-hidden hover:text-white focus-visible:ring-2 focus-visible:ring-blue-500"
-            href="https://blocks.getjustd.com"
+            href="https://blocks.intentui.com"
             target="_blank"
           >
-            <IconBrandJustdBlocks />
+            <IconBrandIntentui />
           </Link>
           <Link
             className="p-2 text-blue-200 outline-hidden hover:text-white focus-visible:ring-2 focus-visible:ring-blue-500"
@@ -131,10 +130,10 @@ export const menus = [
   { href: "/colors", label: "Colors" },
   { href: "/blocks", label: "Blocks" },
   {
-    href: "https://blocks.getjustd.com",
+    href: "https://blocks.intentui.com",
     label: "Premium blocks",
-    icon: IconBrandJustdBlocks,
+    icon: IconBrandIntentui,
     external: true,
   },
-  { href: "https://blocks.getjustd.com/templates", label: "Templates", external: true },
+  { href: "https://blocks.intentui.com/templates", label: "Templates", external: true },
 ]

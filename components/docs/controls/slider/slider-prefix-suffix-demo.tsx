@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-import { IconVolumeFull, IconVolumeOff } from "justd-icons"
+import { IconVolumeFull, IconVolumeOff } from "@intentui/icons"
 
 import { Slider } from "@/components/ui/slider"
 

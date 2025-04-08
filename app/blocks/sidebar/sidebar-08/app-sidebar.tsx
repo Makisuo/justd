@@ -29,7 +29,7 @@ import {
   IconShield,
   IconTrash,
   IconUpload,
-} from "justd-icons"
+} from "@intentui/icons"
 
 export default function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
   return (

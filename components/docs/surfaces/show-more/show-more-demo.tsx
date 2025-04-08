@@ -1,6 +1,6 @@
 "use client"
 import { ShowMore } from "@/components/ui/show-more"
-import { IconChevronLgDown } from "justd-icons"
+import { IconChevronLgDown } from "@intentui/icons"
 import { twMerge } from "tailwind-merge"
 
 export default function ShowMoreDemo() {

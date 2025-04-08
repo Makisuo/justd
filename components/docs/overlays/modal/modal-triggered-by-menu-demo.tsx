@@ -7,7 +7,7 @@ import { Loader } from "@/components/ui/loader"
 import { Menu } from "@/components/ui/menu"
 import { Modal } from "@/components/ui/modal"
 import { wait } from "@/resources/lib/utils"
-import { IconBlock, IconChevronLgDown, IconTrash } from "justd-icons"
+import { IconBlock, IconChevronLgDown, IconTrash } from "@intentui/icons"
 
 export default function ModalTriggeredByMenuDemo() {
   const [state, setState] = useState<string | null>(null)

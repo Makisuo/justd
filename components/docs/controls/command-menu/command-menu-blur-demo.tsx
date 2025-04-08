@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-import { IconBill, IconCube, IconGear, IconHome, IconNotes, IconShield } from "justd-icons"
+import { IconBill, IconCube, IconGear, IconHome, IconNotes, IconShield } from "@intentui/icons"
 
 import { Avatar } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"

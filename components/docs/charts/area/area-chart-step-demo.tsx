@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui/card"
 import { Chart, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
 import type { ChartConfig } from "@/components/ui/chart"
-import { IconGraph } from "justd-icons"
+import { IconGraph } from "@intentui/icons"
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 
 const enrollmentData = Array.from({ length: 24 }, (_, index) => {

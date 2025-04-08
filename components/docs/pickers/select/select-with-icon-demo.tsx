@@ -1,7 +1,7 @@
 "use client"
 
 import { Select } from "@/components/ui/select"
-import { IconBrandDiscord, IconBrandGithub } from "justd-icons"
+import { IconBrandDiscord, IconBrandGithub } from "@intentui/icons"
 
 export default function SelectWithIconDemo() {
   return (

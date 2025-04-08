@@ -1,6 +1,6 @@
 "use client"
 
-import { IconCheck, IconHamburger } from "justd-icons"
+import { IconCheck, IconHamburger } from "@intentui/icons"
 import type {
   ListBoxItemProps as ListBoxItemPrimitiveProps,
   ListBoxProps,

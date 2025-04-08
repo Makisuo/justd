@@ -9,7 +9,7 @@ import { Loader } from "@/components/ui/loader"
 import { Tabs } from "@/components/ui/tabs"
 import { copyToClipboard } from "@/resources/lib/copy"
 import type { RegistryItem } from "@/resources/types"
-import { IconBrandCss, IconBrandReactjs, IconFile, IconWindowVisitFill } from "justd-icons"
+import { IconBrandCss, IconBrandReactjs, IconFile, IconWindowVisitFill } from "@intentui/icons"
 import { Tab } from "react-aria-components"
 import { twMerge } from "tailwind-merge"
 

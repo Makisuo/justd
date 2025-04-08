@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Menu } from "@/components/ui/menu"
-import { IconDashboard, IconSettings, IconShield } from "justd-icons"
+import { IconDashboard, IconSettings, IconShield } from "@intentui/icons"
 
 export default function MenuRespectScreenDemo() {
   return (

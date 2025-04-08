@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Justd Icons",
   description:
     " A library of beautifully crafted react icons, perfect for enhancing the visual appeal and user experience of your web applications. ",
-  metadataBase: new URL("https://getjustd.com"),
+  metadataBase: new URL("https://intentui.com"),
   applicationName: siteConfig.name,
   keywords: [
     "Justd Icons",

@@ -1,6 +1,6 @@
 "use client"
 
-import { IconDotGrid2X3 } from "justd-icons"
+import { IconDotGrid2X3 } from "@intentui/icons"
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels"
 import { twMerge } from "tailwind-merge"
 

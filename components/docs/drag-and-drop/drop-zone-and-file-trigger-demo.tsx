@@ -5,8 +5,8 @@ import { useState } from "react"
 import { DropZone } from "@/components/ui/drop-zone"
 import { Description } from "@/components/ui/field"
 import { FileTrigger } from "@/components/ui/file-trigger"
+import { IconGallery } from "@intentui/icons"
 import type { DropEvent } from "@react-types/shared"
-import { IconGallery } from "justd-icons"
 import { isFileDropItem } from "react-aria-components"
 
 export default function DropZoneAndFileTriggerDemo() {

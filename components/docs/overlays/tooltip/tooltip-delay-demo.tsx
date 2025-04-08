@@ -2,7 +2,7 @@
 
 import { buttonStyles } from "@/components/ui/button"
 import { Tooltip } from "@/components/ui/tooltip"
-import { IconBrandX } from "justd-icons"
+import { IconBrandX } from "@intentui/icons"
 
 export default function TooltipDelayDemo() {
   return (

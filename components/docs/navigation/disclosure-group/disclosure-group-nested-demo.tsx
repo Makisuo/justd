@@ -6,7 +6,7 @@ import {
   DisclosurePanel,
   DisclosureTrigger,
 } from "@/components/ui/disclosure"
-import { IconChevronRight } from "justd-icons"
+import { IconChevronRight } from "@intentui/icons"
 
 export default function DisclosureGroupNestedDemo() {
   return (

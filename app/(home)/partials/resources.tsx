@@ -1,18 +1,18 @@
 "use client"
 
-import { IconBrandJustdBlocks } from "@/components/icons/icon-brand-justd-blocks"
+import { IconBrandIntentui } from "@intentui/icons"
 import { PageContainer } from "@/components/page-container"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
 import { Heading } from "@/components/ui/heading"
 import { Link } from "@/components/ui/link"
-import { IconWindowVisitFill } from "justd-icons"
+import { IconWindowVisitFill } from "@intentui/icons"
 import { twMerge } from "tailwind-merge"
 
 const resources = [
   {
     name: "Next.js Starter Kit",
-    url: "https://next.getjustd.com/",
+    url: "https://next.intentui.com/",
     description:
       "A Next.js starter kit with Justd installed. You don't need to set up anything, just run clone it and you're good to go!",
     label: "Starter Kit",
@@ -38,7 +38,7 @@ const resources = [
   },
   {
     name: "Tanstack Router",
-    url: "https://tanstack-router.getjustd.com/",
+    url: "https://tanstack-router.intentui.com/",
     description: "Tanstack Router is a powerful and flexible router for React applications.",
     label: "Starter Kit",
   },
@@ -103,7 +103,7 @@ export function Resources() {
             >
               <div className="flex">
                 <WrapperIcon>
-                  <IconBrandJustdBlocks />
+                  <IconBrandIntentui />
                 </WrapperIcon>
                 <Card.Header className="flex flex-col gap-y-2">
                   <Card.Title>Justd Blocks</Card.Title>
@@ -122,7 +122,7 @@ export function Resources() {
               target="_blank"
               aria-label={"Justd icons"}
               rel="noopener noreferrer"
-              href="https://blocks.getjustd.com/templates"
+              href="https://blocks.intentui.com/templates"
             >
               <div className="flex">
                 <WrapperIcon>

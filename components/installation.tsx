@@ -9,7 +9,7 @@ import { Link } from "@/components/ui/link"
 import { Menu } from "@/components/ui/menu"
 import { composeTailwindRenderProps } from "@/components/ui/primitive"
 import { copyToClipboard } from "@/resources/lib/copy"
-import { IconCheck, IconDuplicate } from "justd-icons"
+import { IconCheck, IconDuplicate } from "@intentui/icons"
 import { Group } from "react-aria-components"
 
 export interface InstallationProps {

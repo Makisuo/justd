@@ -40,7 +40,7 @@ When you're run this command, it will ask a couple of questions. Like where's yo
 If it's all good, you will see the following:
 ```
 Not sure what to do next?
-Visit our documentation at: https://getjustd.com
+Visit our documentation at: https://intentui.com
 
 Now try to add some components to your project
 by running: npx justd-cli@latest add
@@ -56,7 +56,7 @@ by running: npx justd-cli@latest add
 After running the `init` command, a `.justd` file will appear in your project. This file holds your project's configuration, including settings for gray tones, paths, and more.
 ```
 {
-  "$schema": "https://getjustd.com/schema.json",
+  "$schema": "https://intentui.com/schema.json",
   "ui": "src/components/ui",
   "utils": "src/utils",
   "gray": "zinc",
@@ -152,7 +152,7 @@ Next, add **Tailwind Variant**, **Tailwind Merge**, and for utility functions:
 
 Following that, include the **Tailwind Animate** for managing animations and **Justd Icons** for icons:
 
-<Installation options={{isManual: true}} items={['justd-icons', 'tw-animate-css']} />
+<Installation options={{isManual: true}} items={['@intentui/icons', 'tw-animate-css']} />
 
 ### Style and Primitive
 After installing the required packages, you can copy the CSS below into your global CSS file and move the primitives to your UI folder. Primitives serve as utilities for managing states, including `focusRing`, `focusStyles`, and `focusButtonStyles`.

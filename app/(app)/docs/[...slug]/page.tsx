@@ -1,5 +1,4 @@
 import { DocRefs } from "@/components/doc-refs"
-import { IconBrandJustdBlocks } from "@/components/icons/icon-brand-justd-blocks"
 import { Mdx } from "@/components/mdx"
 import { Pager } from "@/components/pager"
 import { Toc } from "@/components/toc"
@@ -9,10 +8,10 @@ import { Link } from "@/components/ui/link"
 import { siteConfig } from "@/resources/config/site"
 import { title } from "@/resources/lib/utils"
 import { source } from "@/utils/source"
+import { IconBrandIntentui } from "@intentui/icons"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { twJoin } from "tailwind-merge"
-
 export interface DocPageProps {
   params: Promise<{
     slug: string[]
@@ -54,6 +53,7 @@ export async function generateMetadata(props: DocPageProps): Promise<Metadata> {
       "UI Library",
       "UI Framework",
       "Justd",
+      "Intent UI",
       "React Aria",
       "React Aria Components",
       "Server Components",
@@ -62,13 +62,21 @@ export async function generateMetadata(props: DocPageProps): Promise<Metadata> {
       "UI Design System",
       "UI for Laravel Inertia",
       "Justd Components",
+      "Intent Components",
       "Justd UI Components",
+      "Intent UI Components",
       "Justd UI Kit",
+      "Intent UI Kit",
       "Justd UI Library",
+      "Intent UI Library",
       "Justd UI Framework",
+      "Intent UI Framework",
       "Justd Laravel Inertia",
+      "Intent Laravel Inertia",
       "Justd Laravel",
+      "Intent Laravel",
       "Justd Inertia",
+      "Intent Inertia",
     ],
   }
 }
@@ -134,12 +142,12 @@ export default async function Page(props: DocPageProps) {
           <Mdx code={page.data.body} />
           <Link
             target="_blank"
-            className="not-prose group relative my-6 flex min-h-48 overflow-hidden rounded-xl bg-[url(https://blocks.getjustd.com/opengraph-image.jpg)] bg-blue-500/10 bg-center bg-no-repeat ring ring-blue-300/30 transition [background-size:100%] hover:ring-blue-300/70 sm:min-h-110 sm:bg-cover"
-            href="https://blocks.getjustd.com?ref=getjustd.com"
+            className="not-prose group relative my-6 flex min-h-48 overflow-hidden rounded-xl bg-[url(https://blocks.intentui.com/opengraph-image.jpg)] bg-blue-500/10 bg-center bg-no-repeat ring ring-blue-300/30 transition [background-size:100%] hover:ring-blue-300/70 sm:min-h-110 sm:bg-cover"
+            href="https://blocks.intentui.com?ref=intentui.com"
           >
             <div className="absolute bottom-0 flex w-full items-start gap-x-3 bg-linear-to-t from-black via-black/90 p-4 sm:p-6">
               <div className="inset-ring inset-ring-fg/10 grid size-10 shrink-0 place-content-center rounded-sm bg-blue-500/20">
-                <IconBrandJustdBlocks className="size-8" />
+                <IconBrandIntentui className="size-8" />
               </div>
               <Card.Header className="p-0">
                 <Card.Title className="text-white sm:text-base/6">Get premium Blocks</Card.Title>

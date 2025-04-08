@@ -23,7 +23,7 @@ import {
   IconUnderline,
   IconUnderlineFill,
   IconUndo,
-} from "justd-icons"
+} from "@intentui/icons"
 
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"

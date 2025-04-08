@@ -66,7 +66,7 @@ import {
   IconTrashFill,
   IconTriangleExclamation,
   IconTriangleExclamationFill,
-} from "justd-icons"
+} from "@intentui/icons"
 import { useEffect, useState } from "react"
 
 export function IconResources() {

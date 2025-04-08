@@ -12,7 +12,7 @@ import {
   IconLogout,
   IconMic,
   IconSettings,
-} from "justd-icons"
+} from "@intentui/icons"
 
 export default function AppSidebarNav() {
   return (

@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card"
 import { Table } from "@/components/ui/table"
-import { IconStarFill } from "justd-icons"
+import { IconStarFill } from "@intentui/icons"
 import { useDragAndDrop } from "react-aria-components"
 import { useListData } from "react-stately"
 

@@ -23,7 +23,7 @@ import { Select } from "@/components/ui/select"
 import { Separator } from "@/components/ui/separator"
 import { Switch } from "@/components/ui/switch"
 import { TextField } from "@/components/ui/text-field"
-import { IconDashboard } from "justd-icons"
+import { IconDashboard } from "@intentui/icons"
 
 export function Blocks() {
   return (

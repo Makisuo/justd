@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useId, useRef, useState } from "react"
 
-import { IconChevronLgDown } from "justd-icons"
+import { IconChevronLgDown } from "@intentui/icons"
 import { useFilter } from "react-aria"
 import type {
   ComboBoxProps as ComboBoxPrimitiveProps,

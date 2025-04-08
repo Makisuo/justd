@@ -4,7 +4,7 @@ import { useState } from "react"
 
 import { Button } from "@/components/ui/button"
 import { Loader } from "@/components/ui/loader"
-import { IconCircleCheckFill, IconKey } from "justd-icons"
+import { IconCircleCheckFill, IconKey } from "@intentui/icons"
 
 export default function ButtonLoaderDemo() {
   const [loading, setLoading] = useState<"idle" | "loading" | "success">("idle")

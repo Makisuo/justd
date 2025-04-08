@@ -3,7 +3,7 @@
 import { useState } from "react"
 
 import { Toggle } from "@/components/ui/toggle"
-import { IconPin, IconUnpin } from "justd-icons"
+import { IconPin, IconUnpin } from "@intentui/icons"
 
 export default function ToggleControlledDemo() {
   const [isSelected, setSelected] = useState(false)

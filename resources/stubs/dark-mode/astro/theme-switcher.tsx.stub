@@ -1,6 +1,6 @@
 'use client'
 
-import { IconMoon, IconSun } from 'justd-icons'
+import { IconMoon, IconSun } from '@intentui/icons'
 import { useEffect, useState } from 'react'
 import { Button } from 'ui'
 import { twMerge } from 'tailwind-merge';

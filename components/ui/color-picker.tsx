@@ -8,8 +8,8 @@ import {
   ColorPickerStateContext,
 } from "react-aria-components"
 
+import { IconEyeDropper } from "@intentui/icons"
 import { parseColor } from "@react-stately/color"
-import { IconEyeDropper } from "justd-icons"
 import { twJoin, twMerge } from "tailwind-merge"
 import { Button } from "./button"
 import { ColorArea } from "./color-area"

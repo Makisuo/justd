@@ -12,7 +12,7 @@ import RangeCalendarControlledDemo from "@/components/docs/date-and-time/calenda
 import TagFieldDemo from "@/components/docs/forms/tag-field/tag-field-demo"
 import ComboBoxAvatarDemo from "@/components/docs/pickers/combo-box/combo-box-avatar-demo"
 import MultipleSelectDemo from "@/components/docs/pickers/multiple-select/multiple-select-demo"
-import { IconArrowRight, IconPackage } from "justd-icons"
+import { IconArrowRight, IconPackage } from "@intentui/icons"
 
 import { PageContainer } from "@/components/page-container"
 import { buttonStyles } from "@/components/ui/button"

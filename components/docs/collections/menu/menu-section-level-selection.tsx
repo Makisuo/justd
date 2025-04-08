@@ -13,7 +13,7 @@ import {
   IconDuplicate,
   IconItalic,
   IconUnderline,
-} from "justd-icons"
+} from "@intentui/icons"
 import type { Selection } from "react-aria-components"
 
 export default function MenuSectionLevelSelection() {

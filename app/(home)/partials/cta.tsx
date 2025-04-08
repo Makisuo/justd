@@ -1,7 +1,7 @@
 "use client"
 
 import { siteConfig } from "@/resources/config/site"
-import { IconBrandGithub } from "justd-icons"
+import { IconBrandGithub } from "@intentui/icons"
 
 import { PageContainer } from "@/components/page-container"
 import { buttonStyles } from "@/components/ui/button"

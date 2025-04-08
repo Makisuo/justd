@@ -26,7 +26,7 @@ import {
   IconToolbox,
   IconToolboxFill,
   IconUndo,
-} from "justd-icons"
+} from "@intentui/icons"
 
 export default function ToolbarOrientationDemo() {
   return (

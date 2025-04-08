@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge"
 
-export function IconBrandJustdBlocks({ className, ...props }: React.ComponentProps<"svg">) {
+export function IconBrandIntentui({ className, ...props }: React.ComponentProps<"svg">) {
   return (
     <svg
       data-slot="icon"

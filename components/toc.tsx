@@ -2,8 +2,8 @@
 
 import { useScrollPosition } from "@/resources/hooks/use-scroll-position"
 import { useMediaQuery } from "@/utils/use-media-query"
+import { IconAlignmentLeft } from "@intentui/icons"
 import type { TOCItemType, TableOfContents } from "fumadocs-core/server"
-import { IconAlignmentLeft } from "justd-icons"
 import React, { Suspense, useEffect, useState } from "react"
 import { Heading } from "react-aria-components"
 import scrollIntoView from "scroll-into-view-if-needed"

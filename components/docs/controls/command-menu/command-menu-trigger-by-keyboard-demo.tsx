@@ -2,7 +2,14 @@
 
 import { useState } from "react"
 
-import { IconCreditCard, IconCube, IconGear, IconHome2, IconNotes, IconShield } from "justd-icons"
+import {
+  IconCreditCard,
+  IconCube,
+  IconGear,
+  IconHome2,
+  IconNotes,
+  IconShield,
+} from "@intentui/icons"
 
 import { CommandMenu } from "@/components/ui/command-menu"
 
