@@ -122,7 +122,7 @@ export function Resources() {
               target="_blank"
               aria-label={"Intent icons"}
               rel="noopener noreferrer"
-              href="https://blocks.intentui.com/templates"
+              href="https://blocks.getjustd.com/templates"
             >
               <div className="flex">
                 <WrapperIcon>

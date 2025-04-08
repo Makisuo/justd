@@ -142,8 +142,8 @@ export default async function Page(props: DocPageProps) {
           <Mdx code={page.data.body} />
           <Link
             target="_blank"
-            className="not-prose group relative my-6 flex min-h-48 overflow-hidden rounded-xl bg-[url(https://blocks.intentui.com/opengraph-image.jpg)] bg-blue-500/10 bg-center bg-no-repeat ring ring-blue-300/30 transition [background-size:100%] hover:ring-blue-300/70 sm:min-h-110 sm:bg-cover"
-            href="https://blocks.intentui.com?ref=intentui.com"
+            className="not-prose group relative my-6 flex min-h-48 overflow-hidden rounded-xl bg-[url(https://blocks.getjustd.com/opengraph-image.jpg)] bg-blue-500/10 bg-center bg-no-repeat ring ring-blue-300/30 transition [background-size:100%] hover:ring-blue-300/70 sm:min-h-110 sm:bg-cover"
+            href="https://blocks.getjustd.com?ref=intentui.com"
           >
             <div className="absolute bottom-0 flex w-full items-start gap-x-3 bg-linear-to-t from-black via-black/90 p-4 sm:p-6">
               <div className="inset-ring inset-ring-fg/10 grid size-10 shrink-0 place-content-center rounded-sm bg-blue-500/20">

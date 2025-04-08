@@ -51,7 +51,7 @@ export function Navbar() {
           </Button>
           <Link
             className="p-2 text-blue-200 outline-hidden hover:text-white focus-visible:ring-2 focus-visible:ring-blue-500"
-            href="https://blocks.intentui.com"
+            href="https://blocks.getjustd.com"
             target="_blank"
           >
             <IconBrandIntentui />
@@ -130,10 +130,10 @@ export const menus = [
   { href: "/colors", label: "Colors" },
   { href: "/blocks", label: "Blocks" },
   {
-    href: "https://blocks.intentui.com",
+    href: "https://blocks.getjustd.com",
     label: "Premium blocks",
     icon: IconBrandIntentui,
     external: true,
   },
-  { href: "https://blocks.intentui.com/templates", label: "Templates", external: true },
+  { href: "https://blocks.getjustd.com/templates", label: "Templates", external: true },
 ]

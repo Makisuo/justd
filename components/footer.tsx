@@ -23,8 +23,8 @@ const navigation = {
     { name: "Github", href: "https://github.com/intentuilabs" },
     { name: "X / Formerly Twitter", href: "https://x.com/intent/follow?screen_name=irsyadadl" },
     { name: "CLI", href: "https://github.com/intentuilabs/cli" },
-    { name: "Premium Blocks", href: "https://blocks.intentui.com" },
-    { name: "Templates", href: "https://blocks.intentui.com/templates" },
+    { name: "Premium Blocks", href: "https://blocks.getjustd.com" },
+    { name: "Templates", href: "https://blocks.getjustd.com/templates" },
   ],
   extra: [
     { name: "Discord", href: "https://discord.gg/DYmVJ66JUD" },

@@ -249,7 +249,7 @@ export function NavbarDropdown() {
               <IconWindowVisit />
               <Menu.Label>Blocks</Menu.Label>
             </Menu.Item>
-            <Menu.Item target="_blank" href="https://blocks.intentui.com">
+            <Menu.Item target="_blank" href="https://blocks.getjustd.com">
               <IconBrandIntentui />
               <Menu.Label>Premium Blocks</Menu.Label>
             </Menu.Item>
@@ -305,14 +305,14 @@ const premium = [
   {
     id: 1,
     label: "Premium Blocks",
-    href: "https://blocks.intentui.com",
+    href: "https://blocks.getjustd.com",
     icon: <IconBrandIntentui />,
     description: "Pre-designed, ready-to-use React components for seamless integration.",
   },
   {
     id: 4,
     label: "Templates",
-    href: "https://blocks.intentui.com/templates",
+    href: "https://blocks.getjustd.com/templates",
     icon: <IconBrandIntentui />,
     description: "Pre-designed, ready-to-use React components for seamless integration.",
   },
