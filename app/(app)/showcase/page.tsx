@@ -6,7 +6,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Showcase",
-  description: "A showcase of justd components, tools, and more.",
+  description: "A showcase of Intent UI components, tools, and more.",
   metadataBase: new URL("https://intentui.com"),
   applicationName: siteConfig.name,
 }

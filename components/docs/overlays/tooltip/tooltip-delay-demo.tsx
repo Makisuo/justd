@@ -17,7 +17,7 @@ export default function TooltipDelayDemo() {
         >
           <IconBrandX />
         </Tooltip.Trigger>
-        <Tooltip.Content>Follow me @getjustd</Tooltip.Content>
+        <Tooltip.Content>Follow me @intentui</Tooltip.Content>
       </Tooltip>
     </div>
   )

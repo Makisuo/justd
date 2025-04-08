@@ -58,14 +58,14 @@ export function Navbar() {
           </Link>
           <Link
             className="p-2 text-blue-200 outline-hidden hover:text-white focus-visible:ring-2 focus-visible:ring-blue-500"
-            href="https://x.com/getjustd"
+            href={siteConfig.links.twitter}
             target="_blank"
           >
             <IconBrandX />
           </Link>
           <Link
             className="p-2 text-blue-200 outline-hidden hover:text-white focus-visible:ring-2 focus-visible:ring-blue-500"
-            href="https://discord.gg/DYmVJ66JUD"
+            href={siteConfig.discord}
             target="_blank"
           >
             <IconBrandDiscord />

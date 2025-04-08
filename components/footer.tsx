@@ -28,7 +28,7 @@ const navigation = {
   ],
   extra: [
     { name: "Discord", href: "https://discord.gg/DYmVJ66JUD" },
-    { name: "MIT", href: "https://github.com/intentuilabs/justd/blob/main/LICENSE" },
+    { name: "MIT", href: "https://github.com/irsyadadl/intentui/blob/main/LICENSE" },
   ],
 }
 
@@ -151,7 +151,7 @@ export function Footer() {
             Vercel
           </Link>
           . The source code's got the{" "}
-          <Link href="https://github.com/intentuilabs/justd/blob/main/LICENSE">MIT</Link> license.
+          <Link href="https://github.com/irsyadadl/intentui/blob/main/LICENSE">MIT</Link> license.
         </p>
       </PageContainer>
     </footer>

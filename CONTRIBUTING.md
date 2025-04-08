@@ -1,6 +1,6 @@
 ## Contribution Guide
 
-Thanks for jumping in to contribute at intentui.com—we’re thrilled to have you on board!
+Thanks for jumping in to contribute at intentui.com, we’re thrilled to have you on board!
 
 Quick ask: take a moment to review this doc before submitting your first pull request. Also, check out the open issues and pull requests to avoid doubling up on any efforts.
 
@@ -18,7 +18,7 @@ Quick ask: take a moment to review this doc before submitting your first pull re
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [Intent Code of Conduct](https://github.com/intentuilabs/justd/blob/main/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [team@justd.com](mailto:team@justd.com).
+This project and everyone participating in it is governed by the [Intent Code of Conduct](https://github.com/irsyadadl/intentui/blob/main/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [irsyad@parsinta.com](mailto:irsyad@parsinta.com).
 
 ## How to Contribute
 

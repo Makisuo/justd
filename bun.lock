@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "justd",
+      "name": "intentui",
       "dependencies": {
         "@intentui/icons": "^1.10.29",
         "@radix-ui/react-scroll-area": "^1.2.3",

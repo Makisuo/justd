@@ -7,10 +7,10 @@ export const siteConfig = {
   links: {
     twitter: "https://x.com/intent/follow?screen_name=intentui",
     github: "https://github.com/intentuilabs",
-    personalSite: "https://irsyad.co",
+    discord: "https://discord.gg/DYmVJ66JUD",
   },
   discord: "https://discord.gg/DYmVJ66JUD",
-  repo: "https://github.com/irsyadadl/justd",
+  repo: "https://github.com/irsyadadl/intentui",
   currentVersion: "2.x",
 }
 

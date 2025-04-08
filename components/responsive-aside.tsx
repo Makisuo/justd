@@ -78,14 +78,14 @@ export function ResponsiveAside({
           </LinkIcon>
           <LinkIcon
             aria-label="Open Intent X / Twitter"
-            href="https://x.com/getjustd"
+            href={siteConfig.links.twitter}
             target="_blank"
           >
             <IconBrandX />
           </LinkIcon>
           <LinkIcon
             aria-label="Open Intent Discord"
-            href="https://discord.gg/DYmVJ66JUD"
+            href={siteConfig.links.discord}
             target="_blank"
           >
             <IconBrandDiscord />
