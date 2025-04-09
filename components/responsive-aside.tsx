@@ -113,7 +113,6 @@ export function ResponsiveAside({
                   href={menu.href}
                   target={menu.external ? "_blank" : undefined}
                 >
-                  {menu.icon && <menu.icon />}
                   <Menu.Label>{menu.label}</Menu.Label>
                   {menu.external && <IconArrowUpRight />}
                 </Menu.Item>

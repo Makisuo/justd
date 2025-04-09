@@ -211,7 +211,7 @@ export function NavbarDropdown() {
       <Menu>
         <Button aria-label={siteConfig.name} intent="plain" className="-ml-1 group">
           <span className="flex items-center gap-x-2">
-            <IconBrandIntentui className="-ml-1 size-4.5" />
+            <IconBrandIntentui className="-ml-1 size-6" />
             <span className="font-mono text-base tracking-tight sm:text-sm">{siteConfig.name}</span>
             <Badge intent="secondary">
               {pathname.includes("/docs/") ? pathname.split("/")[2] : siteConfig.currentVersion}

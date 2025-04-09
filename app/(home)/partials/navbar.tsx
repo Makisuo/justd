@@ -36,7 +36,7 @@ export function Navbar() {
                 href={menu.href}
                 target={menu.external ? "_blank" : undefined}
               >
-                {menu.icon && <menu.icon />} {menu.label}
+                {menu.label}
               </NavLink>
             ))}
           </div>
@@ -99,7 +99,6 @@ export function Navbar() {
                     href={menu.href}
                     target={menu.external ? "_blank" : undefined}
                   >
-                    {menu.icon && <menu.icon />}
                     <Menu.Label>{menu.label}</Menu.Label>
                     {menu.external && <IconArrowUpRight />}
                   </Menu.Item>
