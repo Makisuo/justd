@@ -219,15 +219,6 @@ export function NavbarDropdown() {
           </span>
         </Button>
         <Menu.Content placement="bottom" className="sm:min-w-64">
-          <Menu.Submenu title="Versions">
-            <Menu.Item>
-              <Menu.Label>Switch Version</Menu.Label>
-            </Menu.Item>
-            <Menu.Content>
-              <Menu.Item href="/docs/1.x/getting-started/introduction">1.x</Menu.Item>
-              <Menu.Item href="/docs/2.x/getting-started/introduction">2.x</Menu.Item>
-            </Menu.Content>
-          </Menu.Submenu>
           <Menu.Section title="Pages">
             <Menu.Item href="/">
               <IconHome />
