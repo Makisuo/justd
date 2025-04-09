@@ -85,7 +85,7 @@ export function Navbar() {
                   <NavLink href="/blocks">Blocks</NavLink>
                   <Menu>
                     <Menu.Trigger className="group flex cursor-pointer items-center gap-x-2 py-3 text-muted-fg text-sm tracking-tight outline-hidden focus-visible:text-fg">
-                      <IconBrandIntentui /> Premium Blocks
+                      Premium Blocks
                       <IconChevronLgDown className="size-3 duration-200 group-pressed:rotate-180" />
                     </Menu.Trigger>
                     <Menu.Content

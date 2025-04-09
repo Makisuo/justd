@@ -132,7 +132,6 @@ export const menus = [
   {
     href: "https://blocks.getjustd.com",
     label: "Premium blocks",
-    icon: IconBrandIntentui,
     external: true,
   },
   { href: "https://blocks.getjustd.com/templates", label: "Templates", external: true },
