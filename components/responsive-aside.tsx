@@ -71,7 +71,7 @@ export function ResponsiveAside({
           <Separator orientation="vertical" className="mx-1 h-5" />
           <LinkIcon
             aria-label="Open Intent Blocks"
-            href="https://blocks.getjustd.com/templates"
+            href="https://blocks.intentui.com/templates"
             target="_blank"
           >
             <IconBrandIntentui />
