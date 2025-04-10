@@ -68,7 +68,7 @@ const SidebarComposed = ({
   if (node.type === "folder") {
     return (
       <div className="mb-6">
-        {!Number(node.name) && (
+        {!Number(node.name) && node.name !== "2.x" && (
           <Heading
             className="mb-2 flex items-center gap-x-2 font-medium text-base sm:text-sm"
             level={3}
@@ -77,9 +77,11 @@ const SidebarComposed = ({
           </Heading>
         )}
 
-        {node.children.map((child, index) => (
-          <SidebarComposed key={index} node={child} />
-        ))}
+        {node.children
+          .filter((i) => i.name !== "2.x")
+          .map((child, index) => (
+            <SidebarComposed key={index} node={child} />
+          ))}
       </div>
     )
   }
