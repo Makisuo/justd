@@ -11,6 +11,7 @@ import {
 import { tv } from "tailwind-variants"
 
 import { useMediaQuery } from "@/utils/use-media-query"
+import { twMerge } from "tailwind-merge"
 import { Description, FieldError, FieldGroup, Input, Label } from "./field"
 import { composeTailwindRenderProps } from "./primitive"
 
@@ -48,20 +49,23 @@ const NumberField = ({
       className={composeTailwindRenderProps(className, "group flex flex-col gap-y-1.5")}
     >
       {label && <Label>{label}</Label>}
-      <FieldGroup className="overflow-hidden">
+      <FieldGroup
+        className={twMerge(
+          "overflow-hidden",
+          isMobile && "**:[button]:h-10 **:[button]:rounded-none **:[button]:px-2",
+        )}
+      >
         {(renderProps) => (
           <>
-            {isMobile ? <StepperButton slot="decrement" className="border-r" /> : null}
+            {isMobile ? <StepperButton className="border-r" slot="decrement" /> : null}
             <Input className="px-13 tabular-nums sm:px-2.5" placeholder={placeholder} />
-            <div
-              className={fieldBorderStyles({
-                ...renderProps,
-                className: "grid h-10 place-content-center border-s",
-              })}
-            >
-              {isMobile ? (
-                <StepperButton slot="increment" />
-              ) : (
+            {!isMobile ? (
+              <div
+                className={fieldBorderStyles({
+                  ...renderProps,
+                  className: "grid h-10 place-content-center sm:border-s",
+                })}
+              >
                 <div className="flex h-full flex-col">
                   <StepperButton slot="increment" emblemType="chevron" className="h-5 px-1" />
                   <div
@@ -72,8 +76,10 @@ const NumberField = ({
                   />
                   <StepperButton slot="decrement" emblemType="chevron" className="h-5 px-1" />
                 </div>
-              )}
-            </div>
+              </div>
+            ) : (
+              <StepperButton className="border-l" slot="increment" />
+            )}
           </>
         )}
       </FieldGroup>
@@ -111,7 +117,7 @@ const StepperButton = ({
     <Button
       className={composeTailwindRenderProps(
         className,
-        "h-10 cursor-default pressed:bg-primary px-3 pressed:text-primary-fg text-muted-fg group-disabled:bg-secondary/70 forced-colors:group-disabled:text-[GrayText]",
+        "h-10 cursor-default pressed:text-primary-fg text-muted-fg group-disabled:bg-secondary/70 sm:pressed:bg-primary forced-colors:group-disabled:text-[GrayText]",
       )}
       slot={slot}
       {...props}
