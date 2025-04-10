@@ -12,7 +12,7 @@ import { twMerge } from "tailwind-merge"
 const resources = [
   {
     name: "Next.js Starter Kit",
-    url: "https://next.intentui.com/",
+    url: "https://github.com/intentuilabs/next.js",
     description:
       "A Next.js starter kit with Intent installed. You don't need to set up anything, just run clone it and you're good to go!",
     label: "Starter Kit",
@@ -38,7 +38,7 @@ const resources = [
   },
   {
     name: "Tanstack Router",
-    url: "https://tanstack-router.intentui.com/",
+    url: "https://github.com/intentuilabs/tanstack-router",
     description: "Tanstack Router is a powerful and flexible router for React applications.",
     label: "Starter Kit",
   },
