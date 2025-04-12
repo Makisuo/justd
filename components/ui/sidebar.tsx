@@ -385,7 +385,7 @@ const SidebarSection = ({
     <div
       data-sidebar-section="true"
       className={twMerge(
-        "col-span-full flex flex-col gap-y-0.5 in-data-[sidebar-intent=fleet]:px-0 px-2 **:data-sidebar-section:**:gap-y-0 **:data-sidebar-section:pr-0",
+        "col-span-full flex flex-col gap-y-0.5 px-0 **:data-sidebar-section:**:gap-y-0 **:data-sidebar-section:pr-0",
         className,
       )}
       {...props}
@@ -580,7 +580,7 @@ const SidebarDisclosure = ({ className, ref, ...props }: SidebarDisclosureProps)
       className={composeTailwindRenderProps(
         className,
         twMerge(
-          "in-data-[sidebar-intent=fleet]:px-0 px-2.5",
+          "px-0",
           state !== "collapsed" && "col-span-full",
         ),
       )}
