@@ -7,10 +7,10 @@ import AppSidebar from "./app-sidebar"
 
 export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <SidebarProvider className="[--sidebar-width:19rem]">
+    <SidebarProvider className="[--sidebar-width:24rem]">
       <AppSidebar closeButton={false} intent="fleet" />
       <SidebarInset>
-        <div className="flex h-12 w-full items-center justify-between border-b bg-sidebar px-4">
+        <div className="sticky top-0 flex h-12 w-full items-center justify-between border-b bg-sidebar px-4">
           <SidebarTrigger className="-ml-2 md:hidden" />
           <div className="flex items-center">
             <IconBrandPhp className="w-8 text-indigo-500" />
