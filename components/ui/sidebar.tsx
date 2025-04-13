@@ -725,7 +725,10 @@ const SidebarLabel = ({ className, ref, ...props }: SidebarLabelProps) => {
         tabIndex={-1}
         ref={ref}
         slot="label"
-        className={twMerge("col-start-2 overflow-hidden whitespace-nowrap", className)}
+        className={twMerge(
+          "col-start-2 overflow-hidden whitespace-nowrap outline-hidden",
+          className,
+        )}
         {...props}
       >
         {props.children}
