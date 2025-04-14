@@ -385,7 +385,8 @@ const SidebarSection = ({
     <div
       data-sidebar-section="true"
       className={twMerge(
-        "col-span-full flex flex-col gap-y-0.5 px-0 **:data-sidebar-section:**:gap-y-0 **:data-sidebar-section:pr-0",
+        "col-span-full flex flex-col gap-y-0.5 **:data-sidebar-section:**:gap-y-0 **:data-sidebar-section:pr-0",
+        state === "expanded" && "px-2.5",
         className,
       )}
       {...props}
