@@ -1,26 +1,71 @@
 import fs from "node:fs"
 import path from "node:path"
 
-type RegistryItem = {
-  name: string
-  dependencies: string[] | undefined
+// Define the structure for items in the registry.json
+type RegistryJsonItem = {
+  name: string // e.g., "ui/button"
+  type: "registry:component" // Assuming all are components for now
+  title: string // e.g., "Button"
+  description: string // e.g., "Displays a button or a link that looks like a button." - Leave empty for now
+  dependencies: string[] // e.g., ["@radix-ui/react-slot"] - Leave empty for now
+  registryDependencies: string[] // e.g., ["button"] - Leave empty for now
   files: {
-    name: string
-    content: string
+    path: string // Relative path from project root, e.g., "components/ui/button.tsx"
+    type: "registry:component"
   }[]
-  type: string
-  componentPath: string
+}
+
+// Function to capitalize the first letter of a string
+const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
+
+// Function to extract external dependencies from file content
+const extractDependencies = (content: string): string[] => {
+  const importRegex = /import(?: | .* from )['"]([^'"]+)['"]/g
+  const dependencies = new Set<string>()
+  let match: RegExpExecArray | null
+
+  // Use a standard loop to avoid assignment in condition
+  while (true) {
+    match = importRegex.exec(content)
+    if (match === null) {
+      break
+    }
+    // Ensure match[1] exists and is a string before proceeding
+    const importPath = match[1]
+    if (typeof importPath !== "string") {
+      continue
+    }
+
+    // Filter out relative paths, aliases, node built-ins, and common packages
+    if (
+      !importPath.startsWith(".") &&
+      !importPath.startsWith("@/") &&
+      !importPath.startsWith("node:") &&
+      ![
+        "react",
+        "react-dom",
+        "clsx",
+        "tailwind-merge",
+        "next",
+        "@headlessui/react",
+        "embla-carousel-react",
+      ].includes(importPath) // Add more common packages if needed
+    ) {
+      dependencies.add(importPath)
+    }
+  }
+  return Array.from(dependencies).sort()
 }
 
 const generateComponentRegistry = () => {
-  const outputBaseDir = "public/registry"
-  const generatedFilePath = "__registry__/generated.ts"
+  // Removed outputBaseDir and generatedFilePath
+  const registryJsonPath = "registry.json" // Output path for the single registry file
 
   const sources = [
     { type: "ui", path: "components/ui" },
-    { type: "anatomies", path: "components/docs/anatomies" },
-    { type: "demo", path: "components/docs" },
-    { type: "blocks", path: "app/blocks" },
+    // { type: "anatomies", path: "components/docs/anatomies" }, // Excluded anatomies
+    // { type: "demo", path: "components/docs" }, // Excluded docs/demos
+    // { type: "blocks", path: "app/blocks" },
   ]
 
   const getAllFiles = (dirPath: string, arrayOfFiles: string[] = []): string[] => {
@@ -33,7 +78,8 @@ const generateComponentRegistry = () => {
       const fullPath = path.join(dirPath, file)
       if (fs.statSync(fullPath).isDirectory()) {
         getAllFiles(fullPath, arrayOfFiles)
-      } else if ([".tsx", ".css", ".json", ".ts"].some((ext) => file.endsWith(ext))) {
+        // Only include .tsx files for components
+      } else if (file.endsWith(".tsx")) {
         arrayOfFiles.push(fullPath)
       }
     }
@@ -41,7 +87,8 @@ const generateComponentRegistry = () => {
     return arrayOfFiles
   }
 
-  const registryEntries: string[] = []
+  // Initialize the array for registry.json items
+  const registryItems: RegistryJsonItem[] = []
 
   for (const { type, path: sourcePath } of sources) {
     const resolvedPath = path.resolve(sourcePath)
@@ -53,84 +100,71 @@ const generateComponentRegistry = () => {
 
     const files = getAllFiles(resolvedPath)
 
+    // Keep the filtering logic for demo components
     const filteredFiles =
       type === "demo" ? files.filter((file) => !file.includes("/anatomies/")) : files
 
     for (const filePath of filteredFiles) {
-      const componentName = path.basename(filePath, ".tsx")
+      // Extract component name (e.g., "button" from "button.tsx")
+      const componentBaseName = path.basename(filePath, ".tsx")
+      // Read file content to parse imports
       const fileContent = fs.readFileSync(filePath, "utf-8")
 
       const relativePath = path.relative(process.cwd(), filePath).replace(/\\/g, "/")
       const relativeKey = path.relative(sourcePath, filePath).replace(/\\/g, "/")
-      const key = `${type}/${relativeKey.replace(".tsx", "")}`
+      // Construct the unique name key (e.g., "ui/button")
+      const nameKey = `${relativeKey.replace(".tsx", "")}`
 
-      const registryItem: RegistryItem = {
-        name: componentName,
-        dependencies: undefined,
+      // Extract dependencies
+      const dependencies = extractDependencies(fileContent)
+
+      // Construct the item for registry.json
+      const registryItem: RegistryJsonItem = {
+        name: nameKey,
+        type: "registry:component", // Hardcoded type
+        title: capitalize(componentBaseName.replace(/-/g, " ")), // Simple title generation
+        description: "", // Keep description empty for now
+        dependencies: dependencies, // Add extracted dependencies
+        registryDependencies: [], // Keep registryDependencies empty for now
         files: [
           {
-            name: path.basename(filePath),
-            content: fileContent,
+            path: relativePath,
+            type: "registry:component", // Hardcoded type for the file
           },
         ],
-        type: `components:${type}`,
-        componentPath: relativePath,
       }
 
-      const jsonOutputPath = path.join(outputBaseDir, `${key}.json`)
-      const jsonDir = path.dirname(jsonOutputPath)
-      if (!fs.existsSync(jsonDir)) {
-        fs.mkdirSync(jsonDir, { recursive: true })
-      }
-      fs.writeFileSync(jsonOutputPath, JSON.stringify(registryItem, null, 2))
+      // Add the item to the list
+      registryItems.push(registryItem)
 
-      if (type !== "anatomies") {
-        registryEntries.push(`
-        "${key}": {
-          name: "${componentName}",
-          type: "registry:${type}",
-          registryDependencies: undefined,
-          files: ["${relativePath}"],
-          component: React.lazy(() => import("@/${relativePath}")),
-          source: "",
-          category: "undefined",
-          subcategory: "undefined",
-          chunks: []
-        }
-      `)
-      }
+      // Removed individual JSON file writing logic
     }
   }
 
-  const generatedContent = `
-// @ts-nocheck
-// THIS FILE IS AUTO-GENERATED. DO NOT EDIT MANUALLY.
-// It is generated by the build-registry script.
+  // Removed registryEntries array and related logic
 
-import React from "react";
+  // Construct the final registry.json object
+  const registryJsonObject = {
+    $schema: "https://ui.shadcn.com/schema/registry.json",
+    name: "intentui", // Assuming this name based on the example registry.json
+    homepage: "https://intentui.com", // Assuming this homepage
+    items: registryItems,
+  }
 
-const registry = {
-  ${registryEntries.join(",\n")}
-};
-
-export default registry;
-  `
-
-  console.info("Generating registry files...")
-
+  // Start progress indication
+  console.info(`Generating ${registryJsonPath}...`)
   const loadingInterval = setInterval(() => {
     process.stdout.write(".")
   }, 500)
 
-  const generatedDir = path.dirname(generatedFilePath)
-  if (!fs.existsSync(generatedDir)) {
-    fs.mkdirSync(generatedDir, { recursive: true })
-  }
-  fs.writeFileSync(generatedFilePath, generatedContent)
+  // Write the final registry.json file
+  fs.writeFileSync(registryJsonPath, JSON.stringify(registryJsonObject, null, 2))
 
+  // Stop progress indication
   clearInterval(loadingInterval)
+  process.stdout.write("\n") // Add a newline after dots
 
-  console.info("Registry generation complete.")
+  console.info(`${registryJsonPath} generation complete.`)
 }
 
 generateComponentRegistry()
