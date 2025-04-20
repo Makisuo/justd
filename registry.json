@@ -4,36 +4,743 @@
   "homepage": "https://intentui.com",
   "items": [
     {
-      "name": "show-more",
+      "name": "avatar",
       "type": "registry:component",
-      "title": "Show more",
+      "title": "Avatar",
       "description": "",
-      "dependencies": [
-        "react-aria-components",
-        "tailwind-variants"
-      ],
+      "dependencies": [],
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/show-more.tsx",
+          "path": "components/ui/avatar.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "tag-field",
+      "name": "badge",
       "type": "registry:component",
-      "title": "Tag field",
+      "title": "Badge",
       "description": "",
       "dependencies": [
-        "react-aria-components",
-        "react-stately",
         "tailwind-variants"
       ],
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/tag-field.tsx",
+          "path": "components/ui/badge.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumbs",
+      "type": "registry:component",
+      "title": "Breadcrumbs",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "react-aria-components"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/breadcrumbs.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:component",
+      "title": "Button",
+      "description": "",
+      "dependencies": [
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:component",
+      "title": "Calendar",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "@internationalized/date",
+        "@react-aria/i18n",
+        "@react-stately/calendar",
+        "react-aria-components"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/calendar.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:component",
+      "title": "Card",
+      "description": "",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:component",
+      "title": "Carousel",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/carousel.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "chart",
+      "type": "registry:component",
+      "title": "Chart",
+      "description": "",
+      "dependencies": [
+        "recharts"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/chart.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:component",
+      "title": "Checkbox",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/checkbox.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "choicebox",
+      "type": "registry:component",
+      "title": "Choicebox",
+      "description": "",
+      "dependencies": [
+        "react-aria-components",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/choicebox.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "color-area",
+      "type": "registry:component",
+      "title": "Color area",
+      "description": "",
+      "dependencies": [
+        "react-aria-components"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/color-area.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "color-field",
+      "type": "registry:component",
+      "title": "Color field",
+      "description": "",
+      "dependencies": [
+        "react-aria-components"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/color-field.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "color-picker",
+      "type": "registry:component",
+      "title": "Color picker",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "@react-stately/color"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/color-picker.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "color-slider",
+      "type": "registry:component",
+      "title": "Color slider",
+      "description": "",
+      "dependencies": [
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/color-slider.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "color-swatch",
+      "type": "registry:component",
+      "title": "Color swatch",
+      "description": "",
+      "dependencies": [
+        "@react-stately/color",
+        "react-aria-components"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/color-swatch.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "color-swatch-picker",
+      "type": "registry:component",
+      "title": "Color swatch picker",
+      "description": "",
+      "dependencies": [
+        "react-aria-components"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/color-swatch-picker.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "color-thumb",
+      "type": "registry:component",
+      "title": "Color thumb",
+      "description": "",
+      "dependencies": [
+        "react-aria-components",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/color-thumb.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "color-wheel",
+      "type": "registry:component",
+      "title": "Color wheel",
+      "description": "",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/color-wheel.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "combo-box",
+      "type": "registry:component",
+      "title": "Combo box",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/combo-box.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "command-menu",
+      "type": "registry:component",
+      "title": "Command menu",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/command-menu.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "container",
+      "type": "registry:component",
+      "title": "Container",
+      "description": "",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/container.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:component",
+      "title": "Context menu",
+      "description": "",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/context-menu.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "date-field",
+      "type": "registry:component",
+      "title": "Date field",
+      "description": "",
+      "dependencies": [
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/date-field.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:component",
+      "title": "Date picker",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "@internationalized/date"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/date-picker.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "date-range-picker",
+      "type": "registry:component",
+      "title": "Date range picker",
+      "description": "",
+      "dependencies": [
+        "@internationalized/date",
+        "@react-types/overlays"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/date-range-picker.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "description-list",
+      "type": "registry:component",
+      "title": "Description list",
+      "description": "",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/description-list.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:component",
+      "title": "Dialog",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "react-aria-components"
+      ],
+      "registryDependencies": [
+        "primitive"
+      ],
+      "files": [
+        {
+          "path": "components/ui/dialog.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "disclosure",
+      "type": "registry:component",
+      "title": "Disclosure",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/disclosure.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:component",
+      "title": "Drawer",
+      "description": "",
+      "dependencies": [
+        "motion/react",
+        "react-aria-components"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/drawer.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "drop-zone",
+      "type": "registry:component",
+      "title": "Drop zone",
+      "description": "",
+      "dependencies": [
+        "react-aria-components",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/drop-zone.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "dropdown",
+      "type": "registry:component",
+      "title": "Dropdown",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/dropdown.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:component",
+      "title": "Field",
+      "description": "",
+      "dependencies": [
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/field.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "file-trigger",
+      "type": "registry:component",
+      "title": "File trigger",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/file-trigger.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "form",
+      "type": "registry:component",
+      "title": "Form",
+      "description": "",
+      "dependencies": [
+        "react-aria-components"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "grid-list",
+      "type": "registry:component",
+      "title": "Grid list",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "react-aria-components",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/grid-list.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "heading",
+      "type": "registry:component",
+      "title": "Heading",
+      "description": "",
+      "dependencies": [
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/heading.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:component",
+      "title": "Input otp",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "input-otp"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/input-otp.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "keyboard",
+      "type": "registry:component",
+      "title": "Keyboard",
+      "description": "",
+      "dependencies": [
+        "react-aria-components"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/keyboard.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "link",
+      "type": "registry:component",
+      "title": "Link",
+      "description": "",
+      "dependencies": [
+        "react-aria-components"
+      ],
+      "registryDependencies": [
+        "primitive"
+      ],
+      "files": [
+        {
+          "path": "components/ui/link.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "list-box",
+      "type": "registry:component",
+      "title": "List box",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons"
+      ],
+      "registryDependencies": [
+        "primitive"
+      ],
+      "files": [
+        {
+          "path": "components/ui/list-box.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "loader",
+      "type": "registry:component",
+      "title": "Loader",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "react-aria-components",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/loader.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "menu",
+      "type": "registry:component",
+      "title": "Menu",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/menu.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "meter",
+      "type": "registry:component",
+      "title": "Meter",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "motion/react"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/meter.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "modal",
+      "type": "registry:component",
+      "title": "Modal",
+      "description": "",
+      "dependencies": [
+        "react-aria-components",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/modal.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "multiple-select",
+      "type": "registry:component",
+      "title": "Multiple select",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "react-aria",
+        "react-aria-components",
+        "react-stately"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/multiple-select.tsx",
           "type": "registry:component"
         }
       ]
@@ -75,50 +782,18 @@
       ]
     },
     {
-      "name": "keyboard",
+      "name": "number-field",
       "type": "registry:component",
-      "title": "Keyboard",
+      "title": "Number field",
       "description": "",
       "dependencies": [
-        "react-aria-components"
+        "@intentui/icons",
+        "tailwind-variants"
       ],
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/keyboard.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "date-range-picker",
-      "type": "registry:component",
-      "title": "Date range picker",
-      "description": "",
-      "dependencies": [
-        "@internationalized/date",
-        "@react-types/overlays"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/date-range-picker.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "list-box",
-      "type": "registry:component",
-      "title": "List box",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/list-box.tsx",
+          "path": "components/ui/number-field.tsx",
           "type": "registry:component"
         }
       ]
@@ -131,74 +806,12 @@
       "dependencies": [
         "react-aria-components"
       ],
-      "registryDependencies": [],
+      "registryDependencies": [
+        "primitive"
+      ],
       "files": [
         {
           "path": "components/ui/pagination.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "link",
-      "type": "registry:component",
-      "title": "Link",
-      "description": "",
-      "dependencies": [
-        "react-aria-components"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/link.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "tabs",
-      "type": "registry:component",
-      "title": "Tabs",
-      "description": "",
-      "dependencies": [
-        "motion/react",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/tabs.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "card",
-      "type": "registry:component",
-      "title": "Card",
-      "description": "",
-      "dependencies": [],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/card.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "slider",
-      "type": "registry:component",
-      "title": "Slider",
-      "description": "",
-      "dependencies": [
-        "react-aria-components",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/slider.tsx",
           "type": "registry:component"
         }
       ]
@@ -215,74 +828,6 @@
       "files": [
         {
           "path": "components/ui/popover.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "text-field",
-      "type": "registry:component",
-      "title": "Text field",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "react-aria-components"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/text-field.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "loader",
-      "type": "registry:component",
-      "title": "Loader",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "react-aria-components",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/loader.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "radio",
-      "type": "registry:component",
-      "title": "Radio",
-      "description": "",
-      "dependencies": [
-        "react-aria-components",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/radio.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "date-field",
-      "type": "registry:component",
-      "title": "Date field",
-      "description": "",
-      "dependencies": [
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/date-field.tsx",
           "type": "registry:component"
         }
       ]
@@ -305,615 +850,6 @@
       ]
     },
     {
-      "name": "visually-hidden",
-      "type": "registry:component",
-      "title": "Visually hidden",
-      "description": "",
-      "dependencies": [
-        "react-aria"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/visually-hidden.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "date-picker",
-      "type": "registry:component",
-      "title": "Date picker",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "@internationalized/date"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/date-picker.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "disclosure",
-      "type": "registry:component",
-      "title": "Disclosure",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/disclosure.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "container",
-      "type": "registry:component",
-      "title": "Container",
-      "description": "",
-      "dependencies": [],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/container.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "input-otp",
-      "type": "registry:component",
-      "title": "Input otp",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "input-otp"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/input-otp.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "chart",
-      "type": "registry:component",
-      "title": "Chart",
-      "description": "",
-      "dependencies": [
-        "recharts"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/chart.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "tag-group",
-      "type": "registry:component",
-      "title": "Tag group",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/tag-group.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "sheet",
-      "type": "registry:component",
-      "title": "Sheet",
-      "description": "",
-      "dependencies": [
-        "react-aria-components",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/sheet.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "field",
-      "type": "registry:component",
-      "title": "Field",
-      "description": "",
-      "dependencies": [
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/field.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "drop-zone",
-      "type": "registry:component",
-      "title": "Drop zone",
-      "description": "",
-      "dependencies": [
-        "react-aria-components",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/drop-zone.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "toolbar",
-      "type": "registry:component",
-      "title": "Toolbar",
-      "description": "",
-      "dependencies": [
-        "react-aria-components"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/toolbar.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "meter",
-      "type": "registry:component",
-      "title": "Meter",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "motion/react"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/meter.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "color-slider",
-      "type": "registry:component",
-      "title": "Color slider",
-      "description": "",
-      "dependencies": [
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/color-slider.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "scroll-area",
-      "type": "registry:component",
-      "title": "Scroll area",
-      "description": "",
-      "dependencies": [
-        "@radix-ui/react-scroll-area"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/scroll-area.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "time-field",
-      "type": "registry:component",
-      "title": "Time field",
-      "description": "",
-      "dependencies": [],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/time-field.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "breadcrumbs",
-      "type": "registry:component",
-      "title": "Breadcrumbs",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "react-aria-components"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/breadcrumbs.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "color-thumb",
-      "type": "registry:component",
-      "title": "Color thumb",
-      "description": "",
-      "dependencies": [
-        "react-aria-components",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/color-thumb.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "drawer",
-      "type": "registry:component",
-      "title": "Drawer",
-      "description": "",
-      "dependencies": [
-        "motion/react",
-        "react-aria-components"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/drawer.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "tooltip",
-      "type": "registry:component",
-      "title": "Tooltip",
-      "description": "",
-      "dependencies": [
-        "react-aria-components",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/tooltip.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "file-trigger",
-      "type": "registry:component",
-      "title": "File trigger",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/file-trigger.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "heading",
-      "type": "registry:component",
-      "title": "Heading",
-      "description": "",
-      "dependencies": [
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/heading.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "color-swatch-picker",
-      "type": "registry:component",
-      "title": "Color swatch picker",
-      "description": "",
-      "dependencies": [
-        "react-aria-components"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/color-swatch-picker.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "choicebox",
-      "type": "registry:component",
-      "title": "Choicebox",
-      "description": "",
-      "dependencies": [
-        "react-aria-components",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/choicebox.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "switch",
-      "type": "registry:component",
-      "title": "Switch",
-      "description": "",
-      "dependencies": [],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/switch.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "description-list",
-      "type": "registry:component",
-      "title": "Description list",
-      "description": "",
-      "dependencies": [],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/description-list.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "calendar",
-      "type": "registry:component",
-      "title": "Calendar",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "@internationalized/date",
-        "@react-aria/i18n",
-        "@react-stately/calendar",
-        "react-aria-components"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/calendar.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "tree",
-      "type": "registry:component",
-      "title": "Tree",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "react-aria-components",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/tree.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "grid-list",
-      "type": "registry:component",
-      "title": "Grid list",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "react-aria-components",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/grid-list.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "multiple-select",
-      "type": "registry:component",
-      "title": "Multiple select",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "react-aria",
-        "react-aria-components",
-        "react-stately"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/multiple-select.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "dropdown",
-      "type": "registry:component",
-      "title": "Dropdown",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/dropdown.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "avatar",
-      "type": "registry:component",
-      "title": "Avatar",
-      "description": "",
-      "dependencies": [],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/avatar.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "color-swatch",
-      "type": "registry:component",
-      "title": "Color swatch",
-      "description": "",
-      "dependencies": [
-        "@react-stately/color",
-        "react-aria-components"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/color-swatch.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "range-calendar",
-      "type": "registry:component",
-      "title": "Range calendar",
-      "description": "",
-      "dependencies": [
-        "@internationalized/date"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/range-calendar.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "combo-box",
-      "type": "registry:component",
-      "title": "Combo box",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/combo-box.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "search-field",
-      "type": "registry:component",
-      "title": "Search field",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/search-field.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "dialog",
-      "type": "registry:component",
-      "title": "Dialog",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "react-aria-components"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/dialog.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "menu",
-      "type": "registry:component",
-      "title": "Menu",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/menu.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
       "name": "progress-bar",
       "type": "registry:component",
       "title": "Progress bar",
@@ -925,106 +861,6 @@
       "files": [
         {
           "path": "components/ui/progress-bar.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "badge",
-      "type": "registry:component",
-      "title": "Badge",
-      "description": "",
-      "dependencies": [
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/badge.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "color-picker",
-      "type": "registry:component",
-      "title": "Color picker",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "@react-stately/color"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/color-picker.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "number-field",
-      "type": "registry:component",
-      "title": "Number field",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/number-field.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "sidebar",
-      "type": "registry:component",
-      "title": "Sidebar",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/sidebar.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "table",
-      "type": "registry:component",
-      "title": "Table",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/table.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "separator",
-      "type": "registry:component",
-      "title": "Separator",
-      "description": "",
-      "dependencies": [
-        "react-aria-components"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/separator.tsx",
           "type": "registry:component"
         }
       ]
@@ -1046,39 +882,9 @@
       ]
     },
     {
-      "name": "color-wheel",
+      "name": "radio",
       "type": "registry:component",
-      "title": "Color wheel",
-      "description": "",
-      "dependencies": [],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/color-wheel.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "button",
-      "type": "registry:component",
-      "title": "Button",
-      "description": "",
-      "dependencies": [
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/button.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "toggle",
-      "type": "registry:component",
-      "title": "Toggle",
+      "title": "Radio",
       "description": "",
       "dependencies": [
         "react-aria-components",
@@ -1087,32 +893,47 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/toggle.tsx",
+          "path": "components/ui/radio.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "modal",
+      "name": "range-calendar",
       "type": "registry:component",
-      "title": "Modal",
+      "title": "Range calendar",
       "description": "",
       "dependencies": [
-        "react-aria-components",
-        "tailwind-variants"
+        "@internationalized/date"
       ],
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/modal.tsx",
+          "path": "components/ui/range-calendar.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "command-menu",
+      "name": "scroll-area",
       "type": "registry:component",
-      "title": "Command menu",
+      "title": "Scroll area",
+      "description": "",
+      "dependencies": [
+        "@radix-ui/react-scroll-area"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/scroll-area.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "search-field",
+      "type": "registry:component",
+      "title": "Search field",
       "description": "",
       "dependencies": [
         "@intentui/icons"
@@ -1120,40 +941,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/command-menu.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "toast",
-      "type": "registry:component",
-      "title": "Toast",
-      "description": "",
-      "dependencies": [
-        "sonner"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/toast.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "checkbox",
-      "type": "registry:component",
-      "title": "Checkbox",
-      "description": "",
-      "dependencies": [
-        "@intentui/icons",
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/checkbox.tsx",
+          "path": "components/ui/search-field.tsx",
           "type": "registry:component"
         }
       ]
@@ -1176,25 +964,9 @@
       ]
     },
     {
-      "name": "textarea",
+      "name": "separator",
       "type": "registry:component",
-      "title": "Textarea",
-      "description": "",
-      "dependencies": [
-        "tailwind-variants"
-      ],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "components/ui/textarea.tsx",
-          "type": "registry:component"
-        }
-      ]
-    },
-    {
-      "name": "color-area",
-      "type": "registry:component",
-      "title": "Color area",
+      "title": "Separator",
       "description": "",
       "dependencies": [
         "react-aria-components"
@@ -1202,7 +974,58 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/color-area.tsx",
+          "path": "components/ui/separator.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:component",
+      "title": "Sheet",
+      "description": "",
+      "dependencies": [
+        "react-aria-components",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/sheet.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "show-more",
+      "type": "registry:component",
+      "title": "Show more",
+      "description": "",
+      "dependencies": [
+        "react-aria-components",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/show-more.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:component",
+      "title": "Sidebar",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/sidebar.tsx",
           "type": "registry:component"
         }
       ]
@@ -1222,23 +1045,193 @@
       ]
     },
     {
-      "name": "context-menu",
+      "name": "slider",
       "type": "registry:component",
-      "title": "Context menu",
+      "title": "Slider",
+      "description": "",
+      "dependencies": [
+        "react-aria-components",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "primitive"
+      ],
+      "files": [
+        {
+          "path": "components/ui/slider.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:component",
+      "title": "Switch",
       "description": "",
       "dependencies": [],
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/context-menu.tsx",
+          "path": "components/ui/switch.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "color-field",
+      "name": "table",
       "type": "registry:component",
-      "title": "Color field",
+      "title": "Table",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "primitive"
+      ],
+      "files": [
+        {
+          "path": "components/ui/table.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:component",
+      "title": "Tabs",
+      "description": "",
+      "dependencies": [
+        "motion/react",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/tabs.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "tag-field",
+      "type": "registry:component",
+      "title": "Tag field",
+      "description": "",
+      "dependencies": [
+        "react-aria-components",
+        "react-stately",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/tag-field.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "tag-group",
+      "type": "registry:component",
+      "title": "Tag group",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/tag-group.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "text-field",
+      "type": "registry:component",
+      "title": "Text field",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons",
+        "react-aria-components"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/text-field.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:component",
+      "title": "Textarea",
+      "description": "",
+      "dependencies": [
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/textarea.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "time-field",
+      "type": "registry:component",
+      "title": "Time field",
+      "description": "",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/time-field.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:component",
+      "title": "Toast",
+      "description": "",
+      "dependencies": [
+        "sonner"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/toast.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:component",
+      "title": "Toggle",
+      "description": "",
+      "dependencies": [
+        "react-aria-components",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/toggle.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "toolbar",
+      "type": "registry:component",
+      "title": "Toolbar",
       "description": "",
       "dependencies": [
         "react-aria-components"
@@ -1246,39 +1239,60 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/color-field.tsx",
+          "path": "components/ui/toolbar.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "form",
+      "name": "tooltip",
       "type": "registry:component",
-      "title": "Form",
+      "title": "Tooltip",
       "description": "",
       "dependencies": [
-        "react-aria-components"
+        "react-aria-components",
+        "tailwind-variants"
       ],
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/form.tsx",
+          "path": "components/ui/tooltip.tsx",
           "type": "registry:component"
         }
       ]
     },
     {
-      "name": "carousel",
+      "name": "tree",
       "type": "registry:component",
-      "title": "Carousel",
+      "title": "Tree",
       "description": "",
       "dependencies": [
-        "@intentui/icons"
+        "@intentui/icons",
+        "react-aria-components",
+        "tailwind-variants"
+      ],
+      "registryDependencies": [
+        "primitive"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tree.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "visually-hidden",
+      "type": "registry:component",
+      "title": "Visually hidden",
+      "description": "",
+      "dependencies": [
+        "react-aria"
       ],
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/ui/carousel.tsx",
+          "path": "components/ui/visually-hidden.tsx",
           "type": "registry:component"
         }
       ]
