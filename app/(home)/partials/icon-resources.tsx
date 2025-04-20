@@ -73,7 +73,7 @@ export function IconResources() {
   const [isCopied, setIsCopied] = useState(false)
 
   useEffect(() => {
-    let timer: NodeJS.Timeout
+    let timer: Timer
     if (isCopied) {
       timer = setTimeout(() => setIsCopied(false), 2000)
     }
