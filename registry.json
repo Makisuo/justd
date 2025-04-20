@@ -4,7 +4,254 @@
   "homepage": "https://intentui.com",
   "items": [
     {
-      "name": "avatar",
+      "name": "blocks-buttons",
+      "type": "registry:component",
+      "title": "Buttons",
+      "description": "",
+      "dependencies": [],
+      "registryDependencies": [
+        "ui-button"
+      ],
+      "files": [
+        {
+          "path": "components/blocks/buttons.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "blocks-check-radio-block",
+      "type": "registry:component",
+      "title": "Check radio block",
+      "description": "",
+      "dependencies": [],
+      "registryDependencies": [
+        "ui-checkbox",
+        "ui-radio"
+      ],
+      "files": [
+        {
+          "path": "components/blocks/check-radio-block.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "blocks-login-form",
+      "type": "registry:component",
+      "title": "Login form",
+      "description": "",
+      "dependencies": [],
+      "registryDependencies": [
+        "ui-button",
+        "ui-card",
+        "ui-checkbox",
+        "ui-text-field"
+      ],
+      "files": [
+        {
+          "path": "components/blocks/login-form.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "blocks-menus",
+      "type": "registry:component",
+      "title": "Menus",
+      "description": "",
+      "dependencies": [],
+      "registryDependencies": [
+        "ui-button",
+        "ui-menu"
+      ],
+      "files": [
+        {
+          "path": "components/blocks/menus.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "blocks-overlays",
+      "type": "registry:component",
+      "title": "Overlays",
+      "description": "",
+      "dependencies": [],
+      "registryDependencies": [
+        "ui-button",
+        "ui-modal",
+        "ui-popover"
+      ],
+      "files": [
+        {
+          "path": "components/blocks/overlays.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "blocks-slider-on-popover-block",
+      "type": "registry:component",
+      "title": "Slider on popover block",
+      "description": "",
+      "dependencies": [
+        "@intentui/icons"
+      ],
+      "registryDependencies": [
+        "ui-button",
+        "ui-field",
+        "ui-popover",
+        "ui-separator",
+        "ui-slider"
+      ],
+      "files": [
+        {
+          "path": "components/blocks/slider-on-popover-block.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "blocks-toolbar-block",
+      "type": "registry:component",
+      "title": "Toolbar block",
+      "description": "",
+      "dependencies": [],
+      "registryDependencies": [
+        "blocks-slider-on-popover-block",
+        "ui-toolbar"
+      ],
+      "files": [
+        {
+          "path": "components/blocks/toolbar-block.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "extends": "none",
+      "name": "index",
+      "type": "registry:style",
+      "dependencies": [
+        "tw-animate-css",
+        "tailwindcss-react-aria-components"
+      ],
+      "registryDependencies": [],
+      "cssVars": {
+        "theme": {
+          "font-sans": "\"Inter\", ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+          "font-mono": "\"Geist Mono\", 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '\"Liberation Mono\"', '\"Courier New\"', 'monospace'",
+          "color-border": "var(--border)",
+          "color-input": "var(--input)",
+          "color-ring": "var(--ring)",
+          "color-bg": "var(--bg)",
+          "color-fg": "var(--fg)",
+          "color-primary": "var(--primary)",
+          "color-primary-fg": "var(--primary-fg)",
+          "color-secondary": "var(--secondary)",
+          "color-secondary-fg": "var(--secondary-fg)",
+          "color-accent": "var(--accent)",
+          "color-accent-fg": "var(--accent-fg)",
+          "color-success": "var(--success)",
+          "color-success-fg": "var(--success-fg)",
+          "color-danger": "var(--danger)",
+          "color-danger-fg": "var(--danger-fg)",
+          "color-warning": "var(--warning)",
+          "color-warning-fg": "var(--warning-fg)",
+          "color-muted": "var(--muted)",
+          "color-muted-fg": "var(--muted-fg)",
+          "color-overlay": "var(--overlay)",
+          "color-overlay-fg": "var(--overlay-fg)",
+          "color-navbar": "var(--navbar)",
+          "color-navbar-fg": "var(--navbar-fg)",
+          "color-sidebar": "var(--sidebar)",
+          "color-sidebar-fg": "var(--sidebar-fg)",
+          "color-chart-1": "var(--chart-1)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-5": "var(--chart-5)"
+        },
+        "light": {
+          "bg": "var(--color-white)",
+          "fg": "var(--color-gray-950)",
+          "primary": "var(--color-blue-600)",
+          "primary-fg": "var(--color-white)",
+          "secondary": "var(--color-gray-100)",
+          "secondary-fg": "var(--color-gray-950)",
+          "overlay": "var(--color-white)",
+          "overlay-fg": "var(--color-gray-950)",
+          "accent": "var(--color-blue-600)",
+          "accent-fg": "var(--color-white)",
+          "muted": "var(--color-gray-100)",
+          "muted-fg": "var(--color-gray-600)",
+          "success": "var(--color-emerald-600)",
+          "success-fg": "var(--color-white)",
+          "warning": "var(--color-amber-400)",
+          "warning-fg": "var(--color-amber-950)",
+          "danger": "var(--color-red-600)",
+          "danger-fg": "var(--color-red-50)",
+          "border": "var(--color-gray-200)",
+          "input": "var(--color-gray-300)",
+          "ring": "var(--color-blue-600)",
+          "navbar": "var(--color-gray-50)",
+          "navbar-fg": "var(--color-gray-950)",
+          "sidebar": "var(--color-gray-50)",
+          "sidebar-fg": "var(--color-gray-950)",
+          "chart-1": "var(--color-blue-600)",
+          "chart-2": "var(--color-blue-400)",
+          "chart-3": "var(--color-blue-300)",
+          "chart-4": "var(--color-blue-200)",
+          "chart-5": "var(--color-blue-100)",
+          "radius-lg": "0.5rem",
+          "radius-xs": "calc(var(--radius-lg) * 0.5)",
+          "radius-sm": "calc(var(--radius-lg) * 0.75)",
+          "radius-md": "calc(var(--radius-lg) * 0.9)",
+          "radius-xl": "calc(var(--radius-lg) * 1.25)",
+          "radius-2xl": "calc(var(--radius-lg) * 1.5)",
+          "radius-3xl": "calc(var(--radius-lg) * 2)",
+          "radius-4xl": "calc(var(--radius-lg) * 3)"
+        },
+        "dark": {
+          "bg": "var(--color-gray-950)",
+          "fg": "var(--color-gray-50)",
+          "primary": "var(--color-blue-600)",
+          "primary-fg": "var(--color-white)",
+          "secondary": "oklch(0.248 0.033 256.848)",
+          "secondary-fg": "var(--color-gray-50)",
+          "accent": "var(--color-blue-600)",
+          "accent-fg": "var(--color-white)",
+          "muted": "var(--color-gray-900)",
+          "muted-fg": "var(--color-gray-400)",
+          "overlay": "oklch(0.170 0.034 264.665)",
+          "overlay-fg": "var(--color-gray-50)",
+          "success": "var(--color-emerald-600)",
+          "success-fg": "var(--color-white)",
+          "warning": "var(--color-amber-400)",
+          "warning-fg": "var(--color-amber-950)",
+          "danger": "var(--color-red-600)",
+          "danger-fg": "var(--color-red-50)",
+          "border": "oklch(0.273 0.034 259.733)",
+          "input": "oklch(0.293 0.034 259.733)",
+          "ring": "var(--color-blue-600)",
+          "navbar": "oklch(0.170 0.034 264.665)",
+          "navbar-fg": "var(--color-gray-50)",
+          "sidebar": "oklch(0.160 0.034 264.665)",
+          "sidebar-fg": "var(--color-gray-50)",
+          "chart-1": "var(--color-blue-700)",
+          "chart-2": "var(--color-blue-500)",
+          "chart-3": "var(--color-blue-400)",
+          "chart-4": "var(--color-blue-300)",
+          "chart-5": "var(--color-blue-200)"
+        }
+      },
+      "files": [],
+      "title": "Base style",
+      "description": ""
+    },
+    {
+      "name": "ui-avatar",
       "type": "registry:component",
       "title": "Avatar",
       "description": "",
@@ -18,7 +265,7 @@
       ]
     },
     {
-      "name": "badge",
+      "name": "ui-badge",
       "type": "registry:component",
       "title": "Badge",
       "description": "",
@@ -34,7 +281,7 @@
       ]
     },
     {
-      "name": "breadcrumbs",
+      "name": "ui-breadcrumbs",
       "type": "registry:component",
       "title": "Breadcrumbs",
       "description": "",
@@ -51,7 +298,7 @@
       ]
     },
     {
-      "name": "button",
+      "name": "ui-button",
       "type": "registry:component",
       "title": "Button",
       "description": "",
@@ -67,7 +314,7 @@
       ]
     },
     {
-      "name": "calendar",
+      "name": "ui-calendar",
       "type": "registry:component",
       "title": "Calendar",
       "description": "",
@@ -87,7 +334,7 @@
       ]
     },
     {
-      "name": "card",
+      "name": "ui-card",
       "type": "registry:component",
       "title": "Card",
       "description": "",
@@ -101,7 +348,7 @@
       ]
     },
     {
-      "name": "carousel",
+      "name": "ui-carousel",
       "type": "registry:component",
       "title": "Carousel",
       "description": "",
@@ -117,7 +364,7 @@
       ]
     },
     {
-      "name": "chart",
+      "name": "ui-chart",
       "type": "registry:component",
       "title": "Chart",
       "description": "",
@@ -133,7 +380,7 @@
       ]
     },
     {
-      "name": "checkbox",
+      "name": "ui-checkbox",
       "type": "registry:component",
       "title": "Checkbox",
       "description": "",
@@ -150,7 +397,7 @@
       ]
     },
     {
-      "name": "choicebox",
+      "name": "ui-choicebox",
       "type": "registry:component",
       "title": "Choicebox",
       "description": "",
@@ -167,7 +414,7 @@
       ]
     },
     {
-      "name": "color-area",
+      "name": "ui-color-area",
       "type": "registry:component",
       "title": "Color area",
       "description": "",
@@ -183,7 +430,7 @@
       ]
     },
     {
-      "name": "color-field",
+      "name": "ui-color-field",
       "type": "registry:component",
       "title": "Color field",
       "description": "",
@@ -199,7 +446,7 @@
       ]
     },
     {
-      "name": "color-picker",
+      "name": "ui-color-picker",
       "type": "registry:component",
       "title": "Color picker",
       "description": "",
@@ -216,7 +463,7 @@
       ]
     },
     {
-      "name": "color-slider",
+      "name": "ui-color-slider",
       "type": "registry:component",
       "title": "Color slider",
       "description": "",
@@ -232,7 +479,7 @@
       ]
     },
     {
-      "name": "color-swatch",
+      "name": "ui-color-swatch",
       "type": "registry:component",
       "title": "Color swatch",
       "description": "",
@@ -249,7 +496,7 @@
       ]
     },
     {
-      "name": "color-swatch-picker",
+      "name": "ui-color-swatch-picker",
       "type": "registry:component",
       "title": "Color swatch picker",
       "description": "",
@@ -265,7 +512,7 @@
       ]
     },
     {
-      "name": "color-thumb",
+      "name": "ui-color-thumb",
       "type": "registry:component",
       "title": "Color thumb",
       "description": "",
@@ -282,7 +529,7 @@
       ]
     },
     {
-      "name": "color-wheel",
+      "name": "ui-color-wheel",
       "type": "registry:component",
       "title": "Color wheel",
       "description": "",
@@ -296,7 +543,7 @@
       ]
     },
     {
-      "name": "combo-box",
+      "name": "ui-combo-box",
       "type": "registry:component",
       "title": "Combo box",
       "description": "",
@@ -312,7 +559,7 @@
       ]
     },
     {
-      "name": "command-menu",
+      "name": "ui-command-menu",
       "type": "registry:component",
       "title": "Command menu",
       "description": "",
@@ -328,7 +575,7 @@
       ]
     },
     {
-      "name": "container",
+      "name": "ui-container",
       "type": "registry:component",
       "title": "Container",
       "description": "",
@@ -342,7 +589,7 @@
       ]
     },
     {
-      "name": "context-menu",
+      "name": "ui-context-menu",
       "type": "registry:component",
       "title": "Context menu",
       "description": "",
@@ -356,7 +603,7 @@
       ]
     },
     {
-      "name": "date-field",
+      "name": "ui-date-field",
       "type": "registry:component",
       "title": "Date field",
       "description": "",
@@ -372,7 +619,7 @@
       ]
     },
     {
-      "name": "date-picker",
+      "name": "ui-date-picker",
       "type": "registry:component",
       "title": "Date picker",
       "description": "",
@@ -389,7 +636,7 @@
       ]
     },
     {
-      "name": "date-range-picker",
+      "name": "ui-date-range-picker",
       "type": "registry:component",
       "title": "Date range picker",
       "description": "",
@@ -406,7 +653,7 @@
       ]
     },
     {
-      "name": "description-list",
+      "name": "ui-description-list",
       "type": "registry:component",
       "title": "Description list",
       "description": "",
@@ -420,7 +667,7 @@
       ]
     },
     {
-      "name": "dialog",
+      "name": "ui-dialog",
       "type": "registry:component",
       "title": "Dialog",
       "description": "",
@@ -429,7 +676,7 @@
         "react-aria-components"
       ],
       "registryDependencies": [
-        "primitive"
+        "ui-primitive"
       ],
       "files": [
         {
@@ -439,7 +686,7 @@
       ]
     },
     {
-      "name": "disclosure",
+      "name": "ui-disclosure",
       "type": "registry:component",
       "title": "Disclosure",
       "description": "",
@@ -455,7 +702,7 @@
       ]
     },
     {
-      "name": "drawer",
+      "name": "ui-drawer",
       "type": "registry:component",
       "title": "Drawer",
       "description": "",
@@ -472,7 +719,7 @@
       ]
     },
     {
-      "name": "drop-zone",
+      "name": "ui-drop-zone",
       "type": "registry:component",
       "title": "Drop zone",
       "description": "",
@@ -489,7 +736,7 @@
       ]
     },
     {
-      "name": "dropdown",
+      "name": "ui-dropdown",
       "type": "registry:component",
       "title": "Dropdown",
       "description": "",
@@ -506,7 +753,7 @@
       ]
     },
     {
-      "name": "field",
+      "name": "ui-field",
       "type": "registry:component",
       "title": "Field",
       "description": "",
@@ -522,7 +769,7 @@
       ]
     },
     {
-      "name": "file-trigger",
+      "name": "ui-file-trigger",
       "type": "registry:component",
       "title": "File trigger",
       "description": "",
@@ -539,7 +786,7 @@
       ]
     },
     {
-      "name": "form",
+      "name": "ui-form",
       "type": "registry:component",
       "title": "Form",
       "description": "",
@@ -555,7 +802,7 @@
       ]
     },
     {
-      "name": "grid-list",
+      "name": "ui-grid-list",
       "type": "registry:component",
       "title": "Grid list",
       "description": "",
@@ -573,7 +820,7 @@
       ]
     },
     {
-      "name": "heading",
+      "name": "ui-heading",
       "type": "registry:component",
       "title": "Heading",
       "description": "",
@@ -589,7 +836,7 @@
       ]
     },
     {
-      "name": "input-otp",
+      "name": "ui-input-otp",
       "type": "registry:component",
       "title": "Input otp",
       "description": "",
@@ -606,7 +853,7 @@
       ]
     },
     {
-      "name": "keyboard",
+      "name": "ui-keyboard",
       "type": "registry:component",
       "title": "Keyboard",
       "description": "",
@@ -622,7 +869,7 @@
       ]
     },
     {
-      "name": "link",
+      "name": "ui-link",
       "type": "registry:component",
       "title": "Link",
       "description": "",
@@ -630,7 +877,7 @@
         "react-aria-components"
       ],
       "registryDependencies": [
-        "primitive"
+        "ui-primitive"
       ],
       "files": [
         {
@@ -640,7 +887,7 @@
       ]
     },
     {
-      "name": "list-box",
+      "name": "ui-list-box",
       "type": "registry:component",
       "title": "List box",
       "description": "",
@@ -648,7 +895,7 @@
         "@intentui/icons"
       ],
       "registryDependencies": [
-        "primitive"
+        "ui-primitive"
       ],
       "files": [
         {
@@ -658,7 +905,7 @@
       ]
     },
     {
-      "name": "loader",
+      "name": "ui-loader",
       "type": "registry:component",
       "title": "Loader",
       "description": "",
@@ -676,7 +923,7 @@
       ]
     },
     {
-      "name": "menu",
+      "name": "ui-menu",
       "type": "registry:component",
       "title": "Menu",
       "description": "",
@@ -693,7 +940,7 @@
       ]
     },
     {
-      "name": "meter",
+      "name": "ui-meter",
       "type": "registry:component",
       "title": "Meter",
       "description": "",
@@ -710,7 +957,7 @@
       ]
     },
     {
-      "name": "modal",
+      "name": "ui-modal",
       "type": "registry:component",
       "title": "Modal",
       "description": "",
@@ -727,7 +974,7 @@
       ]
     },
     {
-      "name": "multiple-select",
+      "name": "ui-multiple-select",
       "type": "registry:component",
       "title": "Multiple select",
       "description": "",
@@ -746,7 +993,7 @@
       ]
     },
     {
-      "name": "navbar",
+      "name": "ui-navbar",
       "type": "registry:component",
       "title": "Navbar",
       "description": "",
@@ -765,7 +1012,7 @@
       ]
     },
     {
-      "name": "note",
+      "name": "ui-note",
       "type": "registry:component",
       "title": "Note",
       "description": "",
@@ -782,7 +1029,7 @@
       ]
     },
     {
-      "name": "number-field",
+      "name": "ui-number-field",
       "type": "registry:component",
       "title": "Number field",
       "description": "",
@@ -799,7 +1046,7 @@
       ]
     },
     {
-      "name": "pagination",
+      "name": "ui-pagination",
       "type": "registry:component",
       "title": "Pagination",
       "description": "",
@@ -807,7 +1054,7 @@
         "react-aria-components"
       ],
       "registryDependencies": [
-        "primitive"
+        "ui-primitive"
       ],
       "files": [
         {
@@ -817,7 +1064,7 @@
       ]
     },
     {
-      "name": "popover",
+      "name": "ui-popover",
       "type": "registry:component",
       "title": "Popover",
       "description": "",
@@ -833,7 +1080,7 @@
       ]
     },
     {
-      "name": "primitive",
+      "name": "ui-primitive",
       "type": "registry:component",
       "title": "Primitive",
       "description": "",
@@ -850,7 +1097,7 @@
       ]
     },
     {
-      "name": "progress-bar",
+      "name": "ui-progress-bar",
       "type": "registry:component",
       "title": "Progress bar",
       "description": "",
@@ -866,7 +1113,7 @@
       ]
     },
     {
-      "name": "progress-circle",
+      "name": "ui-progress-circle",
       "type": "registry:component",
       "title": "Progress circle",
       "description": "",
@@ -882,7 +1129,7 @@
       ]
     },
     {
-      "name": "radio",
+      "name": "ui-radio",
       "type": "registry:component",
       "title": "Radio",
       "description": "",
@@ -899,7 +1146,7 @@
       ]
     },
     {
-      "name": "range-calendar",
+      "name": "ui-range-calendar",
       "type": "registry:component",
       "title": "Range calendar",
       "description": "",
@@ -915,7 +1162,7 @@
       ]
     },
     {
-      "name": "scroll-area",
+      "name": "ui-scroll-area",
       "type": "registry:component",
       "title": "Scroll area",
       "description": "",
@@ -931,7 +1178,7 @@
       ]
     },
     {
-      "name": "search-field",
+      "name": "ui-search-field",
       "type": "registry:component",
       "title": "Search field",
       "description": "",
@@ -947,7 +1194,7 @@
       ]
     },
     {
-      "name": "select",
+      "name": "ui-select",
       "type": "registry:component",
       "title": "Select",
       "description": "",
@@ -964,7 +1211,7 @@
       ]
     },
     {
-      "name": "separator",
+      "name": "ui-separator",
       "type": "registry:component",
       "title": "Separator",
       "description": "",
@@ -980,7 +1227,7 @@
       ]
     },
     {
-      "name": "sheet",
+      "name": "ui-sheet",
       "type": "registry:component",
       "title": "Sheet",
       "description": "",
@@ -997,7 +1244,7 @@
       ]
     },
     {
-      "name": "show-more",
+      "name": "ui-show-more",
       "type": "registry:component",
       "title": "Show more",
       "description": "",
@@ -1014,7 +1261,7 @@
       ]
     },
     {
-      "name": "sidebar",
+      "name": "ui-sidebar",
       "type": "registry:component",
       "title": "Sidebar",
       "description": "",
@@ -1031,7 +1278,7 @@
       ]
     },
     {
-      "name": "skeleton",
+      "name": "ui-skeleton",
       "type": "registry:component",
       "title": "Skeleton",
       "description": "",
@@ -1045,7 +1292,7 @@
       ]
     },
     {
-      "name": "slider",
+      "name": "ui-slider",
       "type": "registry:component",
       "title": "Slider",
       "description": "",
@@ -1054,7 +1301,7 @@
         "tailwind-variants"
       ],
       "registryDependencies": [
-        "primitive"
+        "ui-primitive"
       ],
       "files": [
         {
@@ -1064,7 +1311,7 @@
       ]
     },
     {
-      "name": "switch",
+      "name": "ui-switch",
       "type": "registry:component",
       "title": "Switch",
       "description": "",
@@ -1078,7 +1325,7 @@
       ]
     },
     {
-      "name": "table",
+      "name": "ui-table",
       "type": "registry:component",
       "title": "Table",
       "description": "",
@@ -1087,7 +1334,7 @@
         "tailwind-variants"
       ],
       "registryDependencies": [
-        "primitive"
+        "ui-primitive"
       ],
       "files": [
         {
@@ -1097,7 +1344,7 @@
       ]
     },
     {
-      "name": "tabs",
+      "name": "ui-tabs",
       "type": "registry:component",
       "title": "Tabs",
       "description": "",
@@ -1114,7 +1361,7 @@
       ]
     },
     {
-      "name": "tag-field",
+      "name": "ui-tag-field",
       "type": "registry:component",
       "title": "Tag field",
       "description": "",
@@ -1132,7 +1379,7 @@
       ]
     },
     {
-      "name": "tag-group",
+      "name": "ui-tag-group",
       "type": "registry:component",
       "title": "Tag group",
       "description": "",
@@ -1149,7 +1396,7 @@
       ]
     },
     {
-      "name": "text-field",
+      "name": "ui-text-field",
       "type": "registry:component",
       "title": "Text field",
       "description": "",
@@ -1166,7 +1413,7 @@
       ]
     },
     {
-      "name": "textarea",
+      "name": "ui-textarea",
       "type": "registry:component",
       "title": "Textarea",
       "description": "",
@@ -1182,7 +1429,7 @@
       ]
     },
     {
-      "name": "time-field",
+      "name": "ui-time-field",
       "type": "registry:component",
       "title": "Time field",
       "description": "",
@@ -1196,7 +1443,7 @@
       ]
     },
     {
-      "name": "toast",
+      "name": "ui-toast",
       "type": "registry:component",
       "title": "Toast",
       "description": "",
@@ -1212,7 +1459,7 @@
       ]
     },
     {
-      "name": "toggle",
+      "name": "ui-toggle",
       "type": "registry:component",
       "title": "Toggle",
       "description": "",
@@ -1229,7 +1476,7 @@
       ]
     },
     {
-      "name": "toolbar",
+      "name": "ui-toolbar",
       "type": "registry:component",
       "title": "Toolbar",
       "description": "",
@@ -1245,7 +1492,7 @@
       ]
     },
     {
-      "name": "tooltip",
+      "name": "ui-tooltip",
       "type": "registry:component",
       "title": "Tooltip",
       "description": "",
@@ -1262,7 +1509,7 @@
       ]
     },
     {
-      "name": "tree",
+      "name": "ui-tree",
       "type": "registry:component",
       "title": "Tree",
       "description": "",
@@ -1272,7 +1519,7 @@
         "tailwind-variants"
       ],
       "registryDependencies": [
-        "primitive"
+        "ui-primitive"
       ],
       "files": [
         {
@@ -1282,7 +1529,7 @@
       ]
     },
     {
-      "name": "visually-hidden",
+      "name": "ui-visually-hidden",
       "type": "registry:component",
       "title": "Visually hidden",
       "description": "",

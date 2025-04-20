@@ -4,7 +4,9 @@ import path from "node:path"
 // Define the structure for items in the registry.json
 type RegistryJsonItem = {
   name: string
-  type: "registry:component"
+  extends?: "none"
+  type: "registry:component" | "registry:style"
+  cssVars?: Record<string, any>
   title: string
   description: string
   dependencies: string[]
@@ -14,6 +16,127 @@ type RegistryJsonItem = {
     type: "registry:component"
   }[]
 }
+
+const registryBaseStyle = {
+  extends: "none",
+  name: "index",
+  type: "registry:style",
+  dependencies: ["tw-animate-css", "tailwindcss-react-aria-components"],
+  registryDependencies: [],
+  cssVars: {
+    theme: {
+      "font-sans":
+        '"Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+      "font-mono":
+        "\"Geist Mono\", 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '\"Liberation Mono\"', '\"Courier New\"', 'monospace'",
+      "color-border": "var(--border)",
+      "color-input": "var(--input)",
+      "color-ring": "var(--ring)",
+      "color-bg": "var(--bg)",
+      "color-fg": "var(--fg)",
+      "color-primary": "var(--primary)",
+      "color-primary-fg": "var(--primary-fg)",
+      "color-secondary": "var(--secondary)",
+      "color-secondary-fg": "var(--secondary-fg)",
+      "color-accent": "var(--accent)",
+      "color-accent-fg": "var(--accent-fg)",
+      "color-success": "var(--success)",
+      "color-success-fg": "var(--success-fg)",
+      "color-danger": "var(--danger)",
+      "color-danger-fg": "var(--danger-fg)",
+      "color-warning": "var(--warning)",
+      "color-warning-fg": "var(--warning-fg)",
+      "color-muted": "var(--muted)",
+      "color-muted-fg": "var(--muted-fg)",
+      "color-overlay": "var(--overlay)",
+      "color-overlay-fg": "var(--overlay-fg)",
+      "color-navbar": "var(--navbar)",
+      "color-navbar-fg": "var(--navbar-fg)",
+      "color-sidebar": "var(--sidebar)",
+      "color-sidebar-fg": "var(--sidebar-fg)",
+      "color-chart-1": "var(--chart-1)",
+      "color-chart-2": "var(--chart-2)",
+      "color-chart-3": "var(--chart-3)",
+      "color-chart-4": "var(--chart-4)",
+      "color-chart-5": "var(--chart-5)",
+    },
+    light: {
+      bg: "var(--color-white)",
+      fg: "var(--color-gray-950)",
+      primary: "var(--color-blue-600)",
+      "primary-fg": "var(--color-white)",
+      secondary: "var(--color-gray-100)",
+      "secondary-fg": "var(--color-gray-950)",
+      overlay: "var(--color-white)",
+      "overlay-fg": "var(--color-gray-950)",
+      accent: "var(--color-blue-600)",
+      "accent-fg": "var(--color-white)",
+      muted: "var(--color-gray-100)",
+      "muted-fg": "var(--color-gray-600)",
+      success: "var(--color-emerald-600)",
+      "success-fg": "var(--color-white)",
+      warning: "var(--color-amber-400)",
+      "warning-fg": "var(--color-amber-950)",
+      danger: "var(--color-red-600)",
+      "danger-fg": "var(--color-red-50)",
+      border: "var(--color-gray-200)",
+      input: "var(--color-gray-300)",
+      ring: "var(--color-blue-600)",
+      navbar: "var(--color-gray-50)",
+      "navbar-fg": "var(--color-gray-950)",
+      sidebar: "var(--color-gray-50)",
+      "sidebar-fg": "var(--color-gray-950)",
+      "chart-1": "var(--color-blue-600)",
+      "chart-2": "var(--color-blue-400)",
+      "chart-3": "var(--color-blue-300)",
+      "chart-4": "var(--color-blue-200)",
+      "chart-5": "var(--color-blue-100)",
+      "radius-lg": "0.5rem",
+      "radius-xs": "calc(var(--radius-lg) * 0.5)",
+      "radius-sm": "calc(var(--radius-lg) * 0.75)",
+      "radius-md": "calc(var(--radius-lg) * 0.9)",
+      "radius-xl": "calc(var(--radius-lg) * 1.25)",
+      "radius-2xl": "calc(var(--radius-lg) * 1.5)",
+      "radius-3xl": "calc(var(--radius-lg) * 2)",
+      "radius-4xl": "calc(var(--radius-lg) * 3)",
+    },
+    dark: {
+      bg: "var(--color-gray-950)",
+      fg: "var(--color-gray-50)",
+      primary: "var(--color-blue-600)",
+      "primary-fg": "var(--color-white)",
+      secondary: "oklch(0.248 0.033 256.848)",
+      "secondary-fg": "var(--color-gray-50)",
+      accent: "var(--color-blue-600)",
+      "accent-fg": "var(--color-white)",
+      muted: "var(--color-gray-900)",
+      "muted-fg": "var(--color-gray-400)",
+      overlay: "oklch(0.170 0.034 264.665)",
+      "overlay-fg": "var(--color-gray-50)",
+      success: "var(--color-emerald-600)",
+      "success-fg": "var(--color-white)",
+      warning: "var(--color-amber-400)",
+      "warning-fg": "var(--color-amber-950)",
+      danger: "var(--color-red-600)",
+      "danger-fg": "var(--color-red-50)",
+      border: "oklch(0.273 0.034 259.733)",
+      input: "oklch(0.293 0.034 259.733)",
+      ring: "var(--color-blue-600)",
+      navbar: "oklch(0.170 0.034 264.665)",
+      "navbar-fg": "var(--color-gray-50)",
+      sidebar: "oklch(0.160 0.034 264.665)",
+      "sidebar-fg": "var(--color-gray-50)",
+      "chart-1": "var(--color-blue-700)",
+      "chart-2": "var(--color-blue-500)",
+      "chart-3": "var(--color-blue-400)",
+      "chart-4": "var(--color-blue-300)",
+      "chart-5": "var(--color-blue-200)",
+    },
+  },
+  files: [],
+  title: "Base style",
+  description: "",
+} satisfies RegistryJsonItem
 
 // Helper type for intermediate data
 type IntermediateRegistryItem = Partial<RegistryJsonItem> & {
@@ -124,6 +247,7 @@ const generateComponentRegistry = () => {
 
   const sources = [
     { type: "ui", path: "components/ui" },
+    { type: "blocks", path: "components/blocks" },
     // Only include ui components for now
   ]
 
@@ -161,11 +285,11 @@ const generateComponentRegistry = () => {
       const relativeKey = path.relative(absoluteSourcePath, absoluteFilePath).replace(/\\/g, "/") // Use correct regex for backslashes
 
       // Generate key: relative path within source dir, remove .tsx, remove /index
-      const nameKey = relativeKey
+      const nameKey = `${type}-${relativeKey
         .replace(/\.tsx$/, "") // Correct regex
         .replace(/\/index$/, "") // Correct regex
         // Handle case where index removal leaves empty string (e.g., src/index.tsx)
-        .replace(/^$/, componentBaseName)
+        .replace(/^$/, componentBaseName)}`
 
       if (!nameKey) {
         console.warn(`Could not generate key for ${absoluteFilePath}`)
@@ -221,8 +345,9 @@ const generateComponentRegistry = () => {
 
   // --- Final Construction --- //
   console.info("Constructing final registry...")
-  const finalRegistryItems: RegistryJsonItem[] = Array.from(intermediateData.values()).map(
-    (item) => {
+  const finalRegistryItems: RegistryJsonItem[] = [
+    registryBaseStyle,
+    ...Array.from(intermediateData.values()).map((item) => {
       // Remove temporary properties
       const { filePath, internalImportPaths, ...rest } = item
       // Ensure the rest object conforms to RegistryJsonItem
@@ -235,8 +360,8 @@ const generateComponentRegistry = () => {
         registryDependencies: rest.registryDependencies || [], // Default to empty array
         files: rest.files || [], // Default to empty array
       } as RegistryJsonItem // Assert type after ensuring all fields are present
-    },
-  )
+    }),
+  ]
 
   // Sort final items by name
   finalRegistryItems.sort((a, b) => a.name.localeCompare(b.name))
