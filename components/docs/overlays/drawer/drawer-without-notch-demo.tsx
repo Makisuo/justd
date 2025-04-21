@@ -5,9 +5,9 @@ import { Drawer } from "@/components/ui/drawer"
 
 export default function DrawerWithoutNotchDemo() {
   return (
-    <Drawer withNotch={false}>
+    <Drawer>
       <Drawer.Trigger className={buttonStyles({ intent: "outline" })}>Open</Drawer.Trigger>
-      <Drawer.Content>
+      <Drawer.Content withNotch={false}>
         <Drawer.Header>
           <Drawer.Title>The Beatles</Drawer.Title>
           <Drawer.Description>
