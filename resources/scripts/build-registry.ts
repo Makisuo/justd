@@ -1,6 +1,7 @@
 import fs from "node:fs"
 import path from "node:path"
 
+const registryUrl = process.env.VERCEL_URL ?? "http://localhost:3000"
 // Define the structure for items in the registry.json
 type RegistryJsonItem = {
   name: string
@@ -21,7 +22,7 @@ const registryBaseStyle = {
   extends: "none",
   name: "index",
   type: "registry:style",
-  dependencies: ["tw-animate-css", "tailwindcss-react-aria-components"],
+  dependencies: ["tw-animate-css", "tailwindcss-react-aria-components", "react-aria-components"],
   registryDependencies: [],
   cssVars: {
     theme: {
@@ -332,7 +333,7 @@ const generateComponentRegistry = () => {
         const dependencyKey = filePathToKeyMap.get(importPath)
         // Ensure a key was found and it's not the component itself
         if (dependencyKey && dependencyKey !== item.name) {
-          resolvedRegistryDeps.add(dependencyKey)
+          resolvedRegistryDeps.add(`${registryUrl}/r/${dependencyKey}.json`)
         }
       }
     }
