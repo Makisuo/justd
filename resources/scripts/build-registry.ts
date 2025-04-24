@@ -1,7 +1,9 @@
 import fs from "node:fs"
 import path from "node:path"
 
-const registryUrl = process.env.VERCEL_URL ?? "http://localhost:3000"
+const registryUrl = process.env.VERCEL_BRANCH_URL
+  ? `https://${process.env.VERCEL_BRANCH_URL}`
+  : "http://localhost:3000"
 // Define the structure for items in the registry.json
 type RegistryJsonItem = {
   name: string
