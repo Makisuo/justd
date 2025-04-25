@@ -178,11 +178,10 @@ const extractExternalDependencies = (content: string): string[] => {
         "clsx",
         "tailwind-merge",
         "next",
-        "@headlessui/react",
         "embla-carousel-react",
       ].includes(importPath)
     ) {
-      dependencies.add(importPath)
+      dependencies.add(importPath === "motion/react" ? "motion" : importPath)
     }
   }
   return Array.from(dependencies).sort()
