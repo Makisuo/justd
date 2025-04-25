@@ -5,7 +5,16 @@ const registryUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000"
 
-type RegistryType = "registry:block" | "registry:component" | "registry:lib" | "registry:hook" | "registry:ui" | "registry:page" | "registry:file" | "registry:style" | "registry:theme"
+type RegistryType =
+  | "registry:block"
+  | "registry:component"
+  | "registry:lib"
+  | "registry:hook"
+  | "registry:ui"
+  | "registry:page"
+  | "registry:file"
+  | "registry:style"
+  | "registry:theme"
 type RegistryJsonItem = {
   name: string
   extends?: "none"
@@ -304,37 +313,37 @@ const generateComponentRegistry = () => {
         projectRoot,
       )
 
-      let whatType: IntermediateRegistryItem['type']
+      let whatType: IntermediateRegistryItem["type"]
       switch (true) {
-        case nameKey.startsWith('ui-'):
-          whatType = 'registry:component'
+        case nameKey.startsWith("ui-"):
+          whatType = "registry:component"
           break
-        case nameKey.startsWith('block-'):
-          whatType = 'registry:block'
+        case nameKey.startsWith("block-"):
+          whatType = "registry:block"
           break
-        case nameKey.startsWith('lib-'):
-          whatType = 'registry:lib'
+        case nameKey.startsWith("lib-"):
+          whatType = "registry:lib"
           break
-        case nameKey.startsWith('hook-'):
-          whatType = 'registry:hook'
+        case nameKey.startsWith("hook-"):
+          whatType = "registry:hook"
           break
-        case nameKey.startsWith('ui/'):
-          whatType = 'registry:ui'
+        case nameKey.startsWith("ui/"):
+          whatType = "registry:ui"
           break
-        case nameKey.startsWith('page-'):
-          whatType = 'registry:page'
+        case nameKey.startsWith("page-"):
+          whatType = "registry:page"
           break
-        case nameKey.startsWith('file-'):
-          whatType = 'registry:file'
+        case nameKey.startsWith("file-"):
+          whatType = "registry:file"
           break
-        case nameKey.startsWith('style-'):
-          whatType = 'registry:style'
+        case nameKey.startsWith("style-"):
+          whatType = "registry:style"
           break
-        case nameKey.startsWith('theme-'):
-          whatType = 'registry:theme'
+        case nameKey.startsWith("theme-"):
+          whatType = "registry:theme"
           break
         default:
-          whatType = 'registry:component'
+          whatType = "registry:component"
       }
 
       // console.log(whatType)
