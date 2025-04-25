@@ -14,7 +14,10 @@ const typeToCategoryMap: Record<string, string> = {
   "registry:theme": "theme",
 }
 
-export async function GET(_req: Request, context: { params: Promise<{ category: string; slug: string }> }) {
+export async function GET(
+  _req: Request,
+  context: { params: Promise<{ category: string; slug: string }> },
+) {
   const { category, slug } = await context.params
   const dir = path.join(process.cwd(), "public", "r")
   const files = await readdir(dir)
