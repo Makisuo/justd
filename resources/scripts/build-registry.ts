@@ -22,7 +22,7 @@ type RegistryJsonItem = {
 
 const registryBaseStyle = {
   extends: "none",
-  name: "index",
+  name: "default",
   type: "registry:style",
   dependencies: ["tw-animate-css", "tailwindcss-react-aria-components", "react-aria-components"],
   registryDependencies: [],
@@ -172,17 +172,11 @@ const extractExternalDependencies = (content: string): string[] => {
       !importPath.startsWith(".") &&
       !importPath.startsWith("@/") && // Exclude internal aliases
       !importPath.startsWith("node:") &&
-      ![
-        "react",
-        "react-dom",
-        "clsx",
-        "tailwind-merge",
-        "next",
-        "@headlessui/react",
-        "embla-carousel-react",
-      ].includes(importPath)
+      !["react", "react-dom", "clsx", "tailwind-merge", "next", "embla-carousel-react"].includes(
+        importPath,
+      )
     ) {
-      dependencies.add(importPath)
+      dependencies.add(importPath === "motion/react" ? "motion" : importPath)
     }
   }
   return Array.from(dependencies).sort()
