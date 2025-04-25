@@ -71,7 +71,7 @@ const DrawerContent = ({
                 side === "top" &&
                   `${
                     isFloating
-                      ? "inset-x-2 top-2 rounded-lg border-b-0"
+                      ? "inset-x-2 top-2 rounded-lg border"
                       : "inset-x-0 top-0 rounded-b-2xl border-b"
                   }`,
                 side === "right" &&
@@ -83,7 +83,7 @@ const DrawerContent = ({
                 side === "bottom" &&
                   `${
                     isFloating
-                      ? "inset-x-2 bottom-2 rounded-lg border-t-0"
+                      ? "inset-x-2 bottom-2 rounded-lg border"
                       : "inset-x-0 bottom-0 rounded-t-2xl border-t"
                   }`,
                 side === "left" &&
@@ -137,7 +137,7 @@ const DrawerContent = ({
                   "relative flex flex-col overflow-hidden outline-hidden will-change-auto",
                   side === "top" || side === "bottom"
                     ? "mx-auto max-h-[calc(var(--visual-viewport-height)-var(--visual-viewport-vertical-padding))] max-w-lg"
-                    : "max-h-full",
+                    : "h-full",
                 )}
               >
                 {withNotch && side === "bottom" && (
