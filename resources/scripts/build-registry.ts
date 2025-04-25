@@ -260,7 +260,8 @@ const generateComponentRegistry = () => {
   const sources = [
     { type: "ui", path: "components/ui" },
     { type: "block", path: "components/blocks" },
-    { type: "lib", path: "lib" }, // Added lib directory
+    { type: "lib", path: "lib" },
+    { type: "hook", path: "hooks" },
   ]
 
   // Recursively get all relevant files (.ts and .tsx) from a directory
@@ -327,18 +328,17 @@ const generateComponentRegistry = () => {
       let whatType: IntermediateRegistryItem["type"]
       switch (true) {
         case nameKey.startsWith("ui-"):
-          whatType = "registry:component" // Assuming ui-* are components
+          whatType = "registry:component"
           break
         case nameKey.startsWith("block-"):
           whatType = "registry:block"
           break
-        case nameKey.startsWith("lib-"): // Handle the new lib type
+        case nameKey.startsWith("lib-"):
           whatType = "registry:lib"
           break
-        // Add other cases if needed based on your naming conventions
-        // case nameKey.startsWith("hook-"):
-        //   whatType = "registry:hook";
-        //   break;
+        case nameKey.startsWith("hook-"):
+          whatType = "registry:hook"
+          break
         // case nameKey.startsWith("page-"):
         //   whatType = "registry:page";
         //   break;

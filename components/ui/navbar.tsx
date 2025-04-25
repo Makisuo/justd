@@ -2,8 +2,8 @@
 
 import { createContext, use, useCallback, useId, useMemo, useState } from "react"
 
+import { useMediaQuery } from "@/hooks/use-media-query"
 import { composeTailwindRenderProps } from "@/lib/primitive"
-import { useMediaQuery } from "@/utils/use-media-query"
 import { IconHamburger } from "@intentui/icons"
 import { LayoutGroup, motion } from "motion/react"
 import type { LinkProps } from "react-aria-components"

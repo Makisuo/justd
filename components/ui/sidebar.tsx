@@ -1,7 +1,7 @@
 "use client"
 
+import { useMediaQuery } from "@/hooks/use-media-query"
 import { composeTailwindRenderProps } from "@/lib/primitive"
-import { useMediaQuery } from "@/utils/use-media-query"
 import { IconChevronLgDown, IconHamburger, IconSidebarFill } from "@intentui/icons"
 import { createContext, use, useCallback, useEffect, useMemo, useState } from "react"
 import type {
