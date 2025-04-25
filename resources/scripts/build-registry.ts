@@ -34,7 +34,12 @@ const registryBaseStyle = {
   extends: "none",
   name: "default",
   type: "registry:style",
-  dependencies: ["tw-animate-css", "tailwindcss-react-aria-components", "react-aria-components"],
+  dependencies: [
+    "tw-animate-css",
+    "@intentui/icons",
+    "tailwindcss-react-aria-components",
+    "react-aria-components",
+  ],
   registryDependencies: [],
   cssVars: {
     theme: {
@@ -177,10 +182,9 @@ const extractExternalDependencies = (content: string): string[] => {
       continue
     }
 
-    // Filter OUT relative, aliased, node built-ins, and common packages
     if (
       !importPath.startsWith(".") &&
-      !importPath.startsWith("@/") && // Exclude internal aliases
+      !importPath.startsWith("@/") &&
       !importPath.startsWith("node:") &&
       !["react", "react-dom", "clsx", "tailwind-merge", "next", "embla-carousel-react"].includes(
         importPath,
