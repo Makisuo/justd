@@ -4,11 +4,21 @@ import path from "node:path"
 const registryUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000"
-// Define the structure for items in the registry.json
+
+type RegistryType =
+  | "registry:block"
+  | "registry:component"
+  | "registry:lib"
+  | "registry:hook"
+  | "registry:ui"
+  | "registry:page"
+  | "registry:file"
+  | "registry:style"
+  | "registry:theme"
 type RegistryJsonItem = {
   name: string
   extends?: "none"
-  type: "registry:component" | "registry:style"
+  type: RegistryType
   cssVars?: Record<string, any>
   title: string
   description: string
@@ -16,7 +26,7 @@ type RegistryJsonItem = {
   registryDependencies: string[]
   files: {
     path: string
-    type: "registry:component"
+    type: RegistryType
   }[]
 }
 
@@ -244,7 +254,7 @@ const generateComponentRegistry = () => {
 
   const sources = [
     { type: "ui", path: "components/ui" },
-    { type: "blocks", path: "components/blocks" },
+    { type: "block", path: "components/blocks" },
     // Only include ui components for now
   ]
 
@@ -287,7 +297,6 @@ const generateComponentRegistry = () => {
         .replace(/\/index$/, "") // Correct regex
         // Handle case where index removal leaves empty string (e.g., src/index.tsx)
         .replace(/^$/, componentBaseName)}`
-
       if (!nameKey) {
         console.warn(`Could not generate key for ${absoluteFilePath}`)
         continue
@@ -304,14 +313,48 @@ const generateComponentRegistry = () => {
         projectRoot,
       )
 
+      let whatType: IntermediateRegistryItem["type"]
+      switch (true) {
+        case nameKey.startsWith("ui-"):
+          whatType = "registry:component"
+          break
+        case nameKey.startsWith("block-"):
+          whatType = "registry:block"
+          break
+        case nameKey.startsWith("lib-"):
+          whatType = "registry:lib"
+          break
+        case nameKey.startsWith("hook-"):
+          whatType = "registry:hook"
+          break
+        case nameKey.startsWith("ui/"):
+          whatType = "registry:ui"
+          break
+        case nameKey.startsWith("page-"):
+          whatType = "registry:page"
+          break
+        case nameKey.startsWith("file-"):
+          whatType = "registry:file"
+          break
+        case nameKey.startsWith("style-"):
+          whatType = "registry:style"
+          break
+        case nameKey.startsWith("theme-"):
+          whatType = "registry:theme"
+          break
+        default:
+          whatType = "registry:component"
+      }
+
+      // console.log(whatType)
       const item: IntermediateRegistryItem = {
         filePath: absoluteFilePath,
         name: nameKey,
-        type: "registry:component",
+        type: whatType,
         title: capitalize(componentBaseName.replace(/-/g, " ")),
         description: "",
         dependencies: externalDeps,
-        files: [{ path: relativePathFromRoot, type: "registry:component" }],
+        files: [{ path: relativePathFromRoot, type: whatType }],
         internalImportPaths: internalDepPaths,
         registryDependencies: [], // Initialize registryDependencies
       }
@@ -350,7 +393,7 @@ const generateComponentRegistry = () => {
       // Ensure the rest object conforms to RegistryJsonItem
       return {
         name: rest.name || "", // Provide default empty string
-        type: "registry:component", // Keep consistent type
+        type: item.type, // Keep consistent type
         title: rest.title || "", // Provide default
         description: rest.description || "", // Provide default
         dependencies: rest.dependencies || [], // Default to empty array
