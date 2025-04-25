@@ -4,11 +4,12 @@ import path from "node:path"
 const registryUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000"
-// Define the structure for items in the registry.json
+
+type RegistryType = "registry:block" | "registry:component" | "registry:lib" | "registry:hook" | "registry:ui" | "registry:page" | "registry:file" | "registry:style" | "registry:theme"
 type RegistryJsonItem = {
   name: string
   extends?: "none"
-  type: "registry:block" | "registry:component" | "registry:lib" | "registry:hook" | "registry:ui" | "registry:page" | "registry:file" | "registry:style" | "registry:theme"
+  type: RegistryType
   cssVars?: Record<string, any>
   title: string
   description: string
@@ -16,7 +17,7 @@ type RegistryJsonItem = {
   registryDependencies: string[]
   files: {
     path: string
-    type: RegistryJsonItem["type"]
+    type: RegistryType
   }[]
 }
 
@@ -302,6 +303,7 @@ const generateComponentRegistry = () => {
         absoluteFilePath,
         projectRoot,
       )
+
       let whatType: IntermediateRegistryItem['type']
       switch (true) {
         case nameKey.startsWith('ui-'):
@@ -382,7 +384,7 @@ const generateComponentRegistry = () => {
       // Ensure the rest object conforms to RegistryJsonItem
       return {
         name: rest.name || "", // Provide default empty string
-        type: "registry:component", // Keep consistent type
+        type: item.type, // Keep consistent type
         title: rest.title || "", // Provide default
         description: rest.description || "", // Provide default
         dependencies: rest.dependencies || [], // Default to empty array
