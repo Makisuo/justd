@@ -1,5 +1,6 @@
 "use client"
 
+import { composeTailwindRenderProps } from "@/lib/primitive"
 import { useMediaQuery } from "@/utils/use-media-query"
 import { IconChevronLgDown, IconHamburger, IconSidebarFill } from "@intentui/icons"
 import { createContext, use, useCallback, useEffect, useMemo, useState } from "react"
@@ -27,7 +28,6 @@ import { twJoin, twMerge } from "tailwind-merge"
 import { tv } from "tailwind-variants"
 import { Badge } from "./badge"
 import { Button } from "./button"
-import { composeTailwindRenderProps } from "./primitive"
 import { Sheet } from "./sheet"
 import { Tooltip } from "./tooltip"
 

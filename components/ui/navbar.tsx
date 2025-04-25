@@ -2,6 +2,7 @@
 
 import { createContext, use, useCallback, useId, useMemo, useState } from "react"
 
+import { composeTailwindRenderProps } from "@/lib/primitive"
 import { useMediaQuery } from "@/utils/use-media-query"
 import { IconHamburger } from "@intentui/icons"
 import { LayoutGroup, motion } from "motion/react"
@@ -10,7 +11,6 @@ import { Link } from "react-aria-components"
 import { twJoin, twMerge } from "tailwind-merge"
 import { tv } from "tailwind-variants"
 import { Button, type ButtonProps } from "./button"
-import { composeTailwindRenderProps } from "./primitive"
 import { Sheet } from "./sheet"
 
 type NavbarOptions = {

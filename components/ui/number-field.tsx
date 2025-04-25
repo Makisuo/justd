@@ -10,10 +10,10 @@ import {
 } from "react-aria-components"
 import { tv } from "tailwind-variants"
 
+import { composeTailwindRenderProps } from "@/lib/primitive"
 import { useMediaQuery } from "@/utils/use-media-query"
 import { twMerge } from "tailwind-merge"
 import { Description, FieldError, FieldGroup, Input, Label } from "./field"
-import { composeTailwindRenderProps } from "./primitive"
 
 const fieldBorderStyles = tv({
   base: "group-focus:border-primary/70 forced-colors:border-[Highlight]",
